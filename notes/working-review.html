@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Globe Deconstruction? — Levi Miller — Working Review</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1e222b;
+    --border: #2a2f3a;
+    --text: #e7e9ee;
+    --text-dim: #9aa1af;
+    --accent: #6fb0ff;
+    --original: #7fd48a;
+    --recycled: #f0b45c;
+    --unclear: #b58ef0;
+    --warn: #ff8a8a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  header {
+    padding: 32px 24px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header h1 {
+    font-size: 1.6rem;
+    margin: 0 0 4px;
+  }
+  header .sub {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+  }
+  .status-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: #3a2f14;
+    color: var(--recycled);
+    border: 1px solid #5a4a1e;
+    margin-bottom: 12px;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+  .callout {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--warn);
+    border-radius: 6px;
+    padding: 16px 18px;
+    margin: 20px 0;
+  }
+  .callout h3 { margin: 0 0 8px; font-size: 1rem; color: var(--warn); }
+  .callout p:last-child { margin-bottom: 0; }
+  section {
+    margin-top: 40px;
+  }
+  section > h2 {
+    font-size: 1.15rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  .claim-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+  }
+  .claim-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.02rem;
+  }
+  .claim-card .pages {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .tag-original { background: #123420; color: var(--original); border: 1px solid #1e5a34; }
+  .tag-recycled { background: #3a2f14; color: var(--recycled); border: 1px solid #5a4a1e; }
+  .tag-unclear { background: #2a1f3f; color: var(--unclear); border: 1px solid #453268; }
+  details {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 0;
+    overflow: hidden;
+  }
+  summary {
+    padding: 12px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary .count {
+    font-weight: 400;
+    color: var(--text-dim);
+    font-size: 0.82rem;
+  }
+  summary:after {
+    content: "+";
+    color: var(--accent);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  details[open] summary:after { content: "–"; }
+  .details-body {
+    padding: 4px 16px 16px;
+    border-top: 1px solid var(--border);
+  }
+  .item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .item:last-child { border-bottom: none; }
+  .item h4 { margin: 0 0 4px; font-size: 0.95rem; }
+  .item .pages { font-size: 0.78rem; color: var(--text-dim); margin-bottom: 6px; }
+  .item p { margin: 4px 0; font-size: 0.92rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    margin: 12px 0;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  th { color: var(--text-dim); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
+  a { color: var(--accent); }
+  code {
+    background: var(--panel-2);
+    padding: 1px 5px;
+    border-radius: 4px;
+    font-size: 0.85em;
+  }
+  .stat-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 16px 0 24px;
+  }
+  .stat {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    flex: 1;
+    min-width: 120px;
+  }
+  .stat .n { font-size: 1.4rem; font-weight: 700; }
+  .stat .l { font-size: 0.78rem; color: var(--text-dim); text-transform: uppercase; }
+  .stat.original .n { color: var(--original); }
+  .stat.recycled .n { color: var(--recycled); }
+  .stat.unclear .n { color: var(--unclear); }
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="status-tag">Working review — not published — no verdicts written yet</div>
+  <h1>GLOBE DECONSTRUCTION?</h1>
+  <div class="sub">Prerelease draft by Levi Miller (with Alex Kampf &amp; Mark Meyer) — 500pp Canva deck, sent for early review. This page organizes and summarizes the claims only; ingestion pass, not a rebuttal.</div>
+</header>
+
+<main>
+
+<section>
+  <h2>Quick stats</h2>
+  <div class="stat-row">
+    <div class="stat"><div class="n">~45</div><div class="l">distinct arguments catalogued</div></div>
+    <div class="stat original"><div class="n">~14</div><div class="l">Original</div></div>
+    <div class="stat recycled"><div class="n">~19</div><div class="l">Recycled</div></div>
+    <div class="stat unclear"><div class="n">~12</div><div class="l">Unclear</div></div>
+  </div>
+  <p style="color:var(--text-dim); font-size:0.88rem;">Cross-referenced against <code>flat-earth-origins/scripts/clusters.py</code> — the sibling project's catalogue of 98 known flat-earth/geocentric argument clusters.</p>
+</section>
+
+<section>
+  <h2>The two claims under active review</h2>
+
+  <div class="claim-card">
+    <span class="tag tag-recycled">base claim recycled</span> <span class="tag tag-original">apparatus original</span>
+    <h3>1. Rockets can't work in true vacuum</h3>
+    <div class="pages">pp.16, 20, 26, 44, 77–84, 183, 196, 209–210, 232, 236–237, 258, 265</div>
+    <p>Gas-propelled thrust supposedly needs an external medium to push against — Miller states outright that "almost all flat earthers claim" this (a recycled premise). His original contribution is a self-funded ($3,000) vacuum-chamber syringe/toy-car experiment with Alex Kampf, formalized as <strong>"Kampf's Law"</strong> and called "the ultimate smoking gun of this entire book."</p>
+  </div>
+
+  <div class="callout">
+    <h3>⚠ Correction made 2026-08-09</h3>
+    <p>The only date anywhere in the 500-page text — "November 17, 2023" (p.20) — is a caption on a still from the <strong>Action Labs</strong> YouTube video that inspired their build, <em>not</em> the date of Miller/Kampf's own test (Steve confirmed this directly). Net effect: <strong>the book gives no date at all for their own experiment.</strong> Checked <code>shapedebate.com</code> directly on 2026-08-09: the <code>/chamber</code> page (linked from p.81, right at "Kampf's Law") is a stub — "This specific part of the book is not ready yet" — and the homepage lists the claim with status <strong>"2026 – Experiment done by Alex Kampf – waiting for upload."</strong> So this is an undated result, with a named law attached, presented as the book's decisive evidence, with zero public data behind it as of today.</p>
+  </div>
+
+  <div class="callout" style="border-left-color: var(--accent);">
+    <h3>Other side of it</h3>
+    <p>Even once/if published: a $3,000 setup very likely means a rough mechanical-pump vacuum, not high vacuum. Residual gas pressure and wall-proximity effects in a small chamber are a plausible confound for "distance-dependent thrust delay" and would need to be ruled out (achieved pressure in torr/mbar, chamber dimensions, repeat trials) before the result says anything about true-vacuum propulsion.</p>
+  </div>
+
+  <div class="claim-card">
+    <span class="tag tag-original">original</span>
+    <h3>2. Gravity's control over gases is unproven</h3>
+    <div class="pages">pp.83–84, 102–104, 110, 211, 218–219</div>
+    <p>Never a single crisp thesis. Concentrated at pp.102–104 (how did volcanic gas ever escape Earth's gravity to make room for breathable air, if gravity holds gas down as a "blanket"?) and pp.211/218–219 (atmospheric confinement framed as a set of unproven "positive claims"). Reads as genuinely original — no match anywhere in the flat-earth-origins cluster catalogue. Notably distinct from — and explicitly rejected in favor of, over — the standard flat-earth "buoyancy/density replaces gravity" line, which Miller calls out by name as wrong (p.1, p.197).</p>
+  </div>
+
+  <div class="claim-card">
+    <span class="tag tag-recycled">largely recycled, already-explained</span>
+    <h3>3. "The Sun is not the illumination source"</h3>
+    <div class="pages">pp.26, 75–78, 160–161, 170–173, 186–192, 194–195, 441, 5527–5533 — <code>shapedebate.com/moontilt</code>, <code>shapedebate.com/tfe</code></div>
+    <p>Formal statement (p.26/441/5527): <em>"There are too many red flags in celestial observations. The four hardest to ignore are the uniform light distribution of a full moon, the moon-tilt illusion, Jupiter's moon shadows that fail to align heliocentrically, and the failed trajectory alignment during a solar eclipse. Together, they make a strong case that the Sun is not the illumination source."</em></p>
+    <table style="margin-top:12px;">
+      <tr><th>Red flag</th><th>Pages</th><th>Status</th></tr>
+      <tr><td>Full-moon uniform lighting (expects a specular "highlight")</td><td>76, 192</td><td>Already explained — lunar opposition effect / Hapke photometric models (rough, backscattering regolith, zero-phase-angle geometry at full moon)</td></tr>
+      <tr><td>Moon-tilt illusion</td><td>192, 194–195</td><td>Already explained — documented foreshortening + perceptual illusion, covered by working astronomers</td></tr>
+      <tr><td>Jupiter moon-shadow misalignment (Astaveo critique)</td><td>75, 160–161, 186–187</td><td>Already explained — predictable phase-angle offset, used by amateur astronomers to time shadow transits</td></tr>
+      <tr><td>Eclipse "failed trajectory"/"paused motion"</td><td>191</td><td>Underspecified in the extracted text — single unelaborated bullet, needs closer PDF pass or direct question to Miller</td></tr>
+    </table>
+    <p style="margin-top:10px;">Broader context: pp.191–192 list a longer Sun/Moon/Star "red flag" bucket (cloud hotspots, temperature gradients, sun dogs, selenelion eclipses, star parallax skepticism), plus a separate "local light source" strand (pp.170–173) arguing sunset lighting variance fits a nearby, contracting/expanding local heat source better than a fixed 93-million-mile Sun. The claim explicitly ties itself to Antarctica/TFE: <em>"If the Antarctica Final Experiment is confirmed faked by independent research, the game will be over."</em> Unlike the two signature claims, three of the four named sub-claims land on real, previously-studied astronomical phenomena with accepted explanations — this plank reads as misapplied/incomplete physics more than undiscovered anomaly. The fourth (eclipse trajectory) can't yet be assessed from the extracted text alone.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Framing note</h2>
+  <div class="claim-card">
+    <p>This is <em>not</em> a standard flat-earth text. Miller self-identifies as "geocentrist," not "flat earther," and repeatedly, explicitly disowns several mainline flat-earth positions: the Antarctic ice-wall/unexplored-continent narrative ("clearly just lazy," pp.40, 66), the Gleason map ("just a distorted version of the globe," p.146), and — most relevant here — the buoyancy/density-replaces-gravity explanation itself ("this is clearly not the case," p.1; "stop using relative density as a replacement for... gravity," p.197). Treating this as generic flat-earth material will misfire in places.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Other major planks (full detail in the organized breakdown)</h2>
+
+  <details>
+    <summary>Bottom-up disappearance / angular resolution <span class="count">UNCLEAR / leans recycled</span></summary>
+    <div class="details-body">
+      <div class="item"><p>Argues ships/cities disappear "bottom-up" over water due to limits of human/camera angular resolution + linear perspective, not curvature. Illustrated with headlight/hallway/tree-line analogies and long-zoom photography (Nikon P900/P1000 shots of a wind farm and Monviso, Italy at 184 miles).</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Water / hydrostatics <span class="count">recycled base claim, some original test designs</span></summary>
+    <div class="details-body">
+      <div class="item"><p>No controlled experiment has ever directly measured water bending to Earth's curvature (matches Rowbotham's classic "water finds its level" argument) — proposes an original hypothetical 1000-meter "skinny warehouse" test to settle it. Also: Lake Pontchartrain refraction dispute, Lake Manly/Lake Pukaki reflection-geometry proposal, theodolite/refraction-constant critique of "end of flat earth" shadow experiments.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Celestial / optics claims <span class="count">mixed</span></summary>
+    <div class="details-body">
+      <div class="item"><p>Argues the eye's spherical geometry — not sky curvature — explains why Polaris appears to rise/fall with latitude; calculates Polaris's angular size as ~18,860× smaller than the eye's resolution limit; critiques a flat-earth-challenge astrophotographer's Jupiter moon-shadow image as misaligned with the Sun.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Astronautics / ISS / NASA skepticism <span class="count">largely recycled</span></summary>
+    <div class="details-body">
+      <div class="item"><p>Standard "ISS is CGI/wire-work/green-screen" catalogue and Massimo Mazzucco-sourced moon-landing-hoax claims. Separately: an extended, detailed treatment of Bob Knodel's 2018 ring-laser gyroscope experiment from <em>Behind the Curve</em> — argues suppressed elevation-dependent follow-up data actually disproves Earth's rotation. This is a near-exact match to an existing, well-documented flat-earth argument (Knodel/GlobeBusters, 2018).</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Atmospheric co-rotation skepticism <span class="count">recycled, unattributed</span></summary>
+    <div class="details-body">
+      <div class="item"><p>Standard "why doesn't air's rotational speed vary by altitude, and why is air speed zero exactly at the pole" argument — a long-standing Rowbotham-lineage claim, presented without attribution.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Antarctica / cartography <span class="count">original speculation, explicitly self-labeled</span></summary>
+    <div class="details-body">
+      <div class="item"><p>Rejects the standard ice-wall narrative outright. Instead builds an original, self-labeled-speculative reinterpretation of the 1587 Urbano Monte world map — arguing its "errors" may reflect real lost geography, that Antarctica's "land of fire" label implies it was once ice-free, and sketching a new "Magnetic Declination Removed" flat map with hypothetical unexplored lands ("Lacach," "Patalia," "Galleca," "Vista").</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>Historical / architecture "Tartaria" tangents <span class="count">recycled genre, ~pp.241–470, self-flagged as off-topic</span></summary>
+    <div class="details-body">
+      <div class="item"><p>Roughly a third of the book (pp.241–470): elaborate 19th-century architecture supposedly inconsistent with claimed construction dates/technology, "mudflood" buried first floors, missing construction records — the well-known "Tartaria" internet-conspiracy genre, explicitly credited to other YouTube researchers rather than original to Miller. Culminates in an original "Reset War" theory tying 1850–1880 conflicts to a coordinated global rollout of globe-based school curricula. Miller himself flags this whole section as outside the core "shape debate."</p></div>
+    </div>
+  </details>
+
+</section>
+
+<section>
+  <h2>Cited authorities / personalities</h2>
+  <table>
+    <tr><th>Name</th><th>Credential claimed</th><th>Role</th></tr>
+    <tr><td>Action Labs (YouTube)</td><td>—</td><td>Inspired the vacuum-chamber rocket experiment</td></tr>
+    <tr><td>Dr John D. Agnostic</td><td>"PhD in spectrophotometry"</td><td>Wind-farm/curvature observation</td></tr>
+    <tr><td>Vortexpuppy Agnostic</td><td>"PhD in mathematics and physics"</td><td>Spherical-eye/visual-geometry argument</td></tr>
+    <tr><td>Samuel Blitz</td><td>"PhD in mathematical physics 2022"</td><td>Debate opponent / foil for angular-resolution argument</td></tr>
+    <tr><td>Bob Knodel</td><td><em>Behind the Curve</em> (2018)</td><td>Ring-laser gyroscope experiment</td></tr>
+    <tr><td>Massimo Mazzucco</td><td>Documentary filmmaker</td><td>Moon-landing hoax sourcing</td></tr>
+    <tr><td>Vera Rubin</td><td>Real astronomer</td><td>Cited accurately re: galaxy rotation curves / dark matter</td></tr>
+    <tr><td>Alex Hormozi, Matt Dillahunty</td><td>Business / atheist-debate figures</td><td>Dedications</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Rhetorical structure</h2>
+  <div class="claim-card">
+    <p>Opens with an extended epistemology/cognitive-bias primer (indoctrination, confirmation bias, normalcy bias, dogmatism) before any substantive claims. Repeatedly frames the whole project as structurally identical to atheist "deconstruction" of religion — Miller narrates his own break from Christianity as a template, dedicates the book to Alex Hormozi and Matt Dillahunty, and brands it "No religions. No beliefs. No biases. No assumptions." Central dialectical device: a "falsification-only" burden-of-proof scorecard (pp.205–230) cataloguing 100+ ordinary astronomy facts as unverified "positive claims" heliocentrism must defend.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Sources checked live</h2>
+  <div class="claim-card">
+    <table>
+      <tr><th>URL</th><th>Status (2026-08-09)</th></tr>
+      <tr><td><a href="http://shapedebate.com" target="_blank">shapedebate.com</a></td><td>Homepage — lists "Claim #2" as "2026 – Experiment done by Alex Kampf – waiting for upload"</td></tr>
+      <tr><td><a href="http://shapedebate.com/chamber" target="_blank">shapedebate.com/chamber</a></td><td>Stub — "This specific part of the book is not ready yet"</td></tr>
+      <tr><td><a href="http://shapedebate.com/space-travel" target="_blank">shapedebate.com/space-travel</a></td><td>No rocket/vacuum/Kampf's Law content</td></tr>
+      <tr><td><a href="http://shapedebate.com/links" target="_blank">shapedebate.com/links</a></td><td>Redirects to a sign-in-gated Google Drive folder ("Reference Material for GLOBE.pdf Deconstruction") — not yet opened</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>Still open</h2>
+  <div class="claim-card">
+    <p>No rebuttals or verdicts written yet — deliberately, per the flat-earth-origins standing rule ("refute the source, not the summary"). The six-verdict rubric pass hasn't started for any Globe Deconstruction claim. The Google Drive reference folder is unopened. Not yet decided whether this becomes its own <code>docs/*.html</code> page in a new repo or a section on an existing one.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Source: prerelease draft PDF sent by Levi Miller, extracted via pdftotext -layout (500 pages, ~9,161 lines). Full organized breakdown and raw extraction archived in the shared working folder. This page is a reading aid, not a published position.
+</footer>
+
+</body>
+</html>

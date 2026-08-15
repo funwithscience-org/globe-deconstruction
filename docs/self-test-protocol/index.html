@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Globe Deconstruction — Self-Test Protocol</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1e222b;
+    --border: #2a2f3a;
+    --text: #e7e9ee;
+    --text-dim: #9aa1af;
+    --accent: #6fb0ff;
+    --globe: #7fb2ff;
+    --flat: #f0b45c;
+    --warn: #ff8a8a;
+    --good: #7fd48a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  header {
+    padding: 32px 24px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header h1 { font-size: 1.6rem; margin: 0 0 6px; }
+  header .sub { color: var(--text-dim); font-size: 0.95rem; }
+  main { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+  .intro {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 20px 0 32px;
+    font-size: 0.95rem;
+  }
+  .test {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin-bottom: 24px;
+  }
+  .test-num {
+    display: inline-block;
+    background: var(--panel-2);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+  }
+  .test h2 { margin: 0 0 4px; font-size: 1.15rem; }
+  .test .targets { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 14px; }
+  .test h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-dim); margin: 16px 0 6px; }
+  .test p { margin: 4px 0; font-size: 0.95rem; }
+  .predictions {
+    display: flex;
+    gap: 12px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+  }
+  .pred {
+    flex: 1;
+    min-width: 220px;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+  .pred.globe { background: #10203a; border: 1px solid #234a7c; }
+  .pred.flat { background: #3a2f14; border: 1px solid #5a4a1e; }
+  .pred .label { font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 4px; }
+  .pred.globe .label { color: var(--globe); }
+  .pred.flat .label { color: var(--flat); }
+  .history-box {
+    background: #201830;
+    border: 1px solid #453268;
+    border-left: 3px solid #b58ef0;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin-top: 14px;
+    font-size: 0.9rem;
+  }
+  .history-box .label { color: #b58ef0; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 6px; }
+  .cost {
+    display: inline-block;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 0.78rem;
+    color: var(--good);
+    margin-top: 10px;
+  }
+  code { background: var(--panel-2); padding: 1px 5px; border-radius: 4px; font-size: 0.85em; }
+  footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Self-Test Protocol</h1>
+  <div class="sub">Seven falsifiable tests, built from Levi Miller's own claims and his own stated methodology (falsification-first, "no assumptions," Team A vs Team B). Each one is runnable with cheap equipment, without needing to trust anyone else's footage.</div>
+</header>
+
+<main>
+
+<div class="intro">
+  The book repeatedly frames its project as falsification-driven — settle questions with your own controlled tests, not appeals to authority on either side. These seven tests take that framing at face value: each one is something Miller (or anyone) can actually run, with a clear prediction under the globe model and a clear, different prediction under his model, so the result means something regardless of which way it comes out.
+</div>
+
+<div class="test">
+  <span class="test-num">TEST 1</span>
+  <h2>The bottom-up disappearance test — properly scaled</h2>
+  <div class="targets">Targets: Geocentric flat-Earth claim #1 (p.26) — objects disappear bottom-up due to angular resolution, not curvature</div>
+  <p><strong>His proposed setup (p.127):</strong> flashlight 2.5" above calm water, camera 0.5" above water, 410 feet apart.</p>
+
+  <h3>The problem</h3>
+  <p>At those heights, curvature isn't in play yet at 410 feet. Using the standard horizon-distance formula (d = √(2Rh), R = 3,959 mi): a 0.5" camera has a horizon-limited sightline of about <strong>1,320 ft</strong>; a 2.5" light source, about <strong>2,951 ft</strong>. Combined, the light should stay visible out to roughly <strong>4,271 feet (~0.81 miles)</strong> before curvature could geometrically block it — over 10x his stated baseline. Cross-checked independently: the curvature bulge at 410 ft is only about <strong>0.05 inches</strong>, smaller than either stated height. Neither model predicts disappearance at 410 ft, so a result at that distance can't discriminate between them.</p>
+
+  <div class="history-box">
+    <div class="label">This setup has a 150-year history — and it's the losing side</div>
+    <p>This is structurally the same test Samuel Rowbotham ran in 1838 on the Old Bedford River, the founding demonstration of "zetetic astronomy" and the direct ancestor of the water/hydrostatics claims elsewhere in the book: telescope held <strong>8 inches</strong> above the water, watching a boat flag <strong>3 feet</strong> above the water, over 6 miles. He reported the flag stayed visible the whole way; curvature predicted an ~11-foot drop below his line of sight.</p>
+    <p>In 1870, Alfred Russel Wallace corrected the experiment and settled a public wager against flat-earth proponent John Hampden. He changed exactly two things: raised the sightline to <strong>13 feet</strong> above the water (near-surface sightlines over water are dominated by atmospheric refraction — warm air over water bends light unpredictably at low grazing angles, varying with temperature and humidity), and added a third marker at the midpoint so the curvature bulge showed up directly. With those two fixes, the curvature appeared cleanly and Wallace won the bet.</p>
+    <p>Miller's flashlight/camera setup — both near-water, both very low — reproduces Rowbotham's original, contested methodology, not Wallace's corrected one.</p>
+  </div>
+
+  <h3>Rescaled protocol</h3>
+  <p>Run the same setup at four distances (500ft, 1,500ft, 3,000ft, 5,000ft), holding heights fixed, <em>and</em> elevate both the light and the camera well above the water (a few feet, à la Wallace) rather than inches, to control for near-surface refraction. Add a fixed reference marker at the midpoint.</p>
+  <div class="predictions">
+    <div class="pred globe"><div class="label">Globe predicts</div>Sharp, predictable disappearance point near the calculated horizon-distance sum for whatever heights are used, shifting predictably (√2 per doubling) if heights change.</div>
+    <div class="pred flat"><div class="label">Flat predicts</div>Visibility at all four distances, limited only by brightness/optics — no hard geometric cutoff at any of them.</div>
+  </div>
+  <span class="cost">Cost: tripod + flashlight + a truck, ~$0–50</span>
+</div>
+
+<div class="test">
+  <span class="test-num">TEST 2</span>
+  <h2>Full-moon "no highlight" claim, at his desk</h2>
+  <div class="targets">Targets: Claim #3 sub-claim — a spherical Moon lit by a point-source Sun should show a specular highlight, not uniform brightness</div>
+  <p><strong>Setup:</strong> a rough, matte-textured sphere (a golf ball, a stucco-coated craft ball, a scored orange) lit by a single point source (desk lamp or flashlight) across the room. Photograph once from an angle offset from the lamp, then again with the camera positioned right next to the lamp (near-zero phase angle — mimicking full-moon geometry).</p>
+  <div class="predictions">
+    <div class="pred globe"><div class="label">Standard photometrics predict</div>The near-zero-phase shot shows the same brightening/flattening effect seen on the full Moon (the lunar "opposition effect" — every surface feature's own shadow hides directly behind it from that exact viewing angle).</div>
+    <div class="pred flat"><div class="label">His claim predicts</div>No physical setup should be able to reproduce uniform illumination on a lit sphere without an external explanation.</div>
+  </div>
+  <span class="cost">Cost: a $2 ball and a desk lamp he already owns</span>
+</div>
+
+<div class="test">
+  <span class="test-num">TEST 3</span>
+  <h2>Moon-tilt illusion, with a lamp and a ball on a string</h2>
+  <div class="targets">Targets: Claim #3 sub-claim — moon-tilt illusion "explanation is not satisfactory" (p.192, 194–195)</div>
+  <p><strong>Setup:</strong> a lamp as the "Sun," a small ball hung as the "Moon" at several different angles/heights relative to a fixed horizon reference (a table edge or a taped line). Photograph the terminator (light/shadow boundary) line at each position.</p>
+  <div class="predictions">
+    <div class="pred globe"><div class="label">Standard geometry predicts</div>The terminator angle visibly changes with viewing geometry, reproducing the same "illusion" seen in his Santa Fe/Los Alamos photo, without needing to trust that photo.</div>
+    <div class="pred flat"><div class="label">His claim predicts</div>No consistent geometric/perceptual explanation should reproduce the effect on demand.</div>
+  </div>
+  <span class="cost">Cost: string + a ball he already has</span>
+</div>
+
+<div class="test">
+  <span class="test-num">TEST 4</span>
+  <h2>"Local light source" cloud-brightness claim — one setting change</h2>
+  <div class="targets">Targets: pp.170–172 — two cloud photos showing very different brightness "with the Sun still in full view"</div>
+  <p><strong>Setup:</strong> redo the same above-the-clouds photo sequence, but lock the camera to manual exposure/ISO/shutter (every phone has a "Pro" mode) instead of letting auto-exposure metering adjust between shots.</p>
+  <div class="predictions">
+    <div class="pred globe"><div class="label">Camera-artifact hypothesis predicts</div>The brightness swing disappears once exposure is held constant — the original result was auto-exposure metering, not a real change in the light source.</div>
+    <div class="pred flat"><div class="label">His claim predicts</div>The brightness difference persists even with exposure locked, indicating a genuine local/variable light source.</div>
+  </div>
+  <span class="cost">Cost: free — a phone setting</span>
+</div>
+
+<div class="test">
+  <span class="test-num">TEST 5</span>
+  <h2>Jupiter's moon-shadow "misalignment," as a blind prediction test</h2>
+  <div class="targets">Targets: Claim #3 sub-claim — Jupiter's moon shadows fail to align heliocentrically (pp.75, 160–161, 186–187)</div>
+  <p><strong>Setup:</strong> rather than critiquing someone else's stacked photo after the fact, pull a published shadow-transit prediction (Sky &amp; Telescope and similar sources publish exact times and geometry in advance) for an upcoming date, and independently observe it with a modest telescope.</p>
+  <div class="predictions">
+    <div class="pred globe"><div class="label">Standard model predicts</div>The observed shadow position matches the pre-published prediction, because the offset is a calculable phase-angle effect used routinely by amateur astronomers to time transits.</div>
+    <div class="pred flat"><div class="label">His claim predicts</div>The observed shadow position should not match an advance prediction based on heliocentric geometry.</div>
+  </div>
+  <p style="color:var(--text-dim); font-size:0.85rem;">This is the strongest version of the test because it's a genuine advance prediction — it can't be explained away retroactively either way.</p>
+  <span class="cost">Cost: a modest telescope, or borrowed time on one</span>
+</div>
+
+<div class="test">
+  <span class="test-num">TEST 6</span>
+  <h2>Kampf's Law, properly instrumented</h2>
+  <div class="targets">Targets: "Kampf's Law" (pp.79–84) — gas-propelled thrust requires an external medium to push against</div>
+  <p><strong>Setup:</strong> buy or rent an actual vacuum gauge (~$30–50) and report the real pressure achieved in torr or mbar, not just "vacuum on/off." Run the far-wall trial with the wall backed in absorptive material (foam, cloth) to reduce exhaust bounce-back, at the best achievable vacuum.</p>
+
+  <div class="history-box">
+    <div class="label">Why "does wall-distance stop mattering" is the wrong test</div>
+    <p>Even at a genuinely good vacuum, a nearby wall gives the vehicle's <em>own</em> ejected exhaust gas somewhere close to bounce and recirculate back against it — a real, distance-dependent secondary push that has nothing to do with ambient chamber pressure. This is a documented phenomenon in real propulsion testing, called <strong>facility effects</strong>: electric-propulsion test labs specifically size their vacuum chambers and add beam dumps/baffling to avoid exactly this contaminating thrust measurements (see the AIP <em>Physics of Plasmas</em> review, "A review of the impact of ground test-related facility effects on gridded ion thruster operation and performance," 2024).</p>
+    <p>That means "closer wall → faster/bigger reaction" (the book's own p.80 finding) doesn't discriminate between the two hypotheses — both predict that pattern, for different reasons. The decisive question isn't whether wall-distance-dependence disappears; it's whether the vehicle moves <em>at all</em> in the condition built to minimize recirculation.</p>
+  </div>
+
+  <div class="predictions">
+    <div class="pred globe"><div class="label">Newton's third law predicts</div>Nonzero motion in the farthest-wall / best-vacuum / absorptive-backing trial — any motion there already falsifies "requires an external substrate to work at all," even if closer-wall trials show a bigger or faster effect (now the expected recirculation confound, not evidence for the substrate claim).</div>
+    <div class="pred flat"><div class="label">Kampf's Law predicts</div>Zero motion in that same far-wall/absorptive/best-vacuum trial — no reaction at all without a nearby surface to push against.</div>
+  </div>
+  <p style="color:var(--text-dim); font-size:0.85rem;">Wall-distance comparison is still worth running as a secondary check — near-wall results should decay toward the far-wall baseline as distance increases, consistent with a shrinking recirculation effect rather than a fundamentally different mechanism.</p>
+  <span class="cost">Cost: ~$30–50 vacuum gauge + foam/cloth backing</span>
+</div>
+
+<div class="test">
+  <span class="test-num">TEST 6B</span>
+  <h2>Kampf's Law — the sharper claim: timing, not magnitude</h2>
+  <div class="targets">Targets: his refined mechanism — the push originates when the gas contacts the wall, transmitted back along the gas column, rather than at the moment of ejection</div>
+  <p>This is a more specific and more directly testable claim than "gas needs a substrate," and it's what he actually pointed to in the Action Labs footage: an apparent delay between gas first leaving the nozzle and the vehicle visibly starting to move — a delay that lines up with the gas cloud reaching the wall. Confirmed by direct rewatch of the source footage: the syringe's <em>substantial</em> motion is timed with wall contact, but this is not the <em>initial</em> movement — there's an earlier, smaller motion too, consistent with a two-stage pattern rather than motion strictly gated on wall contact.</p>
+  <p>The observation Miller points to as support — the syringe's suspension filament stays approximately vertical even after gas has visibly left the nozzle — has a mundane kinematic explanation, not evidence of delayed causation: an impulsive force changes <strong>velocity</strong> instantly, but <strong>displacement</strong> (what a filament's angle actually shows) is the time-integral of velocity. For a small syringe puff, the resulting displacement in the first tens of milliseconds can be a fraction of a millimeter — well below what's visible on normal-speed video. A vertical-looking filament right after gas exits is consistent with real, immediate, but very small momentum transfer, not with "nothing happened yet."</p>
+
+  <h3>Primary design — instrumented, not just visual</h3>
+  <p>Miller is committed to the horizontal-tube/syringe geometry, which is fine — the fix is proper force instrumentation on the same rig, not a redesign. Mount a small in-line load cell (strain gauge or piezo, ~$20–100, the same class of part used in hobby-rocketry thrust stands) directly between the syringe and its support, replacing the hanging filament — this gives a direct, continuous force-vs-time curve <em>at the source</em>, independent of anything downrange. Make the target wall an actual pressure-sensitive plate, giving a second force-vs-time trace of exactly when and how hard the gas cloud arrives. Run both simultaneously across a few wall distances.</p>
+  <div class="predictions">
+    <div class="pred globe"><div class="label">Newton's third law predicts</div>The source trace shows force onset at t≈0 (gas exit), shaped like the expected ejection impulse, independent of wall distance. If the wall is close enough for recirculation (Test 6), a second, distinguishable bump appears in the <em>same</em> source trace, timed just after the plate registers impact — a clean two-peak signature, not one delayed peak.</div>
+    <div class="pred flat"><div class="label">His mechanism predicts</div>The source trace shows near-zero force until a signal time-correlated with (not preceding) the plate's own contact registration — effectively one peak, gated by wall contact.</div>
+  </div>
+  <p style="color:var(--text-dim); font-size:0.85rem;">Bonus quantitative check: total impulse (area under the source force curve) should match the momentum predicted from the known ejected gas mass and exit velocity — a real first-principles number to test against, not just a shape or timing comparison.</p>
+
+  <h3>Cheaper fallback — video only</h3>
+  <p>Without load cells: high-framerate video (240fps, standard on most phones), tracking the filament's <em>angle</em> frame-by-frame rather than the syringe body's raw position — a pendulum string is a sensitive lever for tiny horizontal displacement, resolving sub-degree tilts from sub-millimeter motion well before it's visible at normal viewing speed. Timestamp gas-exit onset, first-detectable filament deflection, and gas-wall contact, across several wall distances including one far enough that gas transit time is a full second or more.</p>
+  <span class="cost">Primary cost: two load cells, ~$40–200 total. Fallback cost: a phone with slow-motion video (already owned) + free motion-tracking software</span>
+</div>
+
+<div class="test">
+  <span class="test-num">TEST 7</span>
+  <h2>Water-curvature "skinny warehouse" test, scaled to what's accessible</h2>
+  <div class="targets">Targets: p.89–90 — proposed 1000-meter controlled water-curvature test, never actually run</div>
+  <p><strong>Setup:</strong> a laser level plus a calm canal or long pool. At 100–200 meters the predicted curvature drop is under a millimeter — likely below what basic gear can resolve, which is itself informative (it explains why casual short-range observation never "sees" the curve, with no flat-earth explanation required). Scaling to a genuine mile-plus baseline with a surveying-grade level brings the predicted ~8 inches per mile² within easily measurable range.</p>
+  <div class="predictions">
+    <div class="pred globe"><div class="label">Globe predicts</div>A measurable drop appears once the baseline is long enough relative to instrument precision, matching the standard curvature formula.</div>
+    <div class="pred flat"><div class="label">Flat predicts</div>No drop appears at any baseline, regardless of instrument precision or distance.</div>
+  </div>
+  <span class="cost">Cost: laser level rental, ~$30–100/day</span>
+</div>
+
+</main>
+
+<footer>
+  Built from the prerelease draft of "Globe Deconstruction?" by Levi Miller (with Alex Kampf &amp; Mark Meyer). Each test is designed to produce a result that means something under the book's own stated falsification-first standard, regardless of which way it comes out.
+</footer>
+
+</body>
+</html>
