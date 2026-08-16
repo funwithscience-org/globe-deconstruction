@@ -248,9 +248,14 @@ function pExtended(h){
       x1 += v1*dt*0.00025; // scaled for on-canvas motion
       m -= burn;
       t += dt;
-      // spawn a visual exhaust particle roughly every 40 mass-units ejected
+      // spawn a visual exhaust particle roughly every 40 mass-units ejected.
+      // Freeze the block's position at spawn time (x1Spawn) -- a particle,
+      // once thrown, moves at its own constant speed and must NOT be
+      // re-anchored to the block's continuing (accelerating) position on
+      // every subsequent frame, or it visually appears to decelerate as
+      // the block races away from it.
       if (lastMassSpawned - m > 40){
-        particles.push({age:0, vx: 0.55 + Math.random()*0.15, y: 0});
+        particles.push({age:0, vx: 0.55 + Math.random()*0.15, x1Spawn: x1});
         lastMassSpawned = m;
       }
     }
@@ -288,9 +293,11 @@ function pExtended(h){
     c.fillStyle = C.fake;
     c.fillRect(cx+side/2-2, midY+40-side/2-3, 6, 6);
 
-    // exhaust particles
+    // exhaust particles -- fixed world-frame origin at spawn time (see step()),
+    // so each particle moves at a constant screen speed as it fades, independent
+    // of the block's own continuing acceleration away from it.
     particles.forEach(p=>{
-      const px = cx + side/2 + p.vx * p.age * W*0.28;
+      const px = W*p.x1Spawn + side/2 + p.vx * p.age * W*0.28;
       const alpha = Math.max(0, 1 - p.age/2.2);
       c.fillStyle = `rgba(192,57,43,${alpha.toFixed(2)})`;
       c.fillRect(px, midY+40-side/2-4, 5, 5);
@@ -336,9 +343,16 @@ function pExtended(h){
 
   const M0 = 1000, MFLOOR = 250, MDOT = 6, VE = 40, F = MDOT*VE;
   const SIM_SPEED = 10;
+  // ALT_SCALE converts integrated velocity into "altitude". This has to be
+  // large enough that altitude climbs (and density falls) faster than
+  // velocity squared grows the drag term -- otherwise drag keeps winning
+  // as the block speeds up and "efficiency" falsely trends DOWN across the
+  // whole burn instead of climbing toward 100% as advertised. Tuned and
+  // verified numerically (see harness notes) rather than by inspection.
+  const ALT_SCALE = 0.16;
   const H_SCALE = 40;   // density scale height, toy units
-  const TOP_ALT = 150;  // altitude at top of canvas, toy units
-  const K_DRAG = 0.15;  // drag coefficient, tuned for visible effect at ground level
+  const TOP_ALT = 150;  // visual altitude at top of canvas, toy units (display clamps here; physics can run past it)
+  const K_DRAG = 2.5;   // drag coefficient, tuned for a visible dip-then-recover (verified numerically, not backwards)
 
   function density(alt){ return Math.exp(-Math.max(alt,0)/H_SCALE); }
 
@@ -356,9 +370,9 @@ function pExtended(h){
       const aActual = Math.max(0, aIdeal - drag);
 
       v1 += aActual*dt;
-      alt += v1*dt*0.02;
+      alt += v1*dt*ALT_SCALE;
       vIdeal += aIdeal*dt;
-      altIdeal += vIdeal*dt*0.02;
+      altIdeal += vIdeal*dt*ALT_SCALE;
 
       m -= burn;
       t += dt;
