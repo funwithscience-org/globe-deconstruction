@@ -104,7 +104,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 
 <h2>2 &middot; A falsifiable prediction, made months ahead</h2>
 <p>If new-moon geometry is the real explanation, it should be possible to calculate &mdash; independently of any photograph, any footage, any claimed observation &mdash; exactly when the Moon will be in that position, from any given point on Earth, arbitrarily far in advance. That calculation is just applied orbital mechanics: known orbital elements for the Earth&ndash;Moon&ndash;Sun system, run forward in time.</p>
-<p>The visualization below does exactly that for Reykjav&iacute;k, Iceland, across the nine days surrounding the total solar eclipse of 12 August 2026. Each curve is that day's Moon path across the local sky, plotted by azimuth and altitude; step through the time slider and every date's Moon-and-Sun pair updates together, phase included, so you can watch the 12 August pair converge to the same point in the sky while every other day's pair stays apart. Nothing here is fitted after the fact &mdash; the underlying ephemeris (Astronomy&nbsp;Engine, cross-checked against JPL Horizons and NOVAS) computes raw positions the same way regardless of which day you're looking at.</p>
+<p>The visualization below does exactly that for Reykjav&iacute;k, Iceland, across the nine days surrounding the total solar eclipse of 12 August 2026. All nine daily Moon paths stay on screen at once, plotted by azimuth and altitude. The separate row of dots marks where the <em>Sun</em> stood at 17:50&nbsp;UTC &mdash; the eclipse's own clock time &mdash; on each of those same nine days: a short, tight arc that barely shifts from one day to the next. Pick a day and press play to send that day's Moon along its own path, phase included. Then step the selection from the 8th through to the 16th and watch what the Moon does at that fixed hour: it closes on the Sun's arc day after day, lands on it on the 12th, and keeps right on going. Nothing here is fitted after the fact &mdash; the underlying ephemeris (Astronomy&nbsp;Engine, cross-checked against JPL Horizons and NOVAS) computes raw positions the same way regardless of which day you're looking at.</p>
 
 <div class="chart-box">
 <div id="moon-horizon-paths">
@@ -118,8 +118,16 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
   </div>
   <svg id="mhp-chart" role="img" aria-labelledby="mhp-title mhp-desc" viewBox="0 0 760 470">
     <title id="mhp-title">Daily Moon paths above Reykjavík's horizon, 8 to 16 August 2026</title>
-    <desc id="mhp-desc">Nine separate daily arcs show the Moon moving steadily from eastern rise to western set. Moon and Sun markers appear on every path at the same selected UTC time; the 12 August pair overlaps at the eclipse.</desc>
+    <desc id="mhp-desc">Nine daily arcs show the Moon moving from eastern rise to western set, one arc per day from 8 to 16 August. Superimposed on them is a row of nine dots marking where the Moon stood at 17:50 UTC, the eclipse's clock time, on each of those days: the dots step evenly westward by about fourteen degrees a day. A single larger dot marks the Sun at that same hour — a single dot because across all nine days the Sun's position at 17:50 shifts by less than one degree, too little to separate at this scale. The Moon's row of dots runs straight into the Sun's dot on 12 August and straight out the other side, at the same steady pace, with no pause or special behaviour at the eclipse.</desc>
   </svg>
+  <div class="mhp-legend text-small" role="list" aria-label="Chart legend">
+    <span role="listitem"><i class="mhp-sw" style="background:var(--muted-foreground);opacity:.55"></i>Other days' Moon paths</span>
+    <span role="listitem"><i class="mhp-sw" style="background:var(--viz-series-2)"></i>12 Aug Moon path (eclipse day)</span>
+    <span role="listitem"><i class="mhp-sw" style="background:var(--viz-series-1)"></i>Selected day's Moon path</span>
+    <span role="listitem"><i class="mhp-dot" style="background:var(--foreground);opacity:.7"></i>Moon at 17:50&nbsp;UTC, one dot per day</span>
+    <span role="listitem"><i class="mhp-dot mhp-dot-lg" style="background:var(--viz-series-3)"></i>Sun at 17:50&nbsp;UTC &mdash; all nine days overlap here</span>
+    <span role="listitem"><i class="mhp-ring"></i>Moon, selected day, moving with the slider</span>
+  </div>
   <label class="form-label mt-2" for="mhp-time"><span id="mhp-clock">12 Aug · 17:50 UTC</span>
     <input id="mhp-time" class="form-range" type="range" min="0" max="144" value="107" step="1">
   </label>
@@ -134,19 +142,26 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 #moon-horizon-paths .moon-path{fill:none;stroke:var(--muted-foreground);stroke-width:1.3;opacity:.44}
 #moon-horizon-paths .moon-path.selected{stroke:var(--viz-series-1);stroke-width:3;opacity:1}
 #moon-horizon-paths .moon-path.eclipse{stroke:var(--viz-series-2);stroke-width:2.4;opacity:.86}
-#moon-horizon-paths .sun-path{fill:none;stroke:var(--viz-series-3);stroke-width:1.5;stroke-dasharray:5 5;opacity:.7}
+#moon-horizon-paths .sun-arc-dot{fill:var(--viz-series-3);opacity:.9}
+#moon-horizon-paths .sun-arc-dot.selected{opacity:1}
+#moon-horizon-paths .ref-track{fill:none;stroke:var(--foreground);stroke-width:1.2;stroke-dasharray:4 4;opacity:.4}
+#moon-horizon-paths .moon-ref-dot{fill:var(--foreground);opacity:.7}
+#moon-horizon-paths .moon-ref-dot.selected{opacity:1;stroke:var(--background);stroke-width:1.5}
 #moon-horizon-paths .hour-dot{fill:var(--muted-foreground);opacity:.7}
 #moon-horizon-paths .hour-dot.selected{fill:var(--viz-series-1);opacity:1}
 #moon-horizon-paths .moon-dark{fill:var(--muted);stroke:var(--foreground);stroke-width:1.4}
 #moon-horizon-paths .moon-light{fill:var(--foreground)}
-#moon-horizon-paths .time-sun{fill:var(--viz-series-3);stroke:var(--background);stroke-width:1.5;opacity:.62}
-#moon-horizon-paths .time-pair{opacity:.62}
-#moon-horizon-paths .time-pair.selected{opacity:1}
 #moon-horizon-paths .sun{fill:var(--viz-series-3);stroke:var(--background);stroke-width:2}
 #moon-horizon-paths .label{fill:var(--foreground);font-size:12px;font-weight:500}
 #moon-horizon-paths .note{fill:var(--muted-foreground);font-size:11px;font-weight:400}
 #moon-horizon-paths .halo{paint-order:stroke;stroke:var(--background);stroke-width:4;stroke-linejoin:round}
 #moon-horizon-paths .motion{fill:none;stroke:var(--viz-series-1);stroke-width:2}
+#moon-horizon-paths .mhp-legend{display:flex;flex-wrap:wrap;gap:.5rem 1.1rem;margin:.6rem 0 0}
+#moon-horizon-paths .mhp-legend span{display:inline-flex;align-items:center;gap:.35rem}
+#moon-horizon-paths .mhp-sw{display:inline-block;width:14px;height:3px;border-radius:2px}
+#moon-horizon-paths .mhp-dot{display:inline-block;width:8px;height:8px;border-radius:50%}
+#moon-horizon-paths .mhp-dot-lg{width:13px;height:13px}
+#moon-horizon-paths .mhp-ring{display:inline-block;width:9px;height:9px;border-radius:50%;border:2px solid var(--foreground);background:var(--background)}
 </style>
 <script>
 (()=>{
@@ -172,11 +187,49 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
     const dots=[];day.points.forEach((p,i)=>{if(p.alt>=0&&i%12===0)dots.push(el('circle',{cx:x(p.az),cy:y(p.alt),r:2.5,class:'hour-dot'},layer))});dotNodes.set(day.day,dots);
     const above=day.points.filter(p=>p.alt>=0); if(above.length){const p=above.reduce((a,b)=>a.alt>b.alt?a:b);text(x(p.az),y(p.alt)-7,day.label,day.day===12?'label halo':'note halo','middle')}
   });
-  const eclipseDay=D.days.find(d=>d.day===12);segments(eclipseDay.sunPoints).forEach(seg=>el('path',{d:pathData(seg),class:'sun-path'},layer));
-  el('circle',{cx:x(D.peak.az),cy:y(D.peak.alt),r:8,class:'sun'},layer);text(x(D.peak.az)+12,y(D.peak.alt)-10,'Sun · totality', 'label halo');
+
+  // Where the Sun stood at the eclipse's own clock time on each of the nine
+  // days. These are FIXED reference points, never animated -- that is the
+  // whole argument. At this hour the Sun occupies essentially the same patch
+  // of sky every day (under a degree of drift across the period), while the
+  // Moon's position at the same hour marches ~15 deg/day through it.
+  const peakDate=new Date(D.contacts.peak);
+  const peakMinutes=peakDate.getUTCHours()*60+peakDate.getUTCMinutes()+peakDate.getUTCSeconds()/60;
+  const sunArcIndex=Math.round(peakMinutes/10);
+  const sunClock=String(Math.floor(sunArcIndex/6)).padStart(2,'0')+':'+String(sunArcIndex*10%60).padStart(2,'0');
+  // The MOON at that same hour on each of the nine days. This is the series that
+  // actually renders: consecutive dots sit ~30px apart, marching ~13.8°/day
+  // straight through the Sun on the 12th and out the far side afterwards.
+  const moonRefs=D.days.map(day=>({day:day.day,p:day.points[sunArcIndex]})).filter(r=>r.p.alt>=0);
+  el('path',{d:pathData(moonRefs.map(r=>r.p)),class:'ref-track'},layer);
+  const moonDots=new Map();
+  moonRefs.forEach(r=>moonDots.set(r.day,el('circle',{cx:x(r.p.az),cy:y(r.p.alt),r:4,class:'moon-ref-dot'},layer)));
+  const firstMoon=moonRefs[0].p;
+  text(x(firstMoon.az),y(firstMoon.alt)+19,'Moon at '+sunClock+' UTC, each day','note halo','middle');
+
+  // The SUN at the same hour on the same nine days. Across the whole period it
+  // drifts 0.8° in azimuth and 2.3° in altitude -- at this scale, 1.5 x 9.6 px.
+  // The nine dots therefore genuinely merge into a single mark. That overlap is
+  // the point, so it gets labelled rather than exaggerated into a fake spread.
+  const sunRefs=D.days.map(day=>({day:day.day,p:day.sunPoints[sunArcIndex]})).filter(r=>r.p.alt>=0);
+  const sunDots=new Map();
+  sunRefs.forEach(r=>sunDots.set(r.day,el('circle',{cx:x(r.p.az),cy:y(r.p.alt),r:3.5,class:'sun-arc-dot'},layer)));
+  // r=11 against the Moon marker's r=8: on eclipse day the Moon lands dead on
+  // the Sun, and without the size difference it would hide it completely. The
+  // remaining ring also reads correctly as what a total eclipse looks like.
+  el('circle',{cx:x(D.peak.az),cy:y(D.peak.alt),r:11,class:'sun'},layer);
+  text(x(D.peak.az)+16,y(D.peak.alt)-13,'Sun · totality','label halo');
+  text(x(D.peak.az)+16,y(D.peak.alt)-1,'all nine days’ Sun positions','note halo');
+  text(x(D.peak.az)+16,y(D.peak.alt)+11,'fall inside this one dot','note halo');
+  // Angular separation between two horizontal-coordinate points, in degrees.
+  const RAD=Math.PI/180;
+  const sep=(a,b)=>Math.acos(Math.min(1,Math.max(-1,Math.sin(a.alt*RAD)*Math.sin(b.alt*RAD)+Math.cos(a.alt*RAD)*Math.cos(b.alt*RAD)*Math.cos((a.az-b.az)*RAD))))/RAD;
   const arrowY=y(7);el('path',{d:'M'+x(55)+','+arrowY+' L'+x(115)+','+arrowY,class:'motion','marker-end':'url(#mhp-arrow)'});text(x(85),arrowY-8,'daily motion', 'note halo','middle');
-  const timePairs=new Map();
-  D.days.forEach(day=>{const pair=el('g',{class:'time-pair'},layer);const sunMark=el('circle',{r:4,class:'time-sun'},pair);const moonMark=el('g',{},pair);const dark=el('circle',{r:5.5,class:'moon-dark'},moonMark);const light=el('path',{class:'moon-light'},moonMark);timePairs.set(day.day,{pair,sunMark,moonMark,dark,light})});let timer=null;
+
+  // One moving Moon marker, for the selected day only. The Sun is deliberately
+  // NOT animated -- it is represented solely by the fixed reference dots above.
+  const timePair=(()=>{const moonMark=el('g',{},layer);const dark=el('circle',{r:8,class:'moon-dark'},moonMark);const light=el('path',{class:'moon-light'},moonMark);return {moonMark,dark,light}})();
+  let timer=null;
   function phasePath(phase,r){
     const waxing=phase<=180, q=Math.cos(phase*Math.PI/180), pts=[];
     for(let i=0;i<=20;i++){const yy=-r+2*r*i/20,edge=Math.sqrt(Math.max(0,r*r-yy*yy));pts.push([waxing?edge:-edge,yy])}
@@ -184,14 +237,28 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
     return pts.map((v,i)=>(i?'L':'M')+v[0].toFixed(2)+','+v[1].toFixed(2)).join(' ')+' Z'
   }
   function selected(){return D.days.find(d=>d.day===+daySelect.value)}
-  function updateSelection(){const s=+daySelect.value;pathNodes.forEach((nodes,d)=>nodes.forEach(n=>n.setAttribute('class','moon-path '+(d===s?'selected':(d===12?'eclipse':'')))));dotNodes.forEach((nodes,d)=>nodes.forEach(n=>n.setAttribute('class','hour-dot '+(d===s?'selected':''))));updateTime()}
-  function updateTime(){const day=selected(),index=+slider.value,p=day.points[index],selectedDay=+daySelect.value;D.days.forEach(dy=>{const q=dy.points[index],s=dy.sunPoints[index],marks=timePairs.get(dy.day),active=dy.day===selectedDay,r=active?7.2:4.8;marks.pair.setAttribute('class','time-pair '+(active?'selected':''));marks.moonMark.setAttribute('transform','translate('+x(q.az)+' '+y(Math.max(0,q.alt))+')');marks.dark.setAttribute('r',active?8:5.5);marks.light.setAttribute('d',phasePath(q.phase,r));marks.moonMark.style.display=q.alt>=0?'':'none';marks.sunMark.setAttribute('cx',x(s.az));marks.sunMark.setAttribute('cy',y(Math.max(0,s.alt)));marks.sunMark.setAttribute('r',active?7:4);marks.sunMark.style.display=s.alt>=0?'':'none'});const d=new Date(p.t);clock.textContent=day.label+' · '+String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0')+' UTC on every path';const lit=Math.round((1-Math.cos(p.phase*Math.PI/180))*50);detail.textContent=p.alt>=0?'Selected Moon: azimuth '+p.az.toFixed(1)+'°, altitude '+p.alt.toFixed(1)+'°, '+lit+'% illuminated. Every Moon–Sun pair is shown at this same UTC time.':'Selected Moon is below Reykjavík’s horizon; the other dates remain plotted at the same UTC time.'}
+  function updateSelection(){const s=+daySelect.value;pathNodes.forEach((nodes,d)=>nodes.forEach(n=>n.setAttribute('class','moon-path '+(d===s?'selected':(d===12?'eclipse':'')))));dotNodes.forEach((nodes,d)=>nodes.forEach(n=>n.setAttribute('class','hour-dot '+(d===s?'selected':''))));sunDots.forEach((n,d)=>n.setAttribute('class','sun-arc-dot '+(d===s?'selected':'')));moonDots.forEach((n,d)=>{n.setAttribute('class','moon-ref-dot '+(d===s?'selected':''));n.setAttribute('r',d===s?6:4)});updateTime()}
+  function updateTime(){
+    const day=selected(),index=+slider.value,p=day.points[index];
+    timePair.moonMark.setAttribute('transform','translate('+x(p.az)+' '+y(Math.max(0,p.alt))+')');
+    timePair.light.setAttribute('d',phasePath(p.phase,7.2));
+    timePair.moonMark.style.display=p.alt>=0?'':'none';
+    const d=new Date(p.t);
+    clock.textContent=day.label+' · '+String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0')+' UTC';
+    const lit=Math.round((1-Math.cos(p.phase*Math.PI/180))*50);
+    const now=p.alt>=0
+      ? 'Moon now: azimuth '+p.az.toFixed(1)+'°, altitude '+p.alt.toFixed(1)+'°, '+lit+'% illuminated.'
+      : 'Moon is below Reykjavík’s horizon at this time.';
+    const gap=sep(day.points[sunArcIndex],day.sunPoints[sunArcIndex]);
+    const at=' At '+sunClock+' UTC on '+day.label+' — the eclipse’s own clock time — the Moon sat '+
+      (gap<1?gap.toFixed(2):gap.toFixed(1))+'° from the Sun'+(day.day===12?', i.e. on top of it.':'.');
+    detail.textContent=now+at;
+  }
   function stop(){if(timer)clearInterval(timer);timer=null;play.textContent='Play selected day';play.setAttribute('aria-pressed','false')}
   play.addEventListener('click',()=>{if(timer){stop();return}play.textContent='Pause';play.setAttribute('aria-pressed','true');timer=setInterval(()=>{let n=+slider.value+1;if(n>144)n=0;slider.value=n;updateTime()},90)});
   slider.addEventListener('input',()=>{stop();updateTime()}); daySelect.addEventListener('change',()=>{stop();updateSelection()});updateSelection();
 })();
-</script>
-</div>
+</script></div>
 
 <p>The calculation places maximum eclipse at <strong>17:48:38&nbsp;UTC</strong>, Sun altitude <strong>24.6&deg;</strong> above Reykjav&iacute;k's horizon, Moon illumination <strong>0%</strong> &mdash; run independently of, and before, the event itself. A second, independently built eclipse calculator (sunpoint.org.uk, not affiliated with this page or with Astronomy&nbsp;Engine) puts local maximum at approximately 17:48:48 with the Sun at about 24.5&deg; &mdash; Iceland doesn't observe daylight saving, so its local time is UTC year-round, making that a direct, ten-second, 0.1&deg; agreement between two independently written pieces of software predicting the same sixty-second window in the sky, months before it happened. And on 12 August 2026, it happened, on schedule, watched live from Reykjav&iacute;k.</p>
 
