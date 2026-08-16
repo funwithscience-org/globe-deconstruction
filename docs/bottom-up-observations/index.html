@@ -130,6 +130,117 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 
 <p>The footage itself shows this isn't a stable, geometry-driven effect either. In the daytime clip he narrates the light dropping out and returning within about a second: &ldquo;there it's gone&hellip; and I haven't even touched the water yet. There I touched the water and it's back again.&rdquo; In the night clip, the light drops out for a single frame and returns immediately. Curvature does not switch on and off inside one second. Both are the signature of a marginal, dynamic, near-surface effect &mdash; not a fixed geometric one.</p>
 
+<h2>3a &middot; The book makes the same case with a diagram &mdash; and the diagram gives it away</h2>
+<p>The same argument runs at length in <em>Globe Deconstruction?</em> (Levi Miller, prerelease draft, 2026), pp.&nbsp;96&ndash;115, opening with the headlights-merging-at-distance analogy and building through a hallway-perspective sequence to the pond test itself. It's worth answering separately from the video for one reason: <strong>the book commits to a number.</strong> The video gestures at &ldquo;angular resolution&rdquo;; the book names the threshold twice &mdash; the visual angle falling below &ldquo;1/60th of 1 degree&rdquo; (p.&nbsp;102), restated as 0.0167&deg; (p.&nbsp;107). That is the standard naked-eye figure, and it is the right number to reach for.</p>
+<p>It is also never applied to anything. The phrase &ldquo;the mathematics of angular resolution&rdquo; appears on p.&nbsp;100, but no arithmetic follows it anywhere in the chapter. So here it is, using his threshold and his measurements.</p>
+
+<div class="killer"><strong>His own pond target clears his own threshold.</strong> A 2.5&nbsp;in target at 410&nbsp;ft subtends 2.5&nbsp;&divide;&nbsp;4,920&nbsp;=&nbsp;5.08&times;10<sup>&minus;4</sup>&nbsp;rad, which is <strong>1.75 arcminutes</strong> &mdash; 1.75&times; his stated limit. Measured from the 0.5&nbsp;in lens axis rather than the waterline it is 1.40 arcminutes, still 1.4&times; the limit. For that target to merge into the water by angular resolution alone, it would need to be at roughly <strong>716&nbsp;ft</strong>, not 410. The experiment is staged well inside the distance his own figure requires.</div>
+
+<h3>What the diagram on p.&nbsp;107 actually shows</h3>
+<figure>
+  <img src="assets/book-p107-angle-diagram.jpg" alt="Diagram from the book: an observer's eye at height h1 on the left, a water surface, and a sailing boat at right. Point A is marked at the near end of the boat's hull where it meets the water, point B at the far end of the hull at the waterline, and point C at the masthead. Red rays run from the eye to A and to B; black rays run to C and to marks on the water.">
+  <figcaption><b>The load-bearing diagram.</b> A is the near end of the hull at the waterline; B is the far end of the same hull; C is the masthead. <span class="cred">Figure from <em>Globe Deconstruction?</em> (Levi Miller, prerelease draft, 2026), p.&nbsp;107. Reproduced for critical review.</span></figcaption>
+</figure>
+
+<p>Read what A and B are. They are both on the water, at the near and far ends of the hull &mdash; so <em class="term">angle AB is the boat's length measured along the line of sight</em>. It is a depth. C is the masthead, so AC and BC are the angles that carry the boat's height.</p>
+<p>Now read his own sentence against his own drawing:</p>
+<p class="pull">&ldquo;When angle AB reaches 0.0167 degrees, it will be visually invisible to the eye, while angle AC and angle BC will still be visually distinguishable.&rdquo; &mdash; p.&nbsp;107</p>
+<p>That is the argument conceding itself. When AB collapses, the boat keeps AC and BC &mdash; it keeps its full height, waterline to masthead. What has been lost is the ability to tell the bow from the stern. His mechanism deletes the hull's <em>length</em>, not the hull. A boat in that state is still entirely visible; it just sits at an ambiguous distance. That is loss of depth information, and it is not what &ldquo;disappearing bottom-up&rdquo; means.</p>
+
+<h3>Why the two angles behave completely differently</h3>
+<p>The reason the diagram can't do the work asked of it is that horizontal and vertical extents obey different scaling laws, and only one of them contains the observer's height.</p>
+
+<figure>
+<svg viewBox="0 0 760 400" role="img" aria-labelledby="ang-t ang-d">
+  <title id="ang-t">The depth angle and the height angle compared at two observer heights</title>
+  <desc id="ang-d">Two stacked scenes show the same boat at the same distance. In the upper scene the eye is high above the water; in the lower scene it is close to the water. The red pair of rays spans A and B, the near and far ends of the hull at the waterline, and is about nine times narrower in the lower scene. The blue pair of rays spans A and C, the waterline and the masthead, and subtends exactly the same angle of 11.6 degrees in both scenes.</desc>
+  <g font-family="Inter,system-ui,sans-serif" font-size="11" fill="#6E675B">
+
+    <!-- scene 1: high eye. water y=150, mast top 100 above water, eye 90 above water -->
+    <rect x="40" y="150" width="690" height="20" fill="#2a5a8c" opacity=".13"/>
+    <line x1="40" y1="150" x2="730" y2="150" stroke="#2E4057" stroke-width="1.2"/>
+    <path d="M560,150 L660,150 L652,142 L568,142 Z" fill="#3A352D" opacity=".72"/>
+    <line x1="560" y1="150" x2="560" y2="50" stroke="#3A352D" stroke-width="2"/>
+    <line x1="70" y1="60" x2="660" y2="150" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="70" y1="60" x2="560" y2="150" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="70" y1="60" x2="560" y2="50" stroke="#2a5a8c" stroke-width="1.5"/>
+    <circle cx="70" cy="60" r="5" fill="#fff" stroke="#2E4057" stroke-width="1.6"/>
+    <text x="70" y="48" text-anchor="middle" fill="#2E4057" font-weight="600">eye, high</text>
+    <text x="556" y="165" text-anchor="end" fill="#c0392b" font-weight="700">A</text>
+    <text x="666" y="165" fill="#c0392b" font-weight="700">B</text>
+    <text x="556" y="46" text-anchor="end" fill="#2a5a8c" font-weight="700">C</text>
+    <text x="676" y="112" fill="#c0392b">A&ndash;B = 1.73&deg;</text>
+    <text x="676" y="70" fill="#2a5a8c">A&ndash;C = 11.57&deg;</text>
+
+    <!-- scene 2: low eye. water y=310, mast top 100 above water, eye 10 above water -->
+    <rect x="40" y="310" width="690" height="20" fill="#2a5a8c" opacity=".13"/>
+    <line x1="40" y1="310" x2="730" y2="310" stroke="#2E4057" stroke-width="1.2"/>
+    <path d="M560,310 L660,310 L652,302 L568,302 Z" fill="#3A352D" opacity=".72"/>
+    <line x1="560" y1="310" x2="560" y2="210" stroke="#3A352D" stroke-width="2"/>
+    <line x1="70" y1="300" x2="660" y2="310" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="70" y1="300" x2="560" y2="310" stroke="#c0392b" stroke-width="1.5"/>
+    <line x1="70" y1="300" x2="560" y2="210" stroke="#2a5a8c" stroke-width="1.5"/>
+    <circle cx="70" cy="300" r="5" fill="#fff" stroke="#2E4057" stroke-width="1.6"/>
+    <text x="70" y="288" text-anchor="middle" fill="#2E4057" font-weight="600">eye, low</text>
+    <text x="556" y="325" text-anchor="end" fill="#c0392b" font-weight="700">A</text>
+    <text x="666" y="325" fill="#c0392b" font-weight="700">B</text>
+    <text x="556" y="206" text-anchor="end" fill="#2a5a8c" font-weight="700">C</text>
+    <text x="676" y="310" fill="#c0392b">A&ndash;B = 0.20&deg;</text>
+    <text x="676" y="252" fill="#2a5a8c">A&ndash;C = 11.57&deg;</text>
+
+    <text x="40" y="360" fill="#c0392b" font-weight="700">A&ndash;B, along the water &mdash; the depth angle.</text>
+    <text x="313" y="360">Almost nine times narrower once the eye drops.</text>
+    <text x="40" y="380" fill="#2a5a8c" font-weight="700">A&ndash;C, vertical &mdash; the height angle.</text>
+    <text x="285" y="380">Exactly the same in both scenes.</text>
+  </g>
+</svg>
+  <figcaption><b>The same boat, the same distance, two eye heights.</b> Dropping the eye crushes the red depth angle from 1.73&deg; to 0.20&deg; and leaves the blue height angle at 11.57&deg; in both. The angles quoted are those actually drawn, and can be measured off the figure. <span class="cred">Vertical scale is exaggerated for legibility; at real proportions, where distance vastly exceeds both heights, every angle here is tiny and the height angle's independence from eye height becomes exact. Diagram original; geometry after the figure on p.&nbsp;107.</span></figcaption>
+</figure>
+
+<p>For a horizontal segment of length <code>L</code> lying on the water with its near end at distance <code>d</code>, seen from eye height <code>h</code>, the subtended angle is <code>h/d &minus; h/(d+L)</code>, which for <code>d &gg; L</code> is approximately <code>hL/d&sup2;</code>. For a vertical extent <code>H</code> at distance <code>d</code>, it is approximately <code>H/d</code>. The first is proportional to <code>h</code> and falls off as the square of distance. The second <strong>contains no <code>h</code> at all.</strong></p>
+<p>That is the whole error, stated formally. The book correctly derives the height-dependence of horizontal extents on pp.&nbsp;105&ndash;106, and then applies it to a vertical one. Lowering the camera foreshortens the <em>water surface</em>; it does nothing whatsoever to the angular height of an object standing on that surface.</p>
+
+<h3>The numbers rule out the photographic example too</h3>
+<figure>
+  <img src="assets/book-p100-boat-heights.jpg" alt="Two side-by-side video frames of the same motorboat on a lake, labelled 1 inch observer height and 36 inch observer height. In the 1 inch frame the lower hull is cut off at the waterline; in the 36 inch frame more of the hull is visible.">
+  <figcaption><b>The photographic claim.</b> The same boat from 1&nbsp;in and 36&nbsp;in above the water, captioned &ldquo;as the observer's height increases, we can see more because of the mathematics of angular resolution.&rdquo; <span class="cred">Figure from <em>Globe Deconstruction?</em> (Levi Miller, prerelease draft, 2026), p.&nbsp;100. Reproduced for critical review.</span></figcaption>
+</figure>
+
+<p>Before the arithmetic, one thing to note about the pair itself: <strong>the two frames are not scale-matched.</strong> Crop both boats to the same window and the 36&nbsp;in boat is rendered noticeably larger than the 1&nbsp;in boat &mdash; roughly a third larger by the cleanest measurement we could take, though we won't put a firm figure on it, because the images are low-resolution reproductions of video stills and repeated attempts to measure them automatically disagreed with each other. Either the zoom differs between the two frames or the boat's range does, and possibly both. That matters twice over. It explains most of why the right-hand boat looks <em>sharper</em>, which is a magnification effect rather than anything to do with eye height. And if the range changed as well, then more than one variable moved between the two photographs, so the pair does not isolate observer height in the way the caption assumes. This does not touch the fact that more hull is visible on the right &mdash; that part is real and is not in dispute &mdash; but it does mean the comparison is not the controlled one it is presented as.</p>
+<p>With that noted, take a 6&nbsp;m hull, about right for the boat pictured, and apply his own 1-arcminute threshold to angle AB:</p>
+
+<table class="cmp">
+  <thead><tr><th>Observer height</th><th>Beyond this range, angle AB is unresolvable</th><th>Angle AB for a boat 1&nbsp;mile out</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">36 in</td><td>~441 ft</td><td>0.44 arcsec &mdash; <strong>1/136 of his limit</strong></td></tr>
+    <tr><td class="metric">1 in</td><td>~66 ft</td><td>0.012 arcsec &mdash; <strong>1/4,900 of his limit</strong></td></tr>
+  </tbody>
+</table>
+<p class="scalewarn">The boat is plainly hundreds of yards out &mdash; far past 441&nbsp;ft on any reading of the frame. Both photographs are therefore taken well beyond the range at which angle AB has already collapsed to nothing, and the exact distance doesn't need settling for that to hold.</p>
+
+<div class="killer"><strong>His own mechanism predicts the two photographs should look identical.</strong> If angle AB is thousands of times below the resolution limit in <em>both</em> frames, it cannot be what differs between them. Whatever produces the visible change between 1&nbsp;in and 36&nbsp;in, it is not the effect the preceding eleven pages were built to establish.</div>
+
+<h3>Three of his own examples have no depth to lose</h3>
+<p>The mechanism also has nothing to act on in the very demonstrations offered for it. A ship departing stern-on presents its transom &mdash; a flat face with essentially no along-sight depth, so angle AB is near zero from the outset &mdash; and hulls still vanish bottom-first on a departing ship, which is the observation the whole chapter exists to explain. The night pond test uses a bare torch: a point source, for which AB is undefined. The daytime pond test uses a flat target facing the camera, for which AB is again effectively zero. In all three cases the quantity said to be doing the work is either zero or has no meaning, and the effect happens anyway.</p>
+
+<h3>What is right here, and what we'd want to ask</h3>
+<p>Two things in this chapter are correct and should not be argued with. Ground-plane foreshortening is real, it genuinely does scale with eye height, and at an inch above a lake the near water really does compress into a smeared band in which an object's base is hard to separate from the surface it sits on. And seeing more of a distant object from a greater height is a real, repeatable observation. The disagreement is only about what that second fact indicates: an occlusion effect and a resolution effect both improve with height, but they separate cleanly under magnification, because resolution is a property of the instrument and occlusion is not. A P900 at full zoom resolves roughly 2.5&nbsp;arcseconds &mdash; more than twenty times finer than the naked-eye figure the chapter relies on. If the missing hull is a resolution artifact, that camera restores it. If something is physically in the way, no aperture ever will. The chapter never runs that test, and it is the one test that would settle the question using equipment already in hand.</p>
+<h3>Granting his premise rules out curvature &mdash; and points at waves</h3>
+<p>The caption on p.&nbsp;100 asks why more of the boat is visible from higher up &ldquo;if the water horizon extends well beyond the boat in both scenarios.&rdquo; Take that at face value, because it looks right: the water horizon does appear to lie beyond the boat. That observation is worth more than the chapter makes of it. <strong>If the horizon is beyond the boat, the boat is inside the horizon distance &mdash; and a globe then predicts no occlusion at all.</strong> Exactly as at the pond in &sect;2, curvature is excluded here by his own image, before any argument about resolution is needed.</p>
+<p>So something else is cutting the hull off at 1&nbsp;in and not at 36&nbsp;in, and the simplest candidate is the one the eye height itself makes almost unavoidable: <em class="term">waves</em>. A crest occludes whatever lies beyond it as soon as it rises above the eye. At 1&nbsp;in the eye is 2.54&nbsp;cm up, so any crest taller than an inch qualifies &mdash; which on open water is very nearly all of them. A ray grazing a crest of height <code>w</code> at distance <code>x</code> arrives at a target at distance <code>d</code> at a height of <code>e + (w &minus; e)&middot;d/x</code>, so the occlusion is amplified by the ratio <code>d/x</code>.</p>
+
+<table class="cmp">
+  <thead><tr><th>Intervening crest</th><th>Hull hidden, eye at 1&nbsp;in</th><th>Hull hidden, eye at 36&nbsp;in</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">4 cm crest, 30 m out</td><td><strong>17 cm</strong></td><td>none &mdash; ray passes above</td></tr>
+    <tr><td class="metric">4 cm crest, 10 m out</td><td><strong>46 cm</strong></td><td>none &mdash; ray passes above</td></tr>
+    <tr><td class="metric">6 cm crest, 30 m out</td><td><strong>37 cm</strong></td><td>none &mdash; ray passes above</td></tr>
+  </tbody>
+</table>
+<p class="scalewarn">Boat taken at 300&nbsp;m. These are lower bounds &mdash; they assume a single crest, where real chop presents a whole succession, the nearest qualifying one dominating. At 36&nbsp;in the eye sits 91&nbsp;cm up and no ordinary lake wave reaches it, so the same water occludes nothing at all.</p>
+
+<p>We can't be definitive about which mechanism is operating in that particular pair of frames, and we're not going to pretend otherwise &mdash; small waves are the most likely candidate at an inch of eye height, but near-field clutter or a sub-refractive layer would produce something similar, and the images alone don't separate them. That is the same honest position &sect;8 takes about the pond. What can be said is the part that matters for the argument: it is not angular resolution, because AB has collapsed identically in both frames; and it is not plain curvature, because his own horizon shows the boat inside the horizon distance. Curvature could only re-enter through <em>atypical</em> refraction &mdash; a sub-refractive layer bending rays upward and hiding more than geometry alone &mdash; which is the mirror image of the superior-mirage case that governs the Rampion wind-farm footage, and which, like the temperature gradient in &sect;5, would have to be measured rather than assumed.</p>
+
 <h2>4 &middot; What's actually blocking it &mdash; and it's in his own slide</h2>
 <p>At 0.5in eye height, the sightline to the 410ft target skims extraordinarily close to the water for its entire length &mdash; clearing the surface by roughly half an inch near the camera, widening to only about two inches by the far shore. Anything taller than roughly 0.6in sitting in the first 15ft of that path is enough to occlude the target outright.</p>
 
@@ -204,6 +315,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <h2 id="sources">Sources &amp; further reading</h2>
 <ul class="src-list">
   <li><em>bottom up observations</em>, Shape Debate (YouTube, uploaded 2026-07-10). Pond footage and apparatus originally by &ldquo;LifeIs Short.&rdquo;</li>
+  <li>Levi Miller, <em>Globe Deconstruction?</em> (prerelease draft, 2026), pp.&nbsp;96&ndash;115 &mdash; the angular-resolution chapter. The resolution threshold is stated on pp.&nbsp;102 and 107; the two figures discussed in &sect;3a are on pp.&nbsp;100 and 107.</li>
   <li>NGA, <em>American Practical Navigator</em> &mdash; geometric, optical and refracted horizon distance formulas.</li>
   <li>Standard surveying practice on minimum line-of-sight clearance for levelling runs, as a real-world analogue to grazing-sightline refraction error.</li>
   <li>Bedford Level Experiment: Rowbotham (1838), Wallace (1870), Oldham (1901) &mdash; the historical precedent for grazing-sightline error over water, run in both directions. <a href="https://en.wikipedia.org/wiki/Bedford_Level_experiment" style="color:var(--ink-3)">Wikipedia summary</a>.</li>
@@ -212,7 +324,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <footer>
   <p><a href="https://funwithscience.net/" style="color:var(--ink-3)">Fun With Science</a> &middot; companion to the
   <a href="https://funwithscience.net/globe-deconstruction/" style="color:var(--ink-3)">Globe Deconstruction Review</a>.</p>
-  <p>Tables and analysis are original. Photographic frames are low-resolution stills from the video under discussion, <em>bottom up observations</em> (Shape Debate, YouTube; pond footage and apparatus originally by &ldquo;LifeIs Short&rdquo;), reproduced in small part for the purpose of criticism and review. All rights in the original footage remain with its creators.</p>
+  <p>Tables, calculations and the two-eye-height diagram are original. Photographic frames are low-resolution stills from the video under discussion, <em>bottom up observations</em> (Shape Debate, YouTube; pond footage and apparatus originally by &ldquo;LifeIs Short&rdquo;). The two figures in &sect;3a are low-resolution reproductions of single pages from Levi Miller's <em>Globe Deconstruction?</em> (prerelease draft, 2026). All are reproduced in small part for the purpose of criticism and review; all rights in the originals remain with their creators.</p>
 </footer>
 
 </div>
