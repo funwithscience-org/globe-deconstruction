@@ -151,7 +151,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
   <div class="chart-legend" id="legendSpeed"></div>
 </div>
 
-<p>The real curve keeps building speed the whole way to MECO, exiting the observed window at roughly 3,050&nbsp;m/s and continuing to climb from there toward orbital velocity (~7,800&nbsp;m/s) once the second stage takes over &mdash; not shown here because it's a different engine, but it's the same publicly tracked flight. The &ldquo;air pusher&rdquo; curve does something categorically different: run the identical fuel and mass schedule through it, and by this simulation's numbers it never gets past a peak altitude of about 7.9&nbsp;km, reached around T+1:35, with its thrust already collapsing well before that peak because it's losing the density it depends on. From there it falls back through its own exhaust trail, and by roughly T+2:59 &mdash; call it the T+3&nbsp;minute mark &mdash; it's back at sea level, having flamed out and crashed rather than reached orbit. That's not an ambiguous or marginal outcome; it's what &ldquo;thrust needs a medium&rdquo; actually predicts once you run the model instead of just asserting it, and it is not what any of the thousands of public orbital launches on record have ever shown happening.</p>
+<p>The real curve keeps building speed the whole way to MECO, exiting the observed window at roughly 3,050&nbsp;m/s and continuing to climb from there toward orbital velocity (~7,800&nbsp;m/s) once the second stage takes over &mdash; not shown here because it's a different engine, but it's the same publicly tracked flight. The &ldquo;air pusher&rdquo; curve does something categorically different, and it's worth reading the speed line carefully rather than assuming it simply falls once trouble starts: altitude peaks at about 7.9&nbsp;km around T+1:35 and sinks from there &mdash; but total speed keeps climbing well past that point, for a reason that's really just this model's core flaw playing out a second time. As the vehicle sinks back down it's descending into denser air, which in a thrust-follows-density model means <em>more</em> thrust, not less; by the time the shared pitch-over program (the same one steering the real ascent) has tipped that thrust to about 15&deg; off horizontal, it's diving through increasingly dense low air at up to roughly 75% of sea-level thrust, pouring nearly all of it into horizontal speed instead of altitude. That doesn't stop until the same propellant load the real vehicle burns runs out &mdash; T+2:42, the identical instant as the real MECO, because both curves share one fuel schedule. Only then does thrust actually reach zero; freefall and drag take over, and about seventeen seconds later, around T+2:59 &mdash; call it the T+3&nbsp;minute mark &mdash; it's back at sea level, crashed at over 1,000&nbsp;m/s, having burned its entire propellant load without ever reaching orbital speed or getting anywhere near back to its own earlier peak altitude. That's not an ambiguous or marginal outcome; it's what &ldquo;thrust needs a medium&rdquo; actually predicts once you run the model instead of just asserting it, and it is not what any of the thousands of public orbital launches on record have ever shown happening.</p>
 <p class="scalewarn">For the technically inclined: the equation aerospace engineers actually use to size a nozzle is F&nbsp;=&nbsp;&#7745;&middot;V<sub>e</sub>&nbsp;+&nbsp;A<sub>e</sub>(p<sub>e</sub>&nbsp;&minus;&nbsp;p<sub>0</sub>) (<a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust-equation/" style="color:var(--ink-3)">NASA Glenn, Rocket Thrust Equation</a>). The first term is pure momentum thrust &mdash; medium-independent, exactly &sect;3's block-and-machine result. The second term is the pressure-difference correction from &sect;4: as ambient pressure p<sub>0</sub> falls, that term grows, adding thrust rather than removing it.</p>
 
 <h2>6 &middot; You don't have to trust anyone's numbers to check this</h2>
@@ -585,11 +585,14 @@ function drawSpeed(canvas){
   c.beginPath(); c.arc(sx(fPeak.t),sy(fPeak.vel),3.5,0,7); c.fill();
   c.font='700 10px Inter,sans-serif'; c.textAlign='left';
   c.fillText('peak alt. ~7.9 km (T+1:35)',sx(fPeak.t)+6,sy(fPeak.vel)-6);
+  c.font='400 9px Inter,sans-serif'; c.fillStyle=C.ink3;
+  c.fillText('sinking from here — still thrusting,',sx(fPeak.t)+6,sy(fPeak.vel)+8);
+  c.fillText('now aimed mostly sideways',sx(fPeak.t)+6,sy(fPeak.vel)+19);
   c.beginPath(); c.arc(sx(fCrash.t),sy(fCrash.vel),3.5,0,7); c.fill();
   c.font='700 10px Inter,sans-serif'; c.textAlign='right';
   c.fillText('crashes ~T+2:59',sx(fCrash.t)-6,sy(fCrash.vel)-8);
   c.font='400 9px Inter,sans-serif'; c.fillStyle=C.ink3; c.textAlign='right';
-  c.fillText('flamed out, falling back',sx(fCrash.t)-6,sy(fCrash.vel)+8);
+  c.fillText('no thrust after cutoff — drag wins',sx(fCrash.t)-6,sy(fCrash.vel)+8);
 
   c.fillStyle=C.real; c.font='700 13px Inter,sans-serif'; c.textAlign='left';
   c.fillText(Math.round(rl.vel)+' m/s',sx(rl.t)+4,sy(rl.vel)-8);
@@ -678,7 +681,7 @@ function renderCharts(){
   const ls = document.getElementById('legendSpeed');
   if (ls) ls.innerHTML =
     '<span><span class="sw" style="background:#2a5a8c"></span>Real speed (climbing to MECO, then on to orbital velocity)</span>' +
-    '<span><span class="sw" style="background:#c0392b"></span>Hypothetical &ldquo;air pusher&rdquo; (peaks, flames out, crashes ~T+3min)</span>';
+    '<span><span class="sw" style="background:#c0392b"></span>Hypothetical &ldquo;air pusher&rdquo; (stalls, dives, crashes ~T+3min)</span>';
   const lp = document.getElementById('legendPressure');
   if (lp) lp.innerHTML =
     '<span><span class="sw" style="background:#2a5a8c"></span>Atmospheric pressure vs. altitude, U.S. Standard Atmosphere 1976 (extended)</span>';
