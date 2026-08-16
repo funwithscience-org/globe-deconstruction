@@ -250,7 +250,15 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 
 <div class="killer"><strong>The handedness flip is the part that cannot be explained away.</strong> A magnitude can always be argued about &mdash; instruments drift, currents interfere, someone picked the buoys. A <em>sign reversal</em> at a line the buoys have no way of sensing is a different kind of evidence. Nothing in a drifter knows where the equator is. It has no compass, no map and no opinion. Yet every one of the seven northern buoys loops one way and every one of the eight southern buoys loops the other.</div>
 
-<h2>2 &middot; The measurements</h2>
+<h2>2 &middot; Nobody deployed these buoys to prove anything</h2>
+<p>This is the part that matters most, and it is easy to skim past. <strong>These buoys are not instruments for measuring the Earth.</strong> A Global Drifter Program float is a plastic sphere with a satellite transmitter and a drogue hanging fifteen metres below it, released into the ocean by people who want to know about currents and sea-surface temperature. It has no sensitive axis. It is not aimed at anything. It does not measure rotation, or latitude, or the shape of the planet.</p>
+<p>All it does is report where it is.</p>
+<p class="pull">The rotation isn't in what the buoys measure. It's in how they move.</p>
+<p>The signature is a property of the <em>trajectory</em> &mdash; something nobody has to record, because it emerges from a list of positions when someone else, later, asks a different question. The oceanographers who collected this data were not testing anything about Earth's spin. Many of them actively did not want these loops: near-inertial motion is routinely filtered out of circulation studies because it obscures the mean flow that the study is actually about. <strong>The part of the record that demonstrates the rotation is the part the original users throw away.</strong></p>
+<p>That provenance closes a door that is otherwise always open. The standard objection to any rotation experiment is an objection about the <em>instrument</em>: it drifts, it was calibrated on a rotating-Earth assumption, it is responding to some other medium or effect. Those objections need an instrument to attach themselves to. A float has no bias term, no calibration chain to Earth's rotation, no sensitive axis to misalign, and nothing inside it that could plausibly be responding to something other than the water it is sitting in. It is a lump of plastic going where the sea takes it, and the sea takes it in circles whose direction reverses at the equator.</p>
+<div class="note"><strong>Two brackets on that, in fairness.</strong> Satellite positioning does apply a correction for Earth's rotation during signal transit &mdash; the Sagnac term &mdash; so it is not true that no assumption about rotation touches the data anywhere. But that correction is a static geometric offset of order tens of metres, and it cannot manufacture a <em>latitude-dependent</em> twelve-to-eighty-hour oscillation that reverses handedness at the equator; the loops themselves are kilometres across. Separately: the buoys were not selected to prove anything, but <em>we</em> selected these fifteen out of roughly 1,300. The data generation is independent of the claim; the sampling is not. That is exactly why the caveats below insist that a ladder is not yet a distribution, and why running the whole array is the obvious next job.</div>
+
+<h2>3 &middot; The measurements</h2>
 <p>One buoy per latitude rung, January to April 2019, each analysed independently. &ldquo;Confidence&rdquo; is the ratio of clockwise to counter-clockwise energy in the search band &mdash; how cleanly one handedness dominates. Rows shaded red fall outside 10% of prediction.</p>
 
 <table class="cmp">
@@ -275,7 +283,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 </table>
 <p class="scalewarn">Predicted period is 11.967&nbsp;h&nbsp;&divide;&nbsp;sin&nbsp;&phi;, computed from the buoy's own mean latitude with no fitted parameters.</p>
 
-<h2>3 &middot; The buoys measure the length of the day</h2>
+<h2>4 &middot; The buoys measure the length of the day</h2>
 <p>The relationship has exactly one constant in it. Write the law as <code>T&nbsp;=&nbsp;A&nbsp;&divide;&nbsp;sin&nbsp;&phi;</code> and ask what value of <code>A</code> the fifteen buoys actually imply, rather than assuming it:</p>
 
 <table class="cmp">
@@ -291,7 +299,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <p>Doubling the weighted figure gives a sidereal day of <strong>23.96 hours</strong> against an actual <strong>23.93</strong>. For comparison, Arthur Compton's 1913 laboratory apparatus &mdash; a ring of water flipped on a bench, purpose-built to measure exactly this &mdash; got the day to about 1%. Fifteen buoys bobbing around the ocean for other reasons do better by an order of magnitude.</p>
 <p>Two details are worth more than the headline. The confidence weighting was computed from in-band spectral energy <em>before</em> any of this, with no knowledge of the answer, and applying it <strong>improves</strong> the fit from 0.4% to 0.1% &mdash; which is how an honest quality metric behaves and is not how a fudge factor behaves. And simply discarding the two weakest buoys makes the result <em>worse</em> (0.6%), so the good number is not coming from quietly dropping inconvenient data.</p>
 
-<h2>4 &middot; Method, in enough detail to repeat</h2>
+<h2>5 &middot; Method, in enough detail to repeat</h2>
 <p>Everything here comes from a public archive and can be reproduced from scratch.</p>
 <ul class="tl">
   <li><span class="t">1</span> <strong>Source.</strong> NOAA AOML Global Drifter Program, hourly product <code>gdp_hourly_velocities</code>, served over ERDDAP at <code>data.pmel.noaa.gov</code>. Public domain. Fields used: <code>ID, time, latitude, longitude, ve, vn</code>.</li>
@@ -302,14 +310,14 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 </ul>
 <div class="note"><strong>One unit trap, recorded because it cost a run.</strong> The inertial frequency <code>2&Omega;&nbsp;sin&nbsp;&phi;</code> is in radians per second. Converting to cycles per hour requires dividing by 2&pi; <em>and</em> multiplying by 3600. Omitting the 2&pi; puts the predicted frequency 6.28&times; too high, drags the search band away from the signal, and returns confident nonsense for the handedness. Correct form: <code>f = &Omega;&nbsp;sin|&phi;|&nbsp;/&nbsp;&pi;&nbsp;&times;&nbsp;3600</code> cycles/hour. Sanity check it against T&nbsp;&asymp;&nbsp;69.6&nbsp;h at 9.9&deg; and 13.4&nbsp;h at 63&deg;.</div>
 
-<h2>5 &middot; What could be wrong with this</h2>
+<h2>6 &middot; What could be wrong with this</h2>
 <p>Stated before anyone else has to.</p>
 <p><strong>Fifteen buoys is a ladder, not a distribution.</strong> The airtight version of this claim is statistical &mdash; hemisphere energy asymmetry across hundreds of drifters, binned by latitude, crossing zero at the equator. One buoy per rung demonstrates the effect and traces the curve; it does not yet pin down the scatter. That larger run is the obvious next piece of work and is not done here.</p>
 <p><strong>Several periods are a few percent off, and one is about 20% off.</strong> That is the buoy at 22.7&deg;S, and the discrepancy is real physics rather than noise: near-inertial waves sit slightly above <code>f</code>, shifted by the vorticity of the background flow they are embedded in. The effective frequency is roughly <code>f + &zeta;/2</code>, so a buoy caught in an anticyclonic eddy loops faster than its latitude alone predicts. <strong>These periods are deliberately left uncorrected.</strong> Correcting them would tighten the fit and would also be the single easiest place to hide a thumb on the scale.</p>
 <p><strong>Velocities are a derived product.</strong> The <code>ve</code>/<code>vn</code> fields are computed by interpolating satellite position fixes and differentiating them, with quality control applied. The inertial signal is present in the raw fixes too, but anyone who wants to argue &ldquo;interpolation artifact&rdquo; is entitled to, and the clean answer is to redo one buoy from raw fixes. Also not done here.</p>
 <p><strong>The band-pass is for display, not for manufacturing the result.</strong> The unfiltered rotary spectrum already shows the hemisphere asymmetry at roughly ten to one. Filtering makes the loops legible on a chart; it does not create them.</p>
 
-<h2>6 &middot; Why the equator is the null and not the maximum</h2>
+<h2>7 &middot; Why the equator is the null and not the maximum</h2>
 <p>The natural objection: if Coriolis comes from the Earth's spin, and the spin is <em>fastest</em> at the equator &mdash; a thousand miles an hour &mdash; shouldn't the effect be strongest there rather than absent?</p>
 <p>The acceleration is <code>a = &minus;2&Omega;&nbsp;&times;&nbsp;v</code>, and everything follows from which way that cross product points. For <em>horizontal</em> deflection only the vertical component of <strong>&Omega;</strong> contributes, giving <code>f&nbsp;=&nbsp;2&Omega;&nbsp;sin&nbsp;&phi;</code> &mdash; the same for any heading at a given latitude, and zero at the equator. At the equator the rotation axis lies flat in the local horizontal plane: motion north or south is <em>parallel</em> to it, so the cross product vanishes, and motion east or west produces a force that is <em>vertical</em> rather than sideways.</p>
 <p>That vertical part does not disappear &mdash; it goes as <code>cos&nbsp;&phi;</code> and is <em>maximal</em> at the equator. It is the Eötvös effect: travel east and you weigh very slightly less, travel west and slightly more. One cross product, two projections, opposite latitude dependence. The horizontal one dies at the equator; the vertical one peaks there.</p>
