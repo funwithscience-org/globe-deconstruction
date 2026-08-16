@@ -184,7 +184,26 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
     <tr><td class="metric">10&deg;N</td><td>10&deg;</td><td>29.36&deg;</td><td><strong>19.36&deg;</strong></td><td>0.090&deg;</td><td>215&times;</td></tr>
   </tbody>
 </table>
-<p class="scalewarn">Note the direction as well as the size. Atmospheric refraction makes objects appear <em>higher</em> than they are, not lower &mdash; so the one real mechanism that bends starlight runs opposite to the one required, as well as being two hundred times too weak. Above about 10&deg; of elevation refraction is under 5 arcminutes, and by 45&deg; it is down to 1 arcminute. It is a small print correction in a navigation almanac, invisible to the naked eye.</p>
+<p class="scalewarn">Note the direction as well as the size. Atmospheric refraction makes objects appear <em>higher</em> than they are, not lower &mdash; so the one real mechanism that bends starlight runs opposite to the one required, as well as being two hundred times too weak.</p>
+
+<h3>There is a hard ceiling on this, and it has been known since 1787</h3>
+<p>The obvious reply is that refraction is variable, that strange things happen in strange air, and that the standard table is only an average. All true &mdash; near the horizon. It stops being true higher up, and not by accident.</p>
+<p><em class="term">Oriani's theorem</em>, proved in 1787, shows that for altitudes above roughly 10 to 15&deg; the refraction depends <strong>only on the refractive index at the observer</strong> &mdash; that is, on the local pressure and temperature. The vertical structure of the atmosphere cancels out of the result. Inversions, ducts, exotic lapse rates, layered temperature profiles: none of them can produce anomalous refraction up there, because the theorem says the layering does not enter the answer.</p>
+<p>That is precisely why every dramatic refraction phenomenon on record &mdash; the Novaya Zemlya effect, Fata Morgana, looming, superior mirages &mdash; occurs at or below the horizon. They need a long, grazing path through a steep gradient. A ray arriving from 20&deg; up crosses the atmosphere almost perpendicularly and has no such path available to it.</p>
+<p>So the ceiling can be computed rather than guessed. Refraction scales as pressure over temperature, and those have record extremes:</p>
+
+<table class="cmp">
+  <thead><tr><th>Conditions</th><th>Refraction at 10&deg;</th><th>at 15&deg;</th><th>at 20&deg;</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">Standard sea level</td><td>5.4&prime;</td><td>3.6&prime;</td><td>2.7&prime;</td></tr>
+    <tr><td class="metric">Record high pressure &mdash; Agata, Siberia, 1968</td><td>7.0&prime;</td><td>4.7&prime;</td><td>3.5&prime;</td></tr>
+    <tr><td class="metric">Record low temperature &mdash; Vostok, 1983</td><td>8.3&prime;</td><td>5.6&prime;</td><td>4.2&prime;</td></tr>
+    <tr><td class="metric"><em>Both world records at once</em> &mdash; never observed anywhere</td><td><strong>8.9&prime;</strong></td><td><strong>6.0&prime;</strong></td><td><strong>4.5&prime;</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="killer"><strong>8.9 arcminutes is the wall.</strong> That is 0.148&deg;, produced by combining the highest sea-level pressure ever recorded on Earth with the lowest temperature ever recorded on Earth &mdash; conditions separated by a hemisphere and fifteen years, which have never occurred together and could not. The rescue needs <strong>19.36&deg;</strong>, or 1,162 arcminutes, at that same elevation. It is short by a factor of <strong>131</strong> against the most extreme atmosphere the planet has ever managed, and the shortfall runs the wrong way besides.</div>
+<p>By 45&deg; elevation standard refraction is down to 1 arcminute. It is a small-print correction in the back of a navigation almanac, and invisible to the naked eye.</p>
 <p>Set that aside too. If the angles are compressed by those amounts, the compression has a shape: it must be gentle overhead and severe near the horizon, and we can read off exactly how severe. Expressed as a vertical magnification &mdash; how much the sky is stretched or squeezed in the up-down direction at each elevation:</p>
 
 <table class="cmp">
@@ -265,7 +284,9 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <h2 id="sources">Sources &amp; further reading</h2>
 <ul class="src-list">
   <li>Levi Miller, <em>Globe Deconstruction?</em> (prerelease draft, 2026), section &ldquo;Celestial Globes Exposed,&rdquo; printed pp.&nbsp;124&ndash;152. The Polaris height argument is at pp.&nbsp;143&ndash;145; the angular-size calculation at p.&nbsp;136; the parallel-light claim at p.&nbsp;140.</li>
-  <li>Atmospheric refraction values computed from Bennett's formula, the standard approximation used in navigation almanacs.</li>
+  <li>Atmospheric refraction values computed from Bennett's formula, the standard approximation used in navigation almanacs, scaled by pressure and temperature.</li>
+  <li>Oriani's theorem and the stability of refraction above 10&ndash;15&deg; altitude: A. T. Young, <a href="https://aty.sdsu.edu/explain/atmos_refr/astr_refr.html" style="color:var(--ink-3)">&ldquo;Astronomical Refraction&rdquo;</a>, San Diego State University &mdash; the standard modern reference on the subject.</li>
+  <li>Record atmospheric extremes used for the ceiling in &sect;3: highest sea-level pressure 1083.8&nbsp;hPa (Agata, Siberia, 31 December 1968); lowest recorded temperature &minus;89.2&nbsp;&deg;C (Vostok Station, 21 July 1983).</li>
   <li>Polaris distance and radius: standard published values, 433 light years and approximately 46 solar radii, giving an angular diameter of 3.2 milliarcseconds.</li>
   <li>Companion pages: <a href="https://funwithscience.net/globe-deconstruction/bottom-up-observations/" style="color:var(--ink-3)">the angular-resolution chapter answered</a>, and <a href="https://funwithscience.net/globe-deconstruction/earth-rotation/" style="color:var(--ink-3)">does the Earth spin, or does the sky</a>.</li>
 </ul>
