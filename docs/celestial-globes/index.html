@@ -368,16 +368,77 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 </table>
 <p class="scalewarn">Note the direction as well as the size. Atmospheric refraction makes objects appear <em>higher</em> than they are, never lower &mdash; and every correction in that column runs the other way. The rescue needs starlight pushed <em>down</em>, by amounts two to three hundred times larger than the real effect that pushes it up.</p>
 
-<h3>And it has to bend two different ways at once</h3>
+<h3>Pick whichever anchor helps most &mdash; it still fails</h3>
 <p>Those three rows are samples. The measurement is not three points, though. It is 69 miles per degree <em>continuously</em> &mdash; at 71&deg;N, at 43&frac12;&deg;N, at 12&deg;N, at every latitude anyone has ever stood at. So the required correction is not three numbers either. It is a function of where you are standing, and it has to come out right everywhere along the walk.</p>
-<p>Written out in full it does something the three-row version hides:</p>
+<p>Written out in full, with the lamp still anchored at 45&deg;N, it does something the three-row version hides:</p>
+
+<figure>
+<svg viewBox="8 8 744 531" role="img" aria-label="With the lamp height fitted at 45 degrees north, the required light paths bend upward in the north and downward in the south." aria-describedby="bendA-d">
+<desc id="bendA-d">A lamp 5,009 km above the pole, the height the 45 degree north measurement implies. Grey dashed lines are the straight sight to it; coloured curves are the path light would have to take to arrive at the elevation each observer really measures. North of 45 degrees the rays must be lifted, by 2.5 degrees at 80 north and 3.7 at 60. At 45 the path is straight. South of it they must be pushed down, by 6.9 degrees at 30 north and 26.6 at the equator.</desc>
+<g font-family="Inter,system-ui,sans-serif" font-size="10.5">
+<rect x="18" y="18" width="724" height="509" fill="#fbfaf7" stroke="#E4DDCB" rx="6"/>
+<text x="380" y="42" text-anchor="middle" fill="#3A352D" font-size="12.5" font-weight="700">Fitted at 45&#176;N, the field has to change sign</text>
+<text x="380" y="60" text-anchor="middle" fill="#8d8577" font-size="10">Observers stand where they really are. Grey = the straight sight to the lamp. Colour = the path light would have to take.</text>
+<line x1="82.0" y1="381.4" x2="700" y2="381.4" stroke="#3A352D" stroke-width="1.6"/>
+<line x1="82.0" y1="90.0" x2="82.0" y2="381.4" stroke="#8d8577" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="146.8" y1="381.4" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="276.3" y1="381.4" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="373.5" y1="381.4" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="470.6" y1="381.4" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="664.9" y1="381.4" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M 146.8 381.4 Q 120.8 234.4 82.0 90.0" fill="none" stroke="#2a5a8c" stroke-width="2.0"/>
+<circle cx="146.8" cy="381.4" r="3.8" fill="#2a5a8c"/>
+<path d="M 276.3 381.4 Q 188.7 229.8 82.0 90.0" fill="none" stroke="#2a5a8c" stroke-width="2.0"/>
+<circle cx="276.3" cy="381.4" r="3.8" fill="#2a5a8c"/>
+<path d="M 373.5 381.4 Q 227.7 235.7 82.0 90.0" fill="none" stroke="#2e7d32" stroke-width="2.2"/>
+<circle cx="373.5" cy="381.4" r="3.8" fill="#2e7d32"/>
+<path d="M 470.6 381.4 Q 260.3 260.0 82.0 90.0" fill="none" stroke="#c0392b" stroke-width="2.0"/>
+<circle cx="470.6" cy="381.4" r="3.8" fill="#c0392b"/>
+<path d="M 664.9 381.4 Q 339.1 381.4 82.0 90.0" fill="none" stroke="#c0392b" stroke-width="2.0"/>
+<circle cx="664.9" cy="381.4" r="3.8" fill="#c0392b"/>
+<circle cx="82.0" cy="90.0" r="7.5" fill="#d9a441" stroke="#3A352D" stroke-width="1.2"/>
+<text x="96.0" y="80.0" fill="#3A352D" font-weight="700">Polaris, 5,009&#160;km up &#8212; 3,112&#160;mi</text>
+<text x="82.0" y="398" text-anchor="middle" fill="#8d8577" font-size="8.5">pole</text>
+<text x="82.0" y="411" text-anchor="middle" fill="#8d8577" font-size="8.5">0.0&#176;</text>
+<text x="146.8" y="398" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">80&#176;N</text>
+<text x="146.8" y="411" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 77.5&#176;</text>
+<text x="146.8" y="422" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 80&#176;</text>
+<text x="146.8" y="436" text-anchor="middle" fill="#2a5a8c" font-size="9.5" font-weight="700">lift 2.5&#176;</text>
+<text x="276.3" y="398" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">60&#176;N</text>
+<text x="276.3" y="411" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 56.3&#176;</text>
+<text x="276.3" y="422" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 60&#176;</text>
+<text x="276.3" y="436" text-anchor="middle" fill="#2a5a8c" font-size="9.5" font-weight="700">lift 3.7&#176;</text>
+<text x="373.5" y="398" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">45&#176;N</text>
+<text x="373.5" y="411" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 45.0&#176;</text>
+<text x="373.5" y="422" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 45&#176;</text>
+<text x="373.5" y="436" text-anchor="middle" fill="#2e7d32" font-size="9.5" font-weight="700">no bend at all</text>
+<text x="470.6" y="398" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">30&#176;N</text>
+<text x="470.6" y="411" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 36.9&#176;</text>
+<text x="470.6" y="422" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 30&#176;</text>
+<text x="470.6" y="436" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 6.9&#176;</text>
+<text x="664.9" y="398" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">equator</text>
+<text x="664.9" y="411" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 26.6&#176;</text>
+<text x="664.9" y="422" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 0&#176;</text>
+<text x="664.9" y="436" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 26.6&#176;</text>
+<rect x="432" y="92" width="278" height="86" fill="#fff" stroke="#E4DDCB" rx="5"/>
+<text x="446" y="112" fill="#3A352D" font-size="10" font-weight="700">For comparison, real refraction:</text>
+<text x="446" y="130" fill="#8d8577" font-size="9.5">&#8226; always lifts. It has no other sign.</text>
+<text x="446" y="146" fill="#8d8577" font-size="9.5">&#8226; at most 0.15&#176; above 10&#176; elevation</text>
+<text x="446" y="162" fill="#8d8577" font-size="9.5">&#8226; at 45&#176; elevation: 1 arcminute (0.017&#176;)</text>
+<path d="M 82.0 472.4431818181818 L 82.0 477.4431818181818 L 373.5 477.4431818181818 L 373.5 472.4431818181818" fill="none" stroke="#2a5a8c" stroke-width="1"/>
+<text x="227.7" y="490.4431818181818" text-anchor="middle" fill="#2a5a8c" font-size="9.5" font-weight="700">North of the fitted latitude &#8212; rays must be LIFTED</text>
+<path d="M 373.5 472.4431818181818 L 373.5 477.4431818181818 L 664.9 477.4431818181818 L 664.9 472.4431818181818" fill="none" stroke="#c0392b" stroke-width="1"/>
+<text x="519.2" y="490.4431818181818" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">South of it &#8212; rays must be PUSHED DOWN</text>
+<line x1="373.5" y1="441" x2="373.5" y2="472.4431818181818" stroke="#2e7d32" stroke-width="1.2" stroke-dasharray="4 3"/>
+</g></svg>
+  <figcaption><b>The 45&deg;N fit, drawn as light paths.</b> Observers stand at their real distances from the pole. Grey dashed lines are the straight sight to the lamp; the coloured curves are what the light would have to do to arrive at the elevation actually measured. North of the fitted latitude the ray has to be lifted, south of it pushed down, and at 45&deg;N it runs dead straight. <span class="cred">Arrival angles are exact and drawn to scale; the curvature between the lamp and the observer is schematic, since the required field's internal shape is not determined by the endpoints.</span></figcaption>
+</figure>
 
 <table class="cmp">
   <thead><tr><th>Latitude</th><th>Observed</th><th>Flat model requires</th><th>Bending required</th><th>Which way</th></tr></thead>
   <tbody>
     <tr><td class="metric">80&deg;N</td><td>80&deg;</td><td>77.47&deg;</td><td>2.53&deg;</td><td>ray lifted <strong>up</strong></td></tr>
-    <tr><td class="metric">70&deg;N</td><td>70&deg;</td><td>66.04&deg;</td><td>3.96&deg;</td><td>ray lifted <strong>up</strong></td></tr>
-    <tr><td class="metric">67&deg;N</td><td>67&deg;</td><td>62.93&deg;</td><td><strong>4.07&deg;</strong> &mdash; the worst case going north</td><td>ray lifted <strong>up</strong></td></tr>
+    <tr><td class="metric">67&deg;N</td><td>67&deg;</td><td>62.93&deg;</td><td><strong>4.07&deg;</strong> &mdash; worst case going north</td><td>ray lifted <strong>up</strong></td></tr>
     <tr><td class="metric">60&deg;N</td><td>60&deg;</td><td>56.31&deg;</td><td>3.69&deg;</td><td>ray lifted <strong>up</strong></td></tr>
     <tr><td class="metric">45&deg;N</td><td>45&deg;</td><td>45.00&deg;</td><td><strong>0.00&deg;</strong></td><td>nothing at all</td></tr>
     <tr><td class="metric">30&deg;N</td><td>30&deg;</td><td>36.87&deg;</td><td>6.87&deg;</td><td>ray pushed <strong>down</strong></td></tr>
@@ -385,8 +446,99 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
     <tr><td class="metric">0&deg;</td><td>0&deg;</td><td>26.56&deg;</td><td><strong>26.56&deg;</strong></td><td>ray pushed <strong>down</strong></td></tr>
   </tbody>
 </table>
-<p class="scalewarn">The same air, the same star, the same range of elevations &mdash; and the field has to <em>lift</em> the ray for an observer in Norway, <em>lower</em> it for an observer in Mexico, and pass through exactly zero somewhere in between. Real refraction does not have a sign to choose. It lifts, always, everywhere, by less than a tenth of a degree above 10&deg; elevation.</p>
-<div class="killer"><strong>And now look at where the zero sits.</strong> It is at 45&deg;N &mdash; which is not a physical latitude, not a boundary of anything, not a place where the atmosphere does something different. It is simply the measurement we chose to anchor the lamp's height to. Anchor at 60&deg;N instead and the lamp has to move to 5,784&nbsp;km, the whole curve slides with it, and the zero-crossing lands on 60&deg;N. The required refraction field has no fixed shape at all: it depends on which measurement a person on the ground decided to trust first. Air cannot do that. Air does not know what was assumed about it.</div>
+<p class="scalewarn">The same air, the same star &mdash; lifting the ray for an observer in Norway, lowering it for one in Mexico, and passing through exactly zero in between.</p>
+
+<div class="note"><strong>But that sign change is our doing, not the chapter's.</strong> 45&deg;N was chosen back in &sect;2 to test the tangible geometry on its own terms, and nothing obliges the refraction argument to inherit it. Move the anchor and the zero-crossing moves with it. So the sign flip is not the argument &mdash; it is an artefact of a choice we made, and it would be cheap to lean on it. The fair question is different: <em>across every possible lamp height, what is the best-behaved field the model can be given?</em></div>
+
+<p>Real refraction has a characteristic shape. It is zero at the zenith, grows as you look lower, and is largest at the horizon &mdash; and it only ever bends one way. So the friendliest possible requirement is one shaped like that: no sign change, nothing to correct overhead, growing smoothly toward the horizon. Ask what lamp height delivers it, and two facts drop out of the geometry that no choice can touch.</p>
+
+<ul class="tl">
+  <li><span class="t">&mdash;</span> <strong>At the pole the correction is zero, for every height.</strong> Polaris is overhead; there is nothing to bend. That end is free.</li>
+  <li><span class="t">&mdash;</span> <strong>At the equator the correction is a downward push, for every height.</strong> Polaris is observed on the horizon, and a lamp at any finite height above a flat plane stands above the horizon from anywhere. So the star must always be pushed down there. No height avoids it.</li>
+</ul>
+
+<p>Between those two fixed ends, the height decides the shape. Below a certain height the curve rises first and falls later, and the sign flips on the way. At or above it, the correction is downward everywhere and grows smoothly from nothing at the pole to its maximum at the equator &mdash; monotonic, single-signed, refraction-shaped. That threshold is <strong>3,963 miles, or 6,378&nbsp;km</strong>.</p>
+
+<div class="killer"><strong>Which is the Earth's radius.</strong> Not by coincidence &mdash; it is what &ldquo;69 miles per degree&rdquo; means, restated. The only lamp height that makes the required field behave itself is the one that hands the flat model the sphere's own parameter. Below it the field has to change sign; at or above it, it doesn't. There is no third case.</div>
+
+<p>So take it. Raise the lamp to one Earth radius, drop the 45&deg; anchor entirely, and grant the chapter the most physically respectable field its own geometry can produce:</p>
+
+<figure>
+<svg viewBox="8 8 744 611" role="img" aria-label="With the lamp raised to one Earth radius the required bending never changes sign, but it pushes light downward everywhere." aria-describedby="bendB-d">
+<desc id="bendB-d">The lamp is raised to 6,378 km, one Earth radius, which is the lowest height at which the required correction never changes sign. The correction is now zero at the pole and grows smoothly and monotonically toward the equator: 0.1 degrees at 80 north, 2.4 at 60, 6.9 at 45, 13.7 at 30 and 32.5 at the equator. That is the same shape as real refraction, which is zero overhead and largest near the horizon. But every value is a downward push, and real refraction only ever lifts.</desc>
+<g font-family="Inter,system-ui,sans-serif" font-size="10.5">
+<rect x="18" y="18" width="724" height="589" fill="#fbfaf7" stroke="#E4DDCB" rx="6"/>
+<text x="380" y="42" text-anchor="middle" fill="#3A352D" font-size="12.5" font-weight="700">The best-behaved field any lamp height can produce</text>
+<text x="380" y="60" text-anchor="middle" fill="#8d8577" font-size="10">Lamp raised to one Earth radius &#8212; the only choice that removes the sign change. Nothing is fitted to a latitude.</text>
+<line x1="82.0" y1="461.1" x2="700" y2="461.1" stroke="#3A352D" stroke-width="1.6"/>
+<line x1="82.0" y1="90.0" x2="82.0" y2="461.1" stroke="#8d8577" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="146.8" y1="461.1" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="276.3" y1="461.1" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="373.5" y1="461.1" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="470.6" y1="461.1" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="664.9" y1="461.1" x2="82.0" y2="90.0" stroke="#8d8577" stroke-width="1" stroke-dasharray="4 3"/>
+<path d="M 146.8 461.1 Q 114.1 275.6 82.0 90.0" fill="none" stroke="#c0392b" stroke-width="2.0"/>
+<circle cx="146.8" cy="461.1" r="3.8" fill="#c0392b"/>
+<path d="M 276.3 461.1 Q 171.6 279.7 82.0 90.0" fill="none" stroke="#c0392b" stroke-width="2.0"/>
+<circle cx="276.3" cy="461.1" r="3.8" fill="#c0392b"/>
+<path d="M 373.5 461.1 Q 206.6 294.3 82.0 90.0" fill="none" stroke="#c0392b" stroke-width="2.0"/>
+<circle cx="373.5" cy="461.1" r="3.8" fill="#c0392b"/>
+<path d="M 470.6 461.1 Q 237.9 326.8 82.0 90.0" fill="none" stroke="#c0392b" stroke-width="2.0"/>
+<circle cx="470.6" cy="461.1" r="3.8" fill="#c0392b"/>
+<path d="M 664.9 461.1 Q 319.4 461.1 82.0 90.0" fill="none" stroke="#c0392b" stroke-width="2.0"/>
+<circle cx="664.9" cy="461.1" r="3.8" fill="#c0392b"/>
+<circle cx="82.0" cy="90.0" r="7.5" fill="#d9a441" stroke="#3A352D" stroke-width="1.2"/>
+<text x="96.0" y="80.0" fill="#3A352D" font-weight="700">Polaris, 6,378&#160;km up &#8212; 3,963&#160;mi</text>
+<text x="82.0" y="478" text-anchor="middle" fill="#8d8577" font-size="8.5">pole</text>
+<text x="82.0" y="491" text-anchor="middle" fill="#8d8577" font-size="8.5">0.0&#176;</text>
+<text x="146.8" y="478" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">80&#176;N</text>
+<text x="146.8" y="491" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 80.1&#176;</text>
+<text x="146.8" y="502" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 80&#176;</text>
+<text x="146.8" y="516" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 0.1&#176;</text>
+<text x="276.3" y="478" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">60&#176;N</text>
+<text x="276.3" y="491" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 62.4&#176;</text>
+<text x="276.3" y="502" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 60&#176;</text>
+<text x="276.3" y="516" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 2.4&#176;</text>
+<text x="373.5" y="478" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">45&#176;N</text>
+<text x="373.5" y="491" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 51.9&#176;</text>
+<text x="373.5" y="502" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 45&#176;</text>
+<text x="373.5" y="516" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 6.9&#176;</text>
+<text x="470.6" y="478" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">30&#176;N</text>
+<text x="470.6" y="491" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 43.7&#176;</text>
+<text x="470.6" y="502" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 30&#176;</text>
+<text x="470.6" y="516" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 13.7&#176;</text>
+<text x="664.9" y="478" text-anchor="middle" fill="#3A352D" font-size="9.5" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">equator</text>
+<text x="664.9" y="491" text-anchor="middle" fill="#8d8577" font-size="8.5">straight line 32.5&#176;</text>
+<text x="664.9" y="502" text-anchor="middle" fill="#8d8577" font-size="8.5">observed 0&#176;</text>
+<text x="664.9" y="516" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 32.5&#176;</text>
+<rect x="432" y="92" width="278" height="86" fill="#fff" stroke="#E4DDCB" rx="5"/>
+<text x="446" y="112" fill="#3A352D" font-size="10" font-weight="700">For comparison, real refraction:</text>
+<text x="446" y="130" fill="#8d8577" font-size="9.5">&#8226; always lifts. It has no other sign.</text>
+<text x="446" y="146" fill="#8d8577" font-size="9.5">&#8226; at most 0.15&#176; above 10&#176; elevation</text>
+<text x="446" y="162" fill="#8d8577" font-size="9.5">&#8226; at 45&#176; elevation: 1 arcminute (0.017&#176;)</text>
+<path d="M 82.0 552.0948673625002 L 82.0 557.0948673625002 L 664.9 557.0948673625002 L 664.9 552.0948673625002" fill="none" stroke="#c0392b" stroke-width="1"/>
+<text x="373.5" y="570.0948673625002" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">Every ray, at every latitude, must be pushed DOWN &#8212; and refraction only ever lifts</text>
+</g></svg>
+  <figcaption><b>The strongest version of the claim.</b> Nothing is fitted to a latitude here. The correction is zero at the pole and grows smoothly to 32.5&deg; at the equator &mdash; monotonic, single-signed, and shaped exactly like real refraction. <span class="cred">Same construction and scale as the figure above; the lamp is 27% higher.</span></figcaption>
+</figure>
+
+<table class="cmp">
+  <thead><tr><th>Latitude</th><th>Observed</th><th>Flat model requires</th><th>Push-down needed</th><th>Real refraction</th><th>Wrong by</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">80&deg;N</td><td>80&deg;</td><td>80.10&deg;</td><td>0.10&deg;</td><td>0.003&deg;</td><td>34&times;</td></tr>
+    <tr><td class="metric">60&deg;N</td><td>60&deg;</td><td>62.36&deg;</td><td>2.36&deg;</td><td>0.010&deg;</td><td>246&times;</td></tr>
+    <tr><td class="metric">45&deg;N</td><td>45&deg;</td><td>51.85&deg;</td><td>6.85&deg;</td><td>0.017&deg;</td><td><strong>411&times;</strong></td></tr>
+    <tr><td class="metric">30&deg;N</td><td>30&deg;</td><td>43.68&deg;</td><td>13.68&deg;</td><td>0.029&deg;</td><td><strong>474&times;</strong></td></tr>
+    <tr><td class="metric">10&deg;N</td><td>10&deg;</td><td>35.61&deg;</td><td>25.61&deg;</td><td>0.095&deg;</td><td>271&times;</td></tr>
+    <tr><td class="metric">0&deg;</td><td>0&deg;</td><td>32.48&deg;</td><td><strong>32.48&deg;</strong></td><td>0.575&deg;</td><td>56&times;</td></tr>
+  </tbody>
+</table>
+
+<p><strong>And the high-latitude agreement is genuinely good</strong> &mdash; that deserves saying plainly, because it is the honest reason the flat picture feels workable to anyone who has only ever looked at Polaris from the northern half of the northern hemisphere. At 80&deg;N this lamp is out by six arcminutes. It is a real near-miss, and it is not luck: a lamp one Earth radius above a plane laid tangent at the pole reproduces a sphere of that radius, to first order, in the pole's neighbourhood. The flat model works precisely where a flat approximation to a sphere works, and comes apart as you leave it.</p>
+
+<div class="killer"><strong>What it cannot do is the sign.</strong> Every entry in that column is a downward push, and refraction has no downward. Light bends toward denser air; denser air is underneath; so the ray curves down and the object appears <em>higher</em>. Reversing that needs air that gets denser with altitude &mdash; not in a layer, not on a cold morning, but continuously, from the ground to the top of the atmosphere, over the entire northern hemisphere, permanently. The one real phenomenon that depresses an image is the inferior mirage over hot ground, and it is a grazing-incidence effect that produces an inverted second image near the horizon. It has nothing available to it at 45&deg; elevation, for the reason set out next.</div>
+
+<p class="scalewarn">So the model has two settings and both are closed. Anchor it low and the field must change sign, which means the air has to know which measurement was used to set the lamp. Anchor it at or above one Earth radius and the field is beautifully behaved and points the wrong way at every latitude on Earth. The boundary between the two is the Earth's own radius, which is a strange place for a flat model to keep finding itself.</p>
 
 <h3>There is a hard ceiling on this, and it has been known since 1787</h3>
 <p>The obvious reply is that refraction is variable, that strange things happen in strange air, and that the standard table is only an average. All true &mdash; near the horizon. It stops being true higher up, and not by accident.</p>
@@ -419,6 +571,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
   </tbody>
 </table>
 <p>That is the field the rescue requires. It is not an add-on to the argument; it <em>is</em> the argument, written out with numbers in it.</p>
+<p class="scalewarn">Those magnifications come from the 45&deg;N fit, which is the <em>weaker</em> of the two requirements &mdash; the Earth-radius version above needs 25.6&deg; of correction at 10&deg; elevation rather than 19.4&deg;, and a correspondingly stronger field. Everything &sect;4 does with this table is therefore an understatement of what the steel-manned version demands.</p>
 
 <h2>4 &middot; Grant it anyway &mdash; and walk the Sun and the Moon through it</h2>
 <p>Set every one of those objections aside. Suppose the field exists, in exactly the shape &sect;3 computed, however it manages it. That is not the end of the argument &mdash; it is the start of a different one, because a distortion field is not selective. It cannot be a thing that happens to Polaris. Everything crossing that patch of sky goes through it, and two of those things are looked at by everybody, every day.</p>
