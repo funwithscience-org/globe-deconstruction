@@ -200,6 +200,76 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <p>For a horizontal segment of length <code>L</code> lying on the water with its near end at distance <code>d</code>, seen from eye height <code>h</code>, the subtended angle is <code>h/d &minus; h/(d+L)</code>, which for <code>d &gg; L</code> is approximately <code>hL/d&sup2;</code>. For a vertical extent <code>H</code> at distance <code>d</code>, it is approximately <code>H/d</code>. The first is proportional to <code>h</code> and falls off as the square of distance. The second <strong>contains no <code>h</code> at all.</strong></p>
 <p>That is the whole error, stated formally. The book correctly derives the height-dependence of horizontal extents on pp.&nbsp;105&ndash;106, and then applies it to a vertical one. Lowering the camera foreshortens the <em>water surface</em>; it does nothing whatsoever to the angular height of an object standing on that surface.</p>
 
+<h3>The same thing, as the observer would actually see it</h3>
+<p>Side elevations are hard to read if you don't think spatially, so here is the identical situation rendered from behind the observer's eye &mdash; the same vessel, the same distance, the only change being the height of the camera.</p>
+
+<figure>
+<svg viewBox="0 0 760 366" role="img" aria-labelledby="pov-t pov-d">
+  <title id="pov-t">The same boat seen from 36 inches and from 1 inch above the water</title>
+  <desc id="pov-d">Two views of the same 6-metre boat 26 metres away. In the left view, taken from 36 inches above the water, the eye-level line sits well above the boat's waterline, a wedge of water is visible in front of the boat, and the deck is visible as a shallow band. In the right view, taken from 1 inch above the water, the boat is drawn at exactly the same size — waterline, cabin top and masthead all fall on the same rows as in the left view — but the eye-level line has dropped to almost touch the waterline, the water in front has compressed to a sliver, and the deck has collapsed to nothing. The mast subtends 6.60 degrees in the left view and 6.58 degrees in the right; the deck subtends 22.6 arcminutes on the left and 0.63 arcminutes on the right.</desc>
+  <defs>
+    <clipPath id="povA"><rect x="15" y="15" width="355" height="260"/></clipPath>
+    <clipPath id="povB"><rect x="390" y="15" width="355" height="260"/></clipPath>
+  </defs>
+  <g font-family="Inter,system-ui,sans-serif" font-size="10.5" fill="#6E675B">
+
+    <!-- ============ PANEL A : eye 36 in ============ -->
+    <g clip-path="url(#povA)">
+      <rect x="15" y="15" width="355" height="260" fill="#eef4fa"/>
+      <rect x="15" y="127.33" width="355" height="148" fill="#2a5a8c" opacity=".16"/>
+      <line x1="15" y1="127.33" x2="370" y2="127.33" stroke="#2E4057" stroke-width="1" stroke-dasharray="5 4"/>
+      <!-- deck A-B -->
+      <path d="M134.2,170 L250.8,170 L239.9,162 L145.1,162 Z" fill="#3A352D" opacity=".8"/>
+      <!-- cabin + mast (identical rows in both panels) -->
+      <rect x="155.2" y="114" width="74.6" height="56" fill="#3A352D" opacity=".62"/>
+      <line x1="192.5" y1="114" x2="192.5" y2="30" stroke="#3A352D" stroke-width="2.5"/>
+      <!-- water-band bracket, 10 m to 26 m -->
+      <path d="M46,238.28 L38,238.28 L38,170 L46,170" fill="none" stroke="#c0392b" stroke-width="1.3"/>
+      <line x1="15" y1="238.28" x2="120" y2="238.28" stroke="#c0392b" stroke-width="1" stroke-dasharray="3 3" opacity=".65"/>
+    </g>
+    <rect x="15" y="15" width="355" height="260" fill="none" stroke="#E4DDCB"/>
+    <text x="52" y="207" fill="#c0392b">16 m of water</text>
+    <text x="52" y="219" fill="#c0392b" font-weight="700">3.21&deg; tall</text>
+    <text x="258" y="156" fill="#c0392b" font-weight="700">A&ndash;B = 22.6&prime;</text>
+    <text x="200" y="80" fill="#2a5a8c" font-weight="700">A&ndash;C = 6.60&deg;</text>
+    <text x="366" y="124" text-anchor="end" fill="#2E4057">eye level</text>
+    <text x="130" y="182" text-anchor="end" fill="#c0392b" font-weight="700">A</text>
+    <text x="255" y="182" fill="#c0392b" font-weight="700">B</text>
+    <text x="188" y="26" text-anchor="end" fill="#2a5a8c" font-weight="700">C</text>
+    <text x="192.5" y="292" text-anchor="middle" fill="#2E4057" font-size="12" font-weight="700">Eye 36 in above the water</text>
+
+    <!-- ============ PANEL B : eye 1 in ============ -->
+    <g clip-path="url(#povB)">
+      <rect x="390" y="15" width="355" height="260" fill="#eef4fa"/>
+      <rect x="390" y="168.81" width="355" height="107" fill="#2a5a8c" opacity=".16"/>
+      <line x1="390" y1="168.81" x2="745" y2="168.81" stroke="#2E4057" stroke-width="1" stroke-dasharray="5 4"/>
+      <path d="M509.2,170 L625.8,170 L614.9,169.78 L520.1,169.78 Z" fill="#3A352D" opacity=".8"/>
+      <rect x="530.2" y="114" width="74.6" height="56" fill="#3A352D" opacity=".62"/>
+      <line x1="567.5" y1="114" x2="567.5" y2="30" stroke="#3A352D" stroke-width="2.5"/>
+      <path d="M421,171.9 L413,171.9 L413,170 L421,170" fill="none" stroke="#c0392b" stroke-width="1.3"/>
+    </g>
+    <rect x="390" y="15" width="355" height="260" fill="none" stroke="#E4DDCB"/>
+    <line x1="424" y1="171" x2="452" y2="196" stroke="#c0392b" stroke-width="1"/>
+    <text x="440" y="209" fill="#c0392b">the same 16 m of water</text>
+    <text x="440" y="221" fill="#c0392b" font-weight="700">0.09&deg; tall</text>
+    <line x1="628" y1="188" x2="612" y2="172" stroke="#c0392b" stroke-width="1"/>
+    <text x="624" y="199" fill="#c0392b" font-weight="700">A&ndash;B = 0.63&prime;</text>
+    <text x="575" y="80" fill="#2a5a8c" font-weight="700">A&ndash;C = 6.58&deg;</text>
+    <text x="741" y="162" text-anchor="end" fill="#2E4057">eye level</text>
+    <text x="505" y="182" text-anchor="end" fill="#c0392b" font-weight="700">A B</text>
+    <text x="563" y="26" text-anchor="end" fill="#2a5a8c" font-weight="700">C</text>
+    <text x="567.5" y="292" text-anchor="middle" fill="#2E4057" font-size="12" font-weight="700">Eye 1 in above the water</text>
+
+    <text x="15" y="322" fill="#2a5a8c" font-weight="700">The boat is drawn at identical size in both panels &mdash; that is not an oversight.</text>
+    <text x="15" y="338">Waterline, cabin top and masthead land on exactly the same rows, because every height above the water</text>
+    <text x="15" y="352">subtends <tspan font-family="JetBrains Mono,monospace">H/d</tspan>, with no eye-height term. Only the deck and the water in front of it change.</text>
+  </g>
+</svg>
+  <figcaption><b>Left: the view from 36&nbsp;in. Right: the view from 1&nbsp;in.</b> A 6&nbsp;m boat with a 3&nbsp;m mast, 26&nbsp;m away, same magnification in both. Drop the eye and three things happen: the eye-level line falls until it almost touches the waterline, the sixteen metres of water between 10&nbsp;m and the boat compress from 3.21&deg; to 0.09&deg;, and the deck flattens from 22.6&prime; to 0.63&prime; &mdash; already below the 1&prime; limit the book itself sets, at only 26&nbsp;m. The boat does not shrink, does not lose its bottom, and does not get cut off. <span class="cred">Perspective computed by pinhole projection from the stated geometry; idealised flat water, no waves and no refraction. Diagram original.</span></figcaption>
+</figure>
+
+<p>This is what the chapter's mechanism actually predicts, drawn honestly. From an inch above the water you lose the deck and you lose the sense of intervening distance &mdash; the boat appears pasted onto the horizon, because the horizon has come down to meet it. What you do <em>not</em> lose is any part of the boat itself. To make the hull go missing you need something in the way.</p>
+
 <h3>The numbers rule out the photographic example too</h3>
 <figure>
   <img src="assets/book-p100-boat-heights.jpg" alt="Two side-by-side video frames of the same motorboat on a lake, labelled 1 inch observer height and 36 inch observer height. In the 1 inch frame the lower hull is cut off at the waterline; in the 36 inch frame more of the hull is visible.">
