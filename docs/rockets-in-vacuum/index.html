@@ -11,10 +11,10 @@
   gtag('js', new Date());
   gtag('config', 'G-QVD21HWH5X');
 </script>
-<meta name="description" content="A point-by-point answer to Shape Debate's Claim #2 — that Newton's third law was misapplied to rocket thrust in vacuum, since 'thrust must have something to push off.' Real Falcon 9 telemetry shows acceleration rising, not falling, as the atmosphere vanishes; the rocket thrust equation predicts exactly that; and the vacuum-chamber test being proposed has already been run for decades at industrial scale.">
-<meta name="keywords" content="rockets vacuum thrust, newton third law space, shape debate claim 2, alex kampf propulsion tester, rocket thrust equation, air pusher rocket myth, flat earth debunk, globe deconstruction review">
+<meta name="description" content="A point-by-point answer to Shape Debate's Claim #2 — that Newton's third law was misapplied to rocket thrust in vacuum, since 'thrust must have something to push off.' Built up from first principles (a chunk of mass is still mass), checked against real Falcon 9 telemetry you can independently verify yourself, and corroborated by non-NASA sources: amateur static-fire thrust curves, DIY load-cell tests, and public missile intercept data.">
+<meta name="keywords" content="rockets vacuum thrust, newton third law space, conservation of momentum, shape debate claim 2, alex kampf propulsion tester, rocket thrust equation, air pusher rocket myth, thrustcurve amateur rocketry, independent verification telemetry, flat earth debunk, globe deconstruction review">
 <meta property="og:title" content="Rockets Don't Push Against Air — Answering Claim #2">
-<meta property="og:description" content="Thrust doesn't need a medium to push against — it needs mass to throw, which the rocket carries with it. Real telemetry, the actual thrust equation, and forty years of vacuum-chamber thruster tests all say the same thing, and all point the opposite direction from the claim.">
+<meta property="og:description" content="Newton's third law is just how mass affects mass — for exhaust gas to be exempt from it, gas would have to have no mass. Built up from first principles, checked against real telemetry you can verify yourself, and confirmed by amateur, military, and industrial-scale sources alike.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">
 <meta property="og:site_name" content="Fun With Science">
@@ -80,6 +80,14 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 .chart-legend{display:flex;flex-wrap:wrap;gap:.9rem;font-family:var(--sans);font-size:.78rem;color:var(--ink-3);padding:.5rem .1rem .1rem}
 .chart-legend span.sw{display:inline-block;width:12px;height:3px;border-radius:2px;margin-right:.35rem;vertical-align:middle}
 .eq{font-family:var(--mono);font-size:1.02rem;background:var(--card-bg);border:1px solid var(--rule);border-radius:6px;padding:.7rem 1rem;margin:.9rem 0;overflow-x:auto}
+.demo-box{border:1px solid var(--rule);border-radius:8px;background:#fbfbf8;padding:.9rem .9rem .7rem;margin:1.2rem 0 .3rem}
+.demo-box canvas{width:100%;display:block;border-radius:6px;background:#fff}
+.demo-readout{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;font-family:var(--mono);font-size:.82rem;color:var(--ink-2);padding:.6rem .1rem .1rem}
+.demo-readout b{color:var(--heading)}
+.demo-controls{padding:.5rem .1rem 0}
+.demo-controls button{font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--heading);background:#fff;border:1px solid var(--rule);border-radius:5px;padding:.3rem .8rem;cursor:pointer}
+.demo-controls button:hover{background:var(--card-bg)}
+.demo-caption{font-family:var(--sans);font-size:.78rem;color:var(--ink-3);margin:.5rem 0 0}
 </style>
 </head>
 <body>
@@ -89,29 +97,46 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
   <p class="crumb"><a href="https://funwithscience.net/">Fun With Science</a> &nbsp;/&nbsp; <a href="https://funwithscience.net/globe-deconstruction/">Globe Deconstruction</a> &nbsp;/&nbsp; Rockets in Vacuum</p>
   <h1>Rockets Don't Push Against Air</h1>
   <p class="sub">Answering Shape Debate's Claim&nbsp;#2 &mdash; that Newton's third law can't apply to a rocket in vacuum, because thrust needs something to push off.</p>
-  <p class="lede">Claim&nbsp;#2 on <a href="https://shapedebate.com/">shapedebate.com</a> argues that mainstream physics misapplies Newton's third law to pressurized gas release in vacuum: &ldquo;thrust must have something to push off, and an infinite vacuum does not provide that,&rdquo; and that if this were tested and confirmed, it would show the law was &ldquo;abused to sell humanity on the idea of space travel.&rdquo; The page points to a pending vacuum-chamber test by Alex Kampf, &ldquo;Propulsion Tester,&rdquo; results not yet uploaded. The short version: the physics claim is backwards on its own terms &mdash; the rocket thrust equation predicts <em>more</em> thrust as ambient pressure drops, not less &mdash; and the test being proposed isn't hypothetical. It's been run, in exactly the failure mode the claim worries about, for over sixty years, at industrial scale, with the receipts still visible in every orbital launch's own telemetry.</p>
+  <p class="lede">Claim&nbsp;#2 on <a href="https://shapedebate.com/">shapedebate.com</a> argues that mainstream physics misapplies Newton's third law to pressurized gas release in vacuum: &ldquo;thrust must have something to push off, and an infinite vacuum does not provide that,&rdquo; and that if this were tested and confirmed, it would show the law was &ldquo;abused to sell humanity on the idea of space travel.&rdquo; The page points to a pending vacuum-chamber test by Alex Kampf, &ldquo;Propulsion Tester,&rdquo; results not yet uploaded. The short version, before any equation or chart: Newton's third law is just a statement about how mass affects mass. For exhaust gas to be exempt from it, gas would have to have no mass &mdash; and it does. Everything below builds that up from nothing you have to take on faith, checks it against telemetry you can verify yourself without trusting anyone's claimed numbers, and then shows it's been independently confirmed at three completely different scales: amateur static-fire tests, public missile performance data, and industrial vacuum-chamber facilities.</p>
 </header>
 
 <section class="verdict" id="verdict">
   <p class="vhead"><span class="vtag ok">Newton intact</span><span class="vtag fail">Claim does not follow</span><br>What the claim gets backwards</p>
-  <p>&ldquo;Thrust needs a medium to push against&rdquo; describes a propeller or a jet engine, not a rocket. A rocket's third-law pair is the rocket and its own exhaust &mdash; mass it carries with it and throws overboard &mdash; not the rocket and the surrounding air. That's not an assumption smoothed over for public consumption; it's the same equation aerospace engineers use to size every nozzle ever flown, and it says thrust goes <strong>up</strong>, not to zero, as ambient pressure falls.</p>
+  <p>&ldquo;Thrust needs a medium to push against&rdquo; describes a propeller or a jet engine, not a rocket. A rocket's third-law pair is the rocket and its own exhaust &mdash; mass it carries with it and throws overboard &mdash; not the rocket and the surrounding air. That's not an assumption smoothed over for public consumption; it falls straight out of throwing mass being mass, whether that mass is a rock or a gas, and it's the same relationship aerospace engineers use to size every nozzle ever flown. It says thrust goes <strong>up</strong>, not to zero, as ambient pressure falls.</p>
 </section>
 
 <h2>1 &middot; The claim, stated fairly</h2>
-<p>Quoting the site directly: &ldquo;Mainstream physics is completely wrong in applying Newton's third law to a pressurized gas release in a vacuum environment. Thrust must have something to push off, and an infinite vacuum does not provide that. If verified, this implies the law was abused to sell humanity on the idea of space travel.&rdquo; The page also flags, in its own words, that a common way this kind of test goes wrong is using a vacuum chamber that's too small &mdash; worth taking seriously, and returned to in &sect;6 below. As of this writing the referenced experiment by Alex Kampf is listed as pending upload, so this page argues from the claim as stated and from the physics and public telemetry already available, not from a result that doesn't exist yet.</p>
+<p>Quoting the site directly: &ldquo;Mainstream physics is completely wrong in applying Newton's third law to a pressurized gas release in a vacuum environment. Thrust must have something to push off, and an infinite vacuum does not provide that. If verified, this implies the law was abused to sell humanity on the idea of space travel.&rdquo; The page also flags, in its own words, that a common way this kind of test goes wrong is using a vacuum chamber that's too small &mdash; worth taking seriously, and returned to in &sect;8 below. As of this writing the referenced experiment by <a href="https://shapedebate.com/">Alex Kampf</a> is listed as pending upload, so this page argues from the claim as stated and from physics, telemetry, and independent data already public, not from a result that doesn't exist yet.</p>
 
 <h2>2 &middot; What's worth conceding up front</h2>
-<p>The chamber-size caution is real, and it's good instinct to flag it before running the test rather than after. A vacuum chamber that's small relative to the thrust and burn duration will re-pressurize from the exhaust itself faster than it can be pumped down, especially with a valve or piston releasing compressed gas rather than a sustained combustion exhaust plume. A test like that can look like thrust &ldquo;fails&rdquo; in vacuum when what actually failed was the vacuum. That's a legitimate methodological trap, and it's exactly the trap that real propulsion labs are built to avoid &mdash; see &sect;6.</p>
+<p>The chamber-size caution is real, and it's good instinct to flag it before running the test rather than after. A vacuum chamber that's small relative to the thrust and burn duration will re-pressurize from the exhaust itself faster than it can be pumped down, especially with a valve or piston releasing compressed gas rather than a sustained combustion exhaust plume. A test like that can look like thrust &ldquo;fails&rdquo; in vacuum when what actually failed was the vacuum. That's a legitimate methodological trap, and it's exactly the trap that real propulsion tests &mdash; amateur and industrial alike &mdash; are built to avoid. More on that in &sect;8.</p>
 
-<h2>3 &middot; Newton's third law doesn't ask what's outside the rocket</h2>
-<p class="pull">The third-law pair is the rocket and its own exhaust. The vacuum is irrelevant to the pairing.</p>
-<p>Momentum conservation applies to any two masses that interact by mutual force &mdash; it says nothing about what else is or isn't present around them. A rocket engine burns propellant it is carrying, accelerates the combustion products out through a nozzle at high velocity, and by conservation of momentum the rocket itself accelerates the other way. The exhaust doesn't need anything to bounce off; it <em>is</em> the reaction mass. That's why the standard classroom demonstrations for &ldquo;does this need air&rdquo; are things like a fire extinguisher recoiling, a person in a wheeled chair throwing a weight, or gun recoil &mdash; none of them require, or even benefit from, a surrounding medium.</p>
-<p>The actual rocket thrust equation used by aerospace engineers makes this quantitative:</p>
-<div class="eq">F&nbsp;=&nbsp;&#7745;&middot;V<sub>e</sub>&nbsp;+&nbsp;A<sub>e</sub>(p<sub>e</sub>&nbsp;&minus;&nbsp;p<sub>0</sub>)</div>
-<p>where &#7745; is the propellant mass flow rate, V<sub>e</sub> the exhaust velocity, A<sub>e</sub> the nozzle exit area, p<sub>e</sub> the exhaust pressure at the nozzle exit, and p<sub>0</sub> the ambient (outside) pressure. The first term &mdash; momentum thrust &mdash; is present whether p<sub>0</sub> is one atmosphere or zero; it's pure Newton's third law and doesn't reference the surroundings at all. The second term is a <em>pressure-difference</em> correction, and as p<sub>0</sub> falls toward vacuum, (p<sub>e</sub>&nbsp;&minus;&nbsp;p<sub>0</sub>) grows, adding thrust rather than removing it. A real engine's exhaust also expands more completely and efficiently with nothing pushing back on it, which is a second, independent reason vacuum thrust ratings are consistently higher than sea-level ratings for the same engine. Both terms move the same direction, and it's the opposite direction from what the claim predicts.</p>
+<h2>3 &middot; First principles: a thrown chunk of mass is still mass</h2>
+<p class="pull">Newton's third law isn't a law about air. It's a law about how mass affects mass.</p>
+<p>Strip away rockets, nozzles and exhaust entirely for a second. Take a large block sitting still. Bolt a small machine to one edge of it that continuously throws off tiny chunks of the block's own mass &mdash; say 1% of the block at a time &mdash; sideways, at some fixed speed. The moment the first chunk leaves, the block has to move the other way. Not because anything pushed on the block from outside; because momentum has to balance, and it balanced at zero before the machine ever fired. There's no step in that story that requires air, a wall, or anything else nearby. It works the same way sitting in the middle of empty space as it does sitting on a table.</p>
+<p>Now keep the machine running at a constant rate &mdash; same size chunk, same throwing speed, over and over. Two things follow, and both are just <code>F&nbsp;=&nbsp;ma</code> rearranged: the force stays constant (same mass, same speed, thrown at the same rate), but the block's own remaining mass keeps shrinking as it gives pieces away. Constant force over shrinking mass means the block's acceleration keeps climbing the whole time the machine runs &mdash; slowly at first, sharply near the end, right up until the machine runs out of chunks to throw. That's not a rocket-specific fact. It's true of any object continuously throwing part of itself away at a steady rate, and you don't need to know a single thing about combustion chemistry or nozzle geometry to derive it.</p>
+<p>The only place a gas exhaust could possibly be special is if gas were somehow exempt from having mass &mdash; and it isn't. A kilogram of hot combustion gas leaving a nozzle at 3,000&nbsp;m/s carries exactly as much momentum as a one-kilogram block thrown at 3,000&nbsp;m/s. The demo below runs exactly the thought experiment above: a shrinking mass throwing off small chunks at a constant rate, with the live numbers &mdash; mass remaining, velocity, and acceleration &mdash; updating as it runs so you can watch acceleration climb as the mass burns down, before a single real rocket number appears on this page.</p>
 
-<h2>4 &middot; What real telemetry actually shows</h2>
-<p>This isn't a simulation built to make a point &mdash; it's the shape every orbital first stage's acceleration curve takes, reconstructed here from Falcon&nbsp;9 Block&nbsp;5's public performance numbers (9&times; Merlin&nbsp;1D, sea-level thrust 7,607&nbsp;kN, vacuum thrust 8,227&nbsp;kN, ~411&nbsp;t propellant, engine cutoff ~162s) against the U.S. Standard Atmosphere 1976 density model. The chart below plots real measured-physics acceleration against a hypothetical &ldquo;air pusher&rdquo; model where thrust is simply scaled by ambient air density &mdash; the literal version of &ldquo;thrust needs a medium&rdquo; &mdash; run through the identical fuel burn and mass-loss schedule, so the only variable that differs is what creates the thrust.</p>
+<div class="demo-box">
+  <canvas id="demo1" height="220"></canvas>
+  <div class="demo-readout" id="demo1Readout"></div>
+  <div class="demo-controls"><button id="demo1Restart">Restart</button></div>
+  <p class="demo-caption">Toy units, not real rocket numbers &mdash; the point is the shape of the curve, not the scale. Watch the acceleration figure climb as the remaining mass (the shrinking square) burns down.</p>
+</div>
+
+<h2>4 &middot; Version two: add resistance at both ends</h2>
+<p>Real rockets don't fly in true vacuum until they're well clear of the pad, so it's worth extending the same thought experiment honestly rather than pretending air isn't there. Put the same block-and-machine setup inside a column of air instead of empty space, and let both ends of the interaction &mdash; the block itself, and the thrown chunks &mdash; push against that air as they move through it. Both directions of motion now cost something extra: the block has to shove air out of its own way as it accelerates, and the thrown exhaust has to shove air out of <em>its</em> way too, which bleeds off some of the momentum that would otherwise have gone entirely into pushing the block.</p>
+<p>That drag isn't fixed &mdash; it depends on how much air is actually there. As the block climbs and the surrounding air thins out, both of those losses shrink together: less resistance in front of the block, and less resistance behind the exhaust. The net effect is that the same machine, throwing the same chunks at the same rate, delivers a larger share of its effort into moving the block as the air thins &mdash; not because the machine is doing anything different, but because less of its work is being wasted pushing air out of the way on either end. That's the plain-language version of why a rocket nozzle is rated for more thrust in vacuum than at sea level; the technical form of the same idea, if you want it, is a short equation in the note below &sect;5.</p>
+
+<div class="demo-box">
+  <canvas id="demo2" height="260"></canvas>
+  <div class="demo-readout" id="demo2Readout"></div>
+  <div class="demo-controls"><button id="demo2Restart">Restart</button></div>
+  <p class="demo-caption">Same machine, same throwing rate, now climbing through a column of thinning air (dark = dense, near the bottom; clear = thin, near the top). &ldquo;Efficiency&rdquo; compares the actual acceleration achieved against the drag-free ideal from &sect;3 &mdash; watch it climb toward 100% as the air thins, with no change to the machine itself.</p>
+</div>
+
+<h2>5 &middot; What real telemetry actually shows</h2>
+<p>This is the same shape as the demo in &sect;3, at real Falcon&nbsp;9 Block&nbsp;5 numbers instead of toy units: 9&times; Merlin&nbsp;1D, sea-level thrust 7,607&nbsp;kN, vacuum thrust 8,227&nbsp;kN, ~411&nbsp;t propellant, engine cutoff ~162s, run against the U.S. Standard Atmosphere 1976 density model. The chart below plots that real, measured-physics acceleration against a hypothetical &ldquo;air pusher&rdquo; model where thrust is simply scaled by ambient air density &mdash; the literal version of &ldquo;thrust needs a medium&rdquo; &mdash; run through the identical fuel burn and mass-loss schedule, so the only variable that differs is what creates the thrust.</p>
 
 <div class="chart-box">
   <canvas id="chartAccel" height="360"></canvas>
@@ -119,8 +144,12 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 </div>
 
 <p>The real curve keeps climbing as the rocket empties out and the air thins &mdash; peaking hardest right before engine cutoff, in air thin enough to be a fraction of a percent of sea level. An &ldquo;air pusher&rdquo; engine, built on exactly the same fuel schedule, would collapse toward zero thrust over the same stretch and the vehicle would fall back to Earth rather than reach orbital speed. Those aren't two competing interpretations of ambiguous data; they're two sharply different, easily distinguishable predictions, and every successful orbital launch is a repeated, public test of which one actually happens.</p>
+<p class="scalewarn">For the technically inclined: the equation aerospace engineers actually use to size a nozzle is F&nbsp;=&nbsp;&#7745;&middot;V<sub>e</sub>&nbsp;+&nbsp;A<sub>e</sub>(p<sub>e</sub>&nbsp;&minus;&nbsp;p<sub>0</sub>) (<a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust-equation/" style="color:var(--ink-3)">NASA Glenn, Rocket Thrust Equation</a>). The first term is pure momentum thrust &mdash; medium-independent, exactly &sect;3's block-and-machine result. The second term is the pressure-difference correction from &sect;4: as ambient pressure p<sub>0</sub> falls, that term grows, adding thrust rather than removing it.</p>
 
-<h2>5 &middot; Independent of thrust mechanism: the air is functionally gone long before it would matter</h2>
+<h2>6 &middot; You don't have to trust anyone's numbers to check this</h2>
+<p>Everything in &sect;5 used SpaceX's own published thrust and mass figures, and it's fair to ask why those should be believed. They don't have to be. Altitude, speed, and time are visible directly on the public launch webcast, and acceleration is just the rate those change &mdash; nothing about deriving it requires trusting a single claimed thrust or propellant number from SpaceX at all. Independent, unaffiliated communities already do exactly this for every launch: enthusiasts on forums like <a href="https://forum.nasaspaceflight.com/index.php?topic=40983.0" style="color:var(--ink-3)">NASASpaceflight.com</a> hand-log the on-screen velocity and altitude readouts frame by frame, and open, community-run tools such as the <a href="https://github.com/r-spacex/SpaceX-API" style="color:var(--ink-3)">r/SpaceX-API project</a> and third-party trajectory reconstructions built on it aggregate and replay that same public telemetry with no SpaceX involvement in the analysis. Back out the acceleration curve from that externally observed altitude-and-speed data alone, with no claimed thrust or mass figures anywhere in the calculation, and it lands on the same climbing shape in &sect;5 &mdash; not because independent observers were told to expect it, but because that's what the video feed itself shows happening.</p>
+
+<h2>7 &middot; Independent of thrust mechanism: the air is functionally gone long before it would matter</h2>
 <p>Even setting the thrust-mechanism question aside, &ldquo;no medium to push against&rdquo; isn't some exotic condition unique to a vacuum chamber or deep space &mdash; it's the normal state of the sky well below where second-stage burns and orbital insertion happen. The chart below extends the same atmospheric model up past the K&aacute;rm&aacute;n line (100&nbsp;km, the conventional edge of space) to low Earth orbit altitudes like the ISS (~423&nbsp;km).</p>
 
 <div class="chart-box">
@@ -130,35 +159,46 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 
 <p class="scalewarn">Pressure at 80&nbsp;km is already roughly 0.0006% of sea level; by the K&aacute;rm&aacute;n line it's immeasurably close to the pressure of interplanetary space. If a rocket's thrust genuinely depended on ambient air, it would have already failed by the time a Falcon&nbsp;9 second stage lights, tens of kilometres below where anyone claims spacecraft do their real work. The claim would predict engine failure at an altitude where every orbital mission on record is still climbing normally.</p>
 
-<h2>6 &middot; The vacuum-chamber test isn't hypothetical &mdash; it's been run for sixty years, at a scale built to avoid exactly the pitfall flagged in &sect;2</h2>
-<p>NASA Glenn's Electric Propulsion and Power Laboratory has been testing thrusters in hard vacuum since the 1960s. Its largest chamber, Vacuum Facility&nbsp;5, is 4.6&nbsp;m in diameter and 18.3&nbsp;m long, pumped down to roughly 1&times;10<sup>&minus;7</sup>&nbsp;torr &mdash; a size and pumping capacity specifically chosen so a firing thruster's own exhaust can't re-pressurize the chamber faster than it's evacuated, which is precisely the failure mode the chamber-size caution in &sect;2 is worried about. Ion and Hall-effect thrusters (including NASA's NEXT engine) have been hot-fired there and at comparable facilities worldwide for thousands of hours, in real vacuum, with thrust measured directly on a stand &mdash; not inferred, not simulated.</p>
-<p>Every one of those tests, run by multiple independent space agencies and companies over decades, shows sustained, steady thrust in vacuum &mdash; not the collapse-to-zero the claim predicts. So has every second-stage and on-orbit engine restart ever telemetered, and every deep-space probe (Voyager, New Horizons, both Pioneers) that fired trajectory-correction thrusters in interplanetary vacuum, millions of kilometres from any atmosphere at all.</p>
+<h2>8 &middot; This isn't just NASA saying so</h2>
+<p>It's fair to be skeptical of taking any single institution's word for something this consequential, and this claim in particular is often aimed squarely at NASA's credibility. So set NASA aside for a moment and look at the same physics at completely different scales, run by people with no stake in the space program at all.</p>
+<p>At the small end, amateur and hobby rocketry has been measuring exactly this &mdash; motor thrust over time, on a load cell, no institution required &mdash; for decades. <a href="https://www.thrustcurve.org/" style="color:var(--ink-3)">ThrustCurve.org</a> is an independent, community-run database (maintained by a private individual, not any government or agency) of over a thousand certified motor thrust curves contributed by hobbyists and testing organizations with no connection to NASA or spaceflight programs. Building your own thrust stand is genuinely a weekend project: amateur rocket engineer Richard Nakka's <a href="https://www.nakka-rocketry.net/strainlc.html" style="color:var(--ink-3)">guide to a DIY strain-gauge load cell</a> runs about $10&ndash;20 in parts and produces a real, directly measured thrust-vs-time curve on a home motor test stand &mdash; the same measurement this page is arguing about, done by one person in a garage.</p>
+<p>At the large end, but still nothing to do with NASA, publicly documented missile intercepts show the same physics operating under combat conditions, verified by multiple independent militaries with every incentive to get it right and none to fake it: Arrow-2 interceptors reaching roughly 50&nbsp;km altitude, Arrow-3 achieving an exoatmospheric intercept near 100&nbsp;km during the April 2024 Iranian attack, and a first combat-verified THAAD intercept near 150&nbsp;km in December 2024. None of that hardware is run by a space agency selling the public on space travel; it's missile-defense engineering that has to work the first time, cross-checked by the intercepting country, the country that launched the threat, and outside observers, all in agreement about where these interceptions happened. Public specifications and further detail on individual systems are catalogued at the non-governmental <a href="https://missilethreat.csis.org/" style="color:var(--ink-3)">CSIS Missile Defense Project</a>.</p>
+<p>Only after that does NASA's own data belong in the conversation, and it belongs there as one more point on a curve that amateur and military sources have already traced &mdash; not as the source of the curve. NASA Glenn's Electric Propulsion and Power Laboratory has been testing thrusters in hard vacuum since the 1960s; its largest chamber, <a href="https://www.nasa.gov/centers-and-facilities/glenn/electric-propulsion-and-power-laboratory/" style="color:var(--ink-3)">Vacuum Facility&nbsp;5</a>, is 4.6&nbsp;m in diameter and 18.3&nbsp;m long, pumped down to roughly 1&times;10<sup>&minus;7</sup>&nbsp;torr &mdash; sized specifically so a firing thruster's own exhaust can't re-pressurize the chamber faster than it's evacuated, precisely the failure mode &sect;2 flagged. Ion and Hall-effect thrusters (including NASA's NEXT engine) have been hot-fired there for thousands of hours with thrust measured directly on a stand. What NASA's numbers add isn't a different claim than the garage load cell or the missile intercept &mdash; it's the same relationship extended to a bigger engine and a longer burn. The curve doesn't change shape depending on who's measuring it.</p>
 
-<h2>7 &middot; Where we're genuinely willing to wait and see</h2>
-<p>In fairness: a new, independently run vacuum-chamber test isn't a bad idea just because the physics is already well established elsewhere &mdash; replication is a fine instinct, and Shape Debate's own page correctly names the single most common way an amateur version of this test goes wrong. What actually determines whether the Kampf test lands as evidence either way is whether the chamber and pump-down are large enough, relative to the thrust and burn duration used, that the chamber pressure stays low throughout the firing rather than rising as exhaust accumulates. That's a checkable, falsifiable detail once the results are up: if thrust holds steady while the chamber stays at a documented low pressure throughout the burn, that confirms standard physics; if thrust collapses while the chamber pressure is simultaneously rising, that shows a chamber-sizing problem, not a Newton's-third-law problem.</p>
+<h2>9 &middot; Where we're genuinely willing to wait and see</h2>
+<p>In fairness: a new, independently run vacuum-chamber test isn't a bad idea just because the physics is already well established elsewhere &mdash; replication is a fine instinct, and Shape Debate's own page correctly names the single most common way an amateur version of this test goes wrong. What actually determines whether the Kampf test lands as evidence either way is whether the chamber and pump-down are large enough, relative to the thrust and burn duration used, that the chamber pressure stays low throughout the firing rather than rising as exhaust accumulates &mdash; exactly the sizing problem &sect;8's amateur and NASA facilities were both built to avoid. That's a checkable, falsifiable detail once the results are up: if thrust holds steady while the chamber stays at a documented low pressure throughout the burn, that confirms standard physics; if thrust collapses while the chamber pressure is simultaneously rising, that shows a chamber-sizing problem, not a Newton's-third-law problem.</p>
 
 <h2>The honest bottom line</h2>
-<p>The claim's own physical intuition &mdash; &ldquo;thrust needs something to push off&rdquo; &mdash; correctly describes propellers and jet engines, which really do stop working without air. It just doesn't describe rockets, whose reaction mass is the propellant they carry, not the surrounding atmosphere. The rocket thrust equation used to size real engines predicts thrust rising, not falling, as ambient pressure drops. Real Falcon&nbsp;9 telemetry shows exactly that rise, all the way to engine cutoff in air thinner than a rounding error. And the vacuum-chamber test being proposed isn't a thought experiment &mdash; it's been run, at a scale specifically built to dodge the small-chamber trap the claim itself flags, for over sixty years, with the same result every time.</p>
+<p>The claim's own physical intuition &mdash; &ldquo;thrust needs something to push off&rdquo; &mdash; correctly describes propellers and jet engines, which really do stop working without air. It just doesn't describe a system throwing its own mass overboard, because Newton's third law was never about air in the first place &mdash; it's about mass affecting mass, and exhaust gas has mass like anything else. That's true before a single rocket number gets involved, it's true in real Falcon&nbsp;9 telemetry you can independently verify from the public webcast without trusting anyone's claimed specs, and it's true at every scale anyone has bothered to check &mdash; a $15 garage load cell, a combat-verified missile intercept, and a sixty-year-old NASA vacuum chamber all trace the same curve. NASA's numbers are just that curve drawn out to a bigger engine, not a separate claim resting on trusting NASA.</p>
 
 <h2 id="sources">Sources &amp; further reading</h2>
 <ul class="src-list">
   <li>Shape Debate, Claim&nbsp;#2 (<a href="https://shapedebate.com/">shapedebate.com</a>), and the referenced pending vacuum-chamber test by Alex Kampf, &ldquo;Propulsion Tester.&rdquo;</li>
   <li>NASA Glenn Research Center, <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust-equation/" style="color:var(--ink-3)">Rocket Thrust Equation</a> and <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/rocket-thrust/" style="color:var(--ink-3)">Rocket Thrust</a>.</li>
   <li>NASA, <a href="https://www.nasa.gov/centers-and-facilities/glenn/electric-propulsion-and-power-laboratory/" style="color:var(--ink-3)">Electric Propulsion and Power Laboratory</a>, Glenn Research Center &mdash; Vacuum Facility 5/6 specifications and the NEXT ion thruster program.</li>
-  <li>U.S. Standard Atmosphere, 1976 &mdash; density/pressure model used for both charts on this page.</li>
+  <li><a href="https://www.thrustcurve.org/" style="color:var(--ink-3)">ThrustCurve.org</a> &mdash; independent, community-maintained database of certified amateur and commercial motor thrust curves, no NASA affiliation.</li>
+  <li>Richard Nakka, <a href="https://www.nakka-rocketry.net/strainlc.html" style="color:var(--ink-3)">DIY strain-gauge load cell for thrust measurement</a> &mdash; amateur rocketry reference site.</li>
+  <li><a href="https://missilethreat.csis.org/" style="color:var(--ink-3)">CSIS Missile Defense Project</a> &mdash; non-governmental catalogue of public missile and interceptor specifications, including the Arrow-2/3 and THAAD intercepts cited in &sect;8.</li>
+  <li><a href="https://forum.nasaspaceflight.com/index.php?topic=40983.0" style="color:var(--ink-3)">NASASpaceflight.com forum</a> &mdash; independent enthusiasts hand-logging Falcon 9 webcast velocity/altitude telemetry.</li>
+  <li><a href="https://github.com/r-spacex/SpaceX-API" style="color:var(--ink-3)">r/SpaceX-API</a> &mdash; open-source, community-maintained aggregation of public SpaceX launch telemetry, independent of SpaceX.</li>
+  <li>U.S. Standard Atmosphere, 1976 &mdash; density/pressure model used for both physics charts on this page.</li>
   <li>Falcon 9 Block 5 public performance parameters (engine count and thrust, propellant mass, approximate engine cutoff time) as published by SpaceX and widely reproduced in spaceflight references.</li>
 </ul>
 
 <footer>
   <p><a href="https://funwithscience.net/" style="color:var(--ink-3)">Fun With Science</a> &middot; companion to the
   <a href="https://funwithscience.net/globe-deconstruction/" style="color:var(--ink-3)">Globe Deconstruction Review</a>.</p>
-  <p>Charts on this page are original, computed from public atmospheric models and published Falcon 9 Block 5 performance parameters. Quoted claim text is reproduced in small part from shapedebate.com for the purpose of criticism and review.</p>
+  <p>Charts and interactive demos on this page are original, computed from public atmospheric models and published Falcon 9 Block 5 performance parameters; the two mass-throwing demos in &sect;3&ndash;4 use illustrative toy units, not real rocket figures. Quoted claim text is reproduced in small part from shapedebate.com for the purpose of criticism and review.</p>
 </footer>
 
 </div>
 
 <script>
+/* ============================================================
+   Shared helpers
+   ============================================================ */
 const G = 9.80665, R_AIR = 287.058, RHO_0 = 1.225;
+const C = { real:'#2a5a8c', fake:'#c0392b', atmo:'#8a7fb5', grid:'rgba(0,0,0,0.06)', axis:'#6E675B', event:'rgba(217,119,6,0.55)', ink3:'#6E675B' };
 
 function atmo(h) {
   h = Math.max(h, 0);
@@ -171,13 +211,232 @@ function atmo(h) {
   else{T=186.87;P=1.63*Math.exp(-G*(h-80000)/(R_AIR*186.87));}
   return{p:Math.max(P,0),d:Math.max(P/(R_AIR*T),0)};
 }
-// Extend past 86km with exponential decay, scale height ~6400m (21,000 ft), anchored to the model's own 86km value.
 const P86 = atmo(86000).p;
 function pExtended(h){
   if (h <= 86000) return atmo(h).p;
   return P86 * Math.exp(-(h-86000)/6400);
 }
 
+/* ============================================================
+   Demo 1 -- first-principles mass-throwing demo (no air)
+   Toy units: constant mass flow + constant ejection speed,
+   i.e. F = mdot*ve is constant, a = F/m(t) climbs as m(t) falls.
+   ============================================================ */
+(function(){
+  const canvas = document.getElementById('demo1');
+  const readout = document.getElementById('demo1Readout');
+  const restartBtn = document.getElementById('demo1Restart');
+  if (!canvas) return;
+
+  const M0 = 1000, MFLOOR = 250, MDOT = 6, VE = 40; // toy units
+  const F = MDOT * VE;
+  const SIM_SPEED = 10; // simulated seconds per real second
+
+  let m, v1, x1, t, particles, lastMassSpawned;
+
+  function reset(){
+    m = M0; v1 = 0; x1 = 0.62; t = 0; particles = []; lastMassSpawned = M0;
+  }
+  reset();
+
+  function step(dtReal){
+    const dt = dtReal * SIM_SPEED;
+    if (m > MFLOOR){
+      const burn = Math.min(MDOT*dt, m-MFLOOR);
+      const a = F/m;
+      v1 -= a*dt;          // block accelerates left (negative x)
+      x1 += v1*dt*0.00025; // scaled for on-canvas motion
+      m -= burn;
+      t += dt;
+      // spawn a visual exhaust particle roughly every 40 mass-units ejected
+      if (lastMassSpawned - m > 40){
+        particles.push({age:0, vx: 0.55 + Math.random()*0.15, y: 0});
+        lastMassSpawned = m;
+      }
+    }
+    particles.forEach(p => p.age += dtReal);
+    particles = particles.filter(p => p.age < 2.2);
+    if (x1 < -0.35 || m <= MFLOOR) {
+      // small pause at the end reads better than an instant snap-restart
+      if (m <= MFLOOR && t > 0.05) { reset(); }
+    }
+  }
+
+  function draw(){
+    const rect = canvas.getBoundingClientRect(), dpr = window.devicePixelRatio||1;
+    const H = 220;
+    canvas.width = rect.width*dpr; canvas.height = H*dpr;
+    const c = canvas.getContext('2d'); c.scale(dpr,dpr);
+    const W = rect.width;
+    c.fillStyle = '#fff'; c.fillRect(0,0,W,H);
+
+    // ground line
+    const midY = H*0.55;
+    c.strokeStyle = C.grid; c.lineWidth = 1;
+    c.beginPath(); c.moveTo(0,midY+40); c.lineTo(W,midY+40); c.stroke();
+
+    // block, size scales with sqrt(mass fraction) for a visible but non-linear shrink
+    const frac = (m-MFLOOR)/(M0-MFLOOR);
+    const side = 30 + 70*Math.sqrt(Math.max(frac,0));
+    const cx = W*x1;
+    c.fillStyle = C.real;
+    c.fillRect(cx - side/2, midY+40-side, side, side);
+    c.fillStyle = '#fff'; c.font='600 10px Inter,sans-serif'; c.textAlign='center';
+    c.fillText('MASS 1', cx, midY+40-side/2+3);
+
+    // nozzle mark
+    c.fillStyle = C.fake;
+    c.fillRect(cx+side/2-2, midY+40-side/2-3, 6, 6);
+
+    // exhaust particles
+    particles.forEach(p=>{
+      const px = cx + side/2 + p.vx * p.age * W*0.28;
+      const alpha = Math.max(0, 1 - p.age/2.2);
+      c.fillStyle = `rgba(192,57,43,${alpha.toFixed(2)})`;
+      c.fillRect(px, midY+40-side/2-4, 5, 5);
+    });
+
+    c.fillStyle = C.axis; c.font='400 10px Inter,sans-serif'; c.textAlign='left';
+    c.fillText('mass 1 shrinks and drifts left as it throws off mass 2 at a constant rate →', 6, 18);
+  }
+
+  function updateReadout(){
+    const massPct = Math.max(0, (m-MFLOOR)/(M0-MFLOOR)*100);
+    const accel = m>0 ? F/m : 0;
+    readout.innerHTML =
+      `<span>Mass remaining: <b>${massPct.toFixed(0)}%</b></span>` +
+      `<span>Velocity: <b>${Math.abs(v1).toFixed(2)}</b> (arb. units)</span>` +
+      `<span>Acceleration: <b>${accel.toFixed(3)}</b> (arb. units) ${t>4 ? '↑ rising' : ''}</span>`;
+  }
+
+  let last = null;
+  function loop(ts){
+    if (last===null) last = ts;
+    const dtReal = Math.min((ts-last)/1000, 0.05);
+    last = ts;
+    step(dtReal);
+    draw();
+    updateReadout();
+    requestAnimationFrame(loop);
+  }
+  restartBtn.addEventListener('click', reset);
+  requestAnimationFrame(loop);
+})();
+
+/* ============================================================
+   Demo 2 -- same mechanic, vertical, with drag on the block
+   proportional to local air density * v^2, plus a parallel
+   drag-free "ideal" trace for comparison.
+   ============================================================ */
+(function(){
+  const canvas = document.getElementById('demo2');
+  const readout = document.getElementById('demo2Readout');
+  const restartBtn = document.getElementById('demo2Restart');
+  if (!canvas) return;
+
+  const M0 = 1000, MFLOOR = 250, MDOT = 6, VE = 40, F = MDOT*VE;
+  const SIM_SPEED = 10;
+  const H_SCALE = 40;   // density scale height, toy units
+  const TOP_ALT = 150;  // altitude at top of canvas, toy units
+  const K_DRAG = 0.15;  // drag coefficient, tuned for visible effect at ground level
+
+  function density(alt){ return Math.exp(-Math.max(alt,0)/H_SCALE); }
+
+  let m, v1, alt, vIdeal, altIdeal, t;
+  function reset(){ m=M0; v1=0; alt=0; vIdeal=0; altIdeal=0; t=0; }
+  reset();
+
+  function step(dtReal){
+    const dt = dtReal*SIM_SPEED;
+    if (m > MFLOOR){
+      const burn = Math.min(MDOT*dt, m-MFLOOR);
+      const aIdeal = F/m;
+      const dens = density(alt);
+      const drag = K_DRAG * dens * v1*v1 / m;
+      const aActual = Math.max(0, aIdeal - drag);
+
+      v1 += aActual*dt;
+      alt += v1*dt*0.02;
+      vIdeal += aIdeal*dt;
+      altIdeal += vIdeal*dt*0.02;
+
+      m -= burn;
+      t += dt;
+    } else if (t > 0.05) {
+      reset();
+    } else {
+      t += dt;
+    }
+  }
+
+  function draw(){
+    const rect = canvas.getBoundingClientRect(), dpr = window.devicePixelRatio||1;
+    const Hc = 260;
+    canvas.width = rect.width*dpr; canvas.height = Hc*dpr;
+    const c = canvas.getContext('2d'); c.scale(dpr,dpr);
+    const W = rect.width;
+
+    // density gradient background: dense (bottom) to clear (top)
+    const grad = c.createLinearGradient(0,Hc,0,0);
+    grad.addColorStop(0, 'rgba(138,127,181,0.30)');
+    grad.addColorStop(0.5, 'rgba(138,127,181,0.10)');
+    grad.addColorStop(1, 'rgba(138,127,181,0.0)');
+    c.fillStyle = '#fff'; c.fillRect(0,0,W,Hc);
+    c.fillStyle = grad; c.fillRect(0,0,W,Hc);
+
+    const altToY = a => Hc - 20 - Math.min(1, a/TOP_ALT) * (Hc-40);
+
+    const side = 22 + 34*Math.sqrt(Math.max((m-MFLOOR)/(M0-MFLOOR),0));
+    const cx = W*0.32;
+    const y = altToY(alt);
+    c.fillStyle = C.real;
+    c.fillRect(cx-side/2, y-side, side, side);
+    c.fillStyle='#fff'; c.font='600 9px Inter,sans-serif'; c.textAlign='center';
+    c.fillText('MASS 1', cx, y-side/2+3);
+
+    // ghost ideal marker
+    const yIdeal = altToY(altIdeal);
+    c.strokeStyle = C.fake; c.lineWidth=1.4; c.setLineDash([3,3]);
+    c.beginPath(); c.moveTo(cx+side*0.9, yIdeal); c.lineTo(cx+side*2.3, yIdeal); c.stroke();
+    c.setLineDash([]);
+    c.fillStyle = C.fake; c.font='600 9px Inter,sans-serif'; c.textAlign='left';
+    c.fillText('ideal (no air), for comparison', cx+side*2.4, yIdeal+3);
+
+    c.fillStyle = C.axis; c.font='400 10px Inter,sans-serif'; c.textAlign='left';
+    c.fillText('dense air ↓', 6, Hc-6);
+    c.fillText('thin air ↑', 6, 14);
+  }
+
+  function updateReadout(){
+    const dens = density(alt)*100;
+    const aIdeal = m>0 ? F/m : 0;
+    const drag = K_DRAG*density(alt)*v1*v1/Math.max(m,1);
+    const aActual = Math.max(0, aIdeal-drag);
+    const eff = aIdeal>0 ? Math.min(100, aActual/aIdeal*100) : 100;
+    readout.innerHTML =
+      `<span>Air density here: <b>${dens.toFixed(1)}%</b> of ground level</span>` +
+      `<span>Ideal accel: <b>${aIdeal.toFixed(3)}</b></span>` +
+      `<span>Actual accel: <b>${aActual.toFixed(3)}</b></span>` +
+      `<span>Efficiency: <b>${eff.toFixed(0)}%</b> ${eff>85 ? '↑ near ideal' : ''}</span>`;
+  }
+
+  let last = null;
+  function loop(ts){
+    if (last===null) last = ts;
+    const dtReal = Math.min((ts-last)/1000, 0.05);
+    last = ts;
+    step(dtReal);
+    draw();
+    updateReadout();
+    requestAnimationFrame(loop);
+  }
+  restartBtn.addEventListener('click', reset);
+  requestAnimationFrame(loop);
+})();
+
+/* ============================================================
+   Real telemetry chart (Falcon 9 vs "air pusher")
+   ============================================================ */
 function sim(airPush) {
   const dt=.25,meco=162,m_prop=411000,m_dry=25600,m_s2=120000;
   const m0=m_prop+m_dry+m_s2,mdot=m_prop/meco;
@@ -202,8 +461,6 @@ function sim(airPush) {
   return out;
 }
 const R=sim(false),F=sim(true);
-
-const C = { real:'#2a5a8c', fake:'#c0392b', atmo:'#8a7fb5', grid:'rgba(0,0,0,0.06)', axis:'#6E675B', event:'rgba(217,119,6,0.55)' };
 
 function drawAccel(canvas){
   const rect=canvas.getBoundingClientRect(), dpr=window.devicePixelRatio||1;
@@ -245,7 +502,7 @@ function drawAccel(canvas){
   const rl=R[R.length-1];
   c.fillStyle=C.real; c.font='700 13px Inter,sans-serif'; c.textAlign='left';
   c.fillText((rl.accel/G).toFixed(1)+'g',sx(rl.t)+4,sy(rl.accel/G)-8);
-  c.font='400 10px Inter,sans-serif'; c.fillStyle=C.ink3||'#6E675B';
+  c.font='400 10px Inter,sans-serif'; c.fillStyle=C.ink3;
   c.fillText('real, at cutoff',sx(rl.t)+4,sy(rl.accel/G)+8);
 
   const fm=F.find(d=>d.t===162)||F[F.length-1];
@@ -271,43 +528,38 @@ function drawPressure(canvas){
   const W=rect.width, H=360;
   const m={t:16,r:16,b:34,l:70}, cw=W-m.l-m.r, ch=H-m.t-m.b;
 
-  const maxAltKm=450; // past ISS
+  const maxAltKm=450;
   const logMax=Math.log10(maxAltKm+1);
-  const sy=altKm=>m.t+ch-(Math.log10(altKm+1)/logMax)*ch; // log altitude, 0km at bottom
+  const sy=altKm=>m.t+ch-(Math.log10(altKm+1)/logMax)*ch;
   const maxP=1013.25;
   const sx=pHpa=>m.l+Math.min(1,Math.max(0,pHpa/maxP))*cw;
 
   c.fillStyle='#fff'; c.fillRect(0,0,W,H);
 
-  // gridlines at notable altitudes
   const marks=[0,10,20,50,100,200,450];
   c.strokeStyle=C.grid; c.lineWidth=.5;
   marks.forEach(a=>{const y=sy(a);c.beginPath();c.moveTo(m.l,y);c.lineTo(m.l+cw,y);c.stroke();});
   for(let p=0;p<=maxP;p+=200){c.beginPath();c.moveTo(sx(p),m.t);c.lineTo(sx(p),m.t+ch);c.stroke();}
 
-  // Kármán line
   c.strokeStyle=C.event; c.lineWidth=1; c.setLineDash([3,3]);
   c.beginPath();c.moveTo(m.l,sy(100));c.lineTo(m.l+cw,sy(100));c.stroke();c.setLineDash([]);
   c.fillStyle=C.event; c.font='600 10px Inter,sans-serif'; c.textAlign='left';
   c.fillText('Kármán line, 100 km',m.l+6,sy(100)-4);
 
-  // ISS line
   c.strokeStyle=C.fake; c.lineWidth=1; c.setLineDash([2,3]);
   c.beginPath();c.moveTo(m.l,sy(423));c.lineTo(m.l+cw,sy(423));c.stroke();c.setLineDash([]);
   c.fillStyle=C.fake; c.font='600 10px Inter,sans-serif';
   c.fillText('ISS altitude, ~423 km',m.l+6,sy(423)-4);
 
-  // pressure curve
-  c.strokeStyle=C.sea||C.real; c.lineWidth=2.4; c.beginPath();
+  c.strokeStyle=C.real; c.lineWidth=2.4; c.beginPath();
   let first=true;
   for(let hKm=0; hKm<=maxAltKm; hKm+=0.5){
     const pHpa = pExtended(hKm*1000)/100;
     const x=sx(pHpa), y=sy(hKm);
     if(first){c.moveTo(x,y);first=false;} else c.lineTo(x,y);
   }
-  c.strokeStyle=C.real; c.stroke();
+  c.stroke();
 
-  // fill under curve for visual weight
   c.beginPath();
   first=true;
   for(let hKm=0; hKm<=maxAltKm; hKm+=0.5){
@@ -318,7 +570,6 @@ function drawPressure(canvas){
   c.lineTo(m.l,m.t+ch); c.closePath();
   c.fillStyle='rgba(42,90,140,0.06)'; c.fill();
 
-  // axis labels
   c.fillStyle=C.axis; c.font='400 10px Inter,sans-serif'; c.textAlign='center';
   for(let p=0;p<=maxP;p+=200)c.fillText(p, sx(p), m.t+ch+16);
   c.fillText('Pressure (hPa) — 1013 = sea level',m.l+cw/2,m.t+ch+30);
@@ -326,24 +577,26 @@ function drawPressure(canvas){
   c.textAlign='right';
   marks.forEach(a=>{c.fillStyle=C.axis;c.fillText(a+' km', m.l-6, sy(a)+3);});
 
-  // annotate sea level start point
   c.fillStyle=C.real; c.font='700 11px Inter,sans-serif'; c.textAlign='left';
   c.fillText('1013 hPa at sea level', sx(1013)-2, sy(0)-8);
 }
 
-function render(){
+function renderCharts(){
   const a=document.getElementById('chartAccel'), p=document.getElementById('chartPressure');
-  drawAccel(a); drawPressure(p);
+  if (a) drawAccel(a);
+  if (p) drawPressure(p);
 
-  document.getElementById('legendAccel').innerHTML =
+  const la = document.getElementById('legendAccel');
+  if (la) la.innerHTML =
     '<span><span class="sw" style="background:#2a5a8c"></span>Real acceleration (Newton\'s 3rd law, actual F9 parameters)</span>' +
     '<span><span class="sw" style="background:#c0392b"></span>Hypothetical &ldquo;air pusher&rdquo; (thrust &prop; air density)</span>' +
     '<span><span class="sw" style="background:#8a7fb5"></span>Atmospheric density (% of sea level)</span>';
-  document.getElementById('legendPressure').innerHTML =
+  const lp = document.getElementById('legendPressure');
+  if (lp) lp.innerHTML =
     '<span><span class="sw" style="background:#2a5a8c"></span>Atmospheric pressure vs. altitude, U.S. Standard Atmosphere 1976 (extended)</span>';
 }
-render();
-window.addEventListener('resize', render);
+renderCharts();
+window.addEventListener('resize', renderCharts);
 </script>
 
 </body>
