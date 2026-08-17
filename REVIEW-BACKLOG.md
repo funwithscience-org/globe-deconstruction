@@ -43,6 +43,21 @@ arguing, in case it needs defending later:
 - Closed the loop: his own correct p.119 mechanism (vanes erect to *local*
   vertical, which rotates at V/R) is what answers his island-of-pilots
   objection on p.122.
+- **Added 2026-08-17 (operator's point):** a turn is not forced by the
+  aerodynamics of flow. Lift is perpendicular to the wings; nothing in the
+  airflow curves the path. So vertically the aircraft sits in an equilibrium
+  with a restoring force (level flight *is* curved flight, free), while
+  horizontally there is no equilibrium at all — a bank has to be commanded and
+  held. The flat model therefore needs the kind of curve that cannot happen by
+  itself. That is listed as a §1 concession (it is *why* the flight recorder is
+  the right instrument — the signal is a commanded action, not a residual) and
+  developed in §5 as the **hands-off test**: trim level over the equator and
+  stop steering. Globe keeps you on the line, because it is the one latitude
+  where *both* (V/R)tan φ and the Coriolis sin φ term vanish — at the equator
+  the Coriolis term points straight up (Eötvös, 0.37% of g), not sideways.
+  Flat map: 25 mi off in 1 h, 100 in 2, 391 in 4 (√(r²+d²)−r, r = 6,225 mi).
+  This is the strongest form of the experiment — no instruments, no pilot in
+  the loop, answer arrives as a position anyone on board can see.
 
 ### 2. Unknown Luminaries expansion — `Section p.153` + `Q5` + `Q6` + `Q7` + rest of `Claim #3`
 
