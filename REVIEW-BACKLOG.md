@@ -15,6 +15,99 @@ already banked.
 
 ---
 
+## NEXT UP — Action Lab footage analysis (materials in hand, 2026-08-17)
+
+**Task.** The book's p.20 claim that The Action Lab's *Rocket Launch in a Giant
+Vacuum Chamber* "accidentally proved space travel to be a hoax." Operator has
+supplied a transcript, an analysis, frame tracking, and the 4K frame series.
+The rockets page already answers the argument *as described* (§10, "The delayed
+reaction, and why the camera decides it"); what the footage adds is whether the
+described reading survives contact with the actual frames.
+
+**Materials — on the operator's Mac, connected folder, NOT in the container:**
+`~/Library/Mobile Documents/com~apple~CloudDocs/claude working folder/globe deconstruction/`
+
+| File | Size | Read order |
+|---|---|---|
+| `TRANSCRIPT-actionlab.md` | 6.7 KB | **1st — cheap, read whole** |
+| `ANALYSIS-vacuum-rocket.md` | 8.6 KB | **2nd — cheap, read whole** |
+| `track_launch.json` | 18 KB | 3rd — per-frame tracking, the quantitative core |
+| `front4k.json` | 3.7 KB | 3rd — plume-front positions |
+| `subs.en.vtt` | 60 KB | as needed, timing anchors |
+| `sheet_launch1/2.jpg`, `sheet_288-348.jpg` | ~200–300 KB | contact sheets — **look at these before any full frame** |
+| `launch_montage.png`, `FIG_thrust_signature.png` | 2.7 MB / 123 KB | derived figures |
+| `full_335.60/.85/.95/336.05.png` | ~600 KB each | the four key full frames |
+| `f/x_00001.jpg` … `x_01972.jpg` | 1,972 frames | **do not browse — index only, pull named frames** |
+| `actionlab_4k.mp4` etc. | 280 MB ×2 | too big to stage; leave on device |
+
+**Context discipline — this is the whole reason the session was compacted.**
+Images are the most context-expensive thing available. Order of operations:
+text → JSON → contact sheets → named full frames only where a specific claim
+needs adjudicating. Never stage the `f/` series wholesale or the MP4s at all.
+
+**Physics already computed and already on the page** (do not re-derive):
+mass ratio = speed ratio = 685:1 (73 mg air vs ~50 g carriage); 0.05 N on 50 g
+= 1 m/s² ⇒ 45 ms to move a visible 1 mm; plume front at 500 m/s covers 22 m in
+that time, so **below a ~22 m chamber the cloud reaches the wall first under
+either model**; 30 fps = 33 ms/frame, which buries the 1 ms vs 4 ms
+discriminator inside one frame. The genuine discriminator is **onset timing:
+independent of chamber length under standard physics, proportional to it under
+his**. Near-wall effects require gas to *return* to the vehicle and have two
+competing signs (rebound forward at 2L/v vs p₀·Aₑ pressure rise) — neither is a
+delayed start.
+
+**What the footage should be asked, specifically:**
+
+1. Does the vehicle's motion onset actually coincide with plume-wall contact, or
+   does `track_launch.json` show displacement beginning earlier and simply being
+   sub-pixel until later? That is the whole claim.
+2. What is the frame rate and the pixel scale? Sub-pixel displacement at the
+   observed thrust is the predicted null — quantify the detection floor before
+   saying anything about what is or isn't visible.
+3. Is there a static-friction release signature (a discrete break rather than a
+   smooth ramp)? Thrust ~0.05 N against carriage stiction ~0.05 N predicts one.
+4. Chamber pressure during the burn, if the video states it — the §11 sizing
+   caveat depends on it.
+
+**Tone constraint (standing):** he made an error; he did not fabricate. The
+finding to aim for is "the frames show X, which is what both models predict,"
+not "he misrepresented the video."
+
+**Deliverable:** a subsection in `docs/rockets-in-vacuum/index.html` §10, then
+close this item and the corresponding line in the rockets entry below.
+
+---
+
+## Pushing from a sandbox session — the recipe that actually works
+
+Sandbox git proxy 403s on push; reads and fetch work. The operator's flow
+**clones** the bundle, so it must be a **full-history** bundle, not a range:
+
+```
+git bundle create /mnt/user-data/outputs/globe-deconstruction-<shorthash>.bundle HEAD main
+git bundle verify <file>     # must say "records a complete history" + 2 refs
+```
+
+Then `SendUserFile`, and the operator runs:
+
+```
+BUNDLE=~/Downloads/globe-deconstruction-<shorthash>.bundle
+git bundle verify "$BUNDLE"
+cd /tmp && rm -rf globe-push && \
+git clone "$BUNDLE" globe-push && \
+cd globe-push && \
+git remote add gh "https://Devilwench:$GH_PAT@github.com/funwithscience-org/globe-deconstruction.git" && \
+git push gh HEAD:main
+```
+
+`git bundle create <out> origin/main..HEAD` produces a bundle that **cannot be
+cloned** (it has a prerequisite commit) — that mistake cost three failed
+attempts on 2026-08-17. Name the bundle after its own short hash; browsers
+de-duplicate same-named downloads. Never put the PAT in chat, in the repo, or
+in any iCloud-mirrored file.
+
+---
+
 ## The queue
 
 ### ~~1. Equator Flight Data Challenge~~ — `Q3 (p.46)` + `Section p.117` — **DONE 2026-08-17**
