@@ -219,17 +219,56 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 </figure>
 
 <table class="cmp">
-  <thead><tr><th>Latitude</th><th>Globe requires</th><th>Flat map requires</th><th>Useful as a test?</th></tr></thead>
+  <thead><tr><th>Latitude</th><th>Globe requires</th><th>Flat map requires</th><th>Gap</th></tr></thead>
   <tbody>
-    <tr><td class="metric">0&deg; &mdash; the equator</td><td><strong>0.00&deg;/hr</strong></td><td><strong>5.15&deg;/hr</strong></td><td><strong>decisive</strong></td></tr>
-    <tr><td class="metric">15&deg;</td><td>2.17&deg;/hr</td><td>6.19&deg;/hr</td><td>good</td></tr>
-    <tr><td class="metric">30&deg;</td><td>4.67&deg;/hr</td><td>7.73&deg;/hr</td><td>workable</td></tr>
-    <tr><td class="metric">45&deg;</td><td>8.10&deg;/hr</td><td>10.31&deg;/hr</td><td>marginal</td></tr>
-    <tr><td class="metric">60&deg;</td><td>14.02&deg;/hr</td><td>15.46&deg;/hr</td><td>poor</td></tr>
-    <tr><td class="metric">75&deg;</td><td>30.21&deg;/hr</td><td>30.92&deg;/hr</td><td>useless</td></tr>
+    <tr><td class="metric">0&deg; &mdash; the equator</td><td><strong>0.00&deg;/hr</strong></td><td><strong>5.15&deg;/hr</strong></td><td><strong>5.15&deg;/hr &mdash; and one side is zero</strong></td></tr>
+    <tr><td class="metric">15&deg;</td><td>2.17&deg;/hr</td><td>6.19&deg;/hr</td><td>4.02&deg;/hr</td></tr>
+    <tr><td class="metric">30&deg;</td><td>4.67&deg;/hr</td><td>7.73&deg;/hr</td><td>3.06&deg;/hr</td></tr>
+    <tr><td class="metric">45&deg;</td><td>8.10&deg;/hr</td><td>10.31&deg;/hr</td><td>2.21&deg;/hr</td></tr>
+    <tr><td class="metric">60&deg;</td><td>14.02&deg;/hr</td><td>15.46&deg;/hr</td><td>1.44&deg;/hr</td></tr>
+    <tr><td class="metric">75&deg;</td><td>30.21&deg;/hr</td><td>30.92&deg;/hr</td><td>0.71&deg;/hr</td></tr>
   </tbody>
 </table>
-<p class="scalewarn">He picked the top row. Whatever else is wrong with the chapter, the experimental design is the work of somebody thinking about what would actually distinguish the two answers.</p>
+<p class="scalewarn">The gap is widest at the equator and narrows all the way north, and only at the equator does one side of it read zero. He picked the top row.</p>
+
+<h3>&ldquo;But you can just fly due west and never turn&rdquo;</h3>
+<p>This is the objection to raise at this point, and it is the right one, because it feels obviously true. Hold a heading of 270&deg;. The compass does not move. Nothing in the cockpit says <em>turn</em>. How can that be a turn?</p>
+<p>Because a constant <em>heading</em> is not the same thing as a constant <em>direction</em>, and the difference is the whole chapter in miniature. Heading is measured against north, and north is a local reference that swings round as you travel along a parallel. Fly due west far enough and you arrive back where you began, facing the way you started. Something went all the way round. The compass never registered it, because the compass went round with you.</p>
+<div class="killer"><strong>This is the same trap as &sect;4, and it is why the chapter reads as persuasively as it does.</strong> A pilot flying a parallel genuinely does not feel a turn, genuinely sees a fixed compass, and genuinely makes no control input worth the name. All three of those things are true, and none of them means the path was straight. The instrument that would notice &mdash; a gyro, holding its orientation against space rather than against a rotating reference &mdash; is the one instrument the argument never reaches for.</div>
+<p>And once the circuit is closed, the two models can be compared with no map, no scale and no distances at all, at <em>every</em> latitude. Go all the way round a parallel and add up the turning:</p>
+
+<table class="cmp">
+  <thead><tr><th>Full circuit of the parallel at</th><th>On a globe you turn through</th><th>On any flat surface</th><th>Gap</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">the equator</td><td><strong>0&deg;</strong></td><td>360&deg;</td><td><strong>360&deg;</strong></td></tr>
+    <tr><td class="metric">15&deg;</td><td>93&deg;</td><td>360&deg;</td><td>267&deg;</td></tr>
+    <tr><td class="metric">30&deg;</td><td>180&deg;</td><td>360&deg;</td><td>180&deg;</td></tr>
+    <tr><td class="metric">45&deg;</td><td>255&deg;</td><td>360&deg;</td><td>105&deg;</td></tr>
+    <tr><td class="metric">60&deg;</td><td>312&deg;</td><td>360&deg;</td><td>48&deg;</td></tr>
+    <tr><td class="metric">75&deg;</td><td>348&deg;</td><td>360&deg;</td><td>12&deg;</td></tr>
+  </tbody>
+</table>
+<p class="scalewarn">The globe column is 360&deg;&thinsp;&times;&thinsp;sin&thinsp;&phi;, and the gap is the curvature enclosed by the circuit &mdash; the share of the turning the planet does for you. At the pole you are circling a point and you supply all of it, and the models agree exactly. At the equator the planet supplies all of it and you supply none, and they disagree by a full revolution. Everything in between is a sliding scale, which is the same story the turn-rate table tells, without needing a map to tell it.</p>
+
+<h3>And nobody actually flies a parallel anyway</h3>
+<p>Holding a line of latitude is a real manoeuvre with a real turn rate, and that is what the table computes. It is also something no airline has ever asked a crew to do, and that matters for how the other rows should be read.</p>
+<p>On a globe the shortest path between two points is a great circle, and a great circle is <em>not</em> a line of latitude. It bows toward the pole, sometimes enormously. Which is why the parallel is the expensive way to travel:</p>
+
+<table class="cmp">
+  <thead><tr><th>Route</th><th>Great circle</th><th>Along the parallel</th><th>Great circle's highest latitude</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">London &ndash; Vancouver</td><td>4,721 mi</td><td>5,432 mi &nbsp;<span class="cred">+15%</span></td><td>68.5&deg;N</td></tr>
+    <tr><td class="metric">London &ndash; Tokyo</td><td>5,946 mi</td><td>7,004 mi &nbsp;<span class="cred">+18%</span></td><td>70.9&deg;N</td></tr>
+    <tr><td class="metric">Chicago &ndash; Delhi</td><td>7,476 mi</td><td>9,316 mi &nbsp;<span class="cred">+25%</span></td><td>79.8&deg;N</td></tr>
+    <tr><td class="metric">New York &ndash; Beijing</td><td>6,830 mi</td><td>8,941 mi &nbsp;<span class="cred">+31%</span></td><td>83.9&deg;N</td></tr>
+  </tbody>
+</table>
+<p class="scalewarn">London and Tokyo both sit in the low fifties and thirties, and the aeroplane between them goes to 71&deg;N. That is not a detour; it is the short way, by a thousand miles, and it is flown daily with the fuel bill to prove it.</p>
+
+<div class="killer"><strong>Which is the real reason the equator is the right route, and it is a better reason than the one in &sect;1.</strong> The equator is the <em>only</em> line of latitude that is also a great circle. Everywhere else on Earth, &ldquo;hold this parallel&rdquo; and &ldquo;don't steer&rdquo; are two different instructions and an aircraft can only obey one of them. At the equator they are the same instruction. That is what makes the comparison fair: it is the one latitude where both models can be asked about the same manoeuvre, and where a pilot doing nothing at all is a valid run of the experiment.</div>
+
+<p>And it is worth saying what the northern rows really show, because it is a point in the chapter's favour. Compare the two models on the route aircraft <em>do</em> fly &mdash; the shortest one &mdash; and they nearly agree. On the flat map the shortest path between London and Tokyo also bows poleward, peaking near 74.6&deg;N against the globe's 70.9&deg;N. A few degrees of latitude, a couple of hundred miles of cross-track: real, measurable, but not the sort of thing that would jump out of a cabin window. The northern hemisphere has never been where this map gets into trouble, and the chapter is right not to look for the argument there.</p>
+<p class="scalewarn">The trouble is south, where the same projection stretches the 45th parallel by 233% and the 60th by 424% &mdash; which is why p.&nbsp;120 spends its effort questioning whether southern distances are real rather than defending what the map does with them.</p>
 
 <h2>4 &middot; But not on the instruments the chapter has in mind</h2>
 <p>Here is where the challenge gets more interesting than either side usually allows, and where a lazy rebuttal would go wrong. 5.15&deg;/hr sounds large because it is quoted per hour. Spread across a flight it is not something a pilot would ever feel or see on the panel.</p>
@@ -258,7 +297,8 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <h3>The sharpest form of the test: take your hands off</h3>
 <p>Trim the aircraft, put the wings level over the equator on an easterly heading, and stop steering. Both models make a prediction, and they do not overlap.</p>
 <p>On a globe, <strong>you stay on the equator</strong>. Two separate things that would normally pull you off it both vanish at exactly that latitude, and this is the second reason the route is well chosen. The geometric requirement, (V&divide;R)&thinsp;tan&thinsp;&phi;, is zero because tan&thinsp;0&deg;&nbsp;=&nbsp;0. And the sideways Coriolis deflection, which is what forces the correction at every other latitude, goes as sin&thinsp;&phi; &mdash; also zero. At the equator, flying east, the Coriolis term points straight <em>up</em>, not sideways: it makes the aircraft very slightly lighter and does not steer it at all. The equator is the one line on Earth where an aeroplane left alone will simply follow it.</p>
-<p>On the flat map, the equator is a 6,225-mile-radius circle around the pole, and an aircraft left alone flies straight. So it leaves:</p>
+<p>It is worth seeing how narrow that window is. Take the same hands-off aircraft to 45&deg;N and its ground track curves right at <strong>21.3&deg;/hr</strong> from the Coriolis term alone &mdash; a hundred miles of drift in the first hour, and a full circle in under seventeen hours. The equator is the only place on the planet where an aeroplane can be left alone and still be doing something meaningful. Which is, once again, the route the chapter picked.</p>
+<p>On the flat map, meanwhile, the equator is a circle around the pole and an aircraft left alone flies straight. So it leaves:</p>
 
 <table class="cmp">
   <thead><tr><th>Hands off for</th><th>Distance flown</th><th>Globe: off the equator by</th><th>Flat map: off the equator by</th></tr></thead>

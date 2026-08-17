@@ -58,6 +58,20 @@ arguing, in case it needs defending later:
   Flat map: 25 mi off in 1 h, 100 in 2, 391 in 4 (√(r²+d²)−r, r = 6,225 mi).
   This is the strongest form of the experiment — no instruments, no pilot in
   the loop, answer arrives as a position anyone on board can see.
+- **Added 2026-08-17 (operator, second round):** the per-latitude turn-rate
+  table was the wrong comparison north of the equator, because nobody flies a
+  parallel — the great circle is 15–31% shorter (London–Tokyo 5,946 vs 7,004 mi,
+  vertex 70.9°N). And the natural objection — *"you can just fly due west and
+  never turn"* — is the same constant-heading-vs-constant-direction trap as §4,
+  and is why the chapter persuades. Both now in §3.
+  The fix that generalises everything: **a full circuit of the parallel at
+  latitude φ is 360°·sin φ of turning on a globe and 360° on any flat surface**,
+  so the gap is 360°(1−sin φ) — the enclosed curvature, Gauss–Bonnet. Scale-free,
+  covers every latitude, maximal (a whole revolution) at the equator, zero at the
+  pole. This supersedes the AE-dependent rate table as the primary argument.
+  Also: hands-off at 45°N the track curves 21.3°/hr on Coriolis alone (100 mi in
+  the first hour), so the hands-off test is equator-only — a third independent
+  reason the route is right.
 
 ### 2. Unknown Luminaries expansion — `Section p.153` + `Q5` + `Q6` + `Q7` + rest of `Claim #3`
 
