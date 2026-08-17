@@ -274,6 +274,34 @@ invitation** quoted as the thing the page is answering.
   manual has correction lines for meridian convergency but no curve methodology.
   Page now claims only what the 1910 tables support.
 
+### Rescan round (2026-08-17, both pages) — applied
+`equator-flight`: **§7 offered radial Antarctic flights as evidence and they
+cannot discriminate** — an azimuthal-equidistant map preserves distance along
+its radii by construction, so due-south legs are where it is *designed* to be
+right. (The reviewer said identical; actually Cape Town–Troll is 16° off a
+meridian so it differs 2,700 vs 3,800 mi, 1.4× — weak, not null. Page says
+exactly that.) Replaced with the legs that do discriminate: **Novolazarevskaya →
+Progress, east–west at 70°S, 1,450 vs 11,800 mi (8.2×)**, flown by Basler BT-67
+on the DROMLAN network in a working day; and **Pan Am 50**, 28–30 Oct 1977,
+747SP N533PA, Cape Town → Auckland over the South Pole, 7,300 vs 17,000 mi
+(2.3×) — date/aircraft/route verified. Also the **wind confound**: a 22-kt
+crosswind produces the flat map's entire first-hour departure, so the
+"needs no instruments" claim was untenable; now conceded with the two
+separators (wind is linear in t and moves track-vs-heading; the flat departure
+goes as t² and moves the pole-referenced heading itself). Hands-off leg defined
+operationally (roll-attitude hold at 0° bank, no heading/LNAV) so it stops
+contradicting the spiral-mode concession. Gyro grades corrected (nav-grade is
+tens of thousands; rent it or buy tactical and calibrate) **and the clause the
+test needs added — a seat gyro does NOT read zero on a globe**; the comparison
+is integrated gyro yaw vs GPS-derived heading change, whose predicted difference
+is zero only at the equator.
+
+`celestial-globes`: extinction coefficient was stated backwards — mountain sites
+are *lower* (0.12–0.15 vs 0.2 mag/airmass at sea level); the 0.6 figure is the
+*total* at 10° from a summit, against 0.95 from the coast. Kochab table rescaled
+from 16° to 16.6° to match its own lead-in (16.6/16.2 · 12.0/8.5 · 8.3/4.1).
+"circumpolar circle" → "Kochab–Polaris circle".
+
 ### Not done — operator's call
 - **Length.** equator-flight ~8,100 words, celestial-globes ~9,200, for chapters
   of 6 and 28 pages. Both reviews flag it.
