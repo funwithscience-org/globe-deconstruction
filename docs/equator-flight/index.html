@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QVD21HWH5X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QVD21HWH5X');
+</script>
+<meta name="description" content="Levi Miller proposes flying the equator and reading the flight recorder. It is a good experiment and the equator is the right route — the two models disagree there by more than anywhere else on Earth. The arithmetic in the table needs fixing, and the measurement has already been made several million times.">
+<meta name="keywords" content="equator flight data challenge, flat earth aircraft turn rate, attitude indicator pendulous vanes, inertial reference system gyrocompass, Globe Deconstruction review, Levi Miller">
+<meta property="og:title" content="The Equator Flight Data Challenge, Answered">
+<meta property="og:description" content="The experiment works and the route is well chosen. But the table computes the flat-Earth turning requirement using the globe’s own circumference — and every airliner’s inertial reference already runs the test continuously.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://funwithscience.net/globe-deconstruction/equator-flight/">
+<meta property="og:site_name" content="Fun With Science">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Celestial Globes Exposed, Answered">
+<link rel="canonical" href="https://funwithscience.net/globe-deconstruction/equator-flight/">
+<title>The Equator Flight Data Challenge, Answered | Fun With Science</title>
+<style>
+:root{
+  --bg:#fff; --text:#222; --heading:#2E4057; --accent:#4A6FA5; --link:#0563C1; --rule:#E4DDCB;
+  --ink:#181715; --ink-2:#3A352D; --ink-3:#6E675B; --card-bg:#fafafa; --border:#ccc;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Arial,Helvetica,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Consolas,'Courier New',monospace;
+  --umbra:#c0392b; --sea:#2a5a8c; --warm:#d9a441; --good:#2e7d32;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--serif);line-height:1.62;font-size:1.02rem}
+.wrap{max-width:920px;margin:0 auto;padding:1.1rem 1.15rem 4rem}
+a{color:var(--link)}
+h1,h2,h3{font-family:var(--sans);color:var(--heading);line-height:1.25}
+h1{font-size:1.9rem;margin:.2rem 0 .3rem}
+h2{font-size:1.25rem;margin:2.6rem 0 .6rem}
+h3{font-size:1rem;margin:1.5rem 0 .3rem}
+.crumb{font-family:var(--sans);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin:0 0 .4rem}
+.crumb a{color:var(--ink-3);text-decoration:none}
+.sub{font-family:var(--sans);font-weight:400;color:var(--ink-2);font-size:1.1rem;margin:.1rem 0 1rem}
+.lede{font-size:1.06rem;max-width:74ch}
+.note{background:var(--card-bg);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:6px;padding:.75rem 1rem;margin:1.2rem 0;font-size:.96rem}
+.verdict{background:var(--card-bg);border:1px solid var(--rule);border-left:4px solid var(--good);border-radius:8px;padding:1rem 1.15rem;margin:1.4rem 0 .4rem}
+.verdict .vhead{font-family:var(--sans);font-weight:700;color:var(--heading);font-size:1.05rem;margin:0 0 .4rem;line-height:1.5}
+.verdict .vtag{display:inline-block;font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.12rem .5rem;border-radius:4px;margin-right:.4rem;vertical-align:middle}
+.verdict .vtag.fail{background:rgba(192,57,43,.12);color:var(--umbra);border:1px solid rgba(192,57,43,.4)}
+.verdict .vtag.ok{background:rgba(46,125,50,.12);color:var(--good);border:1px solid rgba(46,125,50,.4)}
+.verdict p{margin:.55rem 0;font-size:.97rem}
+.pull{font-family:var(--sans);font-size:1.12rem;font-weight:600;color:var(--heading);border-left:4px solid var(--accent);padding:.3rem 0 .3rem 1rem;margin:1.4rem 0;line-height:1.4}
+.cmp{width:100%;border-collapse:collapse;margin:1.1rem 0 .3rem;font-family:var(--sans);font-size:.86rem}
+.cmp th,.cmp td{border:1px solid var(--rule);padding:.5rem .6rem;text-align:left;vertical-align:top}
+.cmp thead th{background:var(--card-bg);font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3);font-weight:700}
+.cmp td.metric{font-weight:600;color:var(--heading)}
+.killer{background:rgba(192,57,43,.06);border:1px solid rgba(192,57,43,.28);border-radius:6px;padding:.7rem .9rem;margin:1rem 0;font-size:.94rem}
+.killer strong{color:var(--umbra)}
+.scalewarn{font-family:var(--sans);font-size:.78rem;color:var(--ink-3);margin:.4rem 0 0}
+figure{margin:1.3rem 0 .3rem}
+figure img{width:100%;height:auto;border:1px solid var(--rule);border-radius:8px;display:block;background:#eef2f6}
+figure svg{width:100%;height:auto;border:1px solid var(--rule);border-radius:8px;background:#fff}
+figcaption{font-family:var(--sans);font-size:.78rem;color:var(--ink-3);margin-top:.45rem;line-height:1.5}
+figcaption .cred{color:var(--ink-3);opacity:.85}
+figcaption b{color:var(--ink-2)}
+.tl{list-style:none;margin:1rem 0;padding:0;font-family:var(--sans);font-size:.9rem}
+.tl li{border-left:2px solid var(--rule);padding:.15rem 0 .7rem 1rem;position:relative;margin-left:.3rem}
+.tl li:before{content:'';position:absolute;left:-6px;top:.35rem;width:10px;height:10px;border-radius:50%;background:var(--umbra)}
+.tl .t{font-family:var(--mono);font-size:.8rem;color:var(--ink-3);margin-right:.4rem}
+.src-list{font-family:var(--sans);font-size:.85rem;color:var(--ink-2)}
+.src-list li{margin:.3rem 0}
+code{font-family:var(--mono);font-size:.82em;background:#f0ede4;padding:.05rem .3rem;border-radius:3px}
+footer{margin-top:3rem;padding-top:1.1rem;border-top:1px solid var(--rule);font-family:var(--sans);font-size:.85rem;color:var(--ink-3)}
+em.term{font-style:normal;font-weight:600;color:var(--heading)}
+.figrow{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:600px){.figrow{grid-template-columns:1fr}}
+
+.cmp td{font-variant-numeric:tabular-nums}
+.qbox{background:#fbfaf7;border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-family:var(--sans);font-size:.95rem;line-height:1.55}
+.qbox .qn{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:.35rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="crumb"><a href="https://funwithscience.net/">Fun With Science</a> &nbsp;/&nbsp; <a href="https://funwithscience.net/globe-deconstruction/">Globe Deconstruction</a> &nbsp;/&nbsp; Equator Flight</p>
+  <h1>The Equator Flight Data Challenge, Answered</h1>
+  <p class="sub">A good experiment, the right route, and a table that computes the flat answer with the globe's own numbers.</p>
+  <p class="lede">Chapter p.&nbsp;117 asks for something the rest of the book has been circling: an experiment with no refraction in it, no eyesight, no photographs &mdash; &ldquo;just raw data and numbers.&rdquo; Fly a private jet along the equator, log the flight recorder, and count the steering inputs. A globe needs none. A flat Earth needs a hundred and nineteen. That is a real test with a real discriminator, and it deserves a real answer rather than a dismissal. This page gives one: the experiment is sound, the route is the best one available, one of the chapter's technical passages is simply correct &mdash; and the number in the table cannot be produced by either model.</p>
+</header>
+
+<section class="verdict" id="verdict">
+  <p class="vhead"><span class="vtag ok">Good experiment</span><span class="vtag fail">Table is inconsistent</span>The short version</p>
+  <p>The equator is the sharpest test on Earth: the globe requires a turn rate of <strong>exactly zero</strong> there, and a flat map requires <strong>5.15&deg;/hr</strong>. Nowhere else do the two models differ so completely. But the chapter's 119&deg; comes from converting 8,250&nbsp;miles into degrees using the <em>globe's</em> equatorial circumference. Measured on the flat map the same distance is 75.9&deg;, and the rate is 5.15&deg;/hr, not 8.08&deg;. The experiment survives the correction &mdash; and it has already been run several million times, by every airliner carrying an inertial reference unit.</p>
+</section>
+
+<h2>1 &middot; The challenge, stated fairly</h2>
+<p class="note">&ldquo;What if we took a private jet and flew directly over the coordinates of the equator? &hellip; If the Earth is truly a globe, we should be able to fly in a straight line to reach the other side of the world going east or west! We should see over 100 steering adjustments to maintain the course on a flat Earth, with opposite adjustments on the return trip.&rdquo;<br><span style="color:var(--ink-3);font-family:var(--sans);font-size:.82rem">&mdash; Levi Miller, <em>Globe Deconstruction</em>, p.&nbsp;121 (review draft)</span></p>
+
+<p>The proposed setup, as printed:</p>
+<table class="cmp">
+  <tbody>
+    <tr><td class="metric">Route</td><td>Quito (UIO) &rarr; Pontianak (PNK), following the equator</td></tr>
+    <tr><td class="metric">Distance</td><td>8,250 miles</td></tr>
+    <tr><td class="metric">Cruise speed</td><td>560 mph</td></tr>
+    <tr><td class="metric">Time</td><td>14.73 hours</td></tr>
+    <tr><td class="metric">Degrees of turn</td><td>119&deg;</td></tr>
+    <tr><td class="metric">Rate of turn</td><td>8.08&deg; per hour</td></tr>
+    <tr><td class="metric">Steering inputs</td><td>119, one every 7.4 minutes</td></tr>
+    <tr><td class="metric">Budget</td><td>$715,000</td></tr>
+  </tbody>
+</table>
+
+<p>Several things here are right, and they should be said before anything else &mdash; including one that most replies to this chapter would miss.</p>
+<ul class="tl">
+  <li><span class="t">&mdash;</span> <strong>The experiment is sound.</strong> Turn rate is a physical quantity, it is recorded on every flight, and the two models genuinely disagree about it. This is a better argument than anything in the book that depends on eyesight, cameras or photographs.</li>
+  <li><span class="t">&mdash;</span> <strong>The globe's prediction is exactly what he says it is.</strong> The equator is a great circle. Flying it requires no turn at all &mdash; not &ldquo;a small turn,&rdquo; not &ldquo;a turn within tolerance.&rdquo; Zero, identically.</li>
+  <li><span class="t">&mdash;</span> <strong>And the route is the best possible choice</strong>, for a reason the chapter does not state but which is worth spelling out, because it is a point in his favour. On every other line of latitude the two models both demand a turn, and above about 60&deg; they demand nearly the <em>same</em> turn. The equator is the one place on Earth where one model says a number and the other says zero. Of all the routes he could have picked, this is the one that discriminates hardest.</li>
+  <li><span class="t">&mdash;</span> <strong>And the analysis on p.&nbsp;119 is correct.</strong> The attitude indicator's pendulous vanes erect the gyro to local vertical, and they do it identically whether that vertical is normal to a flat plane or radial to a globe. His conclusion &mdash; &ldquo;no shape debate points for either side&rdquo; &mdash; is right, and it is a more careful piece of reasoning than either camp usually manages on the subject. Hold on to it, because it comes back in &sect;5 and it does more work than he realised.</li>
+</ul>
+
+<h2>2 &middot; The number in the table</h2>
+<p>Start with the conversion, because everything downstream depends on it. Where does 119&deg; come from? It is not the longitude span of the named route. Quito sits at 78.47&deg;W and Pontianak at 109.33&deg;E, which is 187.8&deg; apart going east and 172.2&deg; going west &mdash; about 13,000 and 11,900 miles respectively, not 8,250. So the airports and the distance in the table are not describing the same flight.</p>
+<p>The 119&deg; comes from the distance instead:</p>
+<p class="pull">8,250 mi &divide; 24,901 mi &times; 360&deg; = 119.3&deg;</p>
+<p>24,901 miles is the circumference of the equator <em>on a globe</em>. That is the step to look at. The figure being presented as the flat model's turning requirement has been obtained by measuring the route on the globe.</p>
+<p>On the flat map the equator is not a 24,901-mile circle. It is a circle drawn around the pole at the distance from the pole to the equator &mdash; 6,225 miles &mdash; so it is <strong>39,115 miles</strong> around. The ratio between the two is exactly &pi;/2, which is where the whole discrepancy lives.</p>
+
+<table class="cmp">
+  <thead><tr><th></th><th>On a globe</th><th>On the flat map</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">Equator, total length</td><td>24,901 mi</td><td><strong>39,115 mi</strong></td></tr>
+    <tr><td class="metric">8,250 miles is, in degrees</td><td>119.3&deg;</td><td><strong>75.9&deg;</strong></td></tr>
+    <tr><td class="metric">119&deg; is, in miles</td><td>8,250 mi</td><td><strong>12,930 mi</strong></td></tr>
+    <tr><td class="metric">Turn rate at 560 mph</td><td><strong>0.00&deg;/hr</strong></td><td><strong>5.15&deg;/hr</strong></td></tr>
+    <tr><td class="metric">One-degree steering inputs</td><td>0</td><td><strong>76</strong>, one every 11.6 min</td></tr>
+  </tbody>
+</table>
+<p class="scalewarn">The table's 8.08&deg;/hr is 119&deg; divided by 14.73 hours. Both inputs to that division are globe measurements; the answer is being used as a flat-model prediction. Run consistently on the flat map, the same flight needs 75.9&deg; of accumulated turn at 5.15&deg;/hr &mdash; 76 inputs, not 119.</p>
+
+<div class="note"><strong>This does not break the experiment, and it is worth being clear about that.</strong> A 36% error in the predicted turn count would matter enormously if the globe's prediction were, say, 60&deg;. It is zero. Any experiment that can tell 119&deg; from 0&deg; can tell 76&deg; from 0&deg; just as easily. The correction changes the number to look for; it does not weaken the test. If the flight is ever flown, <strong>76&deg;</strong> is the figure to check against.</div>
+
+<p>There is a second thing worth noticing about the conversion, and it is not arithmetic. Pages 118 to 120 argue that map distances are unreliable &mdash; that roads measure longer than Google represents them, that southern-hemisphere distances may be &ldquo;elongated to conform to a predefined Earth radius,&rdquo; that navigation systems may have been manipulated. Four pages later the experiment's central number is derived by trusting the globe's distance scale to four significant figures. Both positions cannot be held at once, and the chapter needs the second one to generate its headline figure.</p>
+
+<h2>3 &middot; What the two models actually predict</h2>
+<p>The general result is worth having, because it explains why the equator is special and why nothing else would have worked as well.</p>
+<p>On a globe, holding a line of latitude at speed <em>V</em> needs a turn rate of <strong>(V&divide;R)&nbsp;&times;&nbsp;tan&nbsp;&phi;</strong>. The tangent is the whole story: it is zero at the equator, and it climbs steeply toward the poles. On the flat map, a parallel is a circle of radius 69.17&nbsp;&times;&nbsp;(90&nbsp;&minus;&nbsp;&phi;) miles about the pole, so holding it needs <strong>V&nbsp;&divide;&nbsp;r</strong> &mdash; which is never zero anywhere, because the circle never straightens out.</p>
+
+<figure>
+<svg viewBox="8 8 744 400" role="img" aria-label="Required rate of turn to hold a line of latitude, globe against flat model, as a function of latitude." aria-describedby="turn-d">
+<desc id="turn-d">Two curves showing the rate of turn an aircraft at 560 mph must hold to stay on a line of latitude. On a globe the requirement is proportional to the tangent of the latitude, so it is exactly zero at the equator and rises to 30 degrees per hour at 75 north. On a flat azimuthal-equidistant map the requirement is the speed divided by the radius of that latitude circle, so it is 5.15 degrees per hour at the equator and rises to 31 at 75 north. The two curves nearly coincide at high latitude and separate completely at the equator, where one model says 5.15 and the other says exactly zero.</desc>
+<g font-family="Inter,system-ui,sans-serif" font-size="10.5">
+<rect x="18" y="18" width="724" height="380" fill="#fbfaf7" stroke="#E4DDCB" rx="6"/>
+<text x="380" y="40" text-anchor="middle" fill="#3A352D" font-size="12.5" font-weight="700">How hard you have to turn to hold a line of latitude, at 560&#160;mph</text>
+<line x1="92.0" y1="300.0" x2="712.0" y2="300.0" stroke="#E4DDCB" stroke-width="1"/>
+<text x="84.0" y="304.0" text-anchor="end" fill="#8d8577" font-size="9.5">0&#176;/hr</text>
+<line x1="92.0" y1="240.0" x2="712.0" y2="240.0" stroke="#E4DDCB" stroke-width="1"/>
+<text x="84.0" y="244.0" text-anchor="end" fill="#8d8577" font-size="9.5">8&#176;/hr</text>
+<line x1="92.0" y1="180.0" x2="712.0" y2="180.0" stroke="#E4DDCB" stroke-width="1"/>
+<text x="84.0" y="184.0" text-anchor="end" fill="#8d8577" font-size="9.5">16&#176;/hr</text>
+<line x1="92.0" y1="120.0" x2="712.0" y2="120.0" stroke="#E4DDCB" stroke-width="1"/>
+<text x="84.0" y="124.0" text-anchor="end" fill="#8d8577" font-size="9.5">24&#176;/hr</text>
+<line x1="92.0" y1="60.0" x2="712.0" y2="60.0" stroke="#E4DDCB" stroke-width="1"/>
+<text x="84.0" y="64.0" text-anchor="end" fill="#8d8577" font-size="9.5">32&#176;/hr</text>
+<line x1="92.0" y1="300.0" x2="92.0" y2="306.0" stroke="#8d8577" stroke-width="1"/>
+<text x="92.0" y="320.0" text-anchor="middle" fill="#3A352D" font-size="10">0&#176;</text>
+<line x1="216.0" y1="300.0" x2="216.0" y2="306.0" stroke="#8d8577" stroke-width="1"/>
+<text x="216.0" y="320.0" text-anchor="middle" fill="#3A352D" font-size="10">15&#176;</text>
+<line x1="340.0" y1="300.0" x2="340.0" y2="306.0" stroke="#8d8577" stroke-width="1"/>
+<text x="340.0" y="320.0" text-anchor="middle" fill="#3A352D" font-size="10">30&#176;</text>
+<line x1="464.0" y1="300.0" x2="464.0" y2="306.0" stroke="#8d8577" stroke-width="1"/>
+<text x="464.0" y="320.0" text-anchor="middle" fill="#3A352D" font-size="10">45&#176;</text>
+<line x1="588.0" y1="300.0" x2="588.0" y2="306.0" stroke="#8d8577" stroke-width="1"/>
+<text x="588.0" y="320.0" text-anchor="middle" fill="#3A352D" font-size="10">60&#176;</text>
+<line x1="712.0" y1="300.0" x2="712.0" y2="306.0" stroke="#8d8577" stroke-width="1"/>
+<text x="712.0" y="320.0" text-anchor="middle" fill="#3A352D" font-size="10">75&#176;</text>
+<text x="402" y="338.0" text-anchor="middle" fill="#8d8577" font-size="10">latitude</text>
+<line x1="92.0" y1="300.0" x2="712.0" y2="300.0" stroke="#3A352D" stroke-width="1.4"/>
+<path d="M92.0 261.3 L94.1 261.2 L96.1 261.1 L98.2 261.0 L100.3 260.9 L102.3 260.8 L104.4 260.7 L106.5 260.6 L108.5 260.5 L110.6 260.4 L112.7 260.2 L114.7 260.1 L116.8 260.0 L118.9 259.9 L120.9 259.8 L123.0 259.7 L125.1 259.5 L127.1 259.4 L129.2 259.3 L131.3 259.2 L133.3 259.1 L135.4 259.0 L137.5 258.8 L139.5 258.7 L141.6 258.6 L143.7 258.5 L145.7 258.3 L147.8 258.2 L149.9 258.1 L151.9 258.0 L154.0 257.8 L156.1 257.7 L158.1 257.6 L160.2 257.4 L162.3 257.3 L164.3 257.2 L166.4 257.0 L168.5 256.9 L170.5 256.8 L172.6 256.6 L174.7 256.5 L176.7 256.4 L178.8 256.2 L180.9 256.1 L182.9 256.0 L185.0 255.8 L187.1 255.7 L189.1 255.5 L191.2 255.4 L193.3 255.3 L195.3 255.1 L197.4 255.0 L199.5 254.8 L201.5 254.7 L203.6 254.5 L205.7 254.4 L207.7 254.2 L209.8 254.1 L211.9 253.9 L213.9 253.8 L216.0 253.6 L218.1 253.5 L220.1 253.3 L222.2 253.1 L224.3 253.0 L226.3 252.8 L228.4 252.7 L230.5 252.5 L232.5 252.3 L234.6 252.2 L236.7 252.0 L238.7 251.8 L240.8 251.7 L242.9 251.5 L244.9 251.3 L247.0 251.2 L249.1 251.0 L251.1 250.8 L253.2 250.7 L255.3 250.5 L257.3 250.3 L259.4 250.1 L261.5 249.9 L263.5 249.8 L265.6 249.6 L267.7 249.4 L269.7 249.2 L271.8 249.0 L273.9 248.8 L275.9 248.7 L278.0 248.5 L280.1 248.3 L282.1 248.1 L284.2 247.9 L286.3 247.7 L288.3 247.5 L290.4 247.3 L292.5 247.1 L294.5 246.9 L296.6 246.7 L298.7 246.5 L300.7 246.3 L302.8 246.1 L304.9 245.9 L306.9 245.6 L309.0 245.4 L311.1 245.2 L313.1 245.0 L315.2 244.8 L317.3 244.6 L319.3 244.3 L321.4 244.1 L323.5 243.9 L325.5 243.7 L327.6 243.4 L329.7 243.2 L331.7 243.0 L333.8 242.7 L335.9 242.5 L337.9 242.3 L340.0 242.0 L342.1 241.8 L344.1 241.5 L346.2 241.3 L348.3 241.0 L350.3 240.8 L352.4 240.5 L354.5 240.3 L356.5 240.0 L358.6 239.8 L360.7 239.5 L362.7 239.2 L364.8 239.0 L366.9 238.7 L368.9 238.4 L371.0 238.2 L373.1 237.9 L375.1 237.6 L377.2 237.3 L379.3 237.0 L381.3 236.7 L383.4 236.5 L385.5 236.2 L387.5 235.9 L389.6 235.6 L391.7 235.3 L393.7 235.0 L395.8 234.7 L397.9 234.4 L399.9 234.0 L402.0 233.7 L404.1 233.4 L406.1 233.1 L408.2 232.8 L410.3 232.4 L412.3 232.1 L414.4 231.8 L416.5 231.4 L418.5 231.1 L420.6 230.8 L422.7 230.4 L424.7 230.1 L426.8 229.7 L428.9 229.4 L430.9 229.0 L433.0 228.6 L435.1 228.3 L437.1 227.9 L439.2 227.5 L441.3 227.1 L443.3 226.8 L445.4 226.4 L447.5 226.0 L449.5 225.6 L451.6 225.2 L453.7 224.8 L455.7 224.4 L457.8 224.0 L459.9 223.5 L461.9 223.1 L464.0 222.7 L466.1 222.3 L468.1 221.8 L470.2 221.4 L472.3 220.9 L474.3 220.5 L476.4 220.0 L478.5 219.6 L480.5 219.1 L482.6 218.6 L484.7 218.1 L486.7 217.7 L488.8 217.2 L490.9 216.7 L492.9 216.2 L495.0 215.7 L497.1 215.1 L499.1 214.6 L501.2 214.1 L503.3 213.6 L505.3 213.0 L507.4 212.5 L509.5 211.9 L511.5 211.4 L513.6 210.8 L515.7 210.2 L517.7 209.6 L519.8 209.0 L521.9 208.4 L523.9 207.8 L526.0 207.2 L528.1 206.6 L530.1 206.0 L532.2 205.3 L534.3 204.7 L536.3 204.0 L538.4 203.4 L540.5 202.7 L542.5 202.0 L544.6 201.3 L546.7 200.6 L548.7 199.9 L550.8 199.2 L552.9 198.4 L554.9 197.7 L557.0 196.9 L559.1 196.2 L561.1 195.4 L563.2 194.6 L565.3 193.8 L567.3 193.0 L569.4 192.1 L571.5 191.3 L573.5 190.4 L575.6 189.6 L577.7 188.7 L579.7 187.8 L581.8 186.9 L583.9 185.9 L585.9 185.0 L588.0 184.0 L590.1 183.1 L592.1 182.1 L594.2 181.1 L596.3 180.0 L598.3 179.0 L600.4 177.9 L602.5 176.9 L604.5 175.8 L606.6 174.6 L608.7 173.5 L610.7 172.3 L612.8 171.1 L614.9 169.9 L616.9 168.7 L619.0 167.5 L621.1 166.2 L623.1 164.9 L625.2 163.6 L627.3 162.2 L629.3 160.8 L631.4 159.4 L633.5 158.0 L635.5 156.5 L637.6 155.0 L639.7 153.5 L641.7 152.0 L643.8 150.4 L645.9 148.7 L647.9 147.1 L650.0 145.4 L652.1 143.6 L654.1 141.9 L656.2 140.0 L658.3 138.2 L660.3 136.3 L662.4 134.3 L664.5 132.3 L666.5 130.3 L668.6 128.2 L670.7 126.1 L672.7 123.9 L674.8 121.6 L676.9 119.3 L678.9 116.9 L681.0 114.5 L683.1 111.9 L685.1 109.4 L687.2 106.7 L689.3 104.0 L691.3 101.2 L693.4 98.3 L695.5 95.4 L697.5 92.3 L699.6 89.2 L701.7 85.9 L703.7 82.6 L705.8 79.1 L707.9 75.6 L709.9 71.9 L712.0 68.1" fill="none" stroke="#c0392b" stroke-width="2.4"/>
+<path d="M92.0 300.0 L94.1 299.7 L96.1 299.5 L98.2 299.2 L100.3 298.9 L102.3 298.7 L104.4 298.4 L106.5 298.1 L108.5 297.9 L110.6 297.6 L112.7 297.3 L114.7 297.1 L116.8 296.8 L118.9 296.6 L120.9 296.3 L123.0 296.0 L125.1 295.8 L127.1 295.5 L129.2 295.2 L131.3 295.0 L133.3 294.7 L135.4 294.4 L137.5 294.2 L139.5 293.9 L141.6 293.6 L143.7 293.4 L145.7 293.1 L147.8 292.8 L149.9 292.5 L151.9 292.3 L154.0 292.0 L156.1 291.7 L158.1 291.5 L160.2 291.2 L162.3 290.9 L164.3 290.7 L166.4 290.4 L168.5 290.1 L170.5 289.8 L172.6 289.6 L174.7 289.3 L176.7 289.0 L178.8 288.7 L180.9 288.5 L182.9 288.2 L185.0 287.9 L187.1 287.6 L189.1 287.4 L191.2 287.1 L193.3 286.8 L195.3 286.5 L197.4 286.3 L199.5 286.0 L201.5 285.7 L203.6 285.4 L205.7 285.1 L207.7 284.9 L209.8 284.6 L211.9 284.3 L213.9 284.0 L216.0 283.7 L218.1 283.4 L220.1 283.2 L222.2 282.9 L224.3 282.6 L226.3 282.3 L228.4 282.0 L230.5 281.7 L232.5 281.4 L234.6 281.1 L236.7 280.9 L238.7 280.6 L240.8 280.3 L242.9 280.0 L244.9 279.7 L247.0 279.4 L249.1 279.1 L251.1 278.8 L253.2 278.5 L255.3 278.2 L257.3 277.9 L259.4 277.6 L261.5 277.3 L263.5 277.0 L265.6 276.7 L267.7 276.4 L269.7 276.1 L271.8 275.8 L273.9 275.5 L275.9 275.2 L278.0 274.8 L280.1 274.5 L282.1 274.2 L284.2 273.9 L286.3 273.6 L288.3 273.3 L290.4 273.0 L292.5 272.6 L294.5 272.3 L296.6 272.0 L298.7 271.7 L300.7 271.4 L302.8 271.0 L304.9 270.7 L306.9 270.4 L309.0 270.1 L311.1 269.7 L313.1 269.4 L315.2 269.1 L317.3 268.7 L319.3 268.4 L321.4 268.1 L323.5 267.7 L325.5 267.4 L327.6 267.0 L329.7 266.7 L331.7 266.3 L333.8 266.0 L335.9 265.6 L337.9 265.3 L340.0 264.9 L342.1 264.6 L344.1 264.2 L346.2 263.9 L348.3 263.5 L350.3 263.2 L352.4 262.8 L354.5 262.4 L356.5 262.1 L358.6 261.7 L360.7 261.3 L362.7 260.9 L364.8 260.6 L366.9 260.2 L368.9 259.8 L371.0 259.4 L373.1 259.0 L375.1 258.7 L377.2 258.3 L379.3 257.9 L381.3 257.5 L383.4 257.1 L385.5 256.7 L387.5 256.3 L389.6 255.9 L391.7 255.5 L393.7 255.1 L395.8 254.7 L397.9 254.2 L399.9 253.8 L402.0 253.4 L404.1 253.0 L406.1 252.6 L408.2 252.1 L410.3 251.7 L412.3 251.3 L414.4 250.8 L416.5 250.4 L418.5 249.9 L420.6 249.5 L422.7 249.1 L424.7 248.6 L426.8 248.1 L428.9 247.7 L430.9 247.2 L433.0 246.8 L435.1 246.3 L437.1 245.8 L439.2 245.3 L441.3 244.8 L443.3 244.4 L445.4 243.9 L447.5 243.4 L449.5 242.9 L451.6 242.4 L453.7 241.9 L455.7 241.4 L457.8 240.8 L459.9 240.3 L461.9 239.8 L464.0 239.3 L466.1 238.7 L468.1 238.2 L470.2 237.7 L472.3 237.1 L474.3 236.6 L476.4 236.0 L478.5 235.5 L480.5 234.9 L482.6 234.3 L484.7 233.7 L486.7 233.2 L488.8 232.6 L490.9 232.0 L492.9 231.4 L495.0 230.8 L497.1 230.2 L499.1 229.5 L501.2 228.9 L503.3 228.3 L505.3 227.6 L507.4 227.0 L509.5 226.3 L511.5 225.7 L513.6 225.0 L515.7 224.3 L517.7 223.7 L519.8 223.0 L521.9 222.3 L523.9 221.6 L526.0 220.9 L528.1 220.2 L530.1 219.4 L532.2 218.7 L534.3 217.9 L536.3 217.2 L538.4 216.4 L540.5 215.7 L542.5 214.9 L544.6 214.1 L546.7 213.3 L548.7 212.5 L550.8 211.7 L552.9 210.8 L554.9 210.0 L557.0 209.1 L559.1 208.3 L561.1 207.4 L563.2 206.5 L565.3 205.6 L567.3 204.7 L569.4 203.8 L571.5 202.8 L573.5 201.9 L575.6 200.9 L577.7 199.9 L579.7 198.9 L581.8 197.9 L583.9 196.9 L585.9 195.9 L588.0 194.8 L590.1 193.8 L592.1 192.7 L594.2 191.6 L596.3 190.5 L598.3 189.3 L600.4 188.2 L602.5 187.0 L604.5 185.8 L606.6 184.6 L608.7 183.4 L610.7 182.1 L612.8 180.8 L614.9 179.5 L616.9 178.2 L619.0 176.9 L621.1 175.5 L623.1 174.1 L625.2 172.7 L627.3 171.3 L629.3 169.8 L631.4 168.3 L633.5 166.8 L635.5 165.2 L637.6 163.6 L639.7 162.0 L641.7 160.4 L643.8 158.7 L645.9 157.0 L647.9 155.2 L650.0 153.4 L652.1 151.6 L654.1 149.7 L656.2 147.8 L658.3 145.9 L660.3 143.9 L662.4 141.8 L664.5 139.7 L666.5 137.6 L668.6 135.4 L670.7 133.2 L672.7 130.9 L674.8 128.5 L676.9 126.1 L678.9 123.7 L681.0 121.1 L683.1 118.5 L685.1 115.9 L687.2 113.1 L689.3 110.3 L691.3 107.4 L693.4 104.5 L695.5 101.4 L697.5 98.3 L699.6 95.0 L701.7 91.7 L703.7 88.2 L705.8 84.7 L707.9 81.1 L709.9 77.3 L712.0 73.4" fill="none" stroke="#2a5a8c" stroke-width="2.4"/>
+<text x="604.5" y="165.8" fill="#c0392b" font-size="11" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">flat map &#8212; V &#247; r</text>
+<text x="554.9" y="230.0" fill="#2a5a8c" font-size="11" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">globe &#8212; (V&#247;R)&#183;tan&#160;&#966;</text>
+<line x1="92.0" y1="300.0" x2="92.0" y2="261.3" stroke="#3A352D" stroke-width="1.4" stroke-dasharray="4 3"/>
+<circle cx="92.0" cy="261.3" r="5" fill="#c0392b"/>
+<circle cx="92.0" cy="300.0" r="5" fill="#2a5a8c"/>
+<text x="106.0" y="257.3" fill="#c0392b" font-size="11" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">5.15&#176;/hr</text>
+<text x="106.0" y="292.0" fill="#2a5a8c" font-size="11" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">exactly 0.00&#176;/hr</text>
+<text x="116.8" y="187.5" fill="#3A352D" font-size="11" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">the equator is where the</text>
+<text x="116.8" y="202.5" fill="#3A352D" font-size="11" font-weight="700" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">two models disagree most</text>
+<text x="116.8" y="218.5" fill="#8d8577" font-size="10" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">&#8212; which is the route he chose</text>
+<text x="380" y="376" text-anchor="middle" fill="#8d8577" font-size="9.5">Flat model: the azimuthal-equidistant map, on which a parallel is a circle of radius 69.17&#160;&#215;&#160;(90&#8722;&#966;) miles about the pole.</text>
+</g></svg>
+  <figcaption><b>Two requirements, one route that separates them.</b> Above about 60&deg; the two models ask for almost the same turn &mdash; a flight along those parallels would be nearly useless as a test. The curves separate as you go south and part completely at the equator, where the flat map still wants 5.15&deg;/hr and the globe wants nothing at all. <span class="cred">Both curves at 560&nbsp;mph. Flat model is the azimuthal-equidistant map, the one the chapter's own argument requires.</span></figcaption>
+</figure>
+
+<table class="cmp">
+  <thead><tr><th>Latitude</th><th>Globe requires</th><th>Flat map requires</th><th>Useful as a test?</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">0&deg; &mdash; the equator</td><td><strong>0.00&deg;/hr</strong></td><td><strong>5.15&deg;/hr</strong></td><td><strong>decisive</strong></td></tr>
+    <tr><td class="metric">15&deg;</td><td>2.17&deg;/hr</td><td>6.19&deg;/hr</td><td>good</td></tr>
+    <tr><td class="metric">30&deg;</td><td>4.67&deg;/hr</td><td>7.73&deg;/hr</td><td>workable</td></tr>
+    <tr><td class="metric">45&deg;</td><td>8.10&deg;/hr</td><td>10.31&deg;/hr</td><td>marginal</td></tr>
+    <tr><td class="metric">60&deg;</td><td>14.02&deg;/hr</td><td>15.46&deg;/hr</td><td>poor</td></tr>
+    <tr><td class="metric">75&deg;</td><td>30.21&deg;/hr</td><td>30.92&deg;/hr</td><td>useless</td></tr>
+  </tbody>
+</table>
+<p class="scalewarn">He picked the top row. Whatever else is wrong with the chapter, the experimental design is the work of somebody thinking about what would actually distinguish the two answers.</p>
+
+<h2>4 &middot; But not on the instruments the chapter has in mind</h2>
+<p>Here is where the challenge gets more interesting than either side usually allows, and where a lazy rebuttal would go wrong. 5.15&deg;/hr sounds large because it is quoted per hour. Spread across a flight it is not something a pilot would ever feel or see on the panel.</p>
+<ul class="tl">
+  <li><span class="t">&mdash;</span> <strong>The bank angle is 2.2 arcminutes.</strong> A coordinated turn at 5.15&deg;/hr and 560&nbsp;mph needs the aircraft banked by four hundredths of one degree. No attitude indicator in any cockpit resolves that, and the p.&nbsp;119 discussion of pendulous vanes is correct that it would not help if one did.</li>
+  <li><span class="t">&mdash;</span> <strong>The turn needle would not move.</strong> A standard-rate turn is 3&deg; per second. This is one two-thousandth of that.</li>
+  <li><span class="t">&mdash;</span> <strong>And the compass would read the same in both models.</strong> This is the subtle one. On the flat map, &ldquo;north&rdquo; at any point means toward the centre. Fly the equator circle and the pole stays exactly abeam the whole way, so the heading indicator sits on 090&deg; &mdash; the same reading a globe would give. The reference turns with you. A magnetic heading alone cannot separate the models, and any rebuttal claiming it can is wrong.</li>
+</ul>
+<p>So the chapter is right that this is not visible in the way a pilot might first imagine. What it misses is that the aeroplane is already carrying an instrument that does not share the compass's problem, and has been carrying one since the 1960s.</p>
+<div class="killer"><strong>A gyroscope does not know where the pole is.</strong> It holds its orientation against <em>inertial space</em>, which is why a directional gyro drifts against the compass and why pilots reset it. That drift is not a defect; it is a measurement. Its rate is <em class="term">Earth rate</em>, 15.04&deg;/hr times the sine of the latitude, plus a transport term for the aircraft's own motion. At the equator, flying east, <strong>both terms are exactly zero</strong> &mdash; sin&nbsp;0&deg;&nbsp;=&nbsp;0 and tan&nbsp;0&deg;&nbsp;=&nbsp;0. On the flat map, the transport term is 5.15&deg;/hr and does not vanish. The globe says the gyro and the compass stay locked together for the entire fourteen-hour flight. The flat map says they separate by 76&deg;.</div>
+<p>That is the flight recorder trace the chapter is asking for, and it is well inside what the hardware resolves. A navigation-grade ring-laser gyro holds bias to roughly 0.01&deg;/hr; the signal in dispute is about five hundred times that. It is not a marginal measurement. It is one of the easiest things on the aircraft.</p>
+
+<h2>5 &middot; The island of pilots &mdash; answered on page 119</h2>
+<p>The chapter closes with a good rhetorical move. Imagine pilots who have never seen a globe. Introduce the model and they say: <em>&ldquo;But we never point our nose down to go around the curve, and there is no adjustment for Earth spin. That's impossible.&rdquo;</em></p>
+<p>It is a fair thing to ask, and it has a specific answer. The rate at which the nose would have to drop is V&divide;R, which at 560&nbsp;mph is <strong>8.1&deg; per hour</strong> &mdash; about a seventh of a degree per minute. Nobody would notice performing it. But that is not the real answer, because a pilot does not perform it at all.</p>
+<div class="killer"><strong>The mechanism is the one he described correctly himself, two pages earlier.</strong> The pendulous vanes erect the attitude indicator to <em>local</em> vertical &mdash; whatever is locally down, continuously. On a globe, local vertical rotates as you travel, at exactly V&divide;R. So an aircraft flown level against that indicator is following the curve automatically, without anybody pointing anything anywhere. The chapter's own analysis of the instrument, which is right, is precisely the reason the island pilots would never feel the thing they are being asked to feel. The self-correcting behaviour it describes is what makes &ldquo;level&rdquo; and &ldquo;curved&rdquo; the same instruction.</div>
+<p>The second half &mdash; &ldquo;no adjustment for Earth spin&rdquo; &mdash; has the same shape of answer, and it is worked through on the <a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">rotation page</a>: the adjustment exists, it is called the Coriolis correction, and inertial navigation systems apply it continuously. A pilot does not apply it because the box does.</p>
+
+<h2>6 &middot; The measurement has already been made, several million times</h2>
+<p>The chapter budgets $715,000 and hopes to interest a sponsor. The budget is not necessary, because the aircraft that would fly the route is already doing the experiment on every leg it flies, and so is every other airliner in the sky.</p>
+<p>Before pushback, an inertial reference unit performs an alignment. It sits still and senses the Earth's rotation vector &mdash; magnitude 15.04&deg;/hr &mdash; and it resolves that vector into a horizontal and a vertical component. The horizontal component points at true north, which is how the aircraft finds north with no magnetic sensor at all. And the <em>ratio</em> of the two components gives the latitude directly, which the unit checks against the position the crew typed in. A gross mismatch and the alignment fails.</p>
+<ul class="tl">
+  <li><span class="t">&mdash;</span> <strong>This only works on a rotating globe.</strong> The procedure assumes the rotation vector is fixed in space and that the angle between it and local vertical is the co-latitude. That assumption is tested on every alignment, at every airport, at every latitude, several thousand times a day.</li>
+  <li><span class="t">&mdash;</span> <strong>And it degrades where the geometry says it should.</strong> North-finding depends on the horizontal component, which goes as cos&nbsp;&phi;. Near the poles that component shrinks toward nothing, alignments take progressively longer, and above a certain latitude the units decline to align at all. The same effect turns up in surveying, where gyrotheodolites become unusable within roughly 15&deg; of the pole &mdash; a limitation covered on the <a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">rotation page</a>, and one that has no meaning on a flat plane.</li>
+  <li><span class="t">&mdash;</span> <strong>The equator is not a special case for it either.</strong> There the rotation vector lies flat, the vertical component vanishes, and the unit reads zero Earth rate about the vertical axis &mdash; which is the same zero the flight-recorder trace would show along the route.</li>
+</ul>
+<p class="scalewarn">This is the part of the answer that costs nothing to check. The chapter asks for an experiment nobody has run. The honest reply is that the experiment is run continuously by an industry that would notice immediately if it stopped working, and its results are in the maintenance logs of every long-haul aircraft on Earth.</p>
+
+<h2>7 &middot; What would settle it, and the cheap version</h2>
+<p>Two tests, in ascending order of cost.</p>
+<ul class="tl">
+  <li><span class="t">1.</span> <strong>A gyro on a table.</strong> A navigation-grade fibre-optic or ring-laser gyro, stationary, measures Earth rate about the local vertical: 15.04&deg;/hr &times; sin&nbsp;&phi;. Take it to two latitudes a few hundred miles apart and the reading changes by a predictable amount. No aircraft, no charter, no permits. This is the same measurement as the surveying test on the <a href="https://funwithscience.net/globe-deconstruction/self-test-protocol/">self-test page</a>, and it settles the underlying question the flight is a proxy for.</li>
+  <li><span class="t">2.</span> <strong>The flight itself, if somebody funds it.</strong> Worth doing &mdash; it would be a good piece of work and it would produce a public dataset. The prediction to record is the accumulated yaw of the inertial platform relative to the local horizontal frame, along the equator, eastbound. The globe says <strong>0.0&deg;</strong>, to within instrument bias. The flat map says <strong>75.9&deg;</strong> over 8,250 miles. Any sustained non-zero yaw rate at the equator, above the platform's bias, falsifies the globe on this measurement.</li>
+</ul>
+
+<h2>The honest bottom line</h2>
+<p>The chapter asks for raw data and numbers, and it is entitled to them. The numbers say the experiment was well chosen, that the equator is the right route for exactly the reason he intuited, and that his reading of the attitude indicator is correct. They also say the table's 119&deg; was obtained with the globe's own circumference, that the flat model's actual requirement is 75.9&deg;, and that the aeroplane is not the instrument that answers the question &mdash; the gyro is, and it has already answered it.</p>
+<p>What remains is a genuinely good question with a settled answer, which is a better position for the chapter to be in than most of the book.</p>
+
+<h2 id="sources">Sources &amp; further reading</h2>
+<ul class="src">
+  <li>Levi Miller, <em>Globe Deconstruction?</em> &mdash; prerelease draft, 2026. Chapter &ldquo;The Equator Flight Data Challenge,&rdquo; pp.&nbsp;117&ndash;123; the pendulous-vane discussion at p.&nbsp;119; the route table at p.&nbsp;121. The same challenge appears as Question&nbsp;3 at p.&nbsp;46.</li>
+  <li>Turn-rate and bank-angle figures computed for this page: globe (V&divide;R)&thinsp;tan&thinsp;&phi;, flat map V&divide;r with r&nbsp;=&nbsp;69.17&thinsp;(90&minus;&phi;) miles, coordinated-turn bank tan&thinsp;&theta;&nbsp;=&nbsp;V&omega;&divide;g. Equatorial radius 3,963.19&nbsp;mi.</li>
+  <li>Companion pages: <a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a> for gyrocompasses, gyrotheodolites and the Coriolis correction; <a href="https://funwithscience.net/globe-deconstruction/coriolis-drifters/">One Spin, Written Across Every Latitude</a> for the 15.04&thinsp;sin&thinsp;&phi; result measured independently.</li>
+</ul>
+
+<footer>
+  <p><a href="https://funwithscience.net/" style="color:var(--ink-3)">Fun With Science</a> &middot; companion to the
+  <a href="https://funwithscience.net/globe-deconstruction/" style="color:var(--ink-3)">Globe Deconstruction Review</a>.</p>
+  <p>Calculations, tables and figures are original. Short quotations from <em>Globe Deconstruction?</em> (Levi Miller, prerelease draft, 2026) are reproduced for the purpose of criticism and review; all rights remain with the author.</p>
+</footer>
+
+</div>
+</body>
+</html>

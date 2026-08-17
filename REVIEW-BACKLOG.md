@@ -7,7 +7,7 @@ nothing has to be re-derived.
 Catalogue source of truth is `docs/index.html`. When an item closes, update
 **both** this file and the landing page's status chip.
 
-**State as of 2026-08-17: 22 tracked items — 8 answered, 2 partial, 12 open.**
+**State as of 2026-08-17: 22 tracked items — 10 answered, 2 partial, 10 open.**
 
 Ranking weights: how load-bearing the claim is to his thesis × how decisive an
 answer we can actually make × public-facing (site) vs buried (book) × work
@@ -17,27 +17,32 @@ already banked.
 
 ## The queue
 
-### 1. Equator Flight Data Challenge — `Q3 (p.46)` + `Section p.117`
+### ~~1. Equator Flight Data Challenge~~ — `Q3 (p.46)` + `Section p.117` — **DONE 2026-08-17**
 
-- [ ] Page built
-- [ ] Landing page updated (two entries close together)
+- [x] Page built — `docs/equator-flight/`
+- [x] Landing page updated (both entries)
 
-He invites this one, it is his strongest genre (instrument data), and it has an
-internal-contradiction kill.
+Published as *The Equator Flight Data Challenge, Answered*. What it ended up
+arguing, in case it needs defending later:
 
-Banked research — **do not re-derive**:
-
-- His route: 8,250 mi / 119°. Those are *globe* distances used inside *flat*
-  geometry. His own flat-earth equator is **39,072 mi** — a factor of π/2 too
-  long. The numbers he uses and the map he uses are not the same map.
-- Globe requires a **0.00°/hr** turn rate flying the equator; the flat model
-  requires **5.16°/hr**. A flight data recorder distinguishes these trivially.
-- On any other parallel the globe requires a turn rate of **tan(φ)** — which is
-  why the equator case is the clean one and why he picked it.
-- **Concession to lead with:** his attitude-indicator / pendulous-vanes analysis
-  on p.119 is *correct*. Say so first and prominently.
-
-Highest readiness on the board. Build this next.
+- Conceded four things up front: the experiment is sound; the globe's
+  prediction really is exactly zero; **the equator is the best possible route**
+  because it is the one latitude where the two models differ maximally (they
+  converge above ~60°); and the p.119 pendulous-vane analysis is correct.
+- The table's 119° = 8,250 mi ÷ 24,901 mi × 360° — the globe's circumference.
+  On the flat map the same leg is **75.9°** at **5.15°/hr**, 76 inputs not 119.
+  Also: the named airports are 172°/188° apart (~11,900/13,000 mi), so the
+  endpoints and the distance are not the same flight.
+- Noted the tension with pp.118–120, which argue map distances are unreliable,
+  four pages before the headline figure is derived from trusting them.
+- The instruments section is the load-bearing one: bank angle is 2.2 arcmin,
+  turn needle would not move, **and the compass reads 090° in both models**
+  because the flat map's north reference rotates with you. The discriminator is
+  the gyro against inertial space — Earth rate 15.04 sin φ plus transport
+  (V/R) tan φ, both exactly zero at the equator, against 5.15°/hr flat.
+- Closed the loop: his own correct p.119 mechanism (vanes erect to *local*
+  vertical, which rotates at V/R) is what answers his island-of-pilots
+  objection on p.122.
 
 ### 2. Unknown Luminaries expansion — `Section p.153` + `Q5` + `Q6` + `Q7` + rest of `Claim #3`
 
@@ -138,8 +143,8 @@ Well-documented, narrow, low stakes either way. Last.
 
 ## Structure note
 
-The 14 outstanding entries collapse into roughly **8 pages**, because item 1
-merges two catalogue entries and item 2 merges five.
+The 12 outstanding entries collapse into roughly **7 pages**, because item 2
+merges five catalogue entries. (Item 1 merged two and is done.)
 
 ---
 
