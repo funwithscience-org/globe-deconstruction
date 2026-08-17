@@ -7,7 +7,8 @@ nothing has to be re-derived.
 Catalogue source of truth is `docs/index.html`. When an item closes, update
 **both** this file and the landing page's status chip.
 
-**State as of 2026-08-17: 22 tracked items — 10 answered, 2 partial, 10 open.**
+**State as of 2026-08-17: 22 tracked items — 10 answered, 2 partial, 10 open**, plus
+3 supporting pages (drifters, self-test protocol, Action Lab footage).
 
 Ranking weights: how load-bearing the claim is to his thesis × how decisive an
 answer we can actually make × public-facing (site) vs buried (book) × work
@@ -15,66 +16,62 @@ already banked.
 
 ---
 
-## NEXT UP — Action Lab footage analysis (materials in hand, 2026-08-17)
+## DONE — Action Lab footage analysis (landed 2026-08-17)
 
-**Task.** The book's p.20 claim that The Action Lab's *Rocket Launch in a Giant
-Vacuum Chamber* "accidentally proved space travel to be a hoax." Operator has
-supplied a transcript, an analysis, frame tracking, and the 4K frame series.
-The rockets page already answers the argument *as described* (§10, "The delayed
-reaction, and why the camera decides it"); what the footage adds is whether the
-described reading survives contact with the actual frames.
+Deliverable changed during the work: instead of a subsection inside
+`docs/rockets-in-vacuum/` §10, this became its own page,
+**`docs/action-lab-footage/`** — "The Action Lab Footage, Frame by Frame" —
+linked from §10, from the Claim #2 row on the landing page, and from the
+Supporting-pages grid. §10 was reworked around the measured result rather than
+merely patched, and the "we can't adjudicate footage we haven't frame-stepped"
+caveat is gone.
 
-**Materials — on the operator's Mac, connected folder, NOT in the container:**
-`~/Library/Mobile Documents/com~apple~CloudDocs/claude working folder/globe deconstruction/`
+**Answers to the four questions this item posed:**
 
-| File | Size | Read order |
-|---|---|---|
-| `TRANSCRIPT-actionlab.md` | 6.7 KB | **1st — cheap, read whole** |
-| `ANALYSIS-vacuum-rocket.md` | 8.6 KB | **2nd — cheap, read whole** |
-| `track_launch.json` | 18 KB | 3rd — per-frame tracking, the quantitative core |
-| `front4k.json` | 3.7 KB | 3rd — plume-front positions |
-| `subs.en.vtt` | 60 KB | as needed, timing anchors |
-| `sheet_launch1/2.jpg`, `sheet_288-348.jpg` | ~200–300 KB | contact sheets — **look at these before any full frame** |
-| `launch_montage.png`, `FIG_thrust_signature.png` | 2.7 MB / 123 KB | derived figures |
-| `full_335.60/.85/.95/336.05.png` | ~600 KB each | the four key full frames |
-| `f/x_00001.jpg` … `x_01972.jpg` | 1,972 frames | **do not browse — index only, pull named frames** |
-| `actionlab_4k.mp4` etc. | 280 MB ×2 | too big to stage; leave on device |
+1. *Does motion onset coincide with plume-wall contact, or start earlier and
+   sub-pixel?* **Earlier.** Sustained one-directional motion begins during
+   gentle venting, ~1.0 s of playback before the main burn (conservative
+   threshold; 1.45 s on a looser frame-to-frame speed criterion). Onset is not
+   near any wall-contact event.
+2. *Frame rate and pixel scale?* Frame rate **never stated**. The launch clip
+   is **30 distinct fps sampled at 60** — every frame is duplicated, confirmed
+   on both the tracking and the independent 4K plume series. Pixel scale is
+   only good to **±30%**, and the limiting factor is not measurement but that
+   the syringe is blown out in every frame so its volume can't be identified;
+   10/20/60 mL are within 4% of each other on aspect ratio. The page is
+   therefore built on measured pixel travel and never converts to metres.
+3. *Static-friction release signature?* **No, and it doesn't apply** — this rig
+   is a pendulum on threads, not a carriage on a track. The stiction hypothesis
+   in earlier session notes was over-generalised from Kampf's p.80 rig; the
+   two-stage appearance is mass flow (gentle vent, then main burn).
+4. *Chamber pressure?* Stated on camera at 3:46–4:14: 827 mbar against 846 mbar
+   ambient, ≈0.02 atm, unchanged by a burn. **But do not use this as evidence
+   about the mechanism** — 0.2 g of gas in a human-sized chamber moves the
+   pressure ~0.15 mbar and the gauge reads whole mbar, so the null is below
+   instrument resolution and both models predict it. It is evidence about
+   chamber sizing only. An early draft got this wrong.
 
-**Context discipline — this is the whole reason the session was compacted.**
-Images are the most context-expensive thing available. Order of operations:
-text → JSON → contact sheets → named full frames only where a specific claim
-needs adjudicating. Never stage the `f/` series wholesale or the MP4s at all.
+**Core result.** Displacement at gas-wall contact = (measured 134 px of 4K ramp
+travel) × f², where f = (L/v_gas)/(T_playback/S) and S = capture_fps/30.
+Constant acceleration is a deliberate over-estimate; the measured rising ramp
+gives f³, one to two orders of magnitude lower. At 960 fps and a 0.3 m wall:
+~0.02 px on the ramp model, ~0.8 px on the upper bound. Worst plausible corner
+~10 px upper / ~3 px ramp. Pushing f toward 1 doesn't rescue the claim — it
+means the gas arrived after the burn ended, which refutes wall-mediated thrust
+outright.
 
-**Physics already computed and already on the page** (do not re-derive):
-mass ratio = speed ratio = 685:1 (73 mg air vs ~50 g carriage); 0.05 N on 50 g
-= 1 m/s² ⇒ 45 ms to move a visible 1 mm; plume front at 500 m/s covers 22 m in
-that time, so **below a ~22 m chamber the cloud reaches the wall first under
-either model**; 30 fps = 33 ms/frame, which buries the 1 ms vs 4 ms
-discriminator inside one frame. The genuine discriminator is **onset timing:
-independent of chamber length under standard physics, proportional to it under
-his**. Near-wall effects require gas to *return* to the vehicle and have two
-competing signs (rebound forward at 2L/v vs p₀·Aₑ pressure rise) — neither is a
-delayed start.
+**Two things deliberately NOT claimed**, both from the adversarial pass:
+- *Shape* does not discriminate. A continuous-flow rebound returns a delayed
+  scaled copy of the same rising curve, at an interval no ordinary camera
+  resolves. The page says so and leads on **magnitude** instead (~0.01–0.1% of
+  momentum returns diffusely; the claim needs ~100%).
+- The footage rules out only the **naive** version (vehicle inert until a cloud
+  completes a transit). Separating standard physics from continuous-flow
+  rebound needs a load cell, not a camera.
 
-**What the footage should be asked, specifically:**
-
-1. Does the vehicle's motion onset actually coincide with plume-wall contact, or
-   does `track_launch.json` show displacement beginning earlier and simply being
-   sub-pixel until later? That is the whole claim.
-2. What is the frame rate and the pixel scale? Sub-pixel displacement at the
-   observed thrust is the predicted null — quantify the detection floor before
-   saying anything about what is or isn't visible.
-3. Is there a static-friction release signature (a discrete break rather than a
-   smooth ramp)? Thrust ~0.05 N against carriage stiction ~0.05 N predicts one.
-4. Chamber pressure during the burn, if the video states it — the §11 sizing
-   caveat depends on it.
-
-**Tone constraint (standing):** he made an error; he did not fabricate. The
-finding to aim for is "the frames show X, which is what both models predict,"
-not "he misrepresented the video."
-
-**Deliverable:** a subsection in `docs/rockets-in-vacuum/index.html` §10, then
-close this item and the corresponding line in the rockets entry below.
+**Open, if anyone wants it:** the pendulum swing is uncharacterised, and the
+early-onset motion lives at the 1–7 px scale where sway also lives. The
+pre-ignition frames would settle it. Listed as test 4 on the new page.
 
 ---
 
@@ -293,9 +290,9 @@ merges five catalogue entries. (Item 1 merged two and is done.)
 | Item | Page |
 |---|---|
 | Claim #1 — bottom-up disappearance / angular resolution | `bottom-up-observations/`, `rampion/` |
-| Claim #2 — rocket thrust in vacuum | `rockets-in-vacuum/` |
+| Claim #2 — rocket thrust in vacuum | `rockets-in-vacuum/` + `action-lab-footage/` |
 | Claim #3 — celestial red flags | **partial** — eclipse half in `luminaries/`, rest as tests in `self-test-protocol/` |
-| Q1 — gas thrust needs surrounding air | `rockets-in-vacuum/` |
+| Q1 — gas thrust needs surrounding air | `rockets-in-vacuum/` + `action-lab-footage/` |
 | Q9 — no Moon silhouette before an eclipse | `luminaries/` |
 | Q10 — atmospheric co-rotation at every altitude | `earth-rotation/` |
 | Q11 — polar time-lapse, Compton generator in Antarctica | `earth-rotation/`, `coriolis-drifters/` |
