@@ -360,10 +360,37 @@ sentences, **ten** stale §-cross-references from renumbering, two sentences lef
 without subjects after splicing, Max-Q described as a speed-of-sound effect,
 "twenty orders of magnitude" for what is thirteen.
 
-**Still open — needs a person, not an edit:** the book's p.20 claim that Action
-Lab's *Rocket Launch in a Giant Vacuum Chamber* "accidentally proved space travel
-to be a hoax." It is his own founding citation and the rocket visibly fires and
-moves in it. Somebody has to watch it and state what is being reinterpreted.
+**Closed 2026-08-17 — the p.20 / Action Lab timing claim.** Operator supplied
+what drives it: the argument is that the syringe doesn't move until the gas cloud
+*hits the wall*, rather than when the cloud first leaves the nozzle — i.e. the
+p.80 "more delayed reaction as we increase the length of the chamber"
+discriminator, applied to someone else's footage. New §10 subsection *"The
+delayed reaction, and why the camera decides it"* answers the argument as stated
+(explicitly not the footage, which I can't frame-step):
+
+- **Mass ratio is the speed ratio.** 73 mg of air against a ~50 g carriage is
+  **685:1**. Exhaust at 500 m/s ⇒ vehicle at **0.73 m/s**. The gas necessarily
+  moves ~700× faster than the thing it pushed — that *is* the third law being
+  displayed, not violated. Equal and opposite refers to momentum, not speed.
+- **The ordering is forced, under either model.** 0.05 N on 50 g ⇒ 1 m/s² ⇒
+  **45 ms** to move a visible 1 mm. Cloud front at 500 m/s: 0.5 m in 1 ms
+  (vehicle 0.5 µm), 2 m in 4 ms (8 µm), 10 m in 20 ms (0.2 mm). **Crossover at
+  ~22 m** — in any smaller chamber the cloud reaches the wall first *whichever
+  theory is true*, so observing that tells you nothing.
+- **The real discriminator, and it's cheap.** Mainstream: onset of motion is set
+  by thrust and friction, **independent of chamber length** (~45 ms at both
+  0.5 m and 2 m). His model: onset **scales with length** (1 ms vs 4 ms). But
+  30 fps = one frame every **33 ms**, which puts all three numbers inside a
+  single frame. Resolving it needs ~5,000–10,000 fps (phone-tier now) plus a
+  timestamped release trigger, run at two wall distances. That is the one number
+  from the p.80 rig most worth publishing.
+- **Fairness point:** a plume reflecting off a near wall pushes the vehicle
+  *away* from it — same direction as thrust — so it arrives as a late bump at
+  2L/v, and both models predict *more* total motion with the wall closer. Total
+  displacement can't separate them; only the onset clock can.
+
+Also softened the earlier bullet to "wrong discriminator — *for how far it
+moves*" so it doesn't read as contradicting the new timing section.
 
 ### Not done — operator's call
 - **Length.** equator-flight ~8,100 words, celestial-globes ~9,200, for chapters
