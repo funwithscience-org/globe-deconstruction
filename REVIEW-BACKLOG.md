@@ -219,3 +219,66 @@ merges five catalogue entries. (Item 1 merged two and is done.)
   the book.
 - Pushes go via the bundle procedure in `PUSH-README-globe-deconstruction.md`
   (working copy in the Cowork session; the sandbox git proxy blocks writes).
+
+---
+
+## Peer-review passes (2026-08-17)
+
+Two adversarial reviews came back from an independent instance, on
+`equator-flight/` and `celestial-globes/`. Both were verified item by item
+against primary sources before acting; **do not apply a review from that
+instance unchecked** — see the misses below.
+
+### equator-flight — applied
+Big one: §4 claimed the divergence is in the flight-recorder trace. **False.**
+14 CFR Part 121 App. M mandates roll at 0.5° resolution / ±2° accuracy / 1 Hz
+against a 0.04° bank; body rates aren't mandated; recorded heading is
+post-correction IRS output so reads 090 under both models. Page now says so and
+names the cheap alternative (nav-grade FOG in a seat + GPS on any scheduled
+equator sector). Also: twitter card, V/R unified on R = 3,963.19 mi, "ten metres
+across" → twenty (radius vs diameter), UIO/PNK real coordinates, p.118 quote,
+INS "since ~1970", nautical miles. Softened "no equilibrium at all" → no
+*aerodynamic* mechanism (our own 21.3°/hr Coriolis contradicted it), and
+replaced the Schuler hand-wave with the tilt derivation V(1/R_true − 1/R_assumed)
+= 2.9° after an hour = 0.05 g. New §7 answers the p.122 magnetic-south follow-up,
+which we'd skipped: southbound tracks converge on a globe, diverge on any
+pole-centred flat map — topology, not rate — and those flights carry passengers.
+
+### celestial-globes — applied
+Real physics error found: the **Vostok row** scaled refraction by record low
+temperature while holding pressure at sea level. Vostok is at 3,488 m (~620 hPa),
+so actual refraction there is ~5.1′, *below* standard. Row relabelled as an
+explicit sea-level hypothetical and a realistic Siberian-High row added
+(1,060 hPa at −60 °C → 7.5′). The 8.9′ "both records at once" wall is unaffected.
+Also: setting-Sun flattening 10% → ~19% (6′ of a 32′ disc, Bennett); refraction
+at 10° unified on 0.090° with 5.3/5.4/5.7 explained once (10°N "wrong by"
+271× → 285×); Kochab 16° → 16.6°; "best telescope" → best optical interferometer;
+noted his 18,860 is right to his own 430 ly. Softened: **"69 mi/deg never
+changes" varies 1% with oblateness** — now says so and credits the French
+Geodesic Missions 1735–44 as this experiment run three centuries early (a gain,
+not a loss); the extinction degeneracy now closed properly (coefficient measured
+from *other* stars, not fitted to Polaris); Kochab isn't circumpolar from 10°N.
+Added: Fermat one-liner (no medium knows how far away the source is — which is
+what licenses walking the Sun through the field), the Moon-illusion pre-empt,
+σ Octantis + Polaris photographed in one night from Ecuador, and **his own p.131
+invitation** quoted as the thing the page is answering.
+
+### What the reviews got WRONG — check these next time
+- **SVG `<desc>` "leaking into body text"** — claimed on *both* pages, false on
+  both. Verified by rendering. Almost certainly an artifact of fetching the page
+  through a markdown converter, which flattens `<desc>`. Not a page bug.
+- **"along the parallel" figures are rhumb lines** — no, they were parallel-at-
+  mean-latitude; they agree with rhumb within 0.3% only because the city pairs
+  sit at similar latitudes. Relabelled anyway, because the prescription was right.
+- **tangent/secant procedure "formalised in the 1855 Manual"** — fetched it; that
+  manual has correction lines for meridian convergency but no curve methodology.
+  Page now claims only what the 1910 tables support.
+
+### Not done — operator's call
+- **Length.** equator-flight ~8,100 words, celestial-globes ~9,200, for chapters
+  of 6 and 28 pages. Both reviews flag it.
+- **equator-flight:** "why the equator" is argued four times (§1, §3, §5, §6);
+  the suggested instrument-panel table would let a lot of prose be *deleted*.
+- **celestial-globes §4.5:** run §2 with the Earth-radius lamp from the start and
+  demote the 45°N fit to a footnote. Structurally cleaner but a big rewrite of
+  the page's spine.
