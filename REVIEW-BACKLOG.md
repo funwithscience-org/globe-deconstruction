@@ -302,6 +302,35 @@ are *lower* (0.12–0.15 vs 0.2 mag/airmass at sea level); the 0.6 figure is the
 from 16° to 16.6° to match its own lead-in (16.6/16.2 · 12.0/8.5 · 8.3/4.1).
 "circumpolar circle" → "Kochab–Polaris circle".
 
+### Optics pages — reviewed and rescanned (2026-08-17)
+`bottom-up-observations` and `rampion` both went through review + rescan.
+
+**Real error found in bottom-up:** the §5 refraction table computed the mid-path
+*sagitta* (how far the sightline bows below the chord) but labelled it "ray needs
+to miss the lens by". A sagging ray still reaches the lens. True hiding criterion
+— limiting ray from a 63.5 mm source to a 12.7 mm lens over 125 m grazing the
+water — needs **−17.6 °C/m ≈ 0.70 °C over the lowest 4 cm**, seven times what
+the page implied. Column relabelled, cutoff row added, "it's the default"
+softened. Also Wallace was backwards (the *midpoint* disc showed above the far
+marker), pixel scale was the ultrawide figure not the main lens (0.8 px at
+1080p), five orders not six.
+
+**Best new material, both from his own numbers:**
+- bottom-up §3: p.132 *"you see the flare of light, but not the physical
+  dimensions of the source"* — his own concession that a source past the
+  resolution limit stays visible. Plus his p.134 worked example: 1 in at the
+  limit = 286 ft, so 2.5 in = **716 ft**, against Claim #1's "410+ ft minimum".
+- rampion §7: he concedes the dark band at support 6 is ⅓ its height at turbine
+  1 and calls it perspective. Perspective gives **8.0/11.0 = 0.73**. On his own
+  figure something that grows with distance removed the rest. Only differential
+  measurement in the chapter, and it runs against the chapter.
+
+**Errors I introduced while fixing, caught by the rescan** — argues for always
+running the rescan: k attributions swapped (Bowditch implies 0.179; **0.13 is
+Gauss's**), two page refs wrong (286 ft is p.134 not 133; the art-class quote is
+p.95 not 94), "six thousand stars visible at once" is the whole-sky total, and
+"a few millionths of an arcminute" fails for Betelgeuse (0.00075).
+
 ### Not done — operator's call
 - **Length.** equator-flight ~8,100 words, celestial-globes ~9,200, for chapters
   of 6 and 28 pages. Both reviews flag it.
