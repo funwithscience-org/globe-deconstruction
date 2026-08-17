@@ -331,6 +331,40 @@ Gauss's**), two page refs wrong (286 ft is p.134 not 133; the art-class quote is
 p.95 not 94), "six thousand stars visible at once" is the whole-sky total, and
 "a few millionths of an arcminute" fails for Betelgeuse (0.00075).
 
+### Rockets-in-vacuum — reviewed and rescanned twice (2026-08-17)
+**Real physics error found:** §5 explained vacuum thrust as the exhaust "shoving air
+out of its way, bleeding off momentum". Wrong — nothing downstream of the exit
+plane changes the vehicle's momentum. The reason is the pressure term: ambient
+air bears on the outside of the vehicle everywhere *except* across the open
+nozzle mouth, so it exerts a net **rearward** p₀·Aₑ. Removing the air removes
+that penalty — which is the 7,607 → 8,227 kN difference. Better than the old
+answer because it concedes the premise and reverses its sign: air acts on a
+rocket, and its effect is *negative*.
+**Biggest gap filled:** the plainest true statement wasn't on the page at all —
+the gas pushes on the *inside* of the engine and the back has a hole in it. That
+is also the direct answer to Kampf's Law (p.82): the compression that pushes the
+vehicle happens inside, before release, and is just chamber pressure (~97 bar,
+Merlin 1D).
+**Two new sections:** (a) the book *declares the result* — p.82 names the law,
+p.183 says it "conclusively proved these animations are nothing more than CGI" —
+and contains **no data at all**; (b) pre-registered predictions for his rig:
+60 mL of air = 73 mg, ~0.026 N·s, ~0.05 N thrust against ~0.05 N of carriage
+friction, so **a null result is expected on friction grounds and proves nothing**;
+wall distance is the wrong discriminator; 73 mg into 20 L raises it 0.3 kPa.
+**Closing:** NYT printed Claim #2 verbatim 13 Jan 1920 and retracted it 17 Jul
+1969; Goddard fired rockets in evacuated chambers in 1916.
+
+**Errors I introduced while fixing** (both rescans caught more of these than the
+original review found in the page): a self-contradiction in consecutive
+sentences, **ten** stale §-cross-references from renumbering, two sentences left
+without subjects after splicing, Max-Q described as a speed-of-sound effect,
+"twenty orders of magnitude" for what is thirteen.
+
+**Still open — needs a person, not an edit:** the book's p.20 claim that Action
+Lab's *Rocket Launch in a Giant Vacuum Chamber* "accidentally proved space travel
+to be a hoax." It is his own founding citation and the rocket visibly fires and
+moves in it. Somebody has to watch it and state what is being reinterpreted.
+
 ### Not done — operator's call
 - **Length.** equator-flight ~8,100 words, celestial-globes ~9,200, for chapters
   of 6 and 28 pages. Both reviews flag it.
