@@ -72,6 +72,24 @@ arguing, in case it needs defending later:
   Also: hands-off at 45°N the track curves 21.3°/hr on Coriolis alone (100 mi in
   the first hour), so the hands-off test is equator-only — a third independent
   reason the route is right.
+- **Added 2026-08-17 (third round) — §3 rewritten to TEACH, not assert.**
+  Operator: *"you could actually drive straight west without turning"* — and
+  that it was news to them. That reaction is the most useful signal we have had
+  about this chapter: the distinction defeats most globe defenders, so the usual
+  reply ("the equator is a great circle") answers a question nobody asked. Now
+  conceded on the page as a point in Miller's favour.
+  Three-step teaching sequence replaces the assertion: (1) turn the numbers up —
+  10 m from the pole, walk due west, 10 m circle, lap every 45 s, **8°/second**,
+  compass on 270 throughout; (2) drive it — straight line falls south of due west
+  by 6.7 in/mile, **20.1 ft per 6-mile township**, 724 ft in 36 mi at 40°N
+  (derived from κ = tan φ / R); (3) **the PLSS has corrected for it since 1785** —
+  GLO/BLM *Standard Field Tables* Table 13 "Offsets from the tangent to the
+  parallel" + Table 14 for the secant method. Verified the tables exist and are
+  named; could NOT reliably extract the scanned figures, so the page labels the
+  offsets as derived and points readers at Table 13. **If this is ever quoted at
+  Miller, pin the published values first.**
+  Then: 3.4 arcmin of bank at 45°N, and nobody commands the turn — you command a
+  heading. Closes on the 360 sin φ circuit result as the definition-free version.
 
 ### 2. Unknown Luminaries expansion — `Section p.153` + `Q5` + `Q6` + `Q7` + rest of `Claim #3`
 
