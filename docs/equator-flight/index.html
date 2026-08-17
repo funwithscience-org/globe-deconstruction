@@ -92,7 +92,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 
 <section class="verdict" id="verdict">
   <p class="vhead"><span class="vtag ok">Good experiment</span><span class="vtag fail">Table is inconsistent</span>The short version</p>
-  <p>The equator is the sharpest test on Earth: the globe requires a turn rate of <strong>exactly zero</strong> there, and a flat map requires <strong>5.15&deg;/hr</strong>. Nowhere else do the two models differ so completely. But the chapter's 119&deg; comes from converting 8,250&nbsp;miles into degrees using the <em>globe's</em> equatorial circumference. Measured on the flat map the same distance is 75.9&deg;, and the rate is 5.15&deg;/hr, not 8.08&deg;. The experiment survives the correction. And there is a cleaner version of it that needs no instruments at all: trim the aircraft over the equator and stop steering. A globe keeps you on the line, because it is the one latitude where both the geometric turn requirement and the Coriolis deflection vanish. The flat map puts you <strong>100 miles</strong> off it in two hours.</p>
+  <p>The equator is the sharpest test on Earth, and the cleanest version of it needs no map and no distances: fly all the way round any closed loop on any flat surface and you turn through <strong>exactly 360&deg;</strong>; go round the equator on a globe and you turn through <strong>exactly 0&deg;</strong>. The chapter's 119&deg;, though, comes from converting 8,250&nbsp;miles into degrees with the <em>globe's</em> circumference &mdash; and p.&nbsp;120 declines to give the flat Earth a scale at all, so the flat side of its own comparison has no number in it. The experiment survives the correction. And there is a cleaner version of it that needs no instruments at all: trim the aircraft over the equator and stop steering. A globe keeps you on the line, because it is the one latitude where both the geometric turn requirement and the Coriolis deflection vanish. The flat map puts you <strong>100 miles</strong> off it in two hours.</p>
 </section>
 
 <h2>1 &middot; The challenge, stated fairly</h2>
@@ -126,10 +126,33 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <p>The 119&deg; comes from the distance instead:</p>
 <p class="pull">8,250 mi &divide; 24,901 mi &times; 360&deg; = 119.3&deg;</p>
 <p>24,901 miles is the circumference of the equator <em>on a globe</em>. That is the step to look at. The figure being presented as the flat model's turning requirement has been obtained by measuring the route on the globe.</p>
-<p>On the flat map the equator is not a 24,901-mile circle. It is a circle drawn around the pole at the distance from the pole to the equator &mdash; 6,225 miles &mdash; so it is <strong>39,115 miles</strong> around. The ratio between the two is exactly &pi;/2, which is where the whole discrepancy lives.</p>
+<p>Which raises a question the chapter has to answer before it can quote a flat-Earth figure at all: <em>how long is the equator on a flat Earth?</em> And p.&nbsp;120 declines to say. The Gleason map is dismissed there as &ldquo;just a distorted version of the globe,&rdquo; the ice wall as imaginary, and measured distances generally as possibly &ldquo;elongated to conform to a predefined Earth radius.&rdquo; What survives is a requirement rather than a map: that circumnavigation gets <em>longer</em> past the equator.</p>
+<p>That is a fair position to hold, and it is more careful than most flat-Earth writing. But it means the flat side of this comparison has no number in it. There is no scale, so there is no distance, so there is no angle. The 119&deg; had to come from somewhere, and the only geometry on the table with a scale attached was the globe's.</p>
+
+<div class="killer"><strong>And here is the part that makes the experiment survive anyway: it does not need the scale.</strong> Take any flat map you like &mdash; any size, any projection, any shape of outline &mdash; and draw the equator on it. It is a closed loop with the pole inside it. Fly all the way round any closed loop in a plane and you come back pointing the way you started, having turned through <strong>exactly 360&deg;</strong>. Not approximately, and not depending on the loop's size or shape. On a globe the equator is a great circle, and going all the way round it you turn through <strong>exactly 0&deg;</strong>. The gap between the two models is one full revolution, and no choice of map, scale, or distance data can move it.</div>
+<p class="scalewarn">The missing 360&deg; is not an artefact of anything. It is the enclosed curvature, by a theorem of Gauss: the turning a traveller has to supply, plus the curvature of the surface they are crossing, always adds to the same total. A plane supplies none of it, so the pilot supplies all of it. A globe supplies all of it, so the pilot supplies none. That is what the experiment is actually weighing, and it is why the disputed quantities &mdash; map scales, road lengths, who controls the flight-tracking data &mdash; drop out of it entirely.</p>
+
+<h3>If a specific map is wanted</h3>
+<p>For the partial leg in the table a scale <em>is</em> needed, so take the only concrete layout consistent with the chapter's own requirement: parallels as circles about the pole, spaced by true north&ndash;south distance. That is the azimuthal-equidistant arrangement &mdash; the Gleason map's geometry, whatever one thinks of Gleason's chart. On it the equator is a circle of radius 6,225&nbsp;miles, so it is <strong>39,115 miles</strong> around against the globe's 24,901. The ratio is exactly &pi;/2.</p>
+<p>That 57% is worth pausing on, because it sounds larger than people expect at the equator. It is not a special feature of the equator; it is one point on a curve that starts at nothing under the pole and runs away to infinity at the far rim:</p>
 
 <table class="cmp">
-  <thead><tr><th></th><th>On a globe</th><th>On the flat map</th></tr></thead>
+  <thead><tr><th>Parallel</th><th>Stretched by</th></tr></thead>
+  <tbody>
+    <tr><td class="metric">60&deg;N</td><td>1.05&times;</td></tr>
+    <tr><td class="metric">45&deg;N</td><td>1.11&times;</td></tr>
+    <tr><td class="metric">30&deg;N</td><td>1.21&times;</td></tr>
+    <tr><td class="metric">the equator</td><td><strong>1.57&times;</strong> &mdash; exactly &pi;/2</td></tr>
+    <tr><td class="metric">30&deg;S</td><td>2.42&times;</td></tr>
+    <tr><td class="metric">45&deg;S</td><td>3.33&times;</td></tr>
+    <tr><td class="metric">60&deg;S</td><td>5.24&times;</td></tr>
+    <tr><td class="metric">the south pole</td><td><strong>infinite</strong> &mdash; a point becomes the whole rim</td></tr>
+  </tbody>
+</table>
+<p class="scalewarn">The equator sits in the middle of that, not at the end of it. The really violent distortion is in the far south &mdash; which is exactly why hemispheric flight times are the argument this map has always struggled with, and why p.&nbsp;120 spends its effort questioning southern distances rather than defending them.</p>
+
+<table class="cmp">
+  <thead><tr><th></th><th>On a globe</th><th>On that flat map</th></tr></thead>
   <tbody>
     <tr><td class="metric">Equator, total length</td><td>24,901 mi</td><td><strong>39,115 mi</strong></td></tr>
     <tr><td class="metric">8,250 miles is, in degrees</td><td>119.3&deg;</td><td><strong>75.9&deg;</strong></td></tr>
@@ -145,7 +168,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <p>There is a second thing worth noticing about the conversion, and it is not arithmetic. Pages 118 to 120 argue that map distances are unreliable &mdash; that roads measure longer than Google represents them, that southern-hemisphere distances may be &ldquo;elongated to conform to a predefined Earth radius,&rdquo; that navigation systems may have been manipulated. Four pages later the experiment's central number is derived by trusting the globe's distance scale to four significant figures. Both positions cannot be held at once, and the chapter needs the second one to generate its headline figure.</p>
 
 <h2>3 &middot; What the two models actually predict</h2>
-<p>The general result is worth having, because it explains why the equator is special and why nothing else would have worked as well.</p>
+<p>Two results, and they do different jobs. The first needs no map at all: <strong>a full circumnavigation of the equator is 360&deg; of accumulated turn on any flat surface and 0&deg; on a globe.</strong> That one is safe from every argument about scales and distances. The second is the rate at each latitude, which does need a specific map, and is given below on the azimuthal-equidistant layout. It is worth having because it explains why the equator is the best route and why nothing else would have worked as well.</p>
 <p>On a globe, holding a line of latitude at speed <em>V</em> needs a turn rate of <strong>(V&divide;R)&nbsp;&times;&nbsp;tan&nbsp;&phi;</strong>. The tangent is the whole story: it is zero at the equator, and it climbs steeply toward the poles. On the flat map, a parallel is a circle of radius 69.17&nbsp;&times;&nbsp;(90&nbsp;&minus;&nbsp;&phi;) miles about the pole, so holding it needs <strong>V&nbsp;&divide;&nbsp;r</strong> &mdash; which is never zero anywhere, because the circle never straightens out.</p>
 
 <figure>
@@ -192,7 +215,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <text x="116.8" y="218.5" fill="#8d8577" font-size="10" style="paint-order:stroke;stroke:#fbfaf7;stroke-width:3.5;stroke-linejoin:round">&#8212; which is the route he chose</text>
 <text x="380" y="376" text-anchor="middle" fill="#8d8577" font-size="9.5">Flat model: the azimuthal-equidistant map, on which a parallel is a circle of radius 69.17&#160;&#215;&#160;(90&#8722;&#966;) miles about the pole.</text>
 </g></svg>
-  <figcaption><b>Two requirements, one route that separates them.</b> Above about 60&deg; the two models ask for almost the same turn &mdash; a flight along those parallels would be nearly useless as a test. The curves separate as you go south and part completely at the equator, where the flat map still wants 5.15&deg;/hr and the globe wants nothing at all. <span class="cred">Both curves at 560&nbsp;mph. Flat model is the azimuthal-equidistant map, the one the chapter's own argument requires.</span></figcaption>
+  <figcaption><b>Two requirements, one route that separates them.</b> Above about 60&deg; the two models ask for almost the same turn &mdash; a flight along those parallels would be nearly useless as a test. The curves separate as you go south and part completely at the equator, where the flat map still wants 5.15&deg;/hr and the globe wants nothing at all. <span class="cred">Both curves at 560&nbsp;mph. The flat curve assumes the azimuthal-equidistant layout, since a rate requires a scale; the 360&deg;-versus-0&deg; result in &sect;2 does not.</span></figcaption>
 </figure>
 
 <table class="cmp">
@@ -270,7 +293,8 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 </ul>
 
 <h2>The honest bottom line</h2>
-<p>The chapter asks for raw data and numbers, and it is entitled to them. The numbers say the experiment was well chosen, that the equator is the right route for exactly the reason he intuited, and that his reading of the attitude indicator is correct. They also say the table's 119&deg; was obtained with the globe's own circumference, that the flat model's actual requirement is 75.9&deg;, and that the aeroplane is not the instrument that answers the question &mdash; the gyro is, and it has already answered it.</p>
+<p>The chapter asks for raw data and numbers, and it is entitled to them. The numbers say the experiment was well chosen, that the equator is the right route for exactly the reason he intuited, and that his reading of the attitude indicator is correct. They also say the table's 119&deg; was obtained with the globe's own circumference &mdash; and that the flat model, as the chapter deliberately leaves it, supplies no scale from which any rival figure could be computed.</p>
+<p>None of which sinks the experiment, because the strongest form of it never needed the scale. One full circuit of the equator is 360&deg; of turning on any flat surface and 0&deg; on a globe, and the difference is the curvature itself. The aeroplane is not the instrument that settles it &mdash; the gyro is, and it settled it decades ago; but a pilot who trims level over the equator and takes his hands off will get the answer out of the window inside two hours.</p>
 <p>What remains is a genuinely good question with a settled answer, which is a better position for the chapter to be in than most of the book.</p>
 
 <h2 id="sources">Sources &amp; further reading</h2>
