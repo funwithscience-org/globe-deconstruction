@@ -16,75 +16,136 @@ already banked.
 
 ---
 
-## DONE — Action Lab footage analysis (landed 2026-08-17, CORRECTED 2026-08-18)
+## REWRITE REQUIRED — Action Lab footage page (findings 2026-08-18)
 
-Page: **`docs/action-lab-footage/`** — "The Action Lab Footage, Frame by Frame",
-linked from rockets §10, the Claim #2 row, and Supporting pages. §10 was reworked
-around the measurement rather than patched.
+**`docs/action-lab-footage/` is LIVE AND WRONG.** It asserts "motion first, contact
+second". The ordering is the other way round. Do not patch it — rewrite from the
+findings below, and get an adversarial pass BEFORE publishing, not after.
 
-**READ THIS FIRST — the first version of this analysis reached the wrong
-conclusion, and the correction inverts it.** An earlier pass argued that the
-exhaust must reach the wall before any visible motion, making the observed
-ordering uninformative to both models. That is false for this experiment. Do
-not re-derive it.
+### Tone and shape of the rewrite (operator, 2026-08-18)
 
-**What the footage actually shows** (one continuous shot, all measured):
+Keep it **clean and legible — do not tie the page in knots.** The analysis behind it
+is now three layers deep and the temptation is to show all of it. Resist that. The
+reader needs the sequence, the mechanism, and the conclusion; the failed detectors,
+the two wrong versions and the modelling do not belong on the page.
 
-| t (s) | event | syringe |
-|---|---|---|
-| 334.80 | first detectable motion | — |
-| **335.80** | **exhaust reaches the chamber wall** | 27% of peak speed, 73 px travelled |
-| 335.85 | main burn, plume brightness peaks | 65% |
-| 335.88 | peak acceleration | 100% |
+Suggested spine, roughly one idea per section:
+1. What the video shows, in order — gas reaches the wall, then the syringe moves.
+2. Why the burn looks like that — his own free-burn control, and pressure runaway.
+3. Why the delay cannot be the wall — material too slow and sparse, wave far too fast.
+4. The rigid-body version, and why Kampf's Law rules it out. Short, and generous.
+5. What this footage cannot settle, and the test that would.
 
-**Motion first, contact second.** That is a direct refutation of a wall-gated
-push, not a null result.
+Everything else is working, not writing. If a paragraph exists to show that we checked
+something rather than to tell the reader something, cut it.
 
-**Why the first attempt failed.** It treated the exhaust as a coherent jet
-crossing at hundreds of m/s. It is not: at 19 mbar this is an underexpanded jet
-into a background gas, and the venting jet's front is **stationary at ~800 px —
-about a third of the way to the wall — for over three seconds, never reaching
-it**. Only the main burn drives a front the whole way, in about one frame. The
-page's own Ashkenas & Sherman physics already implied this and the tension went
-unnoticed.
+### How the analysis went wrong twice (read before touching the footage)
 
-**Two traps that caused the error, both worth avoiding again:**
-1. *The event is played twice* — once with the `<0.02 atm` caption (~323.4–329 s)
-   and once without (~331.6–336.05 s). Only the second was analysed.
-2. `front4k.json` jumps 2,284 px in one frame at contact. That was written off
-   as frame-edge saturation. It was the real arrival. **Background-subtract
-   against a pre-event baseline before trusting any front measurement** —
-   `front_bgsub.json` (in the operator's working folder) is the corrected series.
+1. **The event is played twice** — with the `<0.02 atm` caption (~323.4–329 s) and
+   again without (~331.65–336.05 s). Only the second was analysed at first.
+2. **Blue-minus-red is the wrong metric.** The jet is blue only inside the laser
+   sheet. The smoke that crosses to the wall and fans out against it is grey-white.
+   A blue-excess detector reports the front "stationary at ~800 px" while the gas is
+   already at the wall. **Use luminance, background-subtracted against a frame from
+   the same shot.**
+3. **The flash floods the frame at the main burn.** Any threshold detector latches
+   onto the glare and reports a spurious "arrival" at 335.80. A control band 300 px
+   off the jet axis shows the same signature — that is the test that exposes it.
+4. `front4k.json` is unreliable for the same reasons. `front_bgsub.json` is also
+   blue-based and should be regenerated in luminance.
 
-**The coincidence that looks like support for the book, and isn't.** Peak
-acceleration does follow contact by 0.08 s. Both are consequences of the same
-main burn; the exhaust arrives first because it moves ~100× faster than the
-vehicle. Miller's observation is real; the causal reading is not.
+### Corrected timeline (one continuous shot, luminance, same-shot baseline)
 
-**Chamber size is the hinge, and this is the transferable result.** A tube small
-enough for the exhaust to cross in a frame makes any timing test uninformative
-whoever is right. A chamber large enough for the jet to dissipate first makes it
-decisive. The p.80 rig as described falls into the first category — which is a
-design criticism neither side has made, and it is now in rockets §2, §10, §11.
+| t (s) | event |
+|---|---|
+| ~332.77 | exhaust reaches the wall and spreads radially against it (visible at 5:33) |
+| ~334.6–334.8 | first detectable syringe motion (sway-subtracted: earlier, ~334.6) |
+| 335.85 | main burn — plume brightness spikes 2.8× and collapses below plateau |
+| 335.85–335.88 | peak acceleration, within 1–2 frames of the flare |
 
-**Still standing from the original pass** (unaffected by the correction): the
-launch clip is **30 distinct frames/s sampled at 60**; image scale only good to
-±30% because the syringe is blown out and its volume unidentifiable, so the
-arithmetic uses measured pixel travel and never converts to metres; chamber
-pressure ~19 mbar absolute (827 mbar vacuum against 846 ambient) and the
-unchanged-pressure demo is **not** evidence about mechanism (0.2 g moves a
-human-sized chamber ~0.15 mbar against a whole-mbar gauge); a wall returns
-0.05–3% of outgoing momentum, Lambertian A/πr², against the ~100% the claim
-needs; *shape* does not discriminate, since a continuous-flow rebound returns a
-delayed copy of the same rising curve.
+**Gas reaches the wall roughly 2 s of playback BEFORE the syringe moves.**
 
-**Pre-ignition:** normal-speed footage of the syringe hanging quietly does exist
-(~5:00–5:04). It is the *slow-motion* clips that start after venting begins.
+### The three cases, and how each is closed
 
-**Open:** the pendulum swing is uncharacterised, and the early-onset motion sits
-at the 1–7 px scale where sway also lives (test 4 on the page). **This rewrite
-has not had an adversarial pass** — it inverted the page's central argument and
-was done quickly.
+**Case 2 — gas returns and pushes.** Closed two ways.
+- *Material return:* any rebound contribution is the emission history convolved with
+  a return-time kernel; convolution cannot create a peak sharper than its input or a
+  peak where the input was flat. Emission runs 2,076 → 3,107 with NO feature anywhere
+  until the spike at 335.85. One round trip earlier (331.79) it is 2,076 ± 70, ratio
+  1.07. There is nothing to copy, at any lag.
+- *Wave return ("compress the molecular flow", p.82):* pressure waves travel at sound
+  speed, ~340 m/s, near-independent of density (c = √(γRT/M)). Across the 0.36 m gap
+  that is **1.07 ms**; doubling the chamber adds ~1 ms. The observed delay is 1.9 s of
+  playback = 28–238 ms real — **30 to 240× too slow for a compression wave**. To be
+  that slow the carrier would have to move at 1.5–13 m/s, which is the drifting smoke
+  cloud, which carries negligible momentum.
+- Material is too slow and too sparse; the wave is far too fast. Nothing physical
+  lives in the gap the book needs.
+
+**Case 3 — gas as a rigid body** (author's sharper version, given in correspondence).
+NOT separable from case 1 by timing — both deliver force with no lag, and motion
+onset AFTER contact is consistent with it. Close it on the book's own structure
+instead: Kampf's Law exists to mark gas as categorically unlike a solid (p.79 "solids
+and gases don't work the same way"; p.82 needs "an external substrate" only because
+gas is held not to transmit force by itself). A rigid gas column is a solid under
+another name — and Newton's third law applies to solids by the book's own concession.
+So either the exhaust is unlike a solid, and case 3 is off the table leaving case 2;
+or it is like a solid, and the rocket recoils exactly as we say. **Frame this
+generously** — the law being written down is what makes it checkable, and the author
+is entitled to the stronger branch.
+
+**Case 1 — reaction at the nozzle.** Positive support: thrust responds to the flare
+within 1–2 frames (zero lag to events at the source); acceleration tracks plume
+brightness throughout.
+
+### New material to add (none of it currently on either page)
+
+1. **The standalone flash-paper control, 3:34–3:42.** He ignites free flash paper on
+   the chamber floor at 0.02 atm. It burns for ~8 s — against sub-half-second at
+   atmosphere, so ~15× slower, matching Vieille's law r = aPⁿ at n ≈ 0.6–0.8
+   (predicts 11–24×). It also leaves **residue**, which flash paper famously does not,
+   indicating incomplete combustion near its low-pressure limit. And it burns as a
+   creeping front with **no terminal peak**.
+2. **The peaking effect, explained from chamber pressure.** For n < 1 the chamber is
+   stable, so there is no runaway from the exponent — the runaway is **area-driven**:
+   P_eq ∝ A_b^(1/(1−n)), which at n = 0.7 is A_b^3.3, so doubling the burning area
+   raises pressure tenfold. Flash paper lit at a point spreads its front, area grows,
+   pressure climbs steeply, higher pressure spreads the front faster. Predicts: long
+   flat phase, abrupt terminal spike, hard collapse at burnout. Observed: flat 4 s,
+   2.8× spike, collapse BELOW plateau in two frames.
+   **The free-burn control is the controlled comparison** — same chamber, same
+   pressure, same propellant, same walls at the same distances; the only variable is
+   confinement, and the peak appears only when confined. If the wall caused the peak,
+   the free burn would peak too. **Neither The Action Lab nor the book explains the
+   peak. This is the page's original contribution.**
+   It also explains the first syringe: smaller volume drives pressure higher and
+   faster, so it ran away harder. His fix — "let's try a little bit bigger syringe" —
+   is exactly how you tame a pressure runaway.
+3. **An x-t (space-time) diagram of the jet.** Better figure than the current one:
+   propagating features appear as diagonal streaks. The smoke front shows as a shallow
+   diagonal at ~600 px/s of playback. A pressure signal at sound speed would be an
+   essentially **vertical** line (1.07 ms = 0.02% of the clip). Diagonal vs vertical is
+   not a judgement call, and it shows the gas transporting rather than transmitting.
+   Caveat: the clip ends 0.2 s after the burn and the flash floods, so the peak surge
+   itself cannot be cleanly tracked — the unambiguous diagonal is venting-phase smoke.
+
+### Corrections to carry over
+- ±30% image scale, 30-distinct-fps conform, 19 mbar chamber, Lambertian 0.05–3%
+  return fraction, shape-does-not-discriminate — all still stand.
+- Pre-ignition footage DOES exist at normal speed (~5:00–5:04); it is the slow-motion
+  clips that start after venting.
+- Reviewer-found errors not yet fixed: "73 px" should be 65.7; the "134 px ramp travel"
+  is mislabelled by ~1.9×; "peak acceleration" and "peak speed" are given the same
+  timestamp; several pre-inversion sentences still assert the old conclusion.
+
+### Honest limits to state on the page
+- This footage **can refute case 2 and cannot separate case 1 from case 3** by
+  measurement. Separation comes from the book's own internal structure, from the
+  wall-distance test, and from flight data (`thrust-in-flight`).
+- Brightness is a proxy for mass flow, not a measurement of it; observed acceleration
+  is too noisy to fit (±2000 px/s² of differentiation noise in the venting phase).
+- The pendulum swing fits period 1.90 s, amplitude 1.05 px. Sway-subtracted, onset is
+  earlier, not later — use that argument rather than the weaker one on the page.
 
 ---
 
