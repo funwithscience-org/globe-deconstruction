@@ -16,62 +16,75 @@ already banked.
 
 ---
 
-## DONE — Action Lab footage analysis (landed 2026-08-17)
+## DONE — Action Lab footage analysis (landed 2026-08-17, CORRECTED 2026-08-18)
 
-Deliverable changed during the work: instead of a subsection inside
-`docs/rockets-in-vacuum/` §10, this became its own page,
-**`docs/action-lab-footage/`** — "The Action Lab Footage, Frame by Frame" —
-linked from §10, from the Claim #2 row on the landing page, and from the
-Supporting-pages grid. §10 was reworked around the measured result rather than
-merely patched, and the "we can't adjudicate footage we haven't frame-stepped"
-caveat is gone.
+Page: **`docs/action-lab-footage/`** — "The Action Lab Footage, Frame by Frame",
+linked from rockets §10, the Claim #2 row, and Supporting pages. §10 was reworked
+around the measurement rather than patched.
 
-**Answers to the four questions this item posed:**
+**READ THIS FIRST — the first version of this analysis reached the wrong
+conclusion, and the correction inverts it.** An earlier pass argued that the
+exhaust must reach the wall before any visible motion, making the observed
+ordering uninformative to both models. That is false for this experiment. Do
+not re-derive it.
 
-1. *Does motion onset coincide with plume-wall contact, or start earlier and
-   sub-pixel?* **Earlier.** Sustained one-directional motion begins during
-   gentle venting, ~1.0 s of playback before the main burn (conservative
-   threshold; 1.45 s on a looser frame-to-frame speed criterion). Onset is not
-   near any wall-contact event.
-2. *Frame rate and pixel scale?* Frame rate **never stated**. The launch clip
-   is **30 distinct fps sampled at 60** — every frame is duplicated, confirmed
-   on both the tracking and the independent 4K plume series. Pixel scale is
-   only good to **±30%**, and the limiting factor is not measurement but that
-   the syringe is blown out in every frame so its volume can't be identified;
-   10/20/60 mL are within 4% of each other on aspect ratio. The page is
-   therefore built on measured pixel travel and never converts to metres.
-3. *Static-friction release signature?* **No, and it doesn't apply** — this rig
-   is a pendulum on threads, not a carriage on a track. The stiction hypothesis
-   in earlier session notes was over-generalised from Kampf's p.80 rig; the
-   two-stage appearance is mass flow (gentle vent, then main burn).
-4. *Chamber pressure?* Stated on camera at 3:46–4:14: 827 mbar against 846 mbar
-   ambient, ≈0.02 atm, unchanged by a burn. **But do not use this as evidence
-   about the mechanism** — 0.2 g of gas in a human-sized chamber moves the
-   pressure ~0.15 mbar and the gauge reads whole mbar, so the null is below
-   instrument resolution and both models predict it. It is evidence about
-   chamber sizing only. An early draft got this wrong.
+**What the footage actually shows** (one continuous shot, all measured):
 
-**Core result.** Displacement at gas-wall contact = (measured 134 px of 4K ramp
-travel) × f², where f = (L/v_gas)/(T_playback/S) and S = capture_fps/30.
-Constant acceleration is a deliberate over-estimate; the measured rising ramp
-gives f³, one to two orders of magnitude lower. At 960 fps and a 0.3 m wall:
-~0.02 px on the ramp model, ~0.8 px on the upper bound. Worst plausible corner
-~10 px upper / ~3 px ramp. Pushing f toward 1 doesn't rescue the claim — it
-means the gas arrived after the burn ended, which refutes wall-mediated thrust
-outright.
+| t (s) | event | syringe |
+|---|---|---|
+| 334.80 | first detectable motion | — |
+| **335.80** | **exhaust reaches the chamber wall** | 27% of peak speed, 73 px travelled |
+| 335.85 | main burn, plume brightness peaks | 65% |
+| 335.88 | peak acceleration | 100% |
 
-**Two things deliberately NOT claimed**, both from the adversarial pass:
-- *Shape* does not discriminate. A continuous-flow rebound returns a delayed
-  scaled copy of the same rising curve, at an interval no ordinary camera
-  resolves. The page says so and leads on **magnitude** instead (~0.01–0.1% of
-  momentum returns diffusely; the claim needs ~100%).
-- The footage rules out only the **naive** version (vehicle inert until a cloud
-  completes a transit). Separating standard physics from continuous-flow
-  rebound needs a load cell, not a camera.
+**Motion first, contact second.** That is a direct refutation of a wall-gated
+push, not a null result.
 
-**Open, if anyone wants it:** the pendulum swing is uncharacterised, and the
-early-onset motion lives at the 1–7 px scale where sway also lives. The
-pre-ignition frames would settle it. Listed as test 4 on the new page.
+**Why the first attempt failed.** It treated the exhaust as a coherent jet
+crossing at hundreds of m/s. It is not: at 19 mbar this is an underexpanded jet
+into a background gas, and the venting jet's front is **stationary at ~800 px —
+about a third of the way to the wall — for over three seconds, never reaching
+it**. Only the main burn drives a front the whole way, in about one frame. The
+page's own Ashkenas & Sherman physics already implied this and the tension went
+unnoticed.
+
+**Two traps that caused the error, both worth avoiding again:**
+1. *The event is played twice* — once with the `<0.02 atm` caption (~323.4–329 s)
+   and once without (~331.6–336.05 s). Only the second was analysed.
+2. `front4k.json` jumps 2,284 px in one frame at contact. That was written off
+   as frame-edge saturation. It was the real arrival. **Background-subtract
+   against a pre-event baseline before trusting any front measurement** —
+   `front_bgsub.json` (in the operator's working folder) is the corrected series.
+
+**The coincidence that looks like support for the book, and isn't.** Peak
+acceleration does follow contact by 0.08 s. Both are consequences of the same
+main burn; the exhaust arrives first because it moves ~100× faster than the
+vehicle. Miller's observation is real; the causal reading is not.
+
+**Chamber size is the hinge, and this is the transferable result.** A tube small
+enough for the exhaust to cross in a frame makes any timing test uninformative
+whoever is right. A chamber large enough for the jet to dissipate first makes it
+decisive. The p.80 rig as described falls into the first category — which is a
+design criticism neither side has made, and it is now in rockets §2, §10, §11.
+
+**Still standing from the original pass** (unaffected by the correction): the
+launch clip is **30 distinct frames/s sampled at 60**; image scale only good to
+±30% because the syringe is blown out and its volume unidentifiable, so the
+arithmetic uses measured pixel travel and never converts to metres; chamber
+pressure ~19 mbar absolute (827 mbar vacuum against 846 ambient) and the
+unchanged-pressure demo is **not** evidence about mechanism (0.2 g moves a
+human-sized chamber ~0.15 mbar against a whole-mbar gauge); a wall returns
+0.05–3% of outgoing momentum, Lambertian A/πr², against the ~100% the claim
+needs; *shape* does not discriminate, since a continuous-flow rebound returns a
+delayed copy of the same rising curve.
+
+**Pre-ignition:** normal-speed footage of the syringe hanging quietly does exist
+(~5:00–5:04). It is the *slow-motion* clips that start after venting begins.
+
+**Open:** the pendulum swing is uncharacterised, and the early-onset motion sits
+at the 1–7 px scale where sway also lives (test 4 on the page). **This rewrite
+has not had an adversarial pass** — it inverted the page's central argument and
+was done quickly.
 
 ---
 
