@@ -8,7 +8,7 @@ Catalogue source of truth is `docs/index.html`. When an item closes, update
 **both** this file and the landing page's status chip.
 
 **State as of 2026-08-17: 22 tracked items — 10 answered, 2 partial, 10 open**, plus
-3 supporting pages (drifters, self-test protocol, Action Lab footage).
+4 supporting pages (drifters, self-test protocol, Action Lab footage, in-flight thrust).
 
 Ranking weights: how load-bearing the claim is to his thesis × how decisive an
 answer we can actually make × public-facing (site) vs buried (book) × work
@@ -72,6 +72,55 @@ outright.
 **Open, if anyone wants it:** the pendulum swing is uncharacterised, and the
 early-onset motion lives at the 1–7 px scale where sway also lives. The
 pre-ignition frames would settle it. Listed as test 4 on the new page.
+
+---
+
+## DONE — in-flight thrust measurement page (landed 2026-08-17)
+
+Operator's point: for a claim about rockets in vacuum, there must already be
+hard data from real flights, published for reasons unrelated to this debate.
+There is, and rockets §9 had a real gap — everything in it except the missile
+intercepts was measured on the ground.
+
+New page **`docs/thrust-in-flight/`** — "Thrust, Measured in Flight". Linked
+from rockets §9, the Claim #2 row, and the Supporting-pages grid.
+
+**The centrepiece is Sovey & Rawlin, NASA TM-106283 (1993)** — a housekeeping
+memo comparing in-flight thrust-measurement techniques. On SERT II (1970) the
+same ion engine was measured at 26.8 mN (beam telemetry + ground thrust stand),
+27.4 mN (onboard accelerometer) and 28 mN (change in orbit over 34 days).
+ETS-III repeats the pattern on Japanese hardware. Four physically unrelated
+channels, agreement to a few per cent, published 1993, nothing to do with any
+of this.
+
+**Independently recomputed** the SERT II orbit-derived thrust from the paper's
+own published inputs (20 km altitude gain, 34 days, r0 = 7400 km, 1524 kg):
+5.15 mN tangential against their 4.9, ~30 mN total against their 28. Rounding.
+A reader can do this from three numbers without trusting any thrust sensor.
+
+**The facility-effect finding is the honest one, and it's in our favour.** The
+same paper measures chamber gas ingestion at ~1% of input flow; DS1's engine
+measured by Doppler in interplanetary space came out ~2% *worse* than the
+ground chamber predicted (Isp 60 s low). So the artefact the objection points
+at is real, is 1–2%, and runs in the direction that flatters the chamber. The
+claim needs 100%.
+
+**Dawn budget closes to 3%:** 71.7 kg xenon from 1215 kg at Isp 3100 s predicts
+1.85 km/s against a Doppler-measured 1.80.
+
+**Deliberately not used** (from the source pass, all recorded in §6 of the page):
+Dawn's LAMO-transfer triple implies Isp ~1805 s, below the engine's 1900 s
+floor — probably rounding, but it doesn't close; DS1's widely repeated mission
+totals (16,265 h, 73.4 kg) could not be confirmed in a primary source; the NSTAR
+ELT hours disagree between sources by 100 h. The Garner & Rayman 2016 paper
+carrying the per-phase tables has **unverified bibliographic details** — content
+read in full, venue and paper number not pinned. Flagged as provisional on the
+page; worth resolving.
+
+**Not researched:** the amateur/independent tracking leg (SeeSat-L observers
+deriving their own elements and detecting manoeuvres, including on classified
+objects). It would add institutional independence, which §6 of the page names
+as the one thing this evidence lacks. Left out rather than hand-waved.
 
 ---
 
