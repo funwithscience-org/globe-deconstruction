@@ -368,7 +368,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
     <tr><td class="metric">10&deg;N</td><td>10&deg;</td><td>29.36&deg;</td><td><strong>19.36&deg;</strong></td><td>0.090&deg;</td><td>215&times;</td></tr>
   </tbody>
 </table>
-<p class="scalewarn">Note the direction as well as the size. Atmospheric refraction makes objects appear <em>higher</em> than they are, never lower &mdash; and every correction in that column runs the other way. The rescue needs starlight pushed <em>down</em>, by amounts two to three hundred times larger than the real effect that pushes it up.</p>
+<p class="scalewarn">Note the direction as well as the size. Light bends towards denser air, and everywhere above the first few metres the denser air is underneath &mdash; so refraction makes objects appear <em>higher</em>, while every correction in that column runs the other way. The rescue needs starlight pushed <em>down</em>, by amounts two to three hundred times larger than the real effect that pushes it up.</p>
 
 <h3>Pick whichever anchor helps most &mdash; it still fails</h3>
 <p>Those three rows are samples. The measurement is not three points, though. It is 69 miles per degree <em>continuously</em> &mdash; at 71&deg;N, at 43&frac12;&deg;N, at 12&deg;N, at every latitude anyone has ever stood at. So the required correction is not three numbers either. It is a function of where you are standing, and it has to come out right everywhere along the walk.</p>
@@ -424,7 +424,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <text x="664.9" y="436" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 26.6&#176;</text>
 <rect x="432" y="92" width="278" height="86" fill="#fff" stroke="#E4DDCB" rx="5"/>
 <text x="446" y="112" fill="#3A352D" font-size="10" font-weight="700">For comparison, real refraction:</text>
-<text x="446" y="130" fill="#8d8577" font-size="9.5">&#8226; always lifts. It has no other sign.</text>
+<text x="446" y="130" fill="#8d8577" font-size="9.5">&#8226; bends towards denser air &#8212; so it lifts</text>
 <text x="446" y="146" fill="#8d8577" font-size="9.5">&#8226; at most 0.15&#176; above 10&#176; elevation</text>
 <text x="446" y="162" fill="#8d8577" font-size="9.5">&#8226; at 45&#176; elevation: 1 arcminute (0.017&#176;)</text>
 <path d="M 82.0 472.4431818181818 L 82.0 477.4431818181818 L 373.5 477.4431818181818 L 373.5 472.4431818181818" fill="none" stroke="#2a5a8c" stroke-width="1"/>
@@ -452,7 +452,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 
 <div class="note"><strong>But that sign change is our doing, not the chapter's.</strong> 45&deg;N was chosen back in &sect;2 to test the tangible geometry on its own terms, and nothing obliges the refraction argument to inherit it. Move the anchor and the zero-crossing moves with it. So the sign flip is not the argument &mdash; it is an artefact of a choice we made, and it would be cheap to lean on it. The fair question is different: <em>across every possible lamp height, what is the best-behaved field the model can be given?</em></div>
 
-<p>Real refraction has a characteristic shape. It is zero at the zenith, grows as you look lower, and is largest at the horizon &mdash; and it only ever bends one way. So the friendliest possible requirement is one shaped like that: no sign change, nothing to correct overhead, growing smoothly toward the horizon. Ask what lamp height delivers it, and two facts drop out of the geometry that no choice can touch.</p>
+<p>Real refraction has a characteristic shape. It is zero at the zenith, grows as you look lower, and is largest at the horizon &mdash; and clear of the surface layer it bends only one way. So the friendliest possible requirement is one shaped like that: no sign change, nothing to correct overhead, growing smoothly toward the horizon. Ask what lamp height delivers it, and two facts drop out of the geometry that no choice can touch.</p>
 
 <ul class="tl">
   <li><span class="t">&mdash;</span> <strong>At the pole the correction is zero, for every height.</strong> Polaris is overhead; there is nothing to bend. That end is free.</li>
@@ -467,7 +467,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 
 <figure>
 <svg viewBox="8 8 744 611" role="img" aria-label="With the lamp raised to one Earth radius the required bending never changes sign, but it pushes light downward everywhere." aria-describedby="bendB-d">
-<desc id="bendB-d">The lamp is raised to 6,378 km, one Earth radius, which is the lowest height at which the required correction never changes sign. The correction is now zero at the pole and grows smoothly and monotonically toward the equator: 0.1 degrees at 80 north, 2.4 at 60, 6.9 at 45, 13.7 at 30 and 32.5 at the equator. That is the same shape as real refraction, which is zero overhead and largest near the horizon. But every value is a downward push, and real refraction only ever lifts.</desc>
+<desc id="bendB-d">The lamp is raised to 6,378 km, one Earth radius, which is the lowest height at which the required correction never changes sign. The correction is now zero at the pole and grows smoothly and monotonically toward the equator: 0.1 degrees at 80 north, 2.4 at 60, 6.9 at 45, 13.7 at 30 and 32.5 at the equator. That is the same shape as real refraction, which is zero overhead and largest near the horizon. But every value is a downward push, and real refraction lifts: light bends towards denser air, and clear of the surface layer the denser air is underneath.</desc>
 <g font-family="Inter,system-ui,sans-serif" font-size="10.5">
 <rect x="18" y="18" width="724" height="589" fill="#fbfaf7" stroke="#E4DDCB" rx="6"/>
 <text x="380" y="42" text-anchor="middle" fill="#3A352D" font-size="12.5" font-weight="700">The best-behaved field any lamp height can produce</text>
@@ -515,11 +515,11 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <text x="664.9" y="516" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">push down 32.5&#176;</text>
 <rect x="432" y="92" width="278" height="86" fill="#fff" stroke="#E4DDCB" rx="5"/>
 <text x="446" y="112" fill="#3A352D" font-size="10" font-weight="700">For comparison, real refraction:</text>
-<text x="446" y="130" fill="#8d8577" font-size="9.5">&#8226; always lifts. It has no other sign.</text>
+<text x="446" y="130" fill="#8d8577" font-size="9.5">&#8226; bends towards denser air &#8212; so it lifts</text>
 <text x="446" y="146" fill="#8d8577" font-size="9.5">&#8226; at most 0.15&#176; above 10&#176; elevation</text>
 <text x="446" y="162" fill="#8d8577" font-size="9.5">&#8226; at 45&#176; elevation: 1 arcminute (0.017&#176;)</text>
 <path d="M 82.0 552.0948673625002 L 82.0 557.0948673625002 L 664.9 557.0948673625002 L 664.9 552.0948673625002" fill="none" stroke="#c0392b" stroke-width="1"/>
-<text x="373.5" y="570.0948673625002" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">Every ray, at every latitude, must be pushed DOWN &#8212; and refraction only ever lifts</text>
+<text x="373.5" y="570.0948673625002" text-anchor="middle" fill="#c0392b" font-size="9.5" font-weight="700">Every ray, at every latitude, must be pushed DOWN &#8212; and at these elevations refraction only lifts</text>
 </g></svg>
   <figcaption><b>The strongest version of the claim.</b> Nothing is fitted to a latitude here. The correction is zero at the pole and grows smoothly to 32.5&deg; at the equator &mdash; monotonic, single-signed, and shaped exactly like real refraction. <span class="cred">Same construction and scale as the figure above; the lamp is 27% higher.</span></figcaption>
 </figure>
@@ -747,7 +747,7 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
   <figcaption><b>The same Sun, three ways.</b> Layered air stretches it straight up at every hour of the day. A pole-centred lens stretches it along the line to the celestial pole instead, so the long axis is canted 44&deg; at sunrise, swings upright at noon, and cants the other way at sunset. What is photographed is a circle &mdash; and near the horizon a slight <em>flattening</em>, aligned with the horizon rather than tilted, which is the opposite of a vertical stretch and is exactly what ordinary refraction produces. <span class="cred">45&deg;N at an equinox; Sun drawn at 12&times; angular size, distortions at the required scale. Tilts are the parallactic angle.</span></figcaption>
 </figure>
 
-<div class="killer"><strong>The requirement is wrong by a factor of several hundred, and wrong in direction.</strong> A Sun 3.3&times; taller than wide at 10&deg; elevation is not a subtle prediction that needs careful equipment to test. It is the most photographed object in the sky. Every sunset time-lapse ever shot, every landscape photograph with the Sun low in frame, every image of a rising Moon over a horizon &mdash; all of them are tests of this, and all of them come back circular.</p></div>
+<div class="killer"><strong>The requirement is wrong by a factor of several hundred, and wrong in direction.</strong> A Sun 3.3&times; taller than wide at 10&deg; elevation is not a subtle prediction that needs careful equipment to test. It is the most photographed object in the sky. Every sunset time-lapse ever shot, every landscape photograph with the Sun low in frame, every image of a rising Moon over a horizon &mdash; all of them are tests of this, and all of them come back circular.</div>
 
 <p>And the Moon makes it worse still, because the Moon is not just a disc but a disc with <em>markings</em>. A vertical stretch of 3.3&times; would distort the maria into unrecognisable streaks at low elevation and let them relax back to familiar shapes overhead. Anybody who has photographed a rising Moon and compared it with one taken later the same night has already run this experiment.</p>
 
