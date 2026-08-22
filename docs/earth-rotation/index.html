@@ -78,22 +78,24 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 .cmp td{font-variant-numeric:tabular-nums}
 .qbox{background:#fbfaf7;border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:6px;padding:.9rem 1.1rem;margin:1.2rem 0;font-family:var(--sans);font-size:.95rem;line-height:1.55}
 .qbox .qn{display:block;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:.35rem}
+ol.ledger{font-family:var(--sans);font-size:.9rem;line-height:1.55;padding-left:1.2rem}
+ol.ledger li{margin:.55rem 0}
 </style>
 </head>
 <body>
 <!--SITENAV-->
 <nav id="sn" aria-label="Site and section navigation"><div class="sn-in">
 <a class="sn-home" href="https://funwithscience.net/globe-deconstruction/">&larr; Globe Deconstruction</a>
-<div class="sn-sec" id="sn-toc" hidden><p class="sn-h">On this page</p><ul></ul></div>
-<div class="sn-sec"><p class="sn-h">Answered</p><ul>
+<div class="sn-sec toc" id="sn-toc" hidden><p class="sn-h">On this page</p><ul></ul></div>
+<details class="sn-sec"><summary class="sn-h">Answered</summary><ul>
 <li><a href="/globe-deconstruction/bottom-up-observations/">Bottom-Up Observations</a></li>
 <li><a href="/globe-deconstruction/rockets-in-vacuum/">Rockets Don't Push Against Air</a></li>
 <li><a href="/globe-deconstruction/equator-flight/">Equator Flight Data</a></li>
 <li><a href="/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a></li>
 <li><a href="/globe-deconstruction/earth-rotation/">Does the Earth Spin?</a></li>
 <li><a href="/globe-deconstruction/celestial-globes/">Celestial Globes Exposed</a></li>
-</ul></div>
-<div class="sn-sec"><p class="sn-h">In draft</p><ul>
+</ul></details>
+<details class="sn-sec"><summary class="sn-h">In draft</summary><ul>
 <li><a href="/globe-deconstruction/hydrostatics/">Hydrostatics</a></li>
 <li><a href="/globe-deconstruction/mirrored-reflections/">Mirrored Reflections</a></li>
 <li><a href="/globe-deconstruction/sky-rate-and-shadows/">Sky Rate &amp; Jupiter's Shadows</a></li>
@@ -102,35 +104,43 @@ em.term{font-style:normal;font-weight:600;color:var(--heading)}
 <li><a href="/globe-deconstruction/sunlight-and-shadows/">Sunlight &amp; Shadows</a></li>
 <li><a href="/globe-deconstruction/construction-records/">Construction Records</a></li>
 <li><a href="/globe-deconstruction/extraordinary-evidence/">Extraordinary Evidence</a></li>
-</ul></div>
-<div class="sn-sec"><p class="sn-h">Supporting</p><ul>
+</ul></details>
+<details class="sn-sec"><summary class="sn-h">Supporting</summary><ul>
 <li><a href="/globe-deconstruction/flat-surface-test/">Flat-Surface Test</a></li>
 <li><a href="/globe-deconstruction/action-lab-footage/">Action Lab Footage</a></li>
 <li><a href="/globe-deconstruction/thrust-in-flight/">Thrust, Measured in Flight</a></li>
 <li><a href="/globe-deconstruction/rampion/">The Black Swan (Rampion)</a></li>
 <li><a href="/globe-deconstruction/coriolis-drifters/">Coriolis Drifters</a></li>
 <li><a href="/globe-deconstruction/self-test-protocol/">Self-Test Protocol</a></li>
-</ul></div>
+</ul></details>
 </div></nav>
 <button id="sn-t" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
 <style>
-#sn{position:fixed;top:0;left:0;bottom:0;width:232px;overflow-y:auto;background:#f7f5ef;border-right:1px solid var(--rule,#E4DDCB);z-index:40;-webkit-overflow-scrolling:touch}
-#sn .sn-in{padding:1rem .85rem 2.5rem}
-#sn a{font-family:var(--sans,system-ui);font-size:.79rem;line-height:1.35;color:#3A352D;text-decoration:none;display:block;padding:.24rem .4rem;border-radius:4px}
-#sn a:hover{background:rgba(46,90,148,.09);color:#0563C1}
-#sn a.sn-home{font-weight:700;font-size:.76rem;letter-spacing:.03em;text-transform:uppercase;color:#6E675B;margin-bottom:.9rem;padding-left:0}
-#sn .sn-h{font-family:var(--sans,system-ui);font-size:.63rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#8d8677;margin:1rem 0 .3rem;padding-left:.4rem}
-#sn ul{list-style:none;margin:0;padding:0}
-#sn a.here{background:rgba(46,90,148,.13);color:#2c5a94;font-weight:700;box-shadow:inset 2px 0 0 #2c5a94}
-#sn-toc a{font-size:.755rem;color:#6E675B;padding-left:.6rem}
-#sn-toc a.cur{color:#992e26;font-weight:700}
-#sn-t{display:none;position:fixed;top:.55rem;left:.55rem;z-index:50;font-size:1.15rem;line-height:1;padding:.34rem .58rem;background:#f7f5ef;color:#3A352D;border:1px solid var(--rule,#E4DDCB);border-radius:6px;cursor:pointer}
-@media (min-width:1200px){body{padding-left:232px}}
+#sn{position:fixed;top:0;left:0;bottom:0;width:238px;overflow-y:auto;background:#faf9f5;border-right:1px solid rgba(0,0,0,.07);z-index:40;-webkit-overflow-scrolling:touch}
+#sn .sn-in{padding:1.15rem 1rem 3rem}
+#sn a{font-family:var(--sans,system-ui);font-size:.775rem;line-height:1.4;color:#4a453c;text-decoration:none;display:block;padding:.2rem .45rem .2rem .55rem;border-radius:4px;border-left:2px solid transparent}
+#sn a:hover{color:#0563C1;border-left-color:rgba(5,99,193,.35)}
+#sn a.sn-home{font-weight:700;font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:#8d8677;margin:0 0 1.15rem;padding-left:0;border-left:0}
+#sn a.sn-home:hover{color:#0563C1}
+#sn .sn-h{font-family:var(--sans,system-ui);font-size:.6rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#a09a8c;margin:0;padding:.3rem 0 .3rem .05rem}
+#sn ul{list-style:none;margin:0 0 .1rem;padding:0}
+#sn a.here{color:#2c5a94;font-weight:700;border-left-color:#2c5a94;background:transparent}
+#sn .toc{padding-bottom:.9rem;margin-bottom:.6rem;border-bottom:1px solid rgba(0,0,0,.07)}
+#sn-toc a{font-size:.75rem;color:#6E675B}
+#sn-toc a.cur{color:#992e26;font-weight:600;border-left-color:#992e26}
+details.sn-sec{margin:0 0 .1rem}
+details.sn-sec>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:.3rem}
+details.sn-sec>summary::-webkit-details-marker{display:none}
+details.sn-sec>summary::before{content:"";width:0;height:0;border-left:4px solid #bdb6a7;border-top:3.5px solid transparent;border-bottom:3.5px solid transparent;transition:transform .15s;flex:none}
+details.sn-sec[open]>summary::before{transform:rotate(90deg)}
+details.sn-sec>summary:hover{color:#0563C1}
+#sn-t{display:none;position:fixed;top:.55rem;left:.55rem;z-index:50;font-size:1.15rem;line-height:1;padding:.34rem .58rem;background:#faf9f5;color:#4a453c;border:1px solid rgba(0,0,0,.12);border-radius:6px;cursor:pointer}
+@media (min-width:1200px){body{padding-left:238px}}
 @media (max-width:1199px){
   #sn{transform:translateX(-100%);transition:transform .18s ease;box-shadow:0 0 24px rgba(0,0,0,.16)}
   body.sn-open #sn{transform:none}
   #sn-t{display:block}
-  body.sn-open #sn-t{left:244px}
+  body.sn-open #sn-t{left:250px}
 }
 @media print{#sn,#sn-t{display:none}body{padding-left:0}}
 </style>
@@ -141,14 +151,15 @@ function boot(){
  if(p.slice(-1)!=='/')p+='/';
  var links=document.querySelectorAll('#sn a[href]'),i,a,h;
  for(i=0;i<links.length;i++){a=links[i];h=a.getAttribute('href').replace(/^https?:\/\/[^/]+/,'');
-   if(h===p&&!a.classList.contains('sn-home')){a.classList.add('here');}}
+   if(h===p&&!a.classList.contains('sn-home')){a.classList.add('here');var d=a.closest('details');if(d)d.open=true;}}
+ if(!document.querySelector('#sn details[open]')){var f=document.querySelector('#sn details');if(f)f.open=true;}
  var nav=document.getElementById('sn');
  var all=document.querySelectorAll('h2'),hs=[],box=document.getElementById('sn-toc'),ul=box.querySelector('ul'),n=0,tops=[];
  for(i=0;i<all.length;i++){if(!nav.contains(all[i]))hs.push(all[i]);}
  for(i=0;i<hs.length;i++){var el=hs[i];
    if(!el.id){el.id='s'+(++n);}
    var t=(el.textContent||'').trim();if(!t)continue;
-   if(t.length>42)t=t.slice(0,40).replace(/\s+\S*$/,'')+'…';
+   t=t.replace(/^\s*\d+\s*[·.\u2013-]\s*/,'');if(t.length>32)t=t.slice(0,31).replace(/\s+\S*$/,'')+'…';
    var li=document.createElement('li'),la=document.createElement('a');
    la.href='#'+el.id;la.textContent=t;li.appendChild(la);ul.appendChild(li);tops.push([el,la]);}
  if(tops.length>1){box.hidden=false;}
@@ -325,6 +336,20 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 <p>The book lists reasons Foucault pendulums are hard to run: an elliptical swing precesses on its own through Airy precession, a suspension stiffer in one direction biases the path, temperature changes the wire, draughts push the bob, traffic vibration distorts it, and a misaligned electromagnetic drive can steer a museum pendulum into a false rate. <strong>Every one of those is true.</strong> These devices are genuinely finicky, and a badly set-up one produces nonsense.</p>
 <p>What none of it explains is why the artifacts should trace a curve. Those error sources bear no relationship to latitude. The precession rate does &mdash; it follows sin&nbsp;&phi;, from 36.6 hours at Compton's Wooster to 26.6 at Reykjav&iacute;k to 23.93 at the pole. A stiff suspension does not know what latitude it is at.</p>
 <p>One note on the source. The book cites Heike Kamerlingh Onnes's 1879 doctoral thesis as documenting why these pendulums fail. That thesis is titled <em>&ldquo;Nieuwe Bewijzen voor de aswenteling der aarde&rdquo;</em> &mdash; <strong>&ldquo;New Proofs for the Axial Rotation of the Earth.&rdquo;</strong> Onnes catalogued the error sources precisely so the experiment could be done properly and the rotation established more rigorously. The analysis is real and worth conceding; the work it comes from reaches the opposite conclusion to the one it is cited for. (His Nobel came in 1913, thirty-four years later, for liquefying helium.)</p>
+
+<h2 id="five-gyros">Five unrelated physics, one rotation rate</h2>
+<p>The gyroscope chapter argues against one instrument. It is worth saying plainly how many there are, because the ring laser is the one the argument knows about and it is not the case.</p>
+<p>Earth's rotation has been detected by <strong>at least five mutually unrelated physical mechanisms</strong>. Not five products &mdash; five different pieces of physics, with no shared calibration chain and no common scale factor.</p>
+<ol class="ledger">
+  <li><b>Angular momentum of a spinning mass.</b> Foucault built one in 1852 and named it the gyroscope, precisely so the Earth's turning could be seen. Its descendants are the ship's gyrocompass and the surveyor's gyrotheodolite &mdash; the DMT Gyromat 6000 finds true north to about 2.6&Prime;, and drove the Gotthard and Brenner base-tunnel breakthroughs.</li>
+  <li><b>The Sagnac effect on light.</b> Michelson and Gale saw it in 1925 &mdash; a fringe shift of 0.230&nbsp;&plusmn;&nbsp;0.005 against a predicted 0.236. Today's ring lasers reach the parts-per-billion level. <em>Fibre-optic gyroscopes belong here too: same principle, different packaging, not a separate confirmation.</em></li>
+  <li><b>The Coriolis force on a vibrating structure.</b> No net angular momentum at all &mdash; a standing wave in silicon. A honeycomb disk resonator published in 2023 finds north to 0.204&deg; in five minutes, with a bias instability of 0.0078&nbsp;&deg;/hr, about one two-thousandth of Earth rate.</li>
+  <li><b>The Sagnac effect on matter waves.</b> Neutrons in 1979, caesium atoms from 1997. The scale factor here is the de Broglie relation and the particle's mass, which differs from the optical one by roughly ten orders of magnitude. A 2022 caesium interferometer matched the predicted Sagnac phase to 25 parts per million.</li>
+  <li><b>Quantum phase coherence in superfluid helium.</b> The most independent of the lot: no optics, no spinning mass, millikelvin temperatures, and a scale factor set by the circulation quantum <em>h/m</em><sub>4</sub> &mdash; a property of the helium atom. Two unaffiliated groups, Berkeley and Saclay, published detections in the same year, 1997, agreeing to about one per cent.</li>
+</ol>
+<p>The crudest quantitative result here is a few per cent and the best is parts per billion &mdash; something like six orders of magnitude apart, with no disagreement anywhere. A systematic error that faked rotation in a ring laser would have to fake a differently-scaled phase in a caesium interferometer, and again in superfluid helium at a scale set by an atomic constant, and again in a brass gyrocompass with no scale factor at all, all by coincidence and all in the same direction.</p>
+<div class="note"><p><strong>The ordinary version of this is stronger than the exotic one.</strong> Every ocean-going ship finds true north with a gyrocompass, and it works only because the Earth turns. The international performance standard, IMO Resolution A.424(XI), sets the permitted settle-point error at <strong>&plusmn;0.75&deg; multiplied by the secant of the latitude</strong>. That formula is not a convention: north-seeking torque goes as &Omega;&nbsp;cos(latitude), so the error must scale as its reciprocal. Modern fibre-optic and resonator gyrocompasses are still specified the same way, at 0.1&deg; and 0.08&deg; secant latitude. A stationary Earth predicts nothing of the sort, and the formula has been in maritime law since 1979.</p></div>
+<p class="scalewarn"><strong>What we are not claiming.</strong> Nuclear-spin (NMR) gyroscopes are sensitive enough &mdash; bias instabilities of 0.01 to 0.04&nbsp;&deg;/hr against Earth's 15.04&nbsp;&deg;/hr &mdash; but we could find no published measurement of Earth rate by one, so they are left out of the count. Comagnetometer experiments do subtract Earth's rotation as a modelled term, and they take that value from VLBI and ring lasers, which makes them a consistency check rather than an independent one. Nor do most of these papers publish a standalone absolute value with an error bar; they report agreement with the accepted figure at some level. The honest statement is that all five agree with the IERS value of 15.04107&nbsp;&deg;/hr within their stated uncertainties, not that all five independently returned it. And under the most aggressive lumping &mdash; treating all interferometry as one idea and all rotating-frame mechanics as another &mdash; the count falls to three: Newtonian mechanics, wave interference, and macroscopic quantum coherence. Three is still three.</p>
 
 <h2>7 &middot; What would actually settle it</h2>
 <ul class="tl">
