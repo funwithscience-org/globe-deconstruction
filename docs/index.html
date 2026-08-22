@@ -118,6 +118,33 @@ table.score td.idc{white-space:nowrap;font-weight:700;color:var(--ink-2);font-si
 table.score td.vc{white-space:nowrap}
 table.score td.nc{color:var(--ink-3);font-size:.76rem}
 table.score tr:hover td{background:rgba(46,90,148,.035)}
+
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin:1.3rem 0 1.1rem}
+@media(max-width:760px){.tiles{grid-template-columns:repeat(2,1fr)}}
+.tile{border:1px solid var(--rule);border-radius:8px;background:#fbfaf7;padding:.7rem .75rem}
+.tile .tv{display:block;font-family:var(--sans);font-size:1.5rem;font-weight:800;color:var(--heading);line-height:1.1}
+.tile .tl{display:block;font-family:var(--sans);font-size:.7rem;color:var(--ink-3);margin-top:.25rem;line-height:1.3}
+.mapkey{font-family:var(--sans);font-size:.7rem;color:var(--ink-3);margin:.5rem 0 .8rem;display:flex;flex-wrap:wrap;align-items:center;gap:.3rem}
+.mapkey .kl{margin-right:.75rem}
+.sw{display:inline-block;width:11px;height:11px;border-radius:2px;border:1px solid rgba(0,0,0,.10)}
+.k1{background:#dfe7f0}.k2{background:#b3c6de}.k3{background:#7d9dc4}.k4{background:#3f6699}
+.plate{background:#e8dcc4;border-color:rgba(160,130,70,.45)}
+.blank{background:#fff}
+.pmap .psec{margin:.9rem 0 1.1rem}
+.pname{font-family:var(--sans);font-size:.83rem;font-weight:700;color:var(--heading);margin:0}
+.pmeta{font-family:var(--sans);font-size:.72rem;color:var(--ink-3);margin:.1rem 0 .35rem}
+.cells{display:flex;flex-wrap:wrap;gap:2px}
+.cells i{width:11px;height:11px;border-radius:2px;display:block;border:1px solid rgba(0,0,0,.10)}
+.cells i.claim{outline:2px solid #b2342a;outline-offset:1px}
+.fam{margin:1.6rem 0 .4rem}
+.fam h4{font-family:var(--sans);font-size:.95rem;color:var(--heading);margin:0 0 .15rem}
+.fam .fd{font-family:var(--sans);font-size:.79rem;color:var(--ink-3);margin:0 0 .5rem}
+.qq{font-family:var(--sans);font-size:.9rem;color:var(--ink);margin:.3rem 0 .45rem;line-height:1.45;font-style:italic}
+.concede{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.75rem;margin:1rem 0}
+@media(max-width:800px){.concede{grid-template-columns:1fr}}
+.ccard{border:1px solid rgba(46,125,50,.3);border-left:3px solid var(--good);border-radius:7px;background:rgba(46,125,50,.04);padding:.7rem .8rem}
+.ccard h4{font-family:var(--sans);font-size:.83rem;margin:0 0 .2rem;color:#2c6130}
+.ccard p{font-family:var(--sans);font-size:.78rem;color:var(--ink-2);margin:0;line-height:1.45}
 .vd.none{background:#f4f2ec;color:#8d8677;border-color:var(--rule);font-weight:700}
 ol.ledger{font-family:var(--sans);font-size:.86rem;line-height:1.55;padding-left:1.2rem}
 ol.ledger li{margin:.5rem 0}
@@ -216,13 +243,13 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 <header>
   <p class="crumb"><a href="https://funwithscience.net/">Fun With Science</a> &nbsp;/&nbsp; Globe Deconstruction</p>
   <h1>Globe Deconstruction &mdash; A Claim-by-Claim Review</h1>
-  <p class="sub">Answering the three claims at shapedebate.com and the twelve science questions in the book, one at a time.</p>
+  <p class="sub">Twenty-four checkable claims, mapped onto the 500-page draft they come from &mdash; what each one says, where it sits, and whether we have answered it.</p>
   <p class="lede">This is an in-progress review of <em>Globe Deconstruction?</em>, a prerelease book by <strong>Levi Miller</strong>, and of the argument presented at <a href="https://shapedebate.com/">shapedebate.com</a>, which Miller runs with <strong>Alex Kampf</strong>. The book describes its position as <em>geocentric flat-earth</em> and treats the two labels as one package &mdash; its three headline claims are printed as &ldquo;Geocentric flat-Earth claim&nbsp;#1/2/3&rdquo;, and p.&nbsp;109 asks &ldquo;does he not know that &lsquo;flat Earth&rsquo; includes geocentrism?&rdquo; What it does not do is defend the standard flat-earth apparatus: the world-encompassing ice wall is &ldquo;clearly just lazy&rdquo; (p.&nbsp;40), replacing gravity with relative density is &ldquo;plain wrong!&rdquo; (p.&nbsp;57), and it tells flat-earthers to stop arguing from religious texts (p.&nbsp;197). It is often sharper about flat-earth argument than its critics are. It also declines, deliberately, to advance a positive model at all &mdash; &ldquo;falsification is independent of replacement&rdquo; &mdash; which is a harder position to answer than the one usually attributed to it. The site's stated posture is &ldquo;no religions, no beliefs, no biases, no assumptions,&rdquo; and its authors invite exactly this sort of scrutiny. We are taking them at their word.</p>
 </header>
 
 <section class="verdict">
   <p class="vhead">The finding so far</p>
-  <p>The book asks twenty-two versions of one question: <em>does any single classical proof of the globe survive on its own?</em> Often the honest answer is &mdash; not as cleanly as the textbook told you. Where his observations are real we concede them and measure them, and several pages here do exactly that. But the project has the argument backwards. The globe is not a stack of independent proofs any one of which carries the weight; it is <strong>one model that has to fit every observation at once, with one sun, one atmosphere, one optics</strong>. The book takes each observation in its own chapter and finds a separate explanation for it &mdash; and some of those explanations cannot both be true. Light travels in straight lines in the chapter on reflections and does not in the chapter on shadows. That is the finding, and the items below are instances of it.</p>
+  <p>The book asks two dozen versions of one question: <em>does any single classical proof of the globe survive on its own?</em> Often the honest answer is &mdash; not as cleanly as the textbook told you. Where his observations are real we concede them and measure them, and several pages here do exactly that. But the project has the argument backwards. The globe is not a stack of independent proofs any one of which carries the weight; it is <strong>one model that has to fit every observation at once, with one sun, one atmosphere, one optics</strong>. The book takes each observation in its own chapter and finds a separate explanation for it &mdash; and some of those explanations cannot both be true. Light travels in straight lines in the chapter on reflections and does not in the chapter on shadows.</p>
 </section>
 
 <h2>How this review works</h2>
@@ -233,6 +260,559 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 <p>Most published responses to this material argue with a caricature. They answer the loudest version of a claim rather than the version actually made, and they treat any concession as a loss &mdash; which is precisely why they persuade nobody who wasn't already persuaded. The book notices this and says so, repeatedly and fairly.</p>
 <p>So the standard here is higher than usual. If a claim is right, it gets conceded in full. If a claim is wrong, the demonstration has to be checkable by the reader without trusting us &mdash; public data, stated arithmetic, named sources. Several of these pages concede substantial ground: the curvature arithmetic in the pond test is correct, the perspective-compression physics in the angular-resolution chapter is real, Foucault pendulums genuinely are difficult to run well, and the book is unusually candid when its own evidence is thin. None of that is a problem for the review. It is what makes the rest of it worth reading.</p>
 <p class="scalewarn">We are in correspondence with the author, who has been generous about receiving criticism. Corrections are welcome and will be published: if any specific claim on any of these pages is wrong, tell us which one and why, and the correction goes up with attribution.</p>
+
+
+<h2 id="map">Where the argument actually is</h2>
+<p>One cell per page, in the book's own order and under its own section titles. Blue is prose, and the darker the blue the more words. <span style="border-bottom:2px solid #a08246">Sand</span> is a page carrying a picture and no sentence on it. A red outline marks a page that states one of the claims below.</p>
+<div class="tiles">
+  <div class="tile"><span class="tv">500</span><span class="tl">Pages in the draft</span></div>
+  <div class="tile"><span class="tv">24</span><span class="tl">Testable claims in it</span></div>
+  <div class="tile"><span class="tv">10</span><span class="tl">Answered in full</span></div>
+  <div class="tile"><span class="tv">80%</span><span class="tl">Of its words, in the first 240 pages</span></div>
+  <div class="tile"><span class="tv">121</span><span class="tl">Pages carrying a picture and no sentence</span></div>
+</div>
+<div class="mapkey">
+<span class="sw k1"></span><span class="kl">sparse prose</span>
+<span class="sw k2"></span><span class="kl">&nbsp;</span>
+<span class="sw k3"></span><span class="kl">&nbsp;</span>
+<span class="sw k4"></span><span class="kl">dense prose</span>
+<span class="sw plate"></span><span class="kl">a picture, no sentence</span>
+<span class="sw claim"></span><span class="kl">hosts a claim</span>
+</div>
+<div class="pmap">
+  <div class="psec">
+    <p class="pname">Opening &amp; the 12 Science Questions</p>
+    <p class="pmeta">pp.&nbsp;7&ndash;55 &middot; 49 pages &middot; 7,328 words, mean 150 a page</p>
+    <div class="cells">
+<i class="k1" title="p.7 — 27 words — text"></i>
+<i class="k4" title="p.8 — 348 words — text"></i>
+<i class="k4" title="p.9 — 202 words — text and picture"></i>
+<i class="k4" title="p.10 — 334 words — text"></i>
+<i class="k4" title="p.11 — 358 words — text"></i>
+<i class="k4" title="p.12 — 210 words — text and picture"></i>
+<i class="k1" title="p.13 — 17 words — text and picture"></i>
+<i class="k1" title="p.14 — 7 words — text and picture"></i>
+<i class="k2" title="p.15 — 49 words — text and picture"></i>
+<i class="k4" title="p.16 — 319 words — text"></i>
+<i class="k4" title="p.17 — 328 words — text"></i>
+<i class="k4" title="p.18 — 326 words — text"></i>
+<i class="k4" title="p.19 — 176 words — text and picture"></i>
+<i class="k2" title="p.20 — 88 words — text and picture"></i>
+<i class="k1" title="p.21 — 19 words — text"></i>
+<i class="k4" title="p.22 — 235 words — text"></i>
+<i class="k4" title="p.23 — 200 words — text"></i>
+<i class="k4" title="p.24 — 253 words — text"></i>
+<i class="k4" title="p.25 — 269 words — text"></i>
+<i class="k1" title="p.26 — 31 words — text"></i>
+<i class="k4" title="p.27 — 301 words — text"></i>
+<i class="k4" title="p.28 — 192 words — text and picture"></i>
+<i class="k4" title="p.29 — 300 words — text"></i>
+<i class="k4" title="p.30 — 309 words — text"></i>
+<i class="k4" title="p.31 — 300 words — text"></i>
+<i class="k1" title="p.32 — 42 words — text and picture"></i>
+<i class="k1" title="p.33 — 10 words — text"></i>
+<i class="k4" title="p.34 — 220 words — text"></i>
+<i class="k4" title="p.35 — 207 words — text"></i>
+<i class="k4" title="p.36 — 227 words — text and picture"></i>
+<i class="k4" title="p.37 — 268 words — text and picture"></i>
+<i class="k4" title="p.38 — 228 words — text and picture"></i>
+<i class="k3" title="p.39 — 107 words — text and picture"></i>
+<i class="k4" title="p.40 — 344 words — text"></i>
+<i class="k1" title="p.41 — 13 words — text and picture"></i>
+<i class="k1" title="p.42 — 20 words — text"></i>
+<i class="k1" title="p.43 — 11 words — text and picture"></i>
+<i class="k1 claim" title="p.44 — 31 words — text — Q1"></i>
+<i class="k1 claim" title="p.45 — 27 words — text — Q2"></i>
+<i class="k1 claim" title="p.46 — 29 words — text — Q3 (printed Q4)"></i>
+<i class="k1 claim" title="p.47 — 20 words — text — Q4"></i>
+<i class="k1 claim" title="p.48 — 37 words — text — Q5"></i>
+<i class="k1 claim" title="p.49 — 34 words — text — Q6"></i>
+<i class="k1 claim" title="p.50 — 33 words — text — Q7"></i>
+<i class="k1 claim" title="p.51 — 38 words — text — Q8"></i>
+<i class="k1 claim" title="p.52 — 29 words — text — Q9"></i>
+<i class="k2 claim" title="p.53 — 59 words — text — Q10"></i>
+<i class="k2 claim" title="p.54 — 58 words — text — Q11"></i>
+<i class="k1 claim" title="p.55 — 38 words — text — Q12"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">Space Travel Requires Faith</p>
+    <p class="pmeta">pp.&nbsp;56&ndash;87 &middot; 32 pages &middot; 4,788 words, mean 150 a page</p>
+    <div class="cells">
+<i class="k1 claim" title="p.56 — 23 words — text — Space Travel Requires Faith"></i>
+<i class="k3" title="p.57 — 147 words — text and picture"></i>
+<i class="k3" title="p.58 — 91 words — text and picture"></i>
+<i class="k3" title="p.59 — 122 words — text and picture"></i>
+<i class="k1" title="p.60 — 26 words — text and picture"></i>
+<i class="k1" title="p.61 — 30 words — text and picture"></i>
+<i class="k4" title="p.62 — 211 words — text and picture"></i>
+<i class="k4" title="p.63 — 177 words — text and picture"></i>
+<i class="k4" title="p.64 — 220 words — text"></i>
+<i class="k4" title="p.65 — 202 words — text"></i>
+<i class="k4" title="p.66 — 192 words — text and picture"></i>
+<i class="k4" title="p.67 — 270 words — text"></i>
+<i class="k4" title="p.68 — 281 words — text"></i>
+<i class="k4" title="p.69 — 287 words — text"></i>
+<i class="k4" title="p.70 — 203 words — text and picture"></i>
+<i class="k3" title="p.71 — 117 words — text and picture"></i>
+<i class="k4" title="p.72 — 296 words — text"></i>
+<i class="k1" title="p.73 — 34 words — text and picture"></i>
+<i class="k4" title="p.74 — 202 words — text and picture"></i>
+<i class="k2" title="p.75 — 88 words — text and picture"></i>
+<i class="k4" title="p.76 — 254 words — text"></i>
+<i class="k4" title="p.77 — 257 words — text"></i>
+<i class="k4" title="p.78 — 238 words — text and picture"></i>
+<i class="k4" title="p.79 — 315 words — text"></i>
+<i class="k2" title="p.80 — 75 words — text and picture"></i>
+<i class="k1" title="p.81 — 24 words — text and picture"></i>
+<i class="k2" title="p.82 — 57 words — text"></i>
+<i class="k1" title="p.83 — 11 words — text and picture"></i>
+<i class="k4" title="p.84 — 222 words — text and picture"></i>
+<i class="k2" title="p.85 — 83 words — text"></i>
+<i class="k1" title="p.86 — 25 words — text and picture"></i>
+<i class="k1" title="p.87 — 8 words — text and picture"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">Hydrostatics &amp; Optics</p>
+    <p class="pmeta">pp.&nbsp;88&ndash;116 &middot; 29 pages &middot; 3,288 words, mean 113 a page</p>
+    <div class="cells">
+<i class="k1 claim" title="p.88 — 9 words — text — Hydrostatics &amp; Optics"></i>
+<i class="k4" title="p.89 — 225 words — text and picture"></i>
+<i class="k4" title="p.90 — 294 words — text"></i>
+<i class="k4" title="p.91 — 201 words — text and picture"></i>
+<i class="k4" title="p.92 — 244 words — text"></i>
+<i class="k1" title="p.93 — 10 words — text and picture"></i>
+<i class="k1" title="p.94 — 29 words — text and picture"></i>
+<i class="k3" title="p.95 — 142 words — text and picture"></i>
+<i class="k4" title="p.96 — 203 words — text and picture"></i>
+<i class="k3" title="p.97 — 99 words — text and picture"></i>
+<i class="k4" title="p.98 — 197 words — text and picture"></i>
+<i class="k1" title="p.99 — 29 words — text and picture"></i>
+<i class="k2" title="p.100 — 50 words — text and picture"></i>
+<i class="k4" title="p.101 — 167 words — text and picture"></i>
+<i class="k2" title="p.102 — 52 words — text"></i>
+<i class="k1" title="p.103 — 9 words — text and picture"></i>
+<i class="k4" title="p.104 — 170 words — text and picture"></i>
+<i class="k3" title="p.105 — 132 words — text and picture"></i>
+<i class="k1" title="p.106 — 26 words — text"></i>
+<i class="k3" title="p.107 — 117 words — text"></i>
+<i class="k2" title="p.108 — 85 words — text and picture"></i>
+<i class="k2" title="p.109 — 58 words — text and picture"></i>
+<i class="k3" title="p.110 — 148 words — text and picture"></i>
+<i class="k4" title="p.111 — 151 words — text and picture"></i>
+<i class="k4" title="p.112 — 163 words — text and picture"></i>
+<i class="k2" title="p.113 — 78 words — text and picture"></i>
+<i class="k2" title="p.114 — 74 words — text and picture"></i>
+<i class="k1" title="p.115 — 25 words — text and picture"></i>
+<i class="k3" title="p.116 — 101 words — text and picture"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">The Equator Flight Data Challenge</p>
+    <p class="pmeta">pp.&nbsp;117&ndash;123 &middot; 7 pages &middot; 1,304 words, mean 186 a page</p>
+    <div class="cells">
+<i class="k1 claim" title="p.117 — 23 words — text — Equator Flight Data"></i>
+<i class="k4" title="p.118 — 250 words — text"></i>
+<i class="k4" title="p.119 — 188 words — text and picture"></i>
+<i class="k4" title="p.120 — 305 words — text and picture"></i>
+<i class="k4" title="p.121 — 251 words — text"></i>
+<i class="k4" title="p.122 — 275 words — text and picture"></i>
+<i class="k1" title="p.123 — 12 words — text and picture"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">Celestial Globes Exposed</p>
+    <p class="pmeta">pp.&nbsp;124&ndash;152 &middot; 29 pages &middot; 3,248 words, mean 112 a page &middot; <b>1 of them a picture with no sentence</b></p>
+    <div class="cells">
+<i class="k1 claim" title="p.124 — 16 words — text — Celestial Globes"></i>
+<i class="k1" title="p.125 — 4 words — text and picture"></i>
+<i class="k3" title="p.126 — 118 words — text and picture"></i>
+<i class="k2" title="p.127 — 79 words — text and picture"></i>
+<i class="k4" title="p.128 — 178 words — text and picture"></i>
+<i class="k4" title="p.129 — 160 words — text and picture"></i>
+<i class="plate" title="p.130 — 1 word — picture, no sentence"></i>
+<i class="k4" title="p.131 — 259 words — text"></i>
+<i class="k3" title="p.132 — 109 words — text and picture"></i>
+<i class="k1" title="p.133 — 7 words — text and picture"></i>
+<i class="k3" title="p.134 — 140 words — text and picture"></i>
+<i class="k3" title="p.135 — 99 words — text and picture"></i>
+<i class="k1" title="p.136 — 23 words — text and picture"></i>
+<i class="k4" title="p.137 — 242 words — text and picture"></i>
+<i class="k4" title="p.138 — 156 words — text and picture"></i>
+<i class="k1" title="p.139 — 8 words — text and picture"></i>
+<i class="k4" title="p.140 — 224 words — text and picture"></i>
+<i class="k3" title="p.141 — 136 words — text and picture"></i>
+<i class="k3" title="p.142 — 115 words — text and picture"></i>
+<i class="k4" title="p.143 — 166 words — text and picture"></i>
+<i class="k1" title="p.144 — 22 words — text"></i>
+<i class="k4" title="p.145 — 190 words — text and picture"></i>
+<i class="k2" title="p.146 — 62 words — text and picture"></i>
+<i class="k2" title="p.147 — 55 words — text and picture"></i>
+<i class="k4" title="p.148 — 168 words — text and picture"></i>
+<i class="k2" title="p.149 — 72 words — text and picture"></i>
+<i class="k4" title="p.150 — 278 words — text and picture"></i>
+<i class="k3" title="p.151 — 137 words — text and picture"></i>
+<i class="k1" title="p.152 — 24 words — text and picture"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">Unknown Luminaries</p>
+    <p class="pmeta">pp.&nbsp;153&ndash;178 &middot; 26 pages &middot; 1,955 words, mean 75 a page &middot; <b>2 of them a picture with no sentence</b></p>
+    <div class="cells">
+<i class="k1 claim" title="p.153 — 11 words — text — Unknown Luminaries"></i>
+<i class="k1" title="p.154 — 25 words — text and picture"></i>
+<i class="k1" title="p.155 — 17 words — text"></i>
+<i class="k3" title="p.156 — 128 words — text and picture"></i>
+<i class="k2" title="p.157 — 48 words — text and picture"></i>
+<i class="plate" title="p.158 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.159 — 1 word — picture, no sentence"></i>
+<i class="k4" title="p.160 — 176 words — text and picture"></i>
+<i class="k3" title="p.161 — 117 words — text and picture"></i>
+<i class="k2" title="p.162 — 58 words — text"></i>
+<i class="k1" title="p.163 — 18 words — text and picture"></i>
+<i class="k1" title="p.164 — 39 words — text and picture"></i>
+<i class="k4" title="p.165 — 195 words — text"></i>
+<i class="k4" title="p.166 — 185 words — text"></i>
+<i class="k1" title="p.167 — 33 words — text and picture"></i>
+<i class="k1" title="p.168 — 33 words — text and picture"></i>
+<i class="k1" title="p.169 — 37 words — text and picture"></i>
+<i class="k1" title="p.170 — 17 words — text and picture"></i>
+<i class="k2" title="p.171 — 83 words — text and picture"></i>
+<i class="k1" title="p.172 — 8 words — text and picture"></i>
+<i class="k2" title="p.173 — 69 words — text"></i>
+<i class="k4" title="p.174 — 231 words — text"></i>
+<i class="k4" title="p.175 — 179 words — text and picture"></i>
+<i class="k1" title="p.176 — 25 words — text and picture"></i>
+<i class="k2" title="p.177 — 58 words — text and picture"></i>
+<i class="k4" title="p.178 — 163 words — text and picture"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">Perfectly Synchronized Gas Rotating with Earth?</p>
+    <p class="pmeta">pp.&nbsp;179&ndash;202 &middot; 24 pages &middot; 3,101 words, mean 129 a page &middot; <b>1 of them a picture with no sentence</b></p>
+    <div class="cells">
+<i class="k1 claim" title="p.179 — 32 words — text — Synchronized Gas"></i>
+<i class="k3" title="p.180 — 123 words — text and picture"></i>
+<i class="k1" title="p.181 — 29 words — text and picture"></i>
+<i class="k4" title="p.182 — 234 words — text"></i>
+<i class="k3" title="p.183 — 119 words — text and picture"></i>
+<i class="k4" title="p.184 — 152 words — text and picture"></i>
+<i class="k4" title="p.185 — 200 words — text and picture"></i>
+<i class="k4" title="p.186 — 247 words — text"></i>
+<i class="k4" title="p.187 — 190 words — text"></i>
+<i class="k2" title="p.188 — 65 words — text and picture"></i>
+<i class="k2" title="p.189 — 72 words — text and picture"></i>
+<i class="k2" title="p.190 — 89 words — text and picture"></i>
+<i class="k1" title="p.191 — 22 words — text and picture"></i>
+<i class="k1" title="p.192 — 28 words — text"></i>
+<i class="k4" title="p.193 — 242 words — text"></i>
+<i class="k4" title="p.194 — 187 words — text and picture"></i>
+<i class="k1" title="p.195 — 20 words — text"></i>
+<i class="k4" title="p.196 — 181 words — text"></i>
+<i class="k4" title="p.197 — 278 words — text"></i>
+<i class="k4" title="p.198 — 205 words — text"></i>
+<i class="plate" title="p.199 — 1 word — picture, no sentence"></i>
+<i class="k4" title="p.200 — 199 words — text and picture"></i>
+<i class="k1" title="p.201 — 24 words — text and picture"></i>
+<i class="k4" title="p.202 — 162 words — text and picture"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">Extraordinary Evidence or Fallacy</p>
+    <p class="pmeta">pp.&nbsp;203&ndash;240 &middot; 38 pages &middot; 7,160 words, mean 188 a page</p>
+    <div class="cells">
+<i class="k1 claim" title="p.203 — 21 words — text — Extraordinary Evidence"></i>
+<i class="k1" title="p.204 — 18 words — text and picture"></i>
+<i class="k4" title="p.205 — 275 words — text"></i>
+<i class="k3" title="p.206 — 148 words — text"></i>
+<i class="k1" title="p.207 — 26 words — text and picture"></i>
+<i class="k1" title="p.208 — 40 words — text and picture"></i>
+<i class="k4" title="p.209 — 303 words — text"></i>
+<i class="k4" title="p.210 — 235 words — text"></i>
+<i class="k4" title="p.211 — 245 words — text"></i>
+<i class="k4" title="p.212 — 187 words — text"></i>
+<i class="k4" title="p.213 — 278 words — text"></i>
+<i class="k4" title="p.214 — 236 words — text"></i>
+<i class="k4" title="p.215 — 267 words — text"></i>
+<i class="k4" title="p.216 — 237 words — text"></i>
+<i class="k4" title="p.217 — 254 words — text"></i>
+<i class="k4" title="p.218 — 274 words — text"></i>
+<i class="k4" title="p.219 — 281 words — text"></i>
+<i class="k4" title="p.220 — 247 words — text"></i>
+<i class="k4" title="p.221 — 254 words — text"></i>
+<i class="k4" title="p.222 — 266 words — text"></i>
+<i class="k4" title="p.223 — 276 words — text"></i>
+<i class="k4" title="p.224 — 287 words — text"></i>
+<i class="k4" title="p.225 — 249 words — text"></i>
+<i class="k4" title="p.226 — 253 words — text"></i>
+<i class="k4" title="p.227 — 244 words — text"></i>
+<i class="k4" title="p.228 — 243 words — text"></i>
+<i class="k4" title="p.229 — 256 words — text"></i>
+<i class="k4" title="p.230 — 292 words — text"></i>
+<i class="k1" title="p.231 — 21 words — text and picture"></i>
+<i class="k2" title="p.232 — 75 words — text and picture"></i>
+<i class="blank" title="p.233 — 1 word — blank"></i>
+<i class="k1" title="p.234 — 21 words — text and picture"></i>
+<i class="k1" title="p.235 — 18 words — text and picture"></i>
+<i class="k4" title="p.236 — 218 words — text and picture"></i>
+<i class="k4" title="p.237 — 187 words — text and picture"></i>
+<i class="k4" title="p.238 — 187 words — text and picture"></i>
+<i class="k3" title="p.239 — 144 words — text"></i>
+<i class="k3" title="p.240 — 96 words — text"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">All Construction Records Missing?</p>
+    <p class="pmeta">pp.&nbsp;241&ndash;414 &middot; 174 pages &middot; 6,068 words, mean 35 a page &middot; <b>89 of them a picture with no sentence</b></p>
+    <div class="cells">
+<i class="k1 claim" title="p.241 — 28 words — text and picture — Construction Records"></i>
+<i class="k1" title="p.242 — 6 words — text and picture"></i>
+<i class="k2" title="p.243 — 77 words — text and picture"></i>
+<i class="k4" title="p.244 — 288 words — text"></i>
+<i class="k4" title="p.245 — 264 words — text"></i>
+<i class="k1" title="p.246 — 19 words — text"></i>
+<i class="plate" title="p.247 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.248 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.249 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.250 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.251 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.252 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.253 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.254 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.255 — 22 words — text and picture"></i>
+<i class="plate" title="p.256 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.257 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.258 — 9 words — text and picture"></i>
+<i class="plate" title="p.259 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.260 — 14 words — text and picture"></i>
+<i class="plate" title="p.261 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.262 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.263 — 6 words — text and picture"></i>
+<i class="k1" title="p.264 — 3 words — text and picture"></i>
+<i class="k1" title="p.265 — 3 words — text and picture"></i>
+<i class="plate" title="p.266 — 2 words — picture, no sentence"></i>
+<i class="k1" title="p.267 — 3 words — text and picture"></i>
+<i class="k1" title="p.268 — 3 words — text and picture"></i>
+<i class="k1" title="p.269 — 4 words — text and picture"></i>
+<i class="plate" title="p.270 — 2 words — picture, no sentence"></i>
+<i class="k1" title="p.271 — 3 words — text and picture"></i>
+<i class="plate" title="p.272 — 2 words — picture, no sentence"></i>
+<i class="k1" title="p.273 — 3 words — text and picture"></i>
+<i class="k4" title="p.274 — 214 words — text and picture"></i>
+<i class="k2" title="p.275 — 89 words — text"></i>
+<i class="k4" title="p.276 — 176 words — text"></i>
+<i class="k3" title="p.277 — 144 words — text and picture"></i>
+<i class="plate" title="p.278 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.279 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.280 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.281 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.282 — 1 word — picture, no sentence"></i>
+<i class="k4" title="p.283 — 155 words — text and picture"></i>
+<i class="plate" title="p.284 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.285 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.286 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.287 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.288 — 10 words — text and picture"></i>
+<i class="k1" title="p.289 — 7 words — text and picture"></i>
+<i class="plate" title="p.290 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.291 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.292 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.293 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.294 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.295 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.296 — 13 words — text and picture"></i>
+<i class="k3" title="p.297 — 131 words — text"></i>
+<i class="k1" title="p.298 — 11 words — text and picture"></i>
+<i class="plate" title="p.299 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.300 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.301 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.302 — 5 words — text and picture"></i>
+<i class="k1" title="p.303 — 17 words — text and picture"></i>
+<i class="plate" title="p.304 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.305 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.306 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.307 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.308 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.309 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.310 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.311 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.312 — 27 words — text and picture"></i>
+<i class="k1" title="p.313 — 4 words — text and picture"></i>
+<i class="plate" title="p.314 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.315 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.316 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.317 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.318 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.319 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.320 — 26 words — text and picture"></i>
+<i class="plate" title="p.321 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.322 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.323 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.324 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.325 — 23 words — text and picture"></i>
+<i class="k1" title="p.326 — 17 words — text and picture"></i>
+<i class="plate" title="p.327 — 1 word — picture, no sentence"></i>
+<i class="k2" title="p.328 — 45 words — text and picture"></i>
+<i class="k1" title="p.329 — 34 words — text and picture"></i>
+<i class="k1" title="p.330 — 23 words — text and picture"></i>
+<i class="k1" title="p.331 — 9 words — text and picture"></i>
+<i class="plate" title="p.332 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.333 — 8 words — text and picture"></i>
+<i class="k1" title="p.334 — 13 words — text and picture"></i>
+<i class="plate" title="p.335 — 0 words — picture, no sentence"></i>
+<i class="k1" title="p.336 — 6 words — text and picture"></i>
+<i class="k1" title="p.337 — 11 words — text and picture"></i>
+<i class="k4" title="p.338 — 198 words — text"></i>
+<i class="k4" title="p.339 — 239 words — text"></i>
+<i class="k1" title="p.340 — 12 words — text and picture"></i>
+<i class="k2" title="p.341 — 84 words — text"></i>
+<i class="k1" title="p.342 — 16 words — text and picture"></i>
+<i class="k1" title="p.343 — 23 words — text"></i>
+<i class="k1" title="p.344 — 20 words — text and picture"></i>
+<i class="plate" title="p.345 — 1 word — picture, no sentence"></i>
+<i class="k4" title="p.346 — 226 words — text"></i>
+<i class="k4" title="p.347 — 195 words — text"></i>
+<i class="k4" title="p.348 — 198 words — text"></i>
+<i class="k3" title="p.349 — 95 words — text"></i>
+<i class="k2" title="p.350 — 66 words — text"></i>
+<i class="k4" title="p.351 — 191 words — text"></i>
+<i class="k1" title="p.352 — 4 words — text and picture"></i>
+<i class="k1" title="p.353 — 3 words — text and picture"></i>
+<i class="k3" title="p.354 — 106 words — text and picture"></i>
+<i class="k2" title="p.355 — 55 words — text and picture"></i>
+<i class="k1" title="p.356 — 33 words — text and picture"></i>
+<i class="k3" title="p.357 — 146 words — text"></i>
+<i class="k3" title="p.358 — 105 words — text and picture"></i>
+<i class="k4" title="p.359 — 157 words — text and picture"></i>
+<i class="k4" title="p.360 — 285 words — text"></i>
+<i class="k1" title="p.361 — 34 words — text and picture"></i>
+<i class="k4" title="p.362 — 218 words — text"></i>
+<i class="k4" title="p.363 — 160 words — text and picture"></i>
+<i class="k4" title="p.364 — 262 words — text"></i>
+<i class="k3" title="p.365 — 92 words — text and picture"></i>
+<i class="plate" title="p.366 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.367 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.368 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.369 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.370 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.371 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.372 — 7 words — text and picture"></i>
+<i class="plate" title="p.373 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.374 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.375 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.376 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.377 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.378 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.379 — 33 words — text and picture"></i>
+<i class="k3" title="p.380 — 126 words — text"></i>
+<i class="k1" title="p.381 — 12 words — text and picture"></i>
+<i class="k1" title="p.382 — 21 words — text and picture"></i>
+<i class="plate" title="p.383 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.384 — 6 words — text and picture"></i>
+<i class="k1" title="p.385 — 4 words — text and picture"></i>
+<i class="plate" title="p.386 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.387 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.388 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.389 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.390 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.391 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.392 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.393 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.394 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.395 — 4 words — text and picture"></i>
+<i class="plate" title="p.396 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.397 — 40 words — text and picture"></i>
+<i class="plate" title="p.398 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.399 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.400 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.401 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.402 — 12 words — text and picture"></i>
+<i class="k1" title="p.403 — 4 words — text and picture"></i>
+<i class="plate" title="p.404 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.405 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.406 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.407 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.408 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.409 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.410 — 15 words — text and picture"></i>
+<i class="k4" title="p.411 — 162 words — text"></i>
+<i class="k1" title="p.412 — 38 words — text and picture"></i>
+<i class="k4" title="p.413 — 284 words — text and picture"></i>
+<i class="k1" title="p.414 — 25 words — text and picture"></i>
+</div>
+  </div>
+  <div class="psec">
+    <p class="pname">Antarctica's Magnetic North</p>
+    <p class="pmeta">pp.&nbsp;415&ndash;473 &middot; 59 pages &middot; 2,177 words, mean 37 a page &middot; <b>28 of them a picture with no sentence</b></p>
+    <div class="cells">
+<i class="k4 claim" title="p.415 — 284 words — text — Antarctica"></i>
+<i class="k1" title="p.416 — 42 words — text and picture"></i>
+<i class="k2" title="p.417 — 83 words — text and picture"></i>
+<i class="plate" title="p.418 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.419 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.420 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.421 — 1 word — picture, no sentence"></i>
+<i class="k3" title="p.422 — 131 words — text and picture"></i>
+<i class="plate" title="p.423 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.424 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.425 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.426 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.427 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.428 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.429 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.430 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.431 — 14 words — text and picture"></i>
+<i class="k4" title="p.432 — 267 words — text and picture"></i>
+<i class="k4" title="p.433 — 269 words — text"></i>
+<i class="k3" title="p.434 — 95 words — text and picture"></i>
+<i class="plate" title="p.435 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.436 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.437 — 1 word — picture, no sentence"></i>
+<i class="k4" title="p.438 — 229 words — text"></i>
+<i class="plate" title="p.439 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.440 — 1 word — picture, no sentence"></i>
+<i class="k2" title="p.441 — 62 words — text and picture"></i>
+<i class="plate" title="p.442 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.443 — 21 words — text and picture"></i>
+<i class="k1" title="p.444 — 33 words — text and picture"></i>
+<i class="k1" title="p.445 — 16 words — text and picture"></i>
+<i class="k3" title="p.446 — 106 words — text and picture"></i>
+<i class="k1" title="p.447 — 15 words — text and picture"></i>
+<i class="k1" title="p.448 — 22 words — text and picture"></i>
+<i class="k2" title="p.449 — 89 words — text and picture"></i>
+<i class="plate" title="p.450 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.451 — 44 words — text and picture"></i>
+<i class="k1" title="p.452 — 23 words — text and picture"></i>
+<i class="plate" title="p.453 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.454 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.455 — 5 words — text and picture"></i>
+<i class="plate" title="p.456 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.457 — 1 word — picture, no sentence"></i>
+<i class="plate" title="p.458 — 1 word — picture, no sentence"></i>
+<i class="k1" title="p.459 — 24 words — text and picture"></i>
+<i class="k1" title="p.460 — 30 words — text and picture"></i>
+<i class="k1" title="p.461 — 22 words — text and picture"></i>
+<i class="k1" title="p.462 — 25 words — text and picture"></i>
+<i class="k2" title="p.463 — 56 words — text and picture"></i>
+<i class="plate" title="p.464 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.465 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.466 — 0 words — picture, no sentence"></i>
+<i class="plate" title="p.467 — 0 words — picture, no sentence"></i>
+<i class="k1" title="p.468 — 24 words — text and picture"></i>
+<i class="k1" title="p.469 — 39 words — text and picture"></i>
+<i class="k1" title="p.470 — 35 words — text and picture"></i>
+<i class="k1" title="p.471 — 10 words — text"></i>
+<i class="k1" title="p.472 — 19 words — text and picture"></i>
+<i class="k1" title="p.473 — 20 words — text and picture"></i>
+</div>
+  </div>
+</div>
+
+<div class="note"><p><strong>The book changes register at page&nbsp;241, and that is the shape of it.</strong> Everything about the shape of the Earth happens in the first two hundred pages, at a mean of 128 words a page. Then the argument about proof runs to p.&nbsp;240 &mdash; the densest section in the draft, 188 words a page. After that come 233 pages, <strong>half the numbered book</strong>, holding a fifth of its words.</p>
+<p>Those pages are not empty, and it would be wrong to say so: there are 725 images in this draft across 358 of its 500 pages, and exactly one page in the whole book is genuinely blank. The last two sections are photographic &mdash; state capitols, World's Fair halls, asylums, train stations, Civil War portraits, Antarctic coastline. But they are <em>plates</em>, not captioned evidence. Of the 174 pages in &ldquo;All Construction Records Missing?&rdquo;, <strong>89 carry a picture and either nothing at all or a bare place name</strong> &mdash; &ldquo;Ohio&rdquo;, &ldquo;China&rdquo;, &ldquo;Indiana Illinois&rdquo;. The section's argument lives in <strong>32 pages</strong>, which hold 5,233 of its 6,068 words. The rest is accumulation.</p>
+<p>Two independent things agree on that boundary. The measured one is above. The other is the author's own: page&nbsp;240 stamps everything after it <strong>SPECULATION</strong> and says &ldquo;Everything beyond this point should not be used in the shape debate.&rdquo; He fenced it himself, and we take him at his word &mdash; which is why the two sections after it are catalogued but not answered.</p></div>
+<p class="scalewarn"><strong>Method.</strong> Word counts come from the text layer of the 500-page PDF (Canva export, created 3&nbsp;August&nbsp;2026) via <code>pdftotext -layout</code>; the image inventory is <code>pdfimages -list</code> on the same file. Page numbers are the book's own, offset a constant 26 from the PDF index and checked against nine landmarks. Words set inside an image are not counted as text, which is why the picture inventory is reported alongside &mdash; word counts alone would misdescribe this book badly. Front matter before p.&nbsp;7 is excluded, its pagination being irregular. If any of this is measured wrong, name the section and we will correct it here.</p>
 
 <h2 id="foundations">The foundations &mdash; the argument, made once</h2>
 <p>Twenty-two items answered one at a time would inherit the book's own problem: the point drowns in volume, and each chapter gets to be judged without the others in the room. So the general argument is made here, once, and the pages below link to it instead of re-arguing it. Nothing in this section substitutes for answering a claim on its merits &mdash; that still happens page by page.</p>
@@ -267,37 +847,38 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 </ol>
 
 <h3 id="scoreboard">Every item, with its verdict</h3>
-<p>The same twenty-two items in the book's own order, so the distribution is visible in one place: <strong>7 refuted, 5 misleading, 4 standard physics, 6 unassessed</strong>. Six verdicts are provisional, resting on a page that has had one pass and no review. The last column is our progress, which is a different thing from the verdict &mdash; several items are fully answered and still come back as observations the mainstream model simply predicts.</p>
+<p>All twenty-four, in the book's own order, so the distribution is visible in one place: <strong>7 refuted, 5 misleading, 4 standard physics, 8 unassessed</strong>. Six verdicts are provisional, resting on a page that has had one pass and no review. The last column is our progress, which is a different thing from the verdict &mdash; several items are fully answered and still come back as observations the mainstream model simply predicts.</p>
 <div class="tblwrap">
 <table class="score">
 <thead><tr><th>Item</th><th>The claim, in short</th><th>Verdict</th><th>Our page / why not graded</th></tr></thead>
 <tbody>
-<tr><td class="idc">Claim&nbsp;#1</td><td>Objects disappear bottom-up by angular resolution</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/bottom-up-observations/">Answered</a></td></tr>
-<tr><td class="idc">Claim&nbsp;#2</td><td>Newton's third law misapplied to gas in vacuum</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Answered</a></td></tr>
-<tr><td class="idc">Claim&nbsp;#3</td><td>Too many red flags in celestial observations</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Cumulative claim &mdash; cannot be graded from a subset</td></tr>
-<tr><td class="idc">Q1 &middot; p.44</td><td>Gas thrust needs surrounding air</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Answered</a></td></tr>
-<tr><td class="idc">Q2 &middot; p.45</td><td>Gravity overriding hydrostatics in a controlled space</td><td class="vc"><span class="vd mislead prov">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/hydrostatics/">Draft</a></td></tr>
+<tr><td class="idc">Claim&nbsp;#1</td><td>Bottom-up disappearance by angular resolution</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/bottom-up-observations/">Answered</a></td></tr>
+<tr><td class="idc">Claim&nbsp;#2</td><td>Gas thrust needs something to push off</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Answered</a></td></tr>
+<tr><td class="idc">Claim&nbsp;#3</td><td>Too many red flags in celestial observations</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Cumulative claim; cannot be graded from a subset</td></tr>
+<tr><td class="idc">Q1 &middot; p.44</td><td>Gas-propelled vehicles use surrounding gases</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Answered</a></td></tr>
+<tr><td class="idc">Q2 &middot; p.45</td><td>Gravity bending hydrostatics in a controlled space</td><td class="vc"><span class="vd mislead prov">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/hydrostatics/">Draft</a></td></tr>
 <tr><td class="idc">Q3 &middot; p.46</td><td>What a flight recorder shows on the equator</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">Answered</a></td></tr>
 <tr><td class="idc">Q4 &middot; p.47</td><td>Mirrored reflections as observer height rises</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/mirrored-reflections/">Draft</a></td></tr>
 <tr><td class="idc">Q5 &middot; p.48</td><td>Stars and planets share one nightly rate</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">Draft</a></td></tr>
 <tr><td class="idc">Q6 &middot; p.49</td><td>Jupiter's moon shadows miss their moons</td><td class="vc"><span class="vd refuted prov">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">Draft</a></td></tr>
 <tr><td class="idc">Q7 &middot; p.50</td><td>Full Moon evenly lit, no highlight</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">Draft</a></td></tr>
-<tr><td class="idc">Q8 &middot; p.51</td><td>The Sun shrinks and fades rather than sets</td><td class="vc"><span class="vd refuted prov">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sun-does-not-shrink/">Draft</a></td></tr>
+<tr><td class="idc">Q8 &middot; p.51</td><td>The Sun shrinks rather than sets</td><td class="vc"><span class="vd refuted prov">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sun-does-not-shrink/">Draft</a></td></tr>
 <tr><td class="idc">Q9 &middot; p.52</td><td>No Moon silhouette before a solar eclipse</td><td class="vc"><span class="vd standard">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/luminaries/">Answered</a></td></tr>
 <tr><td class="idc">Q10 &middot; p.53</td><td>Atmosphere in perfect rotational sync</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
 <tr><td class="idc">Q11 &middot; p.54</td><td>Polar time-lapse; the untested Compton generator</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
-<tr><td class="idc">Q12 &middot; p.55</td><td>Straight sunlight and shadow-angle arguments</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sunlight-and-shadows/">Page answers our paraphrase; p.&nbsp;55 not yet read</a></td></tr>
-<tr><td class="idc">Sec. p.117</td><td>The Equator Flight Data Challenge</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">Answered</a></td></tr>
-<tr><td class="idc">Sec. p.124</td><td>Celestial Globes Exposed &mdash; Polaris and perspective</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/celestial-globes/">Answered</a></td></tr>
-<tr><td class="idc">Sec. p.153</td><td>Unknown Luminaries</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Two limbs answered, the chapter's thesis not</td></tr>
-<tr><td class="idc">Sec. p.179</td><td>Perfectly synchronized gas rotating with Earth?</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
-<tr><td class="idc">Sec. p.203</td><td>Extraordinary Evidence or Fallacy</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/extraordinary-evidence/">A charge against this review that we accept</a></td></tr>
-<tr><td class="idc">Sec. p.241</td><td>All construction records missing?</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Catalogue entry mis-sourced, not yet rewritten</td></tr>
-<tr><td class="idc">Sec. p.415</td><td>Antarctica's Magnetic North</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Catalogue entry mis-sourced, not yet rewritten</td></tr>
+<tr><td class="idc">Q12 &middot; p.55</td><td>Straight sunlight and shadow-angle arguments</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sunlight-and-shadows/">Our page rests on a circular distance</a></td></tr>
+<tr><td class="idc">Sec. 56&ndash;87</td><td>Space Travel Requires Faith</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/action-lab-footage/">Video answered; the wider argument not</a></td></tr>
+<tr><td class="idc">Sec. 88&ndash;116</td><td>Hydrostatics &amp; Optics</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rampion/">Rampion answered; the rest not</a></td></tr>
+<tr><td class="idc">Sec. 117&ndash;123</td><td>The Equator Flight Data Challenge</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">Answered</a></td></tr>
+<tr><td class="idc">Sec. 124&ndash;152</td><td>Celestial Globes Exposed</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/celestial-globes/">Answered</a></td></tr>
+<tr><td class="idc">Sec. 153&ndash;178</td><td>Unknown Luminaries</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Two limbs answered, the chapter's thesis not</td></tr>
+<tr><td class="idc">Sec. 179&ndash;202</td><td>Perfectly synchronized gas rotating with Earth?</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
+<tr><td class="idc">Sec. 203&ndash;240</td><td>Extraordinary Evidence or Fallacy</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/extraordinary-evidence/">A charge against this review that we accept</a></td></tr>
+<tr><td class="idc">Sec. 241&ndash;414</td><td>All Construction Records Missing?</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Author's own SPECULATION fence &mdash; excluded by him</td></tr>
+<tr><td class="idc">Sec. 415&ndash;473</td><td>Antarctica's Magnetic North</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Author's own SPECULATION fence &mdash; excluded by him</td></tr>
 </tbody>
 </table>
 </div>
-
 <h2>The catalogue</h2>
 <p><em>The groupings below are the book's own &mdash; its three headline claims, its twelve numbered questions, its chapter titles. The structure the book does not supply &mdash; what these claims share and where they collide &mdash; is the section above.</em></p>
 
@@ -315,130 +896,172 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
   <p style="font-family:var(--sans);font-size:.8rem;color:var(--ink-3);margin:.7rem 0 0">Standing rule: grade the claim as he actually hedged it, never a compressed or strengthened version. Where a page answers a stronger claim than the book makes, the item stays unassessed until that is fixed.</p>
 </div>
 
-<h3>The three claims from shapedebate.com</h3>
-<p>These are the site's own headline claims, quoted as published.</p>
-<ul class="claims">
-  <li>
-    <span class="lbl">Claim #1 &middot; shapedebate.com</span>
-    <p class="q">&ldquo;Objects can disappear bottom up across a flat surface due to the limitations of angular resolution.&rdquo;</p>
-    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/bottom-up-observations/">Bottom Up Observations, Answered</a> &mdash; and <a href="https://funwithscience.net/globe-deconstruction/rampion/">The Black Swan, Answered</a>, which answers the long-distance wind-farm footage the book cites as real-world evidence for it. He has since tested the claim himself, over 540 feet of pond: <a href="https://funwithscience.net/globe-deconstruction/flat-surface-test/">Something Did Disappear Over a Flat Surface</a> measures his own footage and grants the observation &mdash; the disagreement is over what produced it, and over whether it scales.</p>
-  </li>
-  <li>
-    <span class="lbl">Claim #2 &middot; shapedebate.com</span>
-    <p class="q">&ldquo;Mainstream physics is completely wrong in applying Newton's third law to a pressurized gas release in a vacuum environment.&rdquo; <span class="cred">The book states the same claim with its premise attached (p.&nbsp;2): &ldquo;Mainstream physics is completely wrong in its understanding of how gas-propelled vehicles work in a vacuum. <strong>Thrust from gas must have something to push off, and an infinite vacuum does not provide that.</strong>&rdquo; The push-off premise is the claim; the Newton's-third-law line is what follows if it holds.</span></p>
-    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Rockets Don't Push Against Air</a> &mdash; with <a href="https://funwithscience.net/globe-deconstruction/action-lab-footage/">The Action Lab Footage, Frame by Frame</a>, which measures the vacuum-chamber video the book reads a delayed reaction into, and <a href="https://funwithscience.net/globe-deconstruction/thrust-in-flight/">Thrust, Measured in Flight</a>, the in-flight measurement record.</p>
-  </li>
-  <li>
-    <span class="lbl">Claim #3 &middot; shapedebate.com</span>
-    <p class="q">&ldquo;There are too many red flags in celestial observations&rdquo; &mdash; moon lighting, the moon-tilt illusion, Jupiter's moons, and solar-eclipse alignment.</p>
-    <p class="meta"><span class="vd none">Unassessed</span><span class="st part">Partly answered</span>The eclipse-alignment red flag is answered in <a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a>. The moon-lighting red flag now has a draft &mdash; <a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a>, published for review. The remaining two are addressed as falsifiable tests in the <a href="https://funwithscience.net/globe-deconstruction/self-test-protocol/">Self-Test Protocol</a> but do not yet have pages of their own. Note the book runs these four as a <em>cumulative</em> case &mdash; &ldquo;together, they make a strong case that the Sun is not the source of illumination&rdquo; &mdash; so answering them one at a time does not yet meet the claim as made.</p>
-  </li>
-</ul>
+<p><em>The five groupings below are ours, sorted by what each claim argues about. The book's own order is preserved in the <a href="#map">map above</a> &mdash; position is his, grouping is ours. Every question is quoted verbatim from the prerelease draft; the draft numbers two consecutive questions Q4, on pp.&nbsp;46 and 47, and both are listed. This index counts <strong>24</strong> claims rather than the 22 an earlier catalogue carried, because two long sections &mdash; Hydrostatics &amp; Optics at p.&nbsp;88 and Space Travel Requires Faith at p.&nbsp;56 &mdash; deserve rows of their own.</em></p>
 
-<h3>The twelve science questions from the book</h3>
-<p>The book poses twelve numbered questions on pp.&nbsp;44&ndash;55, under the heading &ldquo;12 Science Questions.&rdquo; They sit a level below the site's three claims &mdash; more specific, and in several cases pointing at particular observations or experiments. Summarised here in our words, with page references to the prerelease draft.</p>
+<div class="fam">
+  <h4>Optics, perspective and hydrostatics</h4>
+  <p class="fd">Seven claims. The strongest part of the book, and where most of what we concede sits.</p>
+</div>
 <ul class="claims">
   <li>
-    <span class="lbl">Q1 &middot; page&nbsp;44</span>
-    <p class="q">Whether gas-propelled vehicles need surrounding air to produce thrust &mdash; and so whether every engineering calculation for space travel rests on a faulty model.</p>
-    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Rockets Don't Push Against Air</a></p>
+    <span class="lbl">Claim&nbsp;#1 &middot; page&nbsp;2</span>
+    <p class="qq">&ldquo;Objects can disappear from the bottom up across a flat surface due to the limitations of angular resolution.&rdquo;</p>
+    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span>The mechanism is real and we grant it &mdash; something did disappear over 540 feet of his own pond, and his curvature arithmetic is right to the digit. What fails is the inference: by his own 1/60-degree criterion the raft should have stayed visible, and the effect came from a camera five times coarser than the eye. <a href="https://funwithscience.net/globe-deconstruction/bottom-up-observations/">Bottom Up Observations</a> &middot; <a href="https://funwithscience.net/globe-deconstruction/flat-surface-test/">Something Did Disappear</a> &middot; <a href="https://funwithscience.net/globe-deconstruction/rampion/">The Black Swan</a></p>
   </li>
   <li>
     <span class="lbl">Q2 &middot; page&nbsp;45</span>
-    <p class="q">Whether anyone has shown gravity to be strong enough to override hydrostatics in a controlled environment.</p>
-    <p class="meta"><span class="vd mislead prov">Misleading</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/hydrostatics/">Bending the Laws of Hydrostatics</a> &mdash; published for review, not yet an answer.</p>
-  </li>
-  <li>
-    <span class="lbl">Q3 &middot; page&nbsp;46</span>
-    <p class="q">What a flight data recorder would show for a pilot holding the equator, a constant turn, or a straight line over a sphere. <span class="cred">(Printed as &ldquo;Q4&rdquo; on p.&nbsp;46 &mdash; the book numbers two consecutive questions Q4.)</span></p>
-    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">The Equator Flight Data Challenge, Answered</a></p>
+    <p class="qq">&ldquo;Why has no one proved that spacetime curvature (known as gravity) is strong enough to literally bend the laws of hydrostatics in a controlled environment?&rdquo;</p>
+    <p class="meta"><span class="vd mislead prov">Misleading</span><span class="st draft">Draft</span>Nobody has run it, and we concede that. But the 3&nbsp;inches is his own rule applied to the wrong two points &mdash; middle-against-edges is 19.6&nbsp;mm &mdash; and a single hectopascal of air pressure moves the surface 10.19&nbsp;mm. <a href="https://funwithscience.net/globe-deconstruction/hydrostatics/">Bending the Laws of Hydrostatics</a></p>
   </li>
   <li>
     <span class="lbl">Q4 &middot; page&nbsp;47</span>
-    <p class="q">Whether we see perfectly mirrored reflections over large still bodies of water as observer height increases.</p>
-    <p class="meta"><span class="vd standard prov">Standard physics</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/mirrored-reflections/">Mirrored Reflections, Answered</a> &mdash; published for review, not yet an answer.</p>
-  </li>
-  <li>
-    <span class="lbl">Q5 &middot; page&nbsp;48</span>
-    <p class="q">Why stars and planets show no difference in apparent speed across a single night, despite the large difference in distance.</p>
-    <p class="meta"><span class="vd standard prov">Standard physics</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">The Sky Turns at One Rate, and Jupiter&rsquo;s Shadows Point at One Sun</a> &mdash; published for review, not yet an answer.</p>
-  </li>
-  <li>
-    <span class="lbl">Q6 &middot; page&nbsp;49</span>
-    <p class="q">Why the shadows of Jupiter's moons appear not to align with a single light source.</p>
-    <p class="meta"><span class="vd refuted prov">Refuted</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">The Sky Turns at One Rate, and Jupiter&rsquo;s Shadows Point at One Sun</a> &mdash; published for review, not yet an answer.</p>
-  </li>
-  <li>
-    <span class="lbl">Q7 &middot; page&nbsp;50</span>
-    <p class="q">How sunlight distributes evenly across a full Moon without a visible highlight point, if the Moon is a sphere in vacuum.</p>
-    <p class="meta"><span class="vd standard prov">Standard physics</span><span class="vd standard prov">Standard physics</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a> &mdash; published for review, not yet an answer.</p>
+    <p class="qq">&ldquo;Do we observe perfectly mirrored reflections over large bodies of water at rest as we increase observer height?&rdquo;</p>
+    <p class="meta"><span class="vd standard prov">Standard physics</span><span class="st draft">Draft</span>The mirror is 125&nbsp;m of water lying 41 to 166&nbsp;m from the camera, across which the Earth departs from flat by 0.3&nbsp;mm. It cannot discriminate &mdash; and neither can any globe-side reply built on the same photograph. <a href="https://funwithscience.net/globe-deconstruction/mirrored-reflections/">Mirrored Reflections, Answered</a></p>
   </li>
   <li>
     <span class="lbl">Q8 &middot; page&nbsp;51</span>
-    <p class="q">Why the Sun appears to shrink and fade rather than set, on clear days at altitude.</p>
-    <p class="meta"><span class="vd refuted prov">Refuted</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/sun-does-not-shrink/">The Sun Does Not Shrink</a> &mdash; published for review, not yet an answer.</p>
-  </li>
-  <li>
-    <span class="lbl">Q9 &middot; page&nbsp;52</span>
-    <p class="q">Why the Moon's full circular silhouette is never seen in the approach to a solar eclipse.</p>
-    <p class="meta"><span class="vd standard">Standard physics</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a></p>
-  </li>
-  <li>
-    <span class="lbl">Q10 &middot; page&nbsp;53</span>
-    <p class="q">How it was established that the atmosphere stays in rotational sync with the ground at every altitude.</p>
-    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
-  </li>
-  <li>
-    <span class="lbl">Q11 &middot; page&nbsp;54</span>
-    <p class="q">Why a time-lapse at the rotational pole shows no movement, given zero air speed at the axis &mdash; and why nobody has tested a Compton generator in Antarctica.</p>
-    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
+    <p class="qq">&ldquo;Why on clear days with low humidity and high altitude does the Sun observably not set (like shown in movies), but rather shrinks due to linear perspective and disappears completely from a lack of visibility?&rdquo;</p>
+    <p class="meta"><span class="vd refuted prov">Refuted</span><span class="st draft">Draft</span>A receding lamp must shrink by 4.07&times; between 45&deg; and 10&deg;. The measured disc is flat to a fraction of a per cent across 130 years of observation. <a href="https://funwithscience.net/globe-deconstruction/sun-does-not-shrink/">The Sun Does Not Shrink</a></p>
   </li>
   <li>
     <span class="lbl">Q12 &middot; page&nbsp;55</span>
-    <p class="q">Who established that sunlight travels in a perfectly straight line through hundreds of miles of atmosphere, and whether that assumption invalidates shadow-angle arguments.</p>
-    <p class="meta"><span class="vd none">Unassessed</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/sunlight-and-shadows/">Sunlight Bends in Air, and the Bend Is About One Arcminute</a> &mdash; published for review, not yet an answer.</p>
+    <p class="qq">&ldquo;What scientist proved that sunlight moves in a perfectly straight line through hundreds or thousands of miles of gas? Is this an incorrect assumption when measuring shadow angles to dismiss the possibility of a flat Earth?&rdquo;</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st draft">Draft</span>The premise is conceded entirely: nobody established it, and two sticks cannot separate the models. Unassessed because our page still takes its ground distance from an integration of the WGS84 meridian &mdash; the conclusion in parametric form. <a href="https://funwithscience.net/globe-deconstruction/sunlight-and-shadows/">Sunlight Bends in Air</a></p>
+  </li>
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;88&ndash;116</span>
+    <p class="qq">Hydrostatics &amp; Optics &mdash; twenty-nine pages, the densest run outside the opening.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st part">Partly answered</span>Includes the Rampion wind-farm footage at pp.&nbsp;91&ndash;95, which has its own answer. The rest of the section does not. <a href="https://funwithscience.net/globe-deconstruction/rampion/">The Black Swan, Answered</a></p>
+  </li>
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;124&ndash;152</span>
+    <p class="qq">Celestial Globes Exposed &mdash; Polaris's inconsistent calculated height, and whether linear perspective accounts for it.</p>
+    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span>Rescuing the flat Polaris measurement needs starlight bent by up to 19&deg;. Refraction supplies 0.09&deg; at that elevation and pushes the other way. <a href="https://funwithscience.net/globe-deconstruction/celestial-globes/">Celestial Globes Exposed, Answered</a></p>
+  </li>
+</ul>
+<div class="fam">
+  <h4>Thrust in a vacuum</h4>
+  <p class="fd">Three claims. The most decisively testable set, and the one with the most measurement behind it on both sides.</p>
+</div>
+<ul class="claims">
+  <li>
+    <span class="lbl">Claim&nbsp;#2 &middot; page&nbsp;2</span>
+    <p class="qq">&ldquo;Mainstream physics is completely wrong in its understanding of how gas-propelled vehicles work in a vacuum. Thrust from gas must have something to push off, and an infinite vacuum does not provide that.&rdquo;</p>
+    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span>The push-off premise is the claim; Newton's third law is what follows if it holds. Engines have been measured firing in real space, several unrelated ways at once, agreeing to a few per cent. <a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Rockets Don't Push Against Air</a> &middot; <a href="https://funwithscience.net/globe-deconstruction/action-lab-footage/">The Action Lab Footage</a> &middot; <a href="https://funwithscience.net/globe-deconstruction/thrust-in-flight/">Thrust, Measured in Flight</a></p>
+  </li>
+  <li>
+    <span class="lbl">Q1 &middot; page&nbsp;44</span>
+    <p class="qq">&ldquo;Why does the scientific method reveal that gas-propelled vehicles utilize the surrounding gases for movement? If verified, all engineering calculations for space travel are based on a faulty model.&rdquo;</p>
+    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span>Air does act on a rocket, and its effect is negative &mdash; which is why the same engine is rated 7,607&nbsp;kN at sea level and 8,227&nbsp;kN in vacuum. <a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Rockets Don't Push Against Air</a></p>
+  </li>
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;56&ndash;87</span>
+    <p class="qq">Space Travel Requires Faith &mdash; thirty-two pages, including the frame-by-frame reading of the vacuum-chamber video at pp.&nbsp;80&ndash;83.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st part">Partly answered</span>The video has an answer and the ordering it shows is conceded. The section's wider argument about space agencies does not. <a href="https://funwithscience.net/globe-deconstruction/action-lab-footage/">The Action Lab Footage, Frame by Frame</a></p>
+  </li>
+</ul>
+<div class="fam">
+  <h4>Rotation and flight data</h4>
+  <p class="fd">Five claims, all answered &mdash; the only family where public instrument data settles the question without either side running a new experiment.</p>
+</div>
+<ul class="claims">
+  <li>
+    <span class="lbl">Q3 &middot; page&nbsp;46 &middot; <span class="cred">printed as Q4</span></span>
+    <p class="qq">&ldquo;What would the flight data recorder reveal if a pilot maintained perfect positioning on the equator, a constant turn, or a straight line around a sphere?&rdquo;</p>
+    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span>The 119&deg; requirement is 8,250&nbsp;mi &divide; 24,901&nbsp;mi &times; 360 &mdash; the globe's own circumference, used to generate the flat model's prediction. The named airports are 172&deg; apart, not 119&deg;. <a href="https://funwithscience.net/globe-deconstruction/equator-flight/">The Equator Flight Data Challenge, Answered</a></p>
+  </li>
+  <li>
+    <span class="lbl">Q10 &middot; page&nbsp;53</span>
+    <p class="qq">&ldquo;How was the scientific method used to prove that air layers have enough friction to stay in perfect rotational sync across all heights of the atmosphere and the Earth to where we perceive zero motion?&rdquo;</p>
+    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span>Nobody claims perfect sync, and the failures are the whole of meteorology. His air-speed table is right to the mile per hour. <a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
+  </li>
+  <li>
+    <span class="lbl">Q11 &middot; page&nbsp;54</span>
+    <p class="qq">&ldquo;If you travel to the exact location of the rotational south pole, why does a high-altitude time-lapse show no movement of the surrounding Earth landscape relative to the camera? Why has no scientist tested the Compton generator in Antarctica?&rdquo;</p>
+    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span>The fact is right and the inference is not: zero tangential speed at the axis is not zero angular rate. On the same law the pole is where a Compton generator reads strongest. <a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
+  </li>
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;117&ndash;123</span>
+    <p class="qq">The Equator Flight Data Challenge.</p>
+    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span>Same finding at chapter scale: the flat side of the comparison is given no scale, so no distance, so no angle. <a href="https://funwithscience.net/globe-deconstruction/equator-flight/">The Equator Flight Data Challenge, Answered</a></p>
+  </li>
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;179&ndash;202</span>
+    <p class="qq">Perfectly Synchronized Gas Rotating with Earth? &mdash; co-rotation, gyroscopes, the Foucault pendulum and the rotational axis.</p>
+    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span>Fifteen NOAA drifters recover half a sidereal day to within half a per cent and reverse handedness at the equator. We concede Foucault pendulums are genuinely hard to run. <a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a> &middot; <a href="https://funwithscience.net/globe-deconstruction/coriolis-drifters/">One Spin, Written Across Every Latitude</a></p>
+  </li>
+</ul>
+<div class="fam">
+  <h4>Celestial observations</h4>
+  <p class="fd">Six claims, one answered. The largest open gap in this review, and we would rather say so than pad it.</p>
+</div>
+<ul class="claims">
+  <li>
+    <span class="lbl">Claim&nbsp;#3 &middot; page&nbsp;2</span>
+    <p class="qq">&ldquo;There are too many red flags in celestial observations.&rdquo; Four of them: full-moon light distribution, the moon-tilt illusion, Jupiter's moon shadows, and eclipse trajectory alignment.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st part">Partly answered</span>Run as a <em>cumulative</em> case, so answering one limb does not meet it. The eclipse limb has a page; two others are written up only as tests. <a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a> &middot; <a href="https://funwithscience.net/globe-deconstruction/self-test-protocol/">Self-Test Protocol</a></p>
+  </li>
+  <li>
+    <span class="lbl">Q5 &middot; page&nbsp;48</span>
+    <p class="qq">&ldquo;Why is there no difference in visual speed between stars and planets as the Earth spins during a single night? A large distance gap requires that visual speeds will not be equal to the observer.&rdquo;</p>
+    <p class="meta"><span class="vd standard prov">Standard physics</span><span class="st draft">Draft</span>The observation is right and understated &mdash; for stars the diurnal rate carries no distance information at one part in ten billion, because rotation changes where you point, not where you are. <a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">The Sky Turns at One Rate</a></p>
+  </li>
+  <li>
+    <span class="lbl">Q6 &middot; page&nbsp;49</span>
+    <p class="qq">&ldquo;Why do the moons of Jupiter produce shadows that are not aligned with the singular light source of the Sun? Are we assuming them to be shadows or can it be proven?&rdquo;</p>
+    <p class="meta"><span class="vd refuted prov">Refuted</span><span class="st draft">Draft</span>One angle applied to four orbital radii, reproducing the offsets to about a per cent. They vanish at opposition and reverse sign across it. <a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">Jupiter's Shadows Point at One Sun</a></p>
+  </li>
+  <li>
+    <span class="lbl">Q7 &middot; page&nbsp;50</span>
+    <p class="qq">&ldquo;If the Moon is a spherical rock in a vacuum, how does the light of the Sun perfectly distribute across the entire surface during a full Moon without any highlight points?&rdquo;</p>
+    <p class="meta"><span class="vd standard prov">Standard physics</span><span class="st draft">Draft</span>The observation falsifies Lambert's cosine law and nothing else. At full phase a Lommel-Seeliger sphere and a flat disc are photometrically identical, so it carries no information about shape either way. <a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a></p>
+  </li>
+  <li>
+    <span class="lbl">Q9 &middot; page&nbsp;52</span>
+    <p class="qq">&ldquo;Why do we never observe the entire circular silhouette of the Moon when approaching a solar eclipse? Photo manipulation always fails to detect evidence of the Moon.&rdquo;</p>
+    <p class="meta"><span class="vd standard">Standard physics</span><span class="st done">Answered</span>Exactly what the standard model predicts: new-moon phase is defined as zero reflected light toward Earth, and there is no dark disc in the data to stretch. <a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a></p>
+  </li>
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;153&ndash;178</span>
+    <p class="qq">Unknown Luminaries &mdash; the planets, Jupiter's moons and their shadows, and what the objects in the sky actually are.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st part">Partly answered</span>The eclipse half is covered and the lighting half has a draft. The chapter's own thesis is not addressed.</p>
+  </li>
+</ul>
+<div class="fam">
+  <h4>Standards of proof and the historical record</h4>
+  <p class="fd">Three claims across 271 pages. Nothing here is an observation about the shape of the Earth, which is why the family sits last &mdash; and why two of the three are catalogued rather than answered.</p>
+</div>
+<ul class="claims">
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;203&ndash;240</span>
+    <p class="qq">Extraordinary Evidence or Fallacy &mdash; the standard of proof demanded of the two models. Thirty-eight pages at 188 words each, the densest section in the draft.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st draft">Draft</span>Unassessed because we accept it rather than answer it. The asymmetric-scrutiny charge lands, including on this review, and our page names an instance of our own double standard found while writing it. <a href="https://funwithscience.net/globe-deconstruction/extraordinary-evidence/">The Standard of Proof Cuts Both Ways</a></p>
+  </li>
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;241&ndash;414</span>
+    <p class="qq">All Construction Records Missing? &mdash; 174 pages on nineteenth-century architecture, World's Fairs, asylums and railway stations.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st todo">Not yet</span>The author stamps this <strong>SPECULATION</strong> and writes that everything beyond p.&nbsp;240 &ldquo;should not be used in the shape debate&rdquo;, so we catalogue it and leave it. The separate blueprint challenge &mdash; which <em>is</em> in scope, at p.&nbsp;148 &mdash; has an answer: <a href="https://funwithscience.net/globe-deconstruction/construction-records/">Curvature Is in the Construction Record</a></p>
+  </li>
+  <li>
+    <span class="lbl">Section &middot; pages&nbsp;415&ndash;473</span>
+    <p class="qq">Antarctica's Magnetic North &mdash; and the speculative map that removes magnetic declination.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st todo">Not yet</span>Also inside the author's own speculation fence. His argument is that declination may be an invention &ldquo;created to make our current maps appear accurate&rdquo;; an earlier version of this catalogue described it as a claim about pole location, which it is not.</p>
   </li>
 </ul>
 
-<h3>Section-level arguments</h3>
-<p>Several of the book's strongest arguments are made across whole chapters and don't correspond to any numbered question. These are its own section titles and page numbers, taken from its table of contents.</p>
-<ul class="claims">
-  <li>
-    <span class="lbl">Section &middot; page&nbsp;117</span>
-    <p class="q">The Equator Flight Data Challenge &mdash; what a flight data recorder would show for an aircraft holding the equator, or any other line of latitude.</p>
-    <p class="meta"><span class="vd mislead">Misleading</span><span class="vd mislead">Misleading</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">The Equator Flight Data Challenge, Answered</a></p>
-  </li>
-  <li>
-    <span class="lbl">Section &middot; page&nbsp;124</span>
-    <p class="q">Celestial Globes Exposed &mdash; Polaris's inconsistent calculated height, and whether linear perspective accounts for it.</p>
-    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/celestial-globes/">Celestial Globes Exposed, Answered</a></p>
-  </li>
-  <li>
-    <span class="lbl">Section &middot; page&nbsp;153</span>
-    <p class="q">Unknown Luminaries &mdash; the planets, Jupiter's moons and their shadows, and what the objects in the sky actually are.</p>
-    <p class="meta"><span class="vd none">Unassessed</span><span class="st part">Partly answered</span>The eclipse half is covered in <a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a>, and the full-Moon lighting half has a draft at <a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a>; the planets and Jupiter's moons are not yet.</p>
-  </li>
-  <li>
-    <span class="lbl">Section &middot; page&nbsp;179</span>
-    <p class="q">Perfectly Synchronized Gas Rotating with Earth? &mdash; atmospheric co-rotation, gyroscopes, the Foucault pendulum, and the rotational axis.</p>
-    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
-  </li>
-  <li>
-    <span class="lbl">Section &middot; page&nbsp;203</span>
-    <p class="q">Extraordinary Evidence or Fallacy &mdash; the standard of proof demanded of the two models.</p>
-    <p class="meta"><span class="vd none">Unassessed</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/extraordinary-evidence/">The Standard of Proof Cuts Both Ways</a> &mdash; published for review, not yet an answer. The Antarctic magnetic half has been withdrawn: it answered a claim the book does not make.</p>
-  </li>
-  <li>
-    <span class="lbl">Section &middot; page&nbsp;241</span>
-    <p class="q">All Construction Records Missing? &mdash; the challenge to produce blueprints for large-scale projects that account for curvature.</p>
-    <p class="meta"><span class="vd none">Unassessed</span><span class="st todo">Not yet</span>No page yet &mdash; and this entry is mis-sourced. The p.&nbsp;241 chapter is about missing documentation for American historical architecture, and the book marks it <strong>SPECULATION</strong>. The blueprint challenge the review actually answers is in the Celestial Globes chapter: <a href="https://funwithscience.net/globe-deconstruction/construction-records/">Curvature Is in the Construction Record</a> (draft).</p>
-  </li>
-  <li>
-    <span class="lbl">Section &middot; page&nbsp;415</span>
-    <p class="q">Antarctica's Magnetic North.</p>
-    <p class="meta"><span class="vd none">Unassessed</span><span class="st todo">Not yet</span>No page yet.</p>
-  </li>
-</ul>
+<h2 id="concede">What we concede</h2>
+<p>A review that cannot concede anything is not a review. These are places where the book is right, or where the observation is real and the disagreement is only about the cause.</p>
+<div class="concede">
+  <div class="ccard"><h4>The pond arithmetic is correct</h4><p>Over 540 feet a globe hides nothing. His curvature figure is right to the digit, and something did disappear.</p></div>
+  <div class="ccard"><h4>The perspective physics is real</h4><p>Angular resolution and perspective compression do make objects vanish from the bottom up. The question is at what range, not whether.</p></div>
+  <div class="ccard"><h4>The Action Lab ordering is real</h4><p>Gas reaches the chamber wall about two seconds of playback before the syringe moves. Neither account forbids that ordering.</p></div>
+  <div class="ccard"><h4>Foucault pendulums are hard</h4><p>They are genuinely difficult to run well, and the demonstration is often presented with more confidence than the apparatus earns.</p></div>
+  <div class="ccard"><h4>The asymmetric-standard charge lands</h4><p>It is correct, and it lands on this review too. We found an instance of our own double standard while writing the page that describes it.</p></div>
+  <div class="ccard"><h4>He fences his own speculation</h4><p>Two hundred and thirty-three pages are stamped SPECULATION and excluded from the shape debate by the author himself. That is more discipline than the genre usually shows.</p></div>
+</div>
+
+<h2>What would settle it</h2>
+<p>Every answered page ends with tests that could go against us, or they would not be worth proposing. Seven are written up as a hand-off built from the book's own falsification-first, Team&nbsp;A versus Team&nbsp;B methodology, with no commentary attached &mdash; <a href="https://funwithscience.net/globe-deconstruction/self-test-protocol/">the Self-Test Protocol</a>.</p>
 
 <h2 id="drafts">In draft &mdash; published for review, not yet answers</h2>
 <div class="note"><strong>These are unreviewed first drafts.</strong> They are published so they can be read in place and marked up, not because they are finished. None is linked as an answer in the catalogue above, each is marked <code>noindex</code>, and each carries a notice naming what is still outstanding on it.</div>
@@ -480,7 +1103,7 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 </div>
 
 <h2>Status</h2>
-<p>Of the twenty-two items, <strong>sixteen carry a verdict and six do not</strong> &mdash; seven refuted, five misleading, four standard physics. Six of the sixteen are marked provisional, because the page behind them has had one pass and no review. The unassessed six are unassessed for stated reasons: two are catalogue entries we have found to be mis-sourced and have not yet rewritten, one is a cumulative claim that cannot be graded from a subset, one is a charge against this review that we accept rather than answer, and two have no page at all. This is an active review of a book that is itself still in prerelease, so both sides are moving. Pages are dated and revised in place rather than replaced, and where a page has changed materially in response to something the author said, it says so.</p>
+<p>Of the twenty-four items, <strong>sixteen carry a verdict and eight do not</strong> &mdash; 7 refuted, 5 misleading, 4 standard physics. Six of the sixteen are provisional, resting on an unreviewed draft. The eight unassessed are unassessed for stated reasons: two sit inside the author's own speculation fence, two are sections whose wider argument we have not answered, one is a cumulative claim that cannot be graded from a subset, one is a charge against this review that we accept, one has a chapter thesis still untouched, and one rests on a page with a circularity we have not yet fixed. This is an active review of a book that is itself still in prerelease, so both sides are moving. Pages are dated and revised in place rather than replaced, and where a page has changed materially in response to something the author said, it says so.</p>
 
 <h2 id="sources">The primary sources</h2>
 <ul class="src-list">

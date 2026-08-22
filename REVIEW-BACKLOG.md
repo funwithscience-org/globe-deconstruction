@@ -9,6 +9,34 @@ Catalogue source of truth is `docs/index.html`. When an item closes, update
 
 ---
 
+## STANDING CONVENTION — the page map is measured, and word counts alone lie about this book
+
+`docs/index.html`'s density map is generated: `data/page-density.json` (from the raw
+500-page PDF) → `scripts/build_map.py` → markup pasted into the landing page.
+
+**Never describe the last third of the draft by word count alone.** Counting words says
+pp. 241–473 average 35 words a page and look near-empty. They are not: there are 725
+images across 358 of the 500 pages and exactly **one** genuinely blank page in the book.
+Those sections are photographic — capitols, World's Fair halls, Civil War portraits,
+Antarctic coastline. Publishing "half the book is empty" would be false and Miller could
+refute it by opening the draft.
+
+The defensible finding, measured three ways:
+- 80% of the book's words are in the first 240 pages.
+- Of the 174 pages in "All Construction Records Missing?", 89 carry a picture and either
+  nothing or a bare place name ("Ohio", "China", "Indiana Illinois") — labels, not captions.
+- That section's argument is **32 pages**, holding 5,233 of its 6,068 words.
+
+So: not empty, and not a developed argument either — plates presented as cumulative
+weight. Same shape as the sibling project's finding that a 461-item proof list collapses
+to 98 distinct arguments; volume standing in for evidence, in a different medium.
+
+Method, if it needs redoing: `pdftotext -layout` and `pdfimages -list` on the Canva
+export dated 3 August 2026. Printed folio = PDF index − 26, constant, checked against
+nine landmarks. Front matter before p. 7 excluded (irregular pagination).
+
+---
+
 ## STANDING CONVENTION — the left-hand nav is generated, do not hand-edit it
 
 Every `docs/**/index.html` carries an identical nav block between `<!--SITENAV-->`

@@ -1,0 +1,2929 @@
+{
+ "sections": [
+  {
+   "a": 7,
+   "b": 55,
+   "name": "Opening &amp; the 12 Science Questions",
+   "pages": 49,
+   "words": 7328,
+   "mean": 150,
+   "plates": 0,
+   "cells": [
+    {
+     "p": 7,
+     "w": 27,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 8,
+     "w": 348,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 9,
+     "w": 202,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 10,
+     "w": 334,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 11,
+     "w": 358,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 12,
+     "w": 210,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 13,
+     "w": 17,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 14,
+     "w": 7,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 15,
+     "w": 49,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 16,
+     "w": 319,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 17,
+     "w": 328,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 18,
+     "w": 326,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 19,
+     "w": 176,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 20,
+     "w": 88,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 21,
+     "w": 19,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 22,
+     "w": 235,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 23,
+     "w": 200,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 24,
+     "w": 253,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 25,
+     "w": 269,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 26,
+     "w": 31,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 27,
+     "w": 301,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 28,
+     "w": 192,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 29,
+     "w": 300,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 30,
+     "w": 309,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 31,
+     "w": 300,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 32,
+     "w": 42,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 33,
+     "w": 10,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 34,
+     "w": 220,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 35,
+     "w": 207,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 36,
+     "w": 227,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 37,
+     "w": 268,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 38,
+     "w": 228,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 39,
+     "w": 107,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 40,
+     "w": 344,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 41,
+     "w": 13,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 42,
+     "w": 20,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 43,
+     "w": 11,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 44,
+     "w": 31,
+     "k": "prose",
+     "c": "Q1"
+    },
+    {
+     "p": 45,
+     "w": 27,
+     "k": "prose",
+     "c": "Q2"
+    },
+    {
+     "p": 46,
+     "w": 29,
+     "k": "prose",
+     "c": "Q3 (printed Q4)"
+    },
+    {
+     "p": 47,
+     "w": 20,
+     "k": "prose",
+     "c": "Q4"
+    },
+    {
+     "p": 48,
+     "w": 37,
+     "k": "prose",
+     "c": "Q5"
+    },
+    {
+     "p": 49,
+     "w": 34,
+     "k": "prose",
+     "c": "Q6"
+    },
+    {
+     "p": 50,
+     "w": 33,
+     "k": "prose",
+     "c": "Q7"
+    },
+    {
+     "p": 51,
+     "w": 38,
+     "k": "prose",
+     "c": "Q8"
+    },
+    {
+     "p": 52,
+     "w": 29,
+     "k": "prose",
+     "c": "Q9"
+    },
+    {
+     "p": 53,
+     "w": 59,
+     "k": "prose",
+     "c": "Q10"
+    },
+    {
+     "p": 54,
+     "w": 58,
+     "k": "prose",
+     "c": "Q11"
+    },
+    {
+     "p": 55,
+     "w": 38,
+     "k": "prose",
+     "c": "Q12"
+    }
+   ]
+  },
+  {
+   "a": 56,
+   "b": 87,
+   "name": "Space Travel Requires Faith",
+   "pages": 32,
+   "words": 4788,
+   "mean": 150,
+   "plates": 0,
+   "cells": [
+    {
+     "p": 56,
+     "w": 23,
+     "k": "prose",
+     "c": "Space Travel Requires Faith"
+    },
+    {
+     "p": 57,
+     "w": 147,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 58,
+     "w": 91,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 59,
+     "w": 122,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 60,
+     "w": 26,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 61,
+     "w": 30,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 62,
+     "w": 211,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 63,
+     "w": 177,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 64,
+     "w": 220,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 65,
+     "w": 202,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 66,
+     "w": 192,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 67,
+     "w": 270,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 68,
+     "w": 281,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 69,
+     "w": 287,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 70,
+     "w": 203,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 71,
+     "w": 117,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 72,
+     "w": 296,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 73,
+     "w": 34,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 74,
+     "w": 202,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 75,
+     "w": 88,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 76,
+     "w": 254,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 77,
+     "w": 257,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 78,
+     "w": 238,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 79,
+     "w": 315,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 80,
+     "w": 75,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 81,
+     "w": 24,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 82,
+     "w": 57,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 83,
+     "w": 11,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 84,
+     "w": 222,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 85,
+     "w": 83,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 86,
+     "w": 25,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 87,
+     "w": 8,
+     "k": "mixed",
+     "c": null
+    }
+   ]
+  },
+  {
+   "a": 88,
+   "b": 116,
+   "name": "Hydrostatics &amp; Optics",
+   "pages": 29,
+   "words": 3288,
+   "mean": 113,
+   "plates": 0,
+   "cells": [
+    {
+     "p": 88,
+     "w": 9,
+     "k": "prose",
+     "c": "Hydrostatics &amp; Optics"
+    },
+    {
+     "p": 89,
+     "w": 225,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 90,
+     "w": 294,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 91,
+     "w": 201,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 92,
+     "w": 244,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 93,
+     "w": 10,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 94,
+     "w": 29,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 95,
+     "w": 142,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 96,
+     "w": 203,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 97,
+     "w": 99,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 98,
+     "w": 197,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 99,
+     "w": 29,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 100,
+     "w": 50,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 101,
+     "w": 167,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 102,
+     "w": 52,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 103,
+     "w": 9,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 104,
+     "w": 170,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 105,
+     "w": 132,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 106,
+     "w": 26,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 107,
+     "w": 117,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 108,
+     "w": 85,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 109,
+     "w": 58,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 110,
+     "w": 148,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 111,
+     "w": 151,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 112,
+     "w": 163,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 113,
+     "w": 78,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 114,
+     "w": 74,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 115,
+     "w": 25,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 116,
+     "w": 101,
+     "k": "mixed",
+     "c": null
+    }
+   ]
+  },
+  {
+   "a": 117,
+   "b": 123,
+   "name": "The Equator Flight Data Challenge",
+   "pages": 7,
+   "words": 1304,
+   "mean": 186,
+   "plates": 0,
+   "cells": [
+    {
+     "p": 117,
+     "w": 23,
+     "k": "prose",
+     "c": "Equator Flight Data"
+    },
+    {
+     "p": 118,
+     "w": 250,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 119,
+     "w": 188,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 120,
+     "w": 305,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 121,
+     "w": 251,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 122,
+     "w": 275,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 123,
+     "w": 12,
+     "k": "mixed",
+     "c": null
+    }
+   ]
+  },
+  {
+   "a": 124,
+   "b": 152,
+   "name": "Celestial Globes Exposed",
+   "pages": 29,
+   "words": 3248,
+   "mean": 112,
+   "plates": 1,
+   "cells": [
+    {
+     "p": 124,
+     "w": 16,
+     "k": "prose",
+     "c": "Celestial Globes"
+    },
+    {
+     "p": 125,
+     "w": 4,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 126,
+     "w": 118,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 127,
+     "w": 79,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 128,
+     "w": 178,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 129,
+     "w": 160,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 130,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 131,
+     "w": 259,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 132,
+     "w": 109,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 133,
+     "w": 7,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 134,
+     "w": 140,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 135,
+     "w": 99,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 136,
+     "w": 23,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 137,
+     "w": 242,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 138,
+     "w": 156,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 139,
+     "w": 8,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 140,
+     "w": 224,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 141,
+     "w": 136,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 142,
+     "w": 115,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 143,
+     "w": 166,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 144,
+     "w": 22,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 145,
+     "w": 190,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 146,
+     "w": 62,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 147,
+     "w": 55,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 148,
+     "w": 168,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 149,
+     "w": 72,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 150,
+     "w": 278,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 151,
+     "w": 137,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 152,
+     "w": 24,
+     "k": "mixed",
+     "c": null
+    }
+   ]
+  },
+  {
+   "a": 153,
+   "b": 178,
+   "name": "Unknown Luminaries",
+   "pages": 26,
+   "words": 1955,
+   "mean": 75,
+   "plates": 2,
+   "cells": [
+    {
+     "p": 153,
+     "w": 11,
+     "k": "prose",
+     "c": "Unknown Luminaries"
+    },
+    {
+     "p": 154,
+     "w": 25,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 155,
+     "w": 17,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 156,
+     "w": 128,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 157,
+     "w": 48,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 158,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 159,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 160,
+     "w": 176,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 161,
+     "w": 117,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 162,
+     "w": 58,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 163,
+     "w": 18,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 164,
+     "w": 39,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 165,
+     "w": 195,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 166,
+     "w": 185,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 167,
+     "w": 33,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 168,
+     "w": 33,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 169,
+     "w": 37,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 170,
+     "w": 17,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 171,
+     "w": 83,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 172,
+     "w": 8,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 173,
+     "w": 69,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 174,
+     "w": 231,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 175,
+     "w": 179,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 176,
+     "w": 25,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 177,
+     "w": 58,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 178,
+     "w": 163,
+     "k": "mixed",
+     "c": null
+    }
+   ]
+  },
+  {
+   "a": 179,
+   "b": 202,
+   "name": "Perfectly Synchronized Gas Rotating with Earth?",
+   "pages": 24,
+   "words": 3101,
+   "mean": 129,
+   "plates": 1,
+   "cells": [
+    {
+     "p": 179,
+     "w": 32,
+     "k": "prose",
+     "c": "Synchronized Gas"
+    },
+    {
+     "p": 180,
+     "w": 123,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 181,
+     "w": 29,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 182,
+     "w": 234,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 183,
+     "w": 119,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 184,
+     "w": 152,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 185,
+     "w": 200,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 186,
+     "w": 247,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 187,
+     "w": 190,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 188,
+     "w": 65,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 189,
+     "w": 72,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 190,
+     "w": 89,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 191,
+     "w": 22,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 192,
+     "w": 28,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 193,
+     "w": 242,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 194,
+     "w": 187,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 195,
+     "w": 20,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 196,
+     "w": 181,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 197,
+     "w": 278,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 198,
+     "w": 205,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 199,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 200,
+     "w": 199,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 201,
+     "w": 24,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 202,
+     "w": 162,
+     "k": "mixed",
+     "c": null
+    }
+   ]
+  },
+  {
+   "a": 203,
+   "b": 240,
+   "name": "Extraordinary Evidence or Fallacy",
+   "pages": 38,
+   "words": 7160,
+   "mean": 188,
+   "plates": 0,
+   "cells": [
+    {
+     "p": 203,
+     "w": 21,
+     "k": "prose",
+     "c": "Extraordinary Evidence"
+    },
+    {
+     "p": 204,
+     "w": 18,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 205,
+     "w": 275,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 206,
+     "w": 148,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 207,
+     "w": 26,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 208,
+     "w": 40,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 209,
+     "w": 303,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 210,
+     "w": 235,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 211,
+     "w": 245,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 212,
+     "w": 187,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 213,
+     "w": 278,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 214,
+     "w": 236,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 215,
+     "w": 267,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 216,
+     "w": 237,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 217,
+     "w": 254,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 218,
+     "w": 274,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 219,
+     "w": 281,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 220,
+     "w": 247,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 221,
+     "w": 254,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 222,
+     "w": 266,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 223,
+     "w": 276,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 224,
+     "w": 287,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 225,
+     "w": 249,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 226,
+     "w": 253,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 227,
+     "w": 244,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 228,
+     "w": 243,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 229,
+     "w": 256,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 230,
+     "w": 292,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 231,
+     "w": 21,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 232,
+     "w": 75,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 233,
+     "w": 1,
+     "k": "blank",
+     "c": null
+    },
+    {
+     "p": 234,
+     "w": 21,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 235,
+     "w": 18,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 236,
+     "w": 218,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 237,
+     "w": 187,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 238,
+     "w": 187,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 239,
+     "w": 144,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 240,
+     "w": 96,
+     "k": "prose",
+     "c": null
+    }
+   ]
+  },
+  {
+   "a": 241,
+   "b": 414,
+   "name": "All Construction Records Missing?",
+   "pages": 174,
+   "words": 6068,
+   "mean": 35,
+   "plates": 89,
+   "cells": [
+    {
+     "p": 241,
+     "w": 28,
+     "k": "mixed",
+     "c": "Construction Records"
+    },
+    {
+     "p": 242,
+     "w": 6,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 243,
+     "w": 77,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 244,
+     "w": 288,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 245,
+     "w": 264,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 246,
+     "w": 19,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 247,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 248,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 249,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 250,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 251,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 252,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 253,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 254,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 255,
+     "w": 22,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 256,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 257,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 258,
+     "w": 9,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 259,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 260,
+     "w": 14,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 261,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 262,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 263,
+     "w": 6,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 264,
+     "w": 3,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 265,
+     "w": 3,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 266,
+     "w": 2,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 267,
+     "w": 3,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 268,
+     "w": 3,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 269,
+     "w": 4,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 270,
+     "w": 2,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 271,
+     "w": 3,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 272,
+     "w": 2,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 273,
+     "w": 3,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 274,
+     "w": 214,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 275,
+     "w": 89,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 276,
+     "w": 176,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 277,
+     "w": 144,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 278,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 279,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 280,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 281,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 282,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 283,
+     "w": 155,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 284,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 285,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 286,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 287,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 288,
+     "w": 10,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 289,
+     "w": 7,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 290,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 291,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 292,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 293,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 294,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 295,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 296,
+     "w": 13,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 297,
+     "w": 131,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 298,
+     "w": 11,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 299,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 300,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 301,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 302,
+     "w": 5,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 303,
+     "w": 17,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 304,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 305,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 306,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 307,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 308,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 309,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 310,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 311,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 312,
+     "w": 27,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 313,
+     "w": 4,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 314,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 315,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 316,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 317,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 318,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 319,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 320,
+     "w": 26,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 321,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 322,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 323,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 324,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 325,
+     "w": 23,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 326,
+     "w": 17,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 327,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 328,
+     "w": 45,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 329,
+     "w": 34,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 330,
+     "w": 23,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 331,
+     "w": 9,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 332,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 333,
+     "w": 8,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 334,
+     "w": 13,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 335,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 336,
+     "w": 6,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 337,
+     "w": 11,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 338,
+     "w": 198,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 339,
+     "w": 239,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 340,
+     "w": 12,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 341,
+     "w": 84,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 342,
+     "w": 16,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 343,
+     "w": 23,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 344,
+     "w": 20,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 345,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 346,
+     "w": 226,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 347,
+     "w": 195,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 348,
+     "w": 198,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 349,
+     "w": 95,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 350,
+     "w": 66,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 351,
+     "w": 191,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 352,
+     "w": 4,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 353,
+     "w": 3,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 354,
+     "w": 106,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 355,
+     "w": 55,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 356,
+     "w": 33,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 357,
+     "w": 146,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 358,
+     "w": 105,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 359,
+     "w": 157,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 360,
+     "w": 285,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 361,
+     "w": 34,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 362,
+     "w": 218,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 363,
+     "w": 160,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 364,
+     "w": 262,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 365,
+     "w": 92,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 366,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 367,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 368,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 369,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 370,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 371,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 372,
+     "w": 7,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 373,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 374,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 375,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 376,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 377,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 378,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 379,
+     "w": 33,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 380,
+     "w": 126,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 381,
+     "w": 12,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 382,
+     "w": 21,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 383,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 384,
+     "w": 6,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 385,
+     "w": 4,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 386,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 387,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 388,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 389,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 390,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 391,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 392,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 393,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 394,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 395,
+     "w": 4,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 396,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 397,
+     "w": 40,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 398,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 399,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 400,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 401,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 402,
+     "w": 12,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 403,
+     "w": 4,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 404,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 405,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 406,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 407,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 408,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 409,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 410,
+     "w": 15,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 411,
+     "w": 162,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 412,
+     "w": 38,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 413,
+     "w": 284,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 414,
+     "w": 25,
+     "k": "mixed",
+     "c": null
+    }
+   ]
+  },
+  {
+   "a": 415,
+   "b": 473,
+   "name": "Antarctica's Magnetic North",
+   "pages": 59,
+   "words": 2177,
+   "mean": 37,
+   "plates": 28,
+   "cells": [
+    {
+     "p": 415,
+     "w": 284,
+     "k": "prose",
+     "c": "Antarctica"
+    },
+    {
+     "p": 416,
+     "w": 42,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 417,
+     "w": 83,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 418,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 419,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 420,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 421,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 422,
+     "w": 131,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 423,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 424,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 425,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 426,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 427,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 428,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 429,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 430,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 431,
+     "w": 14,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 432,
+     "w": 267,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 433,
+     "w": 269,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 434,
+     "w": 95,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 435,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 436,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 437,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 438,
+     "w": 229,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 439,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 440,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 441,
+     "w": 62,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 442,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 443,
+     "w": 21,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 444,
+     "w": 33,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 445,
+     "w": 16,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 446,
+     "w": 106,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 447,
+     "w": 15,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 448,
+     "w": 22,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 449,
+     "w": 89,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 450,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 451,
+     "w": 44,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 452,
+     "w": 23,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 453,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 454,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 455,
+     "w": 5,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 456,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 457,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 458,
+     "w": 1,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 459,
+     "w": 24,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 460,
+     "w": 30,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 461,
+     "w": 22,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 462,
+     "w": 25,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 463,
+     "w": 56,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 464,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 465,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 466,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 467,
+     "w": 0,
+     "k": "plate",
+     "c": null
+    },
+    {
+     "p": 468,
+     "w": 24,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 469,
+     "w": 39,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 470,
+     "w": 35,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 471,
+     "w": 10,
+     "k": "prose",
+     "c": null
+    },
+    {
+     "p": 472,
+     "w": 19,
+     "k": "mixed",
+     "c": null
+    },
+    {
+     "p": 473,
+     "w": 20,
+     "k": "mixed",
+     "c": null
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "pdf_pages": 500,
+  "numbered": 473,
+  "body": 467,
+  "total_words": 40417,
+  "plates": 121,
+  "blanks": 1,
+  "images": 725,
+  "img_pages": 358,
+  "words_first240": 32172,
+  "arg_pages_241": 32,
+  "pct_first240": 80
+ }
+}
