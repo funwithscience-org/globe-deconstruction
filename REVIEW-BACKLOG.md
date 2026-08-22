@@ -7,6 +7,37 @@ nothing has to be re-derived.
 Catalogue source of truth is `docs/index.html`. When an item closes, update
 **both** this file and the landing page's status chip.
 
+---
+
+## STANDING CONVENTION — keep our version history out of the published text
+
+**Do not narrate the review's own drafting process on the page.** Recurring slip;
+caught again 2026-08-22 on the landing page, where the contradiction table closed
+with *"four earlier candidate rows were dropped from this table because checking
+them against the book showed the collision was not there."* True, and irrelevant to
+a reader. It reads as workflow narration, it makes the page about us, and on a
+review of a **prerelease** document it is worse than usual: the book is still
+moving, so a running commentary on our own revisions invites the author to track
+our churn instead of our argument.
+
+The line to hold — these are not the same thing:
+
+| Cut | Keep |
+|---|---|
+| How many candidate rows/sections we tried and discarded | What the page currently claims, and its stated limits |
+| That an earlier draft said something different | A **published** error, corrected with attribution |
+| "We rewrote this after X" / "an earlier version had Y" | "Where this page could be wrong" sections |
+| Counts of our own internal passes, agent runs, verification rounds | A withdrawal notice where we published something and pulled it |
+
+So: the Antarctic withdrawal notice **stays** (we published it, we pulled it, the
+author may have read it). The p.241 mis-sourcing notice **stays** (the catalogue
+entry is live and wrong). "Four rows were dropped before publication" **goes** —
+those rows were never published, so there is nothing to correct.
+
+Rule of thumb: if a reader could not have encountered the earlier state, they do
+not need to hear about it. Do the discarding silently; bank the reasoning here in
+the backlog instead, where it stops the same dead end being re-explored.
+
 **State as of 2026-08-18: 22 tracked items — 10 answered, 2 partial, 10 open**, plus
 4 supporting pages (drifters, self-test protocol, Action Lab footage, in-flight thrust).
 Action Lab footage page rewritten 2026-08-18 after the ordering inversion — see below.

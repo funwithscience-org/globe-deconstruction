@@ -111,12 +111,17 @@ table.contra td{border-bottom:1px solid var(--rule);padding:.55rem .5rem;vertica
 table.contra td.a{background:rgba(46,90,148,.045)}
 table.contra td.b{background:rgba(178,52,42,.045)}
 .tblwrap{overflow-x:auto}
+table.score{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.8rem;margin:.9rem 0}
+table.score th{text-align:left;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--rule);padding:.4rem .5rem}
+table.score td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;vertical-align:top;line-height:1.4}
+table.score td.idc{white-space:nowrap;font-weight:700;color:var(--ink-2);font-size:.74rem}
+table.score td.vc{white-space:nowrap}
+table.score td.nc{color:var(--ink-3);font-size:.76rem}
+table.score tr:hover td{background:rgba(46,90,148,.035)}
+.vd.none{background:#f4f2ec;color:#8d8677;border-color:var(--rule);font-weight:700}
 ol.ledger{font-family:var(--sans);font-size:.86rem;line-height:1.55;padding-left:1.2rem}
 ol.ledger li{margin:.5rem 0}
 ol.ledger b{font-family:var(--sans)}
-.moves{list-style:none;padding:0;margin:1rem 0}
-.moves li{border-left:3px solid var(--rule);padding:.15rem 0 .15rem .8rem;margin:.9rem 0;font-family:var(--sans);font-size:.87rem;line-height:1.55;color:var(--ink-2)}
-.moves .fid{font-weight:800;color:var(--ink);letter-spacing:.04em}
 </style>
 </head>
 <body>
@@ -136,6 +141,7 @@ ol.ledger b{font-family:var(--sans)}
 
 <h2>How this review works</h2>
 <p>Each page answers <strong>one specific claim, as its author actually stated it</strong> &mdash; not a summary, not a weaker version, and not the general genre it belongs to. Where the underlying observation is real, or the arithmetic is right, we say so first and prominently, because a review that cannot concede anything is not a review. Where we think the reasoning fails, we show the working rather than asserting it, and we use the author's own figures wherever he supplies them. Where we genuinely do not know, we say that too. Every page ends with tests that would settle the question &mdash; and they have to be tests that could go against us, or they are not worth proposing.</p>
+<p>The book charges the globe side with demanding laboratory control it never supplies itself, and on that charge it is right; our page on it concedes the point before anything else, and names an instance of our own double standard found while writing it. We take the same standard in return: where this review has published something wrong, the correction goes up with attribution rather than being quietly swapped out.</p>
 
 <h2>Why answer this at all</h2>
 <p>Most published responses to this material argue with a caricature. They answer the loudest version of a claim rather than the version actually made, and they treat any concession as a loss &mdash; which is precisely why they persuade nobody who wasn't already persuaded. The book notices this and says so, repeatedly and fairly.</p>
@@ -145,15 +151,9 @@ ol.ledger b{font-family:var(--sans)}
 <h2 id="foundations">The foundations &mdash; the argument, made once</h2>
 <p>Twenty-two items answered one at a time would inherit the book's own problem: the point drowns in volume, and each chapter gets to be judged without the others in the room. So the general argument is made here, once, and the pages below link to it instead of re-arguing it. Nothing in this section substitutes for answering a claim on its merits &mdash; that still happens page by page.</p>
 
-<h3>Five recurring moves</h3>
-<p>These are patterns in how the argument is built, not accusations about why. A prerelease draft assembled chapter by chapter is exactly where you would expect to find them.</p>
-<ul class="moves">
-  <li><span class="fid">F1 &middot; One pillar at a time.</span> Each chapter takes a classical proof, shows it does not stand alone, and moves on. Read individually the objections often land: Eratosthenes really does assume parallel rays and a sphere before it measures either, and a single pair of shadow angles genuinely cannot separate a far Sun over a globe from a near one over a plane. But the Sun's distance never rested on Eratosthenes &mdash; radar ranging of Venus, stellar aberration and parallax are three unrelated instruments returning one number. Knocking over one pillar of fifty leaves forty-nine, and the alternative offered in its place has to survive all of them. This is partly just how books are organised, which is why it is listed as a structural effect rather than a tactic.</li>
-  <li><span class="fid">F2 &middot; No model to check.</span> The book advances no positive cosmology, deliberately: &ldquo;it is much more effective not to present an alternative model at all&rdquo; (p.&nbsp;28), and &ldquo;falsification is independent of replacement&rdquo; (p.&nbsp;187). <strong>The principle is correct and we concede it</strong> &mdash; you can show something is wrong without having a replacement ready, and demanding one is a bad habit of the defending side. What it forfeits is that a falsification has to be a falsification <em>of something</em>: the local sun in one chapter, the non-straight light in another and the flat celestial plane in a third are never required to hold at the same time, because no chapter is answerable to the next. We hold the review to the reverse of the same rule &mdash; every page names what would falsify it.</li>
-  <li><span class="fid">F3 &middot; The instrument mistaken for the world.</span> &ldquo;Look what you can see happen&rdquo; usually means &ldquo;look at what this sensor rendered.&rdquo; Detection and resolution are different limits, and a camera's floor is far coarser than the eye's. The book knows this in one place &mdash; the limit &ldquo;varies across telescopes and cameras&rdquo; (p.&nbsp;107) &mdash; and forgets it in another, where a 50-mile zoom is credited with recovering a skyline while &ldquo;the camera's angular resolution and haziness&rdquo; is credited with deleting the buildings' bases in the same frame (p.&nbsp;111). Worked out in full on the <a href="https://funwithscience.net/globe-deconstruction/flat-surface-test/">flat-surface test</a>; other pages link rather than re-derive.</li>
-  <li><span class="fid">F4 &middot; The standard of proof, in both directions.</span> The book charges the globe side with demanding laboratory control it never supplies itself, and <strong>on that charge it is right</strong>; our own page on it concedes the point before anything else and names an instance of our double standard found while writing it. The same charge runs the other way: the pond test's calm-check was taken in the wrong place and minutes after the run, and the zoom setting went unstated. Nobody comes out of this clean, which is why this review publishes its own errors with attribution rather than quietly fixing them.</li>
-  <li><span class="fid">F5 &middot; Absence as evidence.</span> Missing blueprints, missing construction records, agencies not to be trusted. The absence of a document is not the presence of a contradiction &mdash; and in the blueprint case the absence is expected, because curvature over a 10-metre span is 0.008&nbsp;mm and no structural code has a clause for it. Where it <em>is</em> designed for, it is written down: LIGO's 4-km arms, Fermilab's beam aimed 3.34&deg; into the ground. The strongest observations on this site &mdash; ocean drifters, in-flight thrust measurements &mdash; are public raw data that need no agency's word.</li>
-</ul>
+<h3>The shape of the argument</h3>
+<p><strong>Knowledge here is a mesh, not a chain.</strong> Read one at a time, the objections often land &mdash; Eratosthenes really does assume parallel rays and a sphere before it measures either, and a single pair of shadow angles genuinely cannot separate a far Sun over a globe from a near one over a plane. But the Sun's distance never rested on Eratosthenes. Radar ranging of Venus, stellar aberration and trigonometric parallax are three unrelated instruments returning one number, and knocking over one pillar of fifty leaves forty-nine standing. That is what the <a href="#ledger">ledger</a> below is for: a chapter-by-chapter book can put each proof on trial alone, and this review declines to re-prosecute settled measurements one page at a time.</p>
+<p><strong>There is no model on the other side to check</strong>, and that is deliberate rather than evasive: &ldquo;it is much more effective not to present an alternative model at all&rdquo; (p.&nbsp;28), and &ldquo;falsification is independent of replacement&rdquo; (p.&nbsp;187). <em>The principle is correct and we concede it.</em> You can show a thing is wrong without having a replacement ready, and demanding one is a bad habit of whichever side is defending. What it forfeits is that a falsification has to be a falsification <em>of something</em>. The local sun in one chapter, the non-straight light in another and the flat celestial plane in a third are never required to hold at the same time, because no chapter is answerable to the next &mdash; which is what the table below is about.</p>
 
 <h3 id="collisions">Where his own claims collide</h3>
 <p>Each row is a pair of positions from the book that cannot both describe the same world. No globe physics is needed to read the table; both halves are his. Every quotation below has been checked against the prerelease text.</p>
@@ -169,16 +169,48 @@ ol.ledger b{font-family:var(--sans)}
 </tbody>
 </table>
 </div>
-<p>One model has to answer to every chapter at once. That is the constraint the globe is under, and it is the constraint the alternative has not yet been put under. <strong>None of this implies bad faith</strong> &mdash; these are positions colliding, not a person being caught, and four earlier candidate rows were dropped from this table because checking them against the book showed the collision was not there.</p>
+<p>One model has to answer to every chapter at once. That is the constraint the globe is under, and it is the constraint the alternative has not yet been put under. <strong>None of this implies bad faith</strong> &mdash; these are positions colliding, not a person being caught. A book assembled chapter by chapter is exactly where you would expect to find them, and finding them is what a review is for.</p>
 
-<h3 id="ledger">What we will not re-derive</h3>
-<p>Established independently of anything in dispute here, each by instruments that do not depend on one another. Pages cite these by number rather than proving them again.</p>
+<h3 id="ledger">Settled once, then cited</h3>
+<p>Two kinds of thing sit here, and the distinction matters. The first three are established <em>outside</em> this review, by instruments that do not depend on one another; no page here proves them, they are cited. The fourth is different: the book makes rocket thrust in vacuum a headline claim, so this review does derive it &mdash; at length, on its own page &mdash; and the entry exists so that the <em>rest</em> of the site does not do it again. Either way the rule is the same: settle it once, then reference it.</p>
 <ol class="ledger">
-  <li><b>The Sun is about 93 million miles away.</b> Radar ranging of Venus, stellar aberration, and trigonometric parallax &mdash; three unrelated techniques, one number. Does not rest on Eratosthenes, before or since.</li>
-  <li><b>The Earth turns once per sidereal day.</b> Ring-laser gyroscopes at widely different latitudes each reading &Omega;&nbsp;sin&nbsp;&phi;, NOAA ocean drifters recovering the period to under a per cent on <a href="https://funwithscience.net/globe-deconstruction/coriolis-drifters/">our own page</a>, and satellite orbital dynamics.</li>
-  <li><b>Light through air bends by a measured amount, not an assumed one.</b> Geodesy does not assume straight sightlines; it carries a refraction coefficient, conventionally <em>k</em>&nbsp;&asymp;&nbsp;0.13, and corrects for it. <em>Honest limit:</em> near the ground <em>k</em> is not a constant and has been measured from &minus;4 to +16, which is precisely why long-baseline work uses evacuated pipes.</li>
-  <li><b>Rocket thrust exists in vacuum.</b> Measured in flight, cross-checked by mutually independent methods on the same engine, with the ground-chamber artefact quantified at about one per cent &mdash; in the direction that flatters the chamber. See <a href="https://funwithscience.net/globe-deconstruction/thrust-in-flight/">Thrust, Measured in Flight</a>.</li>
+  <li><b>The Sun is about 93 million miles away.</b> Radar ranging of Venus, stellar aberration, and trigonometric parallax &mdash; three unrelated techniques, one number. Does not rest on Eratosthenes, before or since. <em>Established outside this review.</em></li>
+  <li><b>The Earth turns once per sidereal day.</b> Ring-laser gyroscopes at widely different latitudes each reading &Omega;&nbsp;sin&nbsp;&phi;, and satellite orbital dynamics. <em>Established outside this review</em> &mdash; though <a href="https://funwithscience.net/globe-deconstruction/coriolis-drifters/">our drifters page</a> recovers the period independently from public NOAA data, which is a check rather than the source.</li>
+  <li><b>Light through air bends by a measured amount, not an assumed one.</b> Geodesy does not assume straight sightlines; it carries a refraction coefficient, conventionally <em>k</em>&nbsp;&asymp;&nbsp;0.13, and corrects for it. <em>Honest limit:</em> near the ground <em>k</em> is not a constant and has been measured from &minus;4 to +16, which is precisely why long-baseline work uses evacuated pipes. <em>Established outside this review.</em></li>
+  <li><b>Rocket thrust exists in vacuum.</b> <em>Derived here, not borrowed</em> &mdash; it is Claim&nbsp;#2 and Q1, so <a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Rockets Don't Push Against Air</a> argues it from the nozzle outwards and <a href="https://funwithscience.net/globe-deconstruction/thrust-in-flight/">Thrust, Measured in Flight</a> gives the in-flight measurement record, cross-checked by mutually independent methods on the same engine with the ground-chamber artefact quantified at about one per cent, in the direction that flatters the chamber. Every other page cites those two rather than re-arguing thrust.</li>
 </ol>
+
+<h3 id="scoreboard">Every item, with its verdict</h3>
+<p>The same twenty-two items in the book's own order, so the distribution is visible in one place: <strong>7 refuted, 5 misleading, 4 standard physics, 6 unassessed</strong>. Six verdicts are provisional, resting on a page that has had one pass and no review. The last column is our progress, which is a different thing from the verdict &mdash; several items are fully answered and still come back as observations the mainstream model simply predicts.</p>
+<div class="tblwrap">
+<table class="score">
+<thead><tr><th>Item</th><th>The claim, in short</th><th>Verdict</th><th>Our page / why not graded</th></tr></thead>
+<tbody>
+<tr><td class="idc">Claim&nbsp;#1</td><td>Objects disappear bottom-up by angular resolution</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/bottom-up-observations/">Answered</a></td></tr>
+<tr><td class="idc">Claim&nbsp;#2</td><td>Newton's third law misapplied to gas in vacuum</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Answered</a></td></tr>
+<tr><td class="idc">Claim&nbsp;#3</td><td>Too many red flags in celestial observations</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Cumulative claim &mdash; cannot be graded from a subset</td></tr>
+<tr><td class="idc">Q1 &middot; p.44</td><td>Gas thrust needs surrounding air</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Answered</a></td></tr>
+<tr><td class="idc">Q2 &middot; p.45</td><td>Gravity overriding hydrostatics in a controlled space</td><td class="vc"><span class="vd mislead prov">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/hydrostatics/">Draft</a></td></tr>
+<tr><td class="idc">Q3 &middot; p.46</td><td>What a flight recorder shows on the equator</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">Answered</a></td></tr>
+<tr><td class="idc">Q4 &middot; p.47</td><td>Mirrored reflections as observer height rises</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/mirrored-reflections/">Draft</a></td></tr>
+<tr><td class="idc">Q5 &middot; p.48</td><td>Stars and planets share one nightly rate</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">Draft</a></td></tr>
+<tr><td class="idc">Q6 &middot; p.49</td><td>Jupiter's moon shadows miss their moons</td><td class="vc"><span class="vd refuted prov">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">Draft</a></td></tr>
+<tr><td class="idc">Q7 &middot; p.50</td><td>Full Moon evenly lit, no highlight</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">Draft</a></td></tr>
+<tr><td class="idc">Q8 &middot; p.51</td><td>The Sun shrinks and fades rather than sets</td><td class="vc"><span class="vd refuted prov">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sun-does-not-shrink/">Draft</a></td></tr>
+<tr><td class="idc">Q9 &middot; p.52</td><td>No Moon silhouette before a solar eclipse</td><td class="vc"><span class="vd standard">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/luminaries/">Answered</a></td></tr>
+<tr><td class="idc">Q10 &middot; p.53</td><td>Atmosphere in perfect rotational sync</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
+<tr><td class="idc">Q11 &middot; p.54</td><td>Polar time-lapse; the untested Compton generator</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
+<tr><td class="idc">Q12 &middot; p.55</td><td>Straight sunlight and shadow-angle arguments</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sunlight-and-shadows/">Page answers our paraphrase; p.&nbsp;55 not yet read</a></td></tr>
+<tr><td class="idc">Sec. p.117</td><td>The Equator Flight Data Challenge</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">Answered</a></td></tr>
+<tr><td class="idc">Sec. p.124</td><td>Celestial Globes Exposed &mdash; Polaris and perspective</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/celestial-globes/">Answered</a></td></tr>
+<tr><td class="idc">Sec. p.153</td><td>Unknown Luminaries</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Two limbs answered, the chapter's thesis not</td></tr>
+<tr><td class="idc">Sec. p.179</td><td>Perfectly synchronized gas rotating with Earth?</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
+<tr><td class="idc">Sec. p.203</td><td>Extraordinary Evidence or Fallacy</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/extraordinary-evidence/">A charge against this review that we accept</a></td></tr>
+<tr><td class="idc">Sec. p.241</td><td>All construction records missing?</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Catalogue entry mis-sourced, not yet rewritten</td></tr>
+<tr><td class="idc">Sec. p.415</td><td>Antarctica's Magnetic North</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Catalogue entry mis-sourced, not yet rewritten</td></tr>
+</tbody>
+</table>
+</div>
 
 <h2>The catalogue</h2>
 <p><em>The groupings below are the book's own &mdash; its three headline claims, its twelve numbered questions, its chapter titles. The structure the book does not supply &mdash; what these claims share and where they collide &mdash; is the section above.</em></p>
@@ -213,7 +245,7 @@ ol.ledger b{font-family:var(--sans)}
   <li>
     <span class="lbl">Claim #3 &middot; shapedebate.com</span>
     <p class="q">&ldquo;There are too many red flags in celestial observations&rdquo; &mdash; moon lighting, the moon-tilt illusion, Jupiter's moons, and solar-eclipse alignment.</p>
-    <p class="meta"><span class="st part">Partly answered</span>The eclipse-alignment red flag is answered in <a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a>. The moon-lighting red flag now has a draft &mdash; <a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a>, published for review. The remaining two are addressed as falsifiable tests in the <a href="https://funwithscience.net/globe-deconstruction/self-test-protocol/">Self-Test Protocol</a> but do not yet have pages of their own. Note the book runs these four as a <em>cumulative</em> case &mdash; &ldquo;together, they make a strong case that the Sun is not the source of illumination&rdquo; &mdash; so answering them one at a time does not yet meet the claim as made.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st part">Partly answered</span>The eclipse-alignment red flag is answered in <a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a>. The moon-lighting red flag now has a draft &mdash; <a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a>, published for review. The remaining two are addressed as falsifiable tests in the <a href="https://funwithscience.net/globe-deconstruction/self-test-protocol/">Self-Test Protocol</a> but do not yet have pages of their own. Note the book runs these four as a <em>cumulative</em> case &mdash; &ldquo;together, they make a strong case that the Sun is not the source of illumination&rdquo; &mdash; so answering them one at a time does not yet meet the claim as made.</p>
   </li>
 </ul>
 
@@ -253,32 +285,32 @@ ol.ledger b{font-family:var(--sans)}
   <li>
     <span class="lbl">Q7 &middot; page&nbsp;50</span>
     <p class="q">How sunlight distributes evenly across a full Moon without a visible highlight point, if the Moon is a sphere in vacuum.</p>
-    <p class="meta"><span class="vd refuted prov">Refuted</span><span class="vd standard prov">Standard physics</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a> &mdash; published for review, not yet an answer.</p>
+    <p class="meta"><span class="vd standard prov">Standard physics</span><span class="vd standard prov">Standard physics</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a> &mdash; published for review, not yet an answer.</p>
   </li>
   <li>
     <span class="lbl">Q8 &middot; page&nbsp;51</span>
     <p class="q">Why the Sun appears to shrink and fade rather than set, on clear days at altitude.</p>
-    <p class="meta"><span class="vd standard">Standard physics</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/sun-does-not-shrink/">The Sun Does Not Shrink</a> &mdash; published for review, not yet an answer.</p>
+    <p class="meta"><span class="vd refuted prov">Refuted</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/sun-does-not-shrink/">The Sun Does Not Shrink</a> &mdash; published for review, not yet an answer.</p>
   </li>
   <li>
     <span class="lbl">Q9 &middot; page&nbsp;52</span>
     <p class="q">Why the Moon's full circular silhouette is never seen in the approach to a solar eclipse.</p>
-    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a></p>
+    <p class="meta"><span class="vd standard">Standard physics</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a></p>
   </li>
   <li>
     <span class="lbl">Q10 &middot; page&nbsp;53</span>
     <p class="q">How it was established that the atmosphere stays in rotational sync with the ground at every altitude.</p>
-    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
+    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
   </li>
   <li>
     <span class="lbl">Q11 &middot; page&nbsp;54</span>
     <p class="q">Why a time-lapse at the rotational pole shows no movement, given zero air speed at the axis &mdash; and why nobody has tested a Compton generator in Antarctica.</p>
-    <p class="meta"><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
+    <p class="meta"><span class="vd mislead">Misleading</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
   </li>
   <li>
     <span class="lbl">Q12 &middot; page&nbsp;55</span>
     <p class="q">Who established that sunlight travels in a perfectly straight line through hundreds of miles of atmosphere, and whether that assumption invalidates shadow-angle arguments.</p>
-    <p class="meta"><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/sunlight-and-shadows/">Sunlight Bends in Air, and the Bend Is About One Arcminute</a> &mdash; published for review, not yet an answer.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/sunlight-and-shadows/">Sunlight Bends in Air, and the Bend Is About One Arcminute</a> &mdash; published for review, not yet an answer.</p>
   </li>
 </ul>
 
@@ -288,37 +320,37 @@ ol.ledger b{font-family:var(--sans)}
   <li>
     <span class="lbl">Section &middot; page&nbsp;117</span>
     <p class="q">The Equator Flight Data Challenge &mdash; what a flight data recorder would show for an aircraft holding the equator, or any other line of latitude.</p>
-    <p class="meta"><span class="vd refuted">Refuted</span><span class="vd mislead">Misleading</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">The Equator Flight Data Challenge, Answered</a></p>
+    <p class="meta"><span class="vd mislead">Misleading</span><span class="vd mislead">Misleading</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">The Equator Flight Data Challenge, Answered</a></p>
   </li>
   <li>
     <span class="lbl">Section &middot; page&nbsp;124</span>
     <p class="q">Celestial Globes Exposed &mdash; Polaris's inconsistent calculated height, and whether linear perspective accounts for it.</p>
-    <p class="meta"><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/celestial-globes/">Celestial Globes Exposed, Answered</a></p>
+    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/celestial-globes/">Celestial Globes Exposed, Answered</a></p>
   </li>
   <li>
     <span class="lbl">Section &middot; page&nbsp;153</span>
     <p class="q">Unknown Luminaries &mdash; the planets, Jupiter's moons and their shadows, and what the objects in the sky actually are.</p>
-    <p class="meta"><span class="vd refuted">Refuted</span><span class="st part">Partly answered</span>The eclipse half is covered in <a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a>, and the full-Moon lighting half has a draft at <a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a>; the planets and Jupiter's moons are not yet.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st part">Partly answered</span>The eclipse half is covered in <a href="https://funwithscience.net/globe-deconstruction/luminaries/">Where's the Moon's Silhouette?</a>, and the full-Moon lighting half has a draft at <a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">The Full Moon Is Flat Because Dust Backscatters</a>; the planets and Jupiter's moons are not yet.</p>
   </li>
   <li>
     <span class="lbl">Section &middot; page&nbsp;179</span>
     <p class="q">Perfectly Synchronized Gas Rotating with Earth? &mdash; atmospheric co-rotation, gyroscopes, the Foucault pendulum, and the rotational axis.</p>
-    <p class="meta"><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
+    <p class="meta"><span class="vd refuted">Refuted</span><span class="st done">Answered</span><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Does the Earth Spin, or Does the Sky?</a></p>
   </li>
   <li>
     <span class="lbl">Section &middot; page&nbsp;203</span>
     <p class="q">Extraordinary Evidence or Fallacy &mdash; the standard of proof demanded of the two models.</p>
-    <p class="meta"><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/extraordinary-evidence/">The Standard of Proof Cuts Both Ways</a> &mdash; published for review, not yet an answer. The Antarctic magnetic half has been withdrawn: it answered a claim the book does not make.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st draft">Draft</span><a href="https://funwithscience.net/globe-deconstruction/extraordinary-evidence/">The Standard of Proof Cuts Both Ways</a> &mdash; published for review, not yet an answer. The Antarctic magnetic half has been withdrawn: it answered a claim the book does not make.</p>
   </li>
   <li>
     <span class="lbl">Section &middot; page&nbsp;241</span>
     <p class="q">All Construction Records Missing? &mdash; the challenge to produce blueprints for large-scale projects that account for curvature.</p>
-    <p class="meta"><span class="st todo">Not yet</span>No page yet &mdash; and this entry is mis-sourced. The p.&nbsp;241 chapter is about missing documentation for American historical architecture, and the book marks it <strong>SPECULATION</strong>. The blueprint challenge the review actually answers is in the Celestial Globes chapter: <a href="https://funwithscience.net/globe-deconstruction/construction-records/">Curvature Is in the Construction Record</a> (draft).</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st todo">Not yet</span>No page yet &mdash; and this entry is mis-sourced. The p.&nbsp;241 chapter is about missing documentation for American historical architecture, and the book marks it <strong>SPECULATION</strong>. The blueprint challenge the review actually answers is in the Celestial Globes chapter: <a href="https://funwithscience.net/globe-deconstruction/construction-records/">Curvature Is in the Construction Record</a> (draft).</p>
   </li>
   <li>
     <span class="lbl">Section &middot; page&nbsp;415</span>
     <p class="q">Antarctica's Magnetic North.</p>
-    <p class="meta"><span class="st todo">Not yet</span>No page yet.</p>
+    <p class="meta"><span class="vd none">Unassessed</span><span class="st todo">Not yet</span>No page yet.</p>
   </li>
 </ul>
 
