@@ -9,6 +9,34 @@ Catalogue source of truth is `docs/index.html`. When an item closes, update
 
 ---
 
+## STANDING CONVENTION — the left-hand nav is generated, do not hand-edit it
+
+Every `docs/**/index.html` carries an identical nav block between `<!--SITENAV-->`
+and `<!--/SITENAV-->`, injected right after `<body>`.
+
+**To change the nav — links, styling, behaviour — edit `scripts/nav_block.html`
+and run `python3 scripts/inject_nav.py`.** The injector is idempotent: it replaces
+whatever sits between the markers, so re-running is safe and is the only supported
+way to update all 21 pages at once. Editing the block inside a page by hand will be
+silently overwritten on the next run.
+
+**When a new page is added to `docs/`,** add it to the right group in
+`nav_block.html` and re-run the injector, or it will be reachable only from the
+landing page.
+
+Two gotchas already paid for:
+- The block sits at the *top* of `<body>`, so its script runs before the document
+  is parsed. Anything reading page content must wait for `DOMContentLoaded` — the
+  first version built the on-this-page list from `document.querySelectorAll('h2')`
+  at parse time and produced an empty list on all 21 pages.
+- `docs/self-test-protocol/` has no `.wrap` container; its content sits directly in
+  `<body>`. Selectors must not assume `.wrap`.
+
+The nav shows as a fixed sidebar at ≥1200px (`body{padding-left:232px}`) and
+collapses behind a hamburger below that.
+
+---
+
 ## STANDING CONVENTION — keep our version history out of the published text
 
 **Do not narrate the review's own drafting process on the page.** Recurring slip;
