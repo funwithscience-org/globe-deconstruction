@@ -111,17 +111,19 @@ table.contra td{border-bottom:1px solid var(--rule);padding:.55rem .5rem;vertica
 table.contra td.a{background:rgba(46,90,148,.045)}
 table.contra td.b{background:rgba(178,52,42,.045)}
 .tblwrap{overflow-x:auto}
-table.score{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.8rem;margin:.9rem 0}
-table.score th{text-align:left;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);border-bottom:1px solid var(--rule);padding:.4rem .5rem}
-table.score td{border-bottom:1px solid var(--rule);padding:.42rem .5rem;vertical-align:top;line-height:1.4}
-table.score td.idc{white-space:nowrap;font-weight:700;color:var(--ink-2);font-size:.74rem}
-table.score td.vc{white-space:nowrap}
-table.score td.nc{color:var(--ink-3);font-size:.76rem}
-table.score tr:hover td{background:rgba(46,90,148,.035)}
 
 .moves{list-style:none;padding:0;margin:1rem 0}
 .moves li{border-left:3px solid var(--rule);padding:.15rem 0 .15rem .8rem;margin:.9rem 0;font-family:var(--sans);font-size:.87rem;line-height:1.55;color:var(--ink-2)}
 .moves .fid{font-weight:800;color:var(--ink);letter-spacing:.02em}
+.totals{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin:1.1rem 0 .6rem}
+@media(max-width:760px){.totals{grid-template-columns:1fr}}
+.tbh{font-family:var(--sans);font-size:.74rem;font-weight:700;letter-spacing:.03em;color:var(--ink-3);margin:0 0 .35rem}
+.bar{display:flex;gap:2px;height:30px;border-radius:5px;overflow:hidden}
+.bar .seg{display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:.72rem;font-weight:800;min-width:14px}
+.legrow{margin-top:.4rem;font-family:var(--sans);font-size:.72rem;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:.15rem .8rem}
+.lg{display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap}
+.lg i{width:10px;height:10px;border-radius:2px;display:inline-block;border:1px solid rgba(0,0,0,.12)}
+.lg b{color:var(--ink-2)}
 .tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:.6rem;margin:1.3rem 0 1.1rem}
 @media(max-width:760px){.tiles{grid-template-columns:repeat(2,1fr)}}
 .tile{border:1px solid var(--rule);border-radius:8px;background:#fbfaf7;padding:.7rem .75rem}
@@ -867,39 +869,6 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
   <li><b>Rocket thrust exists in vacuum.</b> <em>Derived here, not borrowed</em> &mdash; it is Claim&nbsp;#2 and Q1, so <a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Rockets Don't Push Against Air</a> argues it from the nozzle outwards and <a href="https://funwithscience.net/globe-deconstruction/thrust-in-flight/">Thrust, Measured in Flight</a> gives the in-flight measurement record, cross-checked by mutually independent methods on the same engine with the ground-chamber artefact quantified at about one per cent, in the direction that flatters the chamber. Every other page cites those two rather than re-arguing thrust.</li>
 </ol>
 
-<h3 id="scoreboard">Every item, with its verdict</h3>
-<p>All twenty-four, in the book's own order, so the distribution is visible in one place: <strong>7 refuted, 5 misleading, 4 standard physics, 8 unassessed</strong>. Six verdicts are provisional, resting on a page that has had one pass and no review. The last column is our progress, which is a different thing from the verdict &mdash; several items are fully answered and still come back as observations the mainstream model simply predicts.</p>
-<div class="tblwrap">
-<table class="score">
-<thead><tr><th>Item</th><th>The claim, in short</th><th>Verdict</th><th>Our page / why not graded</th></tr></thead>
-<tbody>
-<tr><td class="idc">Claim&nbsp;#1</td><td>Bottom-up disappearance by angular resolution</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/bottom-up-observations/">Answered</a></td></tr>
-<tr><td class="idc">Claim&nbsp;#2</td><td>Gas thrust needs something to push off</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Answered</a></td></tr>
-<tr><td class="idc">Claim&nbsp;#3</td><td>Too many red flags in celestial observations</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Cumulative claim; cannot be graded from a subset</td></tr>
-<tr><td class="idc">Q1 &middot; p.44</td><td>Gas-propelled vehicles use surrounding gases</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rockets-in-vacuum/">Answered</a></td></tr>
-<tr><td class="idc">Q2 &middot; p.45</td><td>Gravity bending hydrostatics in a controlled space</td><td class="vc"><span class="vd mislead prov">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/hydrostatics/">Draft</a></td></tr>
-<tr><td class="idc">Q3 &middot; p.46</td><td>What a flight recorder shows on the equator</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">Answered</a></td></tr>
-<tr><td class="idc">Q4 &middot; p.47</td><td>Mirrored reflections as observer height rises</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/mirrored-reflections/">Draft</a></td></tr>
-<tr><td class="idc">Q5 &middot; p.48</td><td>Stars and planets share one nightly rate</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">Draft</a></td></tr>
-<tr><td class="idc">Q6 &middot; p.49</td><td>Jupiter's moon shadows miss their moons</td><td class="vc"><span class="vd refuted prov">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sky-rate-and-shadows/">Draft</a></td></tr>
-<tr><td class="idc">Q7 &middot; p.50</td><td>Full Moon evenly lit, no highlight</td><td class="vc"><span class="vd standard prov">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/full-moon-lighting/">Draft</a></td></tr>
-<tr><td class="idc">Q8 &middot; p.51</td><td>The Sun shrinks rather than sets</td><td class="vc"><span class="vd refuted prov">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sun-does-not-shrink/">Draft</a></td></tr>
-<tr><td class="idc">Q9 &middot; p.52</td><td>No Moon silhouette before a solar eclipse</td><td class="vc"><span class="vd standard">Standard physics</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/luminaries/">Answered</a></td></tr>
-<tr><td class="idc">Q10 &middot; p.53</td><td>Atmosphere in perfect rotational sync</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
-<tr><td class="idc">Q11 &middot; p.54</td><td>Polar time-lapse; the untested Compton generator</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
-<tr><td class="idc">Q12 &middot; p.55</td><td>Straight sunlight and shadow-angle arguments</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/sunlight-and-shadows/">Our page rests on a circular distance</a></td></tr>
-<tr><td class="idc">Sec. 56&ndash;87</td><td>Space Travel Requires Faith</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/action-lab-footage/">Video answered; the wider argument not</a></td></tr>
-<tr><td class="idc">Sec. 88&ndash;116</td><td>Hydrostatics &amp; Optics</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/rampion/">Rampion answered; the rest not</a></td></tr>
-<tr><td class="idc">Sec. 117&ndash;123</td><td>The Equator Flight Data Challenge</td><td class="vc"><span class="vd mislead">Misleading</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/equator-flight/">Answered</a></td></tr>
-<tr><td class="idc">Sec. 124&ndash;152</td><td>Celestial Globes Exposed</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/celestial-globes/">Answered</a></td></tr>
-<tr><td class="idc">Sec. 153&ndash;178</td><td>Unknown Luminaries</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Two limbs answered, the chapter's thesis not</td></tr>
-<tr><td class="idc">Sec. 179&ndash;202</td><td>Perfectly synchronized gas rotating with Earth?</td><td class="vc"><span class="vd refuted">Refuted</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/earth-rotation/">Answered</a></td></tr>
-<tr><td class="idc">Sec. 203&ndash;240</td><td>Extraordinary Evidence or Fallacy</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc"><a href="https://funwithscience.net/globe-deconstruction/extraordinary-evidence/">A charge against this review that we accept</a></td></tr>
-<tr><td class="idc">Sec. 241&ndash;414</td><td>All Construction Records Missing?</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Author's own SPECULATION fence &mdash; excluded by him</td></tr>
-<tr><td class="idc">Sec. 415&ndash;473</td><td>Antarctica's Magnetic North</td><td class="vc"><span class="vd none">Unassessed</span></td><td class="nc">Author's own SPECULATION fence &mdash; excluded by him</td></tr>
-</tbody>
-</table>
-</div>
 <h2>The catalogue</h2>
 <p><em>The groupings below are the book's own &mdash; its three headline claims, its twelve numbered questions, its chapter titles. The structure the book does not supply &mdash; what these claims share and where they collide &mdash; is the section above.</em></p>
 
@@ -917,7 +886,21 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
   <p style="font-family:var(--sans);font-size:.8rem;color:var(--ink-3);margin:.7rem 0 0">Standing rule: grade the claim as he actually hedged it, never a compressed or strengthened version. Where a page answers a stronger claim than the book makes, the item stays unassessed until that is fixed.</p>
 </div>
 
-<p><em>The five groupings below are ours, sorted by what each claim argues about. The book's own order is preserved in the <a href="#map">map above</a> &mdash; position is his, grouping is ours. Every question is quoted verbatim from the prerelease draft; the draft numbers two consecutive questions Q4, on pp.&nbsp;46 and 47, and both are listed. This index counts <strong>24</strong> claims rather than the 22 an earlier catalogue carried, because two long sections &mdash; Hydrostatics &amp; Optics at p.&nbsp;88 and Space Travel Requires Faith at p.&nbsp;56 &mdash; deserve rows of their own.</em></p>
+<p><em>The five groupings below are ours, sorted by what each claim argues about. The book's own order is preserved in the <a href="#map">map above</a> &mdash; position is his, grouping is ours. Every question is quoted verbatim from the prerelease draft; the draft numbers two consecutive questions Q4, on pp.&nbsp;46 and 47, and both are listed. This index counts <strong>24</strong> claims rather than the 22 his numbering alone would give, because two long sections &mdash; Hydrostatics &amp; Optics at p.&nbsp;88 and Space Travel Requires Faith at p.&nbsp;56 &mdash; deserve rows of their own.</em></p>
+
+<div class="totals">
+  <div class="tb">
+    <p class="tbh">By verdict &mdash; what we concluded about his claim</p>
+<div class="bar"><span class="seg" style="flex:7;background:#b2342a;color:#fff" title="Refuted: 7 of 24">7</span><span class="seg" style="flex:5;background:#c87e20;color:#2b2a26" title="Misleading: 5 of 24">5</span><span class="seg" style="flex:4;background:#2e5a94;color:#fff" title="Standard physics: 4 of 24">4</span><span class="seg" style="flex:8;background:#8d8677;color:#2b2a26" title="Unassessed: 8 of 24">8</span></div>
+<div class="legrow"><span class="lg"><i style="background:#b2342a"></i>Refuted <b>7</b></span> <span class="lg"><i style="background:#c87e20"></i>Misleading <b>5</b></span> <span class="lg"><i style="background:#2e5a94"></i>Standard physics <b>4</b></span> <span class="lg"><i style="background:#8d8677"></i>Unassessed <b>8</b></span></div>
+  </div>
+  <div class="tb">
+    <p class="tbh">By our progress &mdash; how far the answer has got</p>
+<div class="bar"><span class="seg" style="flex:10;background:#2e5a94;color:#fff" title="Answered: 10 of 24">10</span><span class="seg" style="flex:4;background:#7d9dc4;color:#2b2a26" title="Partly answered: 4 of 24">4</span><span class="seg" style="flex:8;background:#b3c6de;color:#2b2a26" title="Draft: 8 of 24">8</span><span class="seg" style="flex:2;background:#dfe7f0;color:#2b2a26" title="Not yet: 2 of 24">2</span></div>
+<div class="legrow"><span class="lg"><i style="background:#2e5a94"></i>Answered <b>10</b></span> <span class="lg"><i style="background:#7d9dc4"></i>Partly answered <b>4</b></span> <span class="lg"><i style="background:#b3c6de"></i>Draft <b>8</b></span> <span class="lg"><i style="background:#dfe7f0"></i>Not yet <b>2</b></span></div>
+  </div>
+</div>
+<p class="scalewarn">Twenty-four claims. The two rows measure different things: a claim can be fully answered and still come back as an observation the mainstream model simply predicts. Six of the sixteen verdicts are provisional, resting on a page that has had one pass and no review.</p>
 
 <div class="fam">
   <h4>Optics, perspective and hydrostatics</h4>
